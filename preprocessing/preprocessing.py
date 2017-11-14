@@ -24,6 +24,9 @@ def preprocessLine(filename):
    	print id_dict
    	print ""
    	print ""
+   	makeIdLinkFile(unique_links,id_dict)
+   	makeIdTranslationFile(id_dict)
+   	makeIdToTextTranslationFile(id_dict)
    	for el in sorted(unique_links):
    		print el, unique_links[el]
    		print id_dict[el]
@@ -48,9 +51,35 @@ def preprocess(filename):
 	for key in sorted(m_dict):
 		print(key,m_dict[key])
 
+def makeIdLinkFile(links,ids):
+	filename = "idfile.txt"
+	text_written = ""
+	for from_el in sorted(links):
+		from_id = ids[from_el]
+		for to_el in sorted(links[from_el]):
+			text_written += str(from_id) + " " + str(ids[to_el]) + '\n'
+	f = open(filename, 'w')
+	f.write(text_written)
+	f.close()
+   		
+def makeIdTranslationFile(ids):
+	text_written = ""
+	filename = "nameToID.txt"
+	for text_el in sorted(ids):
+		text_written += text_el + " " + str(ids[text_el]) + '\n'
+	f = open(filename, 'w')
+	f.write(text_written)
+	f.close()
 
 
-
+def makeIdToTextTranslationFile(ids):
+	text_written = ""
+	filename = "IDToName.txt"
+	for text_el in sorted(ids):
+		text_written +=  str(ids[text_el])  + " " +  text_el + '\n'
+	f = open(filename, 'w')
+	f.write(text_written)
+	f.close()
 
 if __name__ == "__main__":
 	filename = "../data/links.tsv"
