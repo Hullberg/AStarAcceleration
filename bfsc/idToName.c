@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 
-char* getFileName(int id_name){
-    char name_check[100];
+char* getIDToName(int id_name){
+    char * name_check = malloc(sizeof(char)*100);
     int id_compare = -1;
     char* filename = "../preprocessing/IDToName.txt";
   FILE *fp = fopen(filename,"r");
    int i =0;
 while(!feof(fp)){
     i++;
-  fscanf(fp," %d %s",id_compare,name_check);
+  fscanf(fp," %d %s",&id_compare,name_check);
      if(id_compare == id_name){
          break;
    }
@@ -21,8 +21,8 @@ return name_check;
 int main(int argc, char *argv[]){
     int from_id = 7;
     int to_id= 8;
-    char* from_name = getFileID(from_name);
-    char* to_name = getFileID(to_name);
+    char* from_name = getIDToName(from_id);
+    char* to_name = getIDToName(to_id);
     printf("value %s  %s \n",from_name,to_name);
      return 0;
 }
