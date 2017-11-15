@@ -90,7 +90,7 @@ void breadthFirstSearch() {
     while((unvisitedVertex = getAdjUnvisitedVertex(tempVertex)) != -1) {    
       lstVertices[unvisitedVertex]->visited = true;
       displayVertex(unvisitedVertex);
-      if (lstVertices[unvisitedVertex]->label == 'B') printf("FOUND YOU FUCK");
+      if (lstVertices[unvisitedVertex]->label == 'B') printf("Found...\n");
       insert(unvisitedVertex);               
     }		
   }   
