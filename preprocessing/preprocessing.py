@@ -3,34 +3,26 @@ from collections import defaultdict
 def preprocessLine(filename):
 	with open(filename) as f:
 		unique_links = defaultdict(set)
-		first_word = set()
-		second_word = set()
+		word_set= set()
 		id_dict = {}
 		prev_word = ""
 		id_count = 0
    		for line in f:
    			word_links = line.split()
    			unique_links[word_links[0]].add(word_links[1])
-   			first_word.add(word_links[0]);
-   			second_word.add(word_links[1]);
-   		i = 1;
-   		for word in sorted(first_word):
-   			if word  not in id_dict:
-   				id_dict[word]= i
-   				i+=1
-   		for word in sorted(second_word):
-   			if word  not in id_dict:
-   				id_dict[word]= i
+   			word_set.add(word_links[0]);
+   			word_set.add(word_links[1]);
+   		i = 0;
+   		for word in sorted(word_set):
+			id_dict[word]= i
+			i+=1
    	print id_dict
    	print ""
    	print ""
    	makeIdLinkFile(unique_links,id_dict)
    	makeIdTranslationFile(id_dict)
    	makeIdToTextTranslationFile(id_dict)
-   	for el in sorted(unique_links):
-   		print el, unique_links[el]
-   		print id_dict[el]
-   		break;
+	print len(id_dict)
 
 def textInFile(filename):
 	textfile = open(filename,'r')
