@@ -44,6 +44,7 @@ int fileToRowCount(){
   return countlines("../preprocessing/nameToID.txt");
 }
 /*
+
 int main(int argc, char *argv[]){
      int lines = countlines("../preprocessing/nameToID.txt");
      int** matrix= createMatrix(lines,"../preprocessing/idfile.txt");

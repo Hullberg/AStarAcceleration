@@ -44,6 +44,7 @@ def preprocess(filename):
 		print(key,m_dict[key])
 
 def makeIdLinkFile(links,ids):
+	
 	filename = "idfile.txt"
 	text_written = ""
 	for from_el in sorted(links):
@@ -52,15 +53,20 @@ def makeIdLinkFile(links,ids):
 			text_written += str(from_id) + " " + str(ids[to_el]) + '\n'
 	f = open(filename, 'w')
 	f.write(text_written)
+	
 	f.close()
    		
 def makeIdTranslationFile(ids):
 	text_written = ""
+	max_string = "";
 	filename = "nameToID.txt"
 	for text_el in sorted(ids):
 		text_written += text_el + " " + str(ids[text_el]) + '\n'
+		if (len(text_el) > len(max_string)):
+				max_string = text_el
 	f = open(filename, 'w')
 	f.write(text_written)
+	print "maximum " + max_string
 	f.close()
 
 
