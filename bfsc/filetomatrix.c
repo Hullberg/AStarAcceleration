@@ -38,7 +38,7 @@ int** fileToMatrix(){
   int** matrix= createMatrix(lines,"../preprocessing/idfile.txt");
   return matrix;
 }
-/*
+
 int main(int argc, char *argv[]){
      int lines = countlines("../preprocessing/nameToID.txt");
      int** matrix= createMatrix(lines,"../preprocessing/idfile.txt");
@@ -46,4 +46,3 @@ int main(int argc, char *argv[]){
      printf("value %d \n",matrix[4591][4583]);
      return 0;
 }
-*/
