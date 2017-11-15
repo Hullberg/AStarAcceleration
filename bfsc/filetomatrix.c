@@ -17,26 +17,31 @@ while(!feof(fp)){
 return lines;
 }
 int** createMatrix(int lines,char* filename){
-int rows = lines;
-int columns = lines;
-int **matrix = (int **)malloc(rows * sizeof(int*));
-for(int i = 0; i < rows; i++){
-matrix[i] = (int *)malloc(columns * sizeof(int));
-} 
-int ch =0;
-int first_id =0;
-int second_id =0;
-FILE *fp = fopen(filename,"r");
-while(!feof(fp)){
-  fscanf(fp," %d %d",&first_id, &second_id);
-  matrix[first_id][second_id]=1;
-}
+  int rows = lines;
+  int columns = lines;
+  int **matrix = (int **)malloc(rows * sizeof(int*));
+  for(int i = 0; i < rows; i++){
+    matrix[i] = (int *)malloc(columns * sizeof(int));
+  } 
+  int ch =0;
+  int first_id =0;
+  int second_id =0;
+  FILE *fp = fopen(filename,"r");
+  while(!feof(fp)){
+    fscanf(fp," %d %d",&first_id, &second_id);
+    matrix[first_id][second_id]=1;
+  }
   return matrix;
 }
+
 int** fileToMatrix(){
   int lines = countlines("../preprocessing/nameToID.txt");
   int** matrix= createMatrix(lines,"../preprocessing/idfile.txt");
   return matrix;
+}
+
+int fileToRowCount(){
+  return countlines("../preprocessing/nameToID.txt");
 }
 /*
 int main(int argc, char *argv[]){

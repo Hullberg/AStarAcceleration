@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include "../bfsc/filetomatrix.c"
 
-#define MAX 5
+#define MAX 5000
 
 typedef struct Vertex {
   int label;
   bool visited;
+  int* pathParent;
 } Vertex;
 
 // queue variables
@@ -19,7 +21,8 @@ int queueItemCount = 0;
 
 // array of vertices
 Vertex* lstVertices[MAX];
-int adjMatrix[MAX][MAX];
+int** matrix;
+//int adjMatrix[MAX][MAX];
 int vertexCount = 0;
 
 //////////////////////
@@ -29,20 +32,21 @@ int vertexCount = 0;
 void addVertex(char label) {
   Vertex* vertex = (Vertex*) malloc(sizeof(Vertex));
   vertex->label = label;  
-  vertex->visited = false;     
+  vertex->visited = false;
+  vertex->pathParent = NULL;
   lstVertices[vertexCount++] = vertex;
 }
 
-void addEdge(int start,int end) {
+/*void addEdge(int start,int end) {
   adjMatrix[start][end] = 1;
   adjMatrix[end][start] = 1;
-}
+}*/
 
 //////////////////////
 ////////////// STAY IN
 //////////////////////
 void displayVertex(int vertexIndex) {
-  printf("%c \n",lstVertices[vertexIndex]->label);
+  printf("%d\n",lstVertices[vertexIndex]->label);
 }  
 
 bool isQueueEmpty() {
@@ -50,47 +54,52 @@ bool isQueueEmpty() {
 }
 
 void insert(int data) {
+  //printf("%d\n",data);
   queue[++rear] = data;
+  //printf("%d\n",rear);
+  //printf("%d\n",queueItemCount);
   queueItemCount++;
 }
 
 int removeData() {
   queueItemCount--;
-  return queue[front++]; 
+  return queue[front++];
 }
 
-int getAdjUnvisitedVertex(int vertexIndex) {
+int getUnvisitedChild(int vertexIndex) {
   int i;
 	
   for(i = 0; i<vertexCount; i++) {
-    if(adjMatrix[vertexIndex][i] == 1 && lstVertices[i]->visited == false)
+    if(matrix[vertexIndex][i] == 1 && lstVertices[i]->visited == false)
       return i;
   }
   return -1;
 }
 
-void breadthFirstSearch() {
+void breadthFirstSearch(int start, int end) {
   int i;
-
+  
   //mark first node as visited
-  lstVertices[0]->visited = true;
+  lstVertices[start]->visited = true;
 
   //display the vertex
-  displayVertex(0);   
+  displayVertex(start);
 
   //insert vertex index in queue
-  insert(0);
+
+  insert(start);
   int unvisitedVertex;
 
   while(!isQueueEmpty()) {
     //get the unvisited vertex of the first vertex in the queue
     int tempVertex = removeData();   
+    //displayVertex(tempVertex);
 
     //no adjacent vertex found
-    while((unvisitedVertex = getAdjUnvisitedVertex(tempVertex)) != -1) {    
+    while((unvisitedVertex = getUnvisitedChild(tempVertex)) != -1) {    
       lstVertices[unvisitedVertex]->visited = true;
-      displayVertex(unvisitedVertex);
-      if (lstVertices[unvisitedVertex]->label == 'B') printf("Found...\n");
+      //displayVertex(unvisitedVertex);
+      if (lstVertices[unvisitedVertex]->label == end) printf("Found...\n");
       insert(unvisitedVertex);               
     }		
   }   
@@ -101,31 +110,32 @@ void breadthFirstSearch() {
   }    
 }
 
-int main() {
-  int i, j;
+int main(int argc, char* argv[]) {
+  // ./bfs.c startedge endedge
+  // argc == 3
+  char* start = argv[1];
+  char* end = argv[2];
+  int startID, endID;
+  startID = 7;
+  endID = 260;
 
-  for(i = 0; i<MAX; i++){  // adjacency
+  /*for(i = 0; i<MAX; i++){  // adjacency
     for(j = 0; j<MAX; j++) // matrix to 0
       adjMatrix[i][j] = 0;
-  }
+  }*/
 
-  addVertex('S');   // 0
-  addVertex('A');   // 1
-  addVertex('B');   // 2
-  addVertex('C');   // 3
-  addVertex('D');   // 4
-  
-  addEdge(0, 1);    // S - A
-  addEdge(0, 2);    // S - B
-  addEdge(0, 3);    // S - C
-  addEdge(1, 4);    // A - D
-  addEdge(2, 4);    // B - D
-  addEdge(3, 4);    // C - D
-  
-  
+  matrix = fileToMatrix();
+  int numberOfLines = fileToRowCount();
+
+  // fileToMatrix() returns int** matrix, one row for each id, and columns (0 if no edge, 1 if edge) (4500,4500 ish)
+  printf("%d\n",numberOfLines);
+  for(int i = 0; i < numberOfLines; i++) {
+    addVertex(i); // ID's
+  }  
+
   printf("\nBreadth First Search: \n");
   
-  breadthFirstSearch();
+  breadthFirstSearch(startID,endID);
   
   return 0;
 }
