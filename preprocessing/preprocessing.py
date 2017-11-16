@@ -16,10 +16,10 @@ def preprocessLine(filename):
    		for word in sorted(word_set):
 			id_dict[word]= i
 			i+=1
-   	print id_dict
+   	#print id_dict
    	print ""
    	print ""
-   	makeIdLinkFile(unique_links,id_dict)
+   	makeIdLinkFile(unique_links,id_dict,"idfile.txt")
    	makeIdTranslationFile(id_dict)
    	makeIdToTextTranslationFile(id_dict)
 	print len(id_dict)
@@ -42,10 +42,8 @@ def preprocess(filename):
 	m_dict = uniqueLinks(textToLowerList(textInFile(filename)))
 	for key in sorted(m_dict):
 		print(key,m_dict[key])
-
-def makeIdLinkFile(links,ids):
-	
-	filename = "idfile.txt"
+		
+def makeIdLinkFile(links,ids,filename):
 	text_written = ""
 	for from_el in sorted(links):
 		from_id = ids[from_el]
@@ -69,6 +67,34 @@ def makeIdTranslationFile(ids):
 	print "maximum " + max_string
 	f.close()
 
+def sortIDs(filename,sorted_filename,id_filename):
+	with open(filename) as f:
+		unique_links = defaultdict(set)
+		word_set= set()
+		id_dict = {}
+		prev_word = ""
+		id_count = 0
+   		for line in f:
+   			word_links = line.split()
+   			unique_links[word_links[0]].add(word_links[1])
+   			word_set.add(word_links[0]);
+   			word_set.add(word_links[1]);
+   		i = 0;
+   		for word in sorted(word_set):
+			id_dict[word]= i
+			i+=1
+   	#print id_dict
+   	#print ""
+   	#print ""'
+	print("LINK")
+   	makeIdLinkFile(unique_links,id_dict,sorted_filename);
+	makeToIDFile(len(id_dict),id_filename)
+	#print len(id_dict)
+def makeToIDFile(length, id_filename):
+	text_written = ""
+	for i in range(length):
+		text_written += str(i) + '\n'
+	
 
 def makeIdToTextTranslationFile(ids):
 	text_written = ""
@@ -81,4 +107,6 @@ def makeIdToTextTranslationFile(ids):
 
 if __name__ == "__main__":
 	filename = "../data/links.tsv"
-	preprocessLine(filename)
+	#preprocessLine(filename)
+	sortIDs("../data/web-google.txt","googleidfile.txt","googleIDs.txt")
+	print("DONE")
