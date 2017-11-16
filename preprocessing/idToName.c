@@ -5,7 +5,7 @@
 char* getIDToName(int id_name){
     char * name_check = malloc(sizeof(char)*100);
     int id_compare = -1;
-    char* filename = "../preprocessing/IDToName.txt";
+    char* filename = "IDToName.txt";
   FILE *fp = fopen(filename,"r");
    int i =0;
 while(!feof(fp)){

@@ -5,7 +5,7 @@
 int getFileID(char* first_name){
     char name_check[100];
     int name_id = -1;
-    char* filename = "../preprocessing/nameToID.txt";
+    char* filename = "nameToID.txt";
   FILE *fp = fopen(filename,"r");
    int i =0;
 while(!feof(fp) || name_id == -1){
