@@ -109,7 +109,8 @@ def makeIdToTextTranslationFile(ids):
 	f.write(text_written)
 	f.close()
 def replaceSpaceToUnderScore(filename,id_to_name_filename,name_to_id_filename):
-	with open(filename) as f:
+	print "lol"
+        with open(filename) as f:
 		name_to_id_dict = {}
 		id_to_name_dict = {}
 		word_set= set()
@@ -141,5 +142,5 @@ if __name__ == "__main__":
 	filename = "../data/links.tsv"
 	#preprocessLine(filename)
 	#sortIDs("../data/web-google.txt","googleidfile.txt","googleIDs.txt")
-	replaceSpaceToUnderScore("../data/topcats/wiki-topcats-names.txt","topcats-IDToName.txt","topcats-NameToID.txt")
+	replaceSpaceToUnderScore("../data/topcats/wiki-topcats-page-names.txt","../data/topcats/topcats-IDToName.txt","../data/topcats/topcats-NameToID.txt")
 	print("DONE")

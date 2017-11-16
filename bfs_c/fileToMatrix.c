@@ -9,9 +9,11 @@ int countlines(char* filename){
     ch = fgetc(fp);
     if(ch == '\n')
       {
+	printf("\n%d\n", lines);
 	lines++;
       }
   }
+  printf("%s  %d","UTE UR LOOP: ",lines);
   fclose(fp);
   return lines;
 }
@@ -29,19 +31,20 @@ int** createMatrix(int lines,char* filename){
   while(!feof(fp)){
     fscanf(fp," %d %d",&first_id, &second_id);
     matrix[first_id][second_id]=1;
+    printf("%d %d", first_id,second_id);
   }
   fclose(fp);
   return matrix;
 }
 
-int** fileToMatrix(){
-  int lines = countlines("../preprocessing/nameToID.txt");
-  int** matrix= createMatrix(lines,"../preprocessing/idfile.txt");
+int** fileToMatrix(char* rowcountFile, char *IDfile){
+  int lines = countlines(rowcountFile);
+  int** matrix= createMatrix(lines,IDfile);
   return matrix;
 }
 
-int fileToRowCount(){
-  return countlines("../preprocessing/nameToID.txt");
+int fileToRowCount(char* rowCountFile){
+  return countlines(rowCountFile);
 }
 
 /*

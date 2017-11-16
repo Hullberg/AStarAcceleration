@@ -4,7 +4,7 @@
 #include "fileToMatrix.c"
 
 
-#define MAX 5000
+#define MAX 2000000
 
 // gcc -std=c99 -Wall bfs.c -o bfs
 
@@ -129,6 +129,7 @@ void breadthFirstSearch(int start, int end) {
 }
 
 int main(int argc, char* argv[]) {
+  printf("%s %s \n\n\n\n\n", argv[1], argv[2]);
   // ./bfs.c startedge endedge
   // argc == 3
   //char* start = argv[1];
@@ -140,9 +141,8 @@ int main(int argc, char* argv[]) {
     for(j = 0; j<MAX; j++) // matrix to 0
       adjMatrix[i][j] = 0;
   }*/
-  
-  matrix = fileToMatrix();
-  int numberOfLines = fileToRowCount();
+  matrix = fileToMatrix(argv[1], argv[2]);
+  int numberOfLines = fileToRowCount(argv[1]);
   
 //
   // fileToMatrix() returns int** matrix
