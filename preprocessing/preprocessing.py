@@ -94,6 +94,10 @@ def makeToIDFile(length, id_filename):
 	text_written = ""
 	for i in range(length):
 		text_written += str(i) + '\n'
+	print("Writing file")
+	f = open(id_filename, 'w')
+	f.write(text_written)
+	f.close()
 	
 
 def makeIdToTextTranslationFile(ids):
@@ -104,9 +108,38 @@ def makeIdToTextTranslationFile(ids):
 	f = open(filename, 'w')
 	f.write(text_written)
 	f.close()
+def replaceSpaceToUnderScore(filename,id_to_name_filename,name_to_id_filename):
+	with open(filename) as f:
+		name_to_id_dict = {}
+		id_to_name_dict = {}
+		word_set= set()
+		id_dict = {}
+		prev_word = ""
+		id_count = 0
+   		for line in f:
+   			split_arr = line.split()
+			word_links = spaceToUnderScore(split_arr)
+			if(len(word_links) ==2 ):
+				id_to_name_dict[word_links[0]]= word_links[1]
+				name_to_id_dict[word_links[1]] = word_links[0]
+			
+   			
+   	makeTranslationFile(id_to_name_dict,id_to_name_filename)
+   	makeTranslationFile(name_to_id_dict,name_to_id_filename)
+
+def spaceToUnderScore(m_array):
+	return (m_array[0] + " " + "_".join(m_array[1:])).split()
+def makeTranslationFile(m_dict,filename):
+	text_written = ""
+	for m_name in sorted(m_dict):
+		text_written += m_name + " " + m_dict[m_name] + "\n"
+	f = open(filename, 'w')
+	f.write(text_written)
+	f.close()
 
 if __name__ == "__main__":
 	filename = "../data/links.tsv"
 	#preprocessLine(filename)
-	sortIDs("../data/web-google.txt","googleidfile.txt","googleIDs.txt")
+	#sortIDs("../data/web-google.txt","googleidfile.txt","googleIDs.txt")
+	replaceSpaceToUnderScore("../data/topcats/wiki-topcats-names.txt","topcats-IDToName.txt","topcats-NameToID.txt")
 	print("DONE")
