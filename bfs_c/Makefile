@@ -7,7 +7,7 @@ run: $(FILES)
 
 run_topcats: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs
-	./bfs "../data/topcats/topcats-NameToID.txt" "../data/topcats/wiki-topcats-page-names.txt"
+	./bfs "../data/topcats/topcats-NameToID.txt" "../data/topcats/wiki-topcats.txt"
 
 clean: 
 	rm -f *.o *o d *.~ callgrind.out.* *\~
