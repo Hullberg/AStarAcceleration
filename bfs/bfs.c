@@ -74,8 +74,11 @@ int get_unvisited_child(int vertex_index) {
 
 // Path from end to start
 void get_path(int end){
+  printf("Getting path %d\n",end);
   int cursor = end;
+  printf("parent index %d",vertex_list[cursor]->parent_index);
   while (vertex_list[cursor]->parent_index != -1) {
+     printf("path loop\n");
     printf("%d\n", cursor);
     cursor = vertex_list[cursor]->parent_index;
   }
@@ -83,14 +86,20 @@ void get_path(int end){
 }
 
 void breadth_first_search(int start, int end) {
+  printf("Test 0:");
+
   int i;
   int done = false;
 
   //mark first node as visited
+  printf("Test 1:");
+
   vertex_list[start]->visited = true;
+  printf("Test 2:");
 
   //insert vertex index in queue
   insert(start);
+  printf("Test 3:");
 
   int unvisited_vertex;
   while(!is_queue_empty() && !done) {
@@ -109,11 +118,19 @@ void breadth_first_search(int start, int end) {
       insert(unvisited_vertex);               
     }		
   }   
+  printf("Test 4:");
 
   //queue is empty, search is complete, reset the visited flag        
   for(i = 0; i < vertex_count; i++) {
     vertex_list[i]->visited = false;
   }    
+  printf("Test 5:");
+
+}
+char* hello_world(){
+  char* bajs = "hello world";
+  printf("bajsa");
+  return bajs;
 }
 
 int main(int argc, char* argv[]) {
@@ -126,7 +143,7 @@ int main(int argc, char* argv[]) {
   char* id_file = argv[2];
   int start_id, end_id;
   start_id = 1;
-  end_id = 3333;
+  end_id = 6;
   
   //matrix = file_to_matrix(name_to_id, id_file);
   printf("\nDone with file_to_matrix... starting file_to_row\n");
@@ -141,6 +158,8 @@ int main(int argc, char* argv[]) {
   // printf("\nRunning file_to_matrix \n");
   printf("\nAdding children to vertices...\n");
   add_vertex_children(vertex_list, id_file);
+  
+  hello_world();
 
   printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
