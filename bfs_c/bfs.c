@@ -4,166 +4,148 @@
 #include "fileToMatrix.c"
 
 
-#define MAX 2000000
+#define MAX 2500000
 
 // gcc -std=c99 -Wall bfs.c -o bfs
 
 typedef struct Vertex {
   int label;
   bool visited;
-  int parentIndex;
+  int parent_index;
 } Vertex;
 
 // queue variables
-
 int queue[MAX];
 int rear = -1;
 int front = 0;
 // BREAK OUT
-int queueItemCount = 0;
+int queue_item_count = 0;
 
 // array of vertices
-Vertex* lstVertices[MAX];
+Vertex* lst_vertices[MAX];
 int** matrix;
-//int adjMatrix[MAX][MAX];
-int vertexCount = 0;
+int vertex_count = 0;
 
 //////////////////////
 //////////// BREAK OUT
 //////////////////////
 
-void addVertex(int label) {
+void add_vertex(int label) {
   Vertex* vertex = (Vertex*) malloc(sizeof(Vertex));
   vertex->label = label;  
   vertex->visited = false;
-  vertex->parentIndex = -1;
-  lstVertices[vertexCount++] = vertex;
+  vertex->parent_index = -1;
+  lst_vertices[vertex_count++] = vertex;
 }
-
-/*
-void addEdge(int start,int end) {
-  adjMatrix[start][end] = 1;
-  adjMatrix[end][start] = 1;
-}
-*/
 
 //////////////////////
 ////////////// STAY IN
 //////////////////////
-void displayVertex(int vertexIndex) {
-
+void display_vertex(int vertex_index) {
   printf("===============\n");
-  printf("%d\n",lstVertices[vertexIndex]->label);
-  printf("%d\n",lstVertices[vertexIndex]->parentIndex);
+  printf("%d\n", lst_vertices[vertex_index]->label);
+  printf("%d\n", lst_vertices[vertex_index]->parent_index);
   printf("===============\n");
 }
 
-bool isQueueEmpty() {
-  return queueItemCount == 0;
+bool is_queue_empty() {
+  return queue_item_count == 0;
 }
 
 void insert(int data) {
   queue[++rear] = data;
-  queueItemCount++;
+  queue_item_count++;
 }
 
-int removeData() {
-  queueItemCount--;
+int remove_data() {
+  queue_item_count--;
   return queue[front++];
 }
 
-int getUnvisitedChild(int vertexIndex) {
+// Look at vertex
+int get_unvisited_child(int vertex_index) {
   int i;
 	
-  for(i = 0; i<vertexCount; i++) {
-    if(matrix[vertexIndex][i] == 1 && lstVertices[i]->visited == false)
+  for(i = 0; i < vertex_count; i++) {
+    if (matrix[vertex_index][i] == 1 && lst_vertices[i]->visited == false)
       return i;
   }
   return -1;
 }
 
-void getPath(int end){
+// Path from end to start
+void get_path(int end){
   int cursor = end;
-  while (lstVertices[cursor]->parentIndex != -1) {
-    printf("%d\n",cursor);
-    cursor = lstVertices[cursor]->parentIndex;
+  while (lst_vertices[cursor]->parent_index != -1) {
+    printf("%d\n", cursor);
+    cursor = lst_vertices[cursor]->parent_index;
   }
   printf("%d\nDone!\n",cursor);
 }
 
-void breadthFirstSearch(int start, int end) {
+void breadth_first_search(int start, int end) {
   int i;
   int done = false;
 
   //mark first node as visited
-  lstVertices[start]->visited = true;
-
-  //display the vertex
-  //displayVertex(start);
+  lst_vertices[start]->visited = true;
 
   //insert vertex index in queue
-
   insert(start);
-  int unvisitedVertex;
-  while(!isQueueEmpty() && !done) {
+
+  int unvisited_vertex;
+  while(!is_queue_empty() && !done) {
+    
     //get the unvisited vertices of the first vertex in the queue
-    int tempVertex = removeData();   
+    int temp_vertex = remove_data();   
     
     //no adjacent vertex found
-    while((unvisitedVertex = getUnvisitedChild(tempVertex)) != -1 && !done) {    
-      lstVertices[unvisitedVertex]->visited = true;
-      lstVertices[unvisitedVertex]->parentIndex = tempVertex;
-      //displayVertex(unvisitedVertex);
-      if (lstVertices[unvisitedVertex]->label == end) {
-	done = true;
+    while((unvisited_vertex = get_unvisited_child(temp_vertex)) != -1 && !done) {    
+      lst_vertices[unvisited_vertex]->visited = true;
+      lst_vertices[unvisited_vertex]->parent_index = temp_vertex;
+      
+      if (lst_vertices[unvisited_vertex]->label == end) {
+        done = true;
       }
-      insert(unvisitedVertex);               
-  
+      insert(unvisited_vertex);               
     }		
   }   
 
   //queue is empty, search is complete, reset the visited flag        
-  for(i = 0;i<vertexCount;i++) {
-    lstVertices[i]->visited = false;
+  for(i = 0; i < vertex_count; i++) {
+    lst_vertices[i]->visited = false;
   }    
 }
 
 int main(int argc, char* argv[]) {
   printf("%s %s \n\n\n\n\n", argv[1], argv[2]);
-  // ./bfs.c startedge endedge
-  // argc == 3
-  //char* start = argv[1];
-  //char* end = argv[2];
-  int startID, endID;
-  startID = 1;
-  endID = 3333;
-  /*for(i = 0; i<MAX; i++){  // adjacency
-    for(j = 0; j<MAX; j++) // matrix to 0
-      adjMatrix[i][j] = 0;
-  }*/
-  matrix = fileToMatrix(argv[1], argv[2]);
-  int numberOfLines = fileToRowCount(argv[1]);
-  
-//
-  // fileToMatrix() returns int** matrix
-  // one row for each id, and columns 
-  // (0 if no edge, 1 if edge) (4500,4500 ish)
-  //  
+  if (argc != 3) {
+    printf("Please input id file and name file");
+  }
 
-  for(int i = 0; i < numberOfLines; i++) {
-    addVertex(i); // ID's
-    //displayVertex(i);
+  char* name_to_id = argv[1];
+  char* id_file = argv[2];
+  int start_id, end_id;
+  start_id = 1;
+  end_id = 3333;
+  
+  matrix = file_to_matrix(name_to_id, id_file);
+  int number_of_lines = file_to_row_count(name_to_id);
+  
+
+  for(int i = 0; i < number_of_lines; i++) {
+    add_vertex(i); // ID's
   }  
 
   printf("\nBreadth First Search: \n");
 
-  breadthFirstSearch(startID,endID);
+  breadth_first_search(start_id, end_id);
   //printf("DONE");
 
-  getPath(endID);
+  get_path(end_id);
 
-  for (int i = 0; i < numberOfLines; i++){
-    free(lstVertices[i]);
+  for (int i = 0; i < number_of_lines; i++){
+    free(lst_vertices[i]);
     free(matrix[i]);
   }
   free(matrix);
