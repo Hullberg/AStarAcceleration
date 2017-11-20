@@ -13,15 +13,14 @@ def read_name_links_file(filename):
 			from_name = name_link[0]
 			to_name = name_link[1]
    			name_links[from_name].add(to_name)
-   			word_set.add(from_name)
-   			word_set.add(to_name)
+   			name_set.add(from_name)
+   			name_set.add(to_name)
    		
    		for name in sorted(name_set):
 			name_id_dict[name] = m_id
 			id_name_dict[str(m_id)] = name
 			m_id += 1
-   
-   return name_links, name_id_dict, id_name_dict
+	return name_links, name_id_dict, id_name_dict
 
 
 def space_to_underscore_dicts(filename):
@@ -34,21 +33,24 @@ def space_to_underscore_dicts(filename):
 		id_count = 0
 		for line in f:
 			split_arr = line.split()
-			id_and_word= words_to_join(split_arr,1)
-			if(len(id_and_word) > 1 ):
+			merged_name= words_to_join(split_arr,1)
+			if(len(merged_name) > 0 ):
 				#id_to_name_dict[word_links[0]]= word_links[1]
-				name_to_id_dict[id_and_word[1]] = id_and_word[0]
-				id_to_name_dict[id_and_word[0]] = id_and_word[1]
+				name_to_id_dict[merged_name] = split_arr[0]
+				id_to_name_dict[split_arr[0]] = merged_name
+			else:
+				name_to_id_dict["noname_" + split_arr[0]] = split_arr[0]
+				id_to_name_dict[split_arr[0]] = "noname_"+ split_arr[0]
 	return name_to_id_dict, id_to_name_dict
 
 
-def make_id_link_text(links,ids):
+def make_id_link_text(name_links,name_id_dict):
 	id_links_text = ""
-	for from_el in sorted(links):
-		new_from_id = ids[from_el]
-		for to_el in sorted(links[new_from_el]):
-			new_to_id = ids[to_el]
-			id_links_text += new_from_id + " " + new_to_id + '\n'
+	for from_el in sorted(name_links):
+		new_from_id = name_id_dict[from_el]
+		for to_el in sorted(name_links[from_el]):
+			new_to_id = name_id_dict[to_el]
+			id_links_text += str(new_from_id) + " " + str(new_to_id) + '\n'
 	return id_links_text
 
 
@@ -63,7 +65,7 @@ def name_id_dict_to_text(name_id_dict):
 	name_id_text= ""
 	id_name_text = ""
 	for name in sorted(name_id_dict):
-		name_id_text += name + " " + name__id_dict[name]
+		name_id_text += name + " " + str(name_id_dict[name]) + "\n"
 		
 	return name_id_text
 
@@ -71,7 +73,7 @@ def name_id_dict_to_text(name_id_dict):
 def id_name_dict_to_text(id_name_dict):
 	id_name_text = ""
 	for i in range(len(id_name_dict)):
-		name_id_text += i + " " + id_name_dict[str(i)]
+		id_name_text += str(i) + " " + id_name_dict[str(i)] + "\n"
 	
 	return id_name_text
 
@@ -101,7 +103,7 @@ def preprocess_wiki(wiki_filename, id_links_filename,name_id_filename, id_name_f
 
 def preprocess_google(google_filename,id_links_filename,id_list_filename):
 	name_links, name_id_dict, id_name_dict = read_name_links_file(google_filename)
-	id_links_text = make_id_link_text(name_links,id_dict)
+	id_links_text = make_id_link_text(name_links,name_id_dict)
 	id_list_text = make_id_list_text(len(name_id_dict))
 	write_text_to_file(id_links_text,id_links_filename)
 	write_text_to_file(id_list_text,id_list_filename)
@@ -116,18 +118,18 @@ def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename):
 
 
 if __name__ == "__main__":
-	wiki_file = "../data/wiki/wiki_name_links_raw.tsv"
+	wiki_file = "../data/wiki/wiki_name_links_raw.txt"
 	wiki_id_links_file = "../data/wiki/wiki_id_links.txt"
-	wiki_name_id_file = "./data/wiki/wiki_name_id.txt"
-	wiki_id_name_file = "./data/wiki/wiki_id_name.txt"
+	wiki_name_id_file = "../data/wiki/wiki_name_id.txt"
+	wiki_id_name_file = "../data/wiki/wiki_id_name.txt"
 
 	google_file = "../data/google/google_id_links_raw.txt"
-	google_id_list_file = "./data/google/google_id_list.txt"
-	google_id_links_file = "./data/google/google_id_links.txt"
+	google_id_list_file = "../data/google/google_id_list.txt"
+	google_id_links_file = "../data/google/google_id_links.txt"
 
 	topcats_file = "../data/topcats/topcats_id_name_raw.txt"
-	wiki_name_id_file = "./data/wiki/topcats_name_id.txt"
-	wiki_id_name_file = "./data/wiki/topcats_id_name.txt"
+	topcats_name_id_file = "../data/topcats/topcats_name_id.txt"
+	topcats_id_name_file = "../data/topcats/topcats_id_name.txt"
 
 
 
@@ -137,4 +139,4 @@ if __name__ == "__main__":
 	print "Google DONE"
 	preprocess_topcats(topcats_file,topcats_name_id_file,topcats_id_name_file,)
 	print "Topcats DONE"
-	print("DONE")
+	print(" Preprocessing DONE")
