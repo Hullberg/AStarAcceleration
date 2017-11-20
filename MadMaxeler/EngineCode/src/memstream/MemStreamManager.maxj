@@ -1,0 +1,60 @@
+package memstream;
+
+import static com.maxeler.maxcompiler.v2.managers.standard.Manager.link;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.managers.BuildConfig;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.CPUTypes;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface.Direction;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.InterfaceParam;
+import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
+import com.maxeler.maxcompiler.v2.managers.standard.Manager;
+
+public class MemStreamManager {
+
+	private static final String s_kernelName = "MemStreamKernel";
+
+	public static void main(String[] args) {
+		MemStreamEngineParameters params = new MemStreamEngineParameters(args);
+		Manager manager = new Manager(params);
+		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
+		manager.setKernel(kernel);
+		manager.setIO(
+			link("x", IODestination.LMEM_LINEAR_1D),
+			link("y", IODestination.CPU),
+			link("s", IODestination.CPU));
+
+		manager.createSLiCinterface(interfaceDefault());
+
+		configBuild(manager, params);
+	
+		manager.build();
+	}
+
+	private static EngineInterface interfaceDefault() {
+		EngineInterface engine_interface = new EngineInterface();
+		CPUTypes   type = CPUTypes.INT32;
+		int        size = type.sizeInBytes();
+		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
+		InterfaceParam  A    = engine_interface.addParam("A", CPUTypes.INT);
+		InterfaceParam  zero = engine_interface.addConstant(0l);
+		engine_interface.setTicks(s_kernelName, N);
+
+		engine_interface.setScalar(s_kernelName, "a", A);
+		engine_interface.setLMemLinear("x", zero, N * size);
+		engine_interface.setStream("y", type, N * size);
+		engine_interface.setStream("s", type, N * size);
+
+		engine_interface.ignoreAll(Direction.IN_OUT);
+		return engine_interface;
+	}
+	
+	private static void configBuild(Manager manager, MemStreamEngineParameters params) {
+		manager.setEnableStreamStatusBlocks(false);
+		BuildConfig buildConfig = manager.getBuildConfig();
+		buildConfig.setMPPRCostTableSearchRange(params.getMPPRStartCT(), params.getMPPREndCT());
+		buildConfig.setMPPRParallelism(params.getMPPRThreads());
+		buildConfig.setMPPRRetryNearMissesThreshold(params.getMPPRRetryThreshold());
+	}
+}
