@@ -12,13 +12,15 @@ class MemStreamKernel extends Kernel {
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
 
+		// From the MemStreamManager we get these variables from the stream.
 		DFEVar x = io.input("x", type);
 		DFEVar y = io.input("y", type);
 		DFEVar a = io.scalarInput("a", type);
 
-		// TODO replace with your computation
+		// Here we do the maxeler-calculations
 		DFEVar sum = x + y + a;
 
+		// Send back to CPUCode/MemStreamCpuCode.c
 		io.output("s", sum, type);
 	}
 

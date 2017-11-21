@@ -24,7 +24,13 @@ public class MemStreamManager {
 			link("x", IODestination.LMEM_LINEAR_1D),
 			link("y", IODestination.CPU),
 			link("s", IODestination.CPU));
+		// ^ From MemStreamCpuCode.c :
+		// MemStream_writeLMem(0, ((int const size = 384)*sizeof(int32_t)), x)
+		// MemStream(int scalar = 3, y, s)
 
+		// Create a simple default SLiC interface. 
+		// This will assume all input/output streams have the same type and are of the same length.
+		// The interface is defined in function below
 		manager.createSLiCinterface(interfaceDefault());
 
 		configBuild(manager, params);
@@ -36,11 +42,18 @@ public class MemStreamManager {
 		EngineInterface engine_interface = new EngineInterface();
 		CPUTypes   type = CPUTypes.INT32;
 		int        size = type.sizeInBytes();
+		// I am unsure where the N and A comes from.
+		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
+		// Add a single dataset size param N
 		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
+		// Add a scalar parameter A
 		InterfaceParam  A    = engine_interface.addParam("A", CPUTypes.INT);
 		InterfaceParam  zero = engine_interface.addConstant(0l);
+		// Set kernel to run for N ticks (Number of ticks of the block
 		engine_interface.setTicks(s_kernelName, N);
 
+		// Set the streams to be of type INT32 (line 43) and size = N*sizeof(INT32)
+		// I assume the scalar (named scalar in CpuCode.c is set here)
 		engine_interface.setScalar(s_kernelName, "a", A);
 		engine_interface.setLMemLinear("x", zero, N * size);
 		engine_interface.setStream("y", type, N * size);
@@ -48,8 +61,10 @@ public class MemStreamManager {
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
 		return engine_interface;
+		// These parameters are sent to EngineCode/src/memstream/MemStreamKernel.maxj
 	}
 	
+	// Don't think we need to change things below.
 	private static void configBuild(Manager manager, MemStreamEngineParameters params) {
 		manager.setEnableStreamStatusBlocks(false);
 		BuildConfig buildConfig = manager.getBuildConfig();
