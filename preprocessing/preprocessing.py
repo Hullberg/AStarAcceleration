@@ -47,6 +47,10 @@ def space_to_underscore_dicts(filename):
 				id_to_name_dict[split_arr[0]] = "noname_"+ split_arr[0]
 	return name_to_id_dict, id_to_name_dict
 
+def modify_id_links_file(filename):
+	id_links, name_id_dict, id_name_dict = read_name_links_file(filename)
+	return id_links
+
 
 def make_id_link_text(name_links,name_id_dict):
 	id_links_text = ""
@@ -97,7 +101,14 @@ def words_to_join(m_array,join_from_index):
 def createMetaFile():
 	print("TODO")
 
-
+def id_links_to_text(id_links,num_of_id):
+	text_string =""
+	for i in range(num_of_id):
+		text_string += str(i)
+   		for j in sorted(map(int,list(id_links[str(i)]))):
+			   text_string += " " + str(j)
+		text_string += "\n"
+	return text_string
 def preprocess_wiki(wiki_filename, id_links_filename,name_id_filename, id_name_filename,):
 	name_links, name_id_dict, id_name_dict = read_name_links_file(wiki_filename)
 	id_link_text = make_id_link_text(name_links,name_id_dict)
@@ -114,12 +125,15 @@ def preprocess_google(google_filename,id_links_filename,id_list_filename):
 	write_text_to_file(id_links_text,id_links_filename)
 	write_text_to_file(id_list_text,id_list_filename)
 
-def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename):
+def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename,topcats_id_links_raw_file,topcats_id_links_file):
 	name_id_dict,id_name_dict = space_to_underscore_dicts(topcats_filename)
 	name_id_text = name_id_dict_to_text(name_id_dict)
 	id_name_text = id_name_dict_to_text(id_name_dict)
+	id_links = modify_id_links_file(topcats_id_links_raw_file);
+	id_links_text = id_links_to_text(id_links,len(name_id_dict));
 	write_text_to_file(name_id_text,name_id_filename)
 	write_text_to_file(id_name_text,id_name_filename)
+	write_text_to_file(id_links_text,topcats_id_links_file)
 
 
 
@@ -134,15 +148,17 @@ if __name__ == "__main__":
 	google_id_links_file = "../data/google/google_id_links.txt"
 
 	topcats_file = "../data/topcats/topcats_id_name_raw.txt"
+	topcats_id_links_raw_file ="../data/topcats/topcats_id_links_raw.txt"
+	topcats_id_links_file ="../data/topcats/topcats_id_links.txt"
 	topcats_name_id_file = "../data/topcats/topcats_name_id.txt"
 	topcats_id_name_file = "../data/topcats/topcats_id_name.txt"
 
 
 
-	preprocess_wiki(wiki_file,wiki_id_links_file, wiki_name_id_file,wiki_id_name_file,)
+	#preprocess_wiki(wiki_file,wiki_id_links_file, wiki_name_id_file,wiki_id_name_file)
 	print "Wiki DONE"
-	preprocess_google(google_file,google_id_links_file,google_id_list_file)
+	#preprocess_google(google_file,google_id_links_file,google_id_list_file)
 	print "Google DONE"
-	preprocess_topcats(topcats_file,topcats_name_id_file,topcats_id_name_file,)
+	preprocess_topcats(topcats_file,topcats_name_id_file,topcats_id_name_file,topcats_id_links_raw_file,topcats_id_links_file)
 	print "Topcats DONE"
 	print(" Preprocessing DONE")
