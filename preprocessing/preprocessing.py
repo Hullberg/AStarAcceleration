@@ -19,7 +19,11 @@ def read_name_links_file(filename):
    		for name in sorted(name_set):
 			name_id_dict[name] = m_id
 			id_name_dict[str(m_id)] = name
+			if name not in name_links:
+				name_links[name].add(name)
+
 			m_id += 1
+			
 	return name_links, name_id_dict, id_name_dict
 
 
@@ -48,9 +52,11 @@ def make_id_link_text(name_links,name_id_dict):
 	id_links_text = ""
 	for from_el in sorted(name_links):
 		new_from_id = name_id_dict[from_el]
+		id_links_text += str(new_from_id)
 		for to_el in sorted(name_links[from_el]):
 			new_to_id = name_id_dict[to_el]
-			id_links_text += str(new_from_id) + " " + str(new_to_id) + '\n'
+			id_links_text += " " + str(new_to_id)
+		id_links_text += "\n"
 	return id_links_text
 
 
