@@ -1,8 +1,10 @@
+#define _GNU_SOURCE
+
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include "fileToMatrix.c"
-
 #define MAX 2500000
 
 // gcc -std=c99 -Wall bfs.c -o bfs
@@ -11,34 +13,33 @@
 int queue[MAX];
 int rear = -1;
 int front = 0;
-// BREAK OUT
 int queue_item_count = 0;
 
 // array of vertices
 Vertex** vertex_list;//[MAX];
 int** matrix;
 int vertex_count = 0;
-
-//////////////////////
-//////////// BREAK OUT
-//////////////////////
-
-void add_vertex(int label) {
+/*
+  void add_vertex(int label) {
   Vertex* vertex = malloc(sizeof(Vertex));
   vertex->label = label;  
   vertex->visited = false;
   vertex->parent_index = -1;
   vertex_list[vertex_count++] = vertex;
-}
+  }
+*/
 
-//////////////////////
-////////////// STAY IN
-//////////////////////
-void display_vertex(int vertex_index) {
-  printf("===============\n");
-  printf("%d\n", vertex_list[vertex_index]->label);
-  printf("%d\n", vertex_list[vertex_index]->parent_index);
-  printf("===============\n");
+void display_vertex() {
+  for(int i = 0; i < vertex_count; i++){
+    int size_child_list = sizeof(vertex_list[i]->children)/sizeof(int);
+    printf("===============\n");
+    printf("%d\n", vertex_list[i]->label);
+    for(int j = 0; j < size_child_list; j++){
+      printf("%d %d\n",vertex_list[i]->label, vertex_list[i]->children[j]); 
+    }
+
+    printf("===============\n");
+  }
 }
 
 bool is_queue_empty() {
@@ -65,10 +66,10 @@ int get_unvisited_child(int vertex_index) {
       return index;
   }
   /*	
-  for(i = 0; i < vertex_count; i++) {
-    if (matrix[vertex_index][i] == 1 && vertex_list[i]->visited == false)
-      return i;
-      }*/
+	for(i = 0; i < vertex_count; i++) {
+	if (matrix[vertex_index][i] == 1 && vertex_list[i]->visited == false)
+	return i;
+	}*/
   return -1;
 }
 
@@ -78,7 +79,7 @@ void get_path(int end){
   int cursor = end;
   printf("parent index %d",vertex_list[cursor]->parent_index);
   while (vertex_list[cursor]->parent_index != -1) {
-     printf("path loop\n");
+    printf("path loop\n");
     printf("%d\n", cursor);
     cursor = vertex_list[cursor]->parent_index;
   }
@@ -127,55 +128,34 @@ void breadth_first_search(int start, int end) {
   printf("Test 5:");
 
 }
-char* hello_world(){
-  char* bajs = "hello world";
-  printf("bajsa");
-  return bajs;
-}
 
 int main(int argc, char* argv[]) {
-  printf("\nRunning ... With argv[1] = %s argv[2] = %s \n\n", argv[1], argv[2]);
   if (argc != 3) {
     printf("Please input id file and name file");
   }
 
-  char* name_to_id = argv[1];
+ 
   char* id_file = argv[2];
   int start_id, end_id;
-  start_id = 1;
-  end_id = 6;
+  start_id = 10;
+  end_id = 90;
   
-  //matrix = file_to_matrix(name_to_id, id_file);
-  printf("\nDone with file_to_matrix... starting file_to_row\n");
-  int number_of_lines = file_to_row_count(name_to_id);
-  printf("\nDone with file_to_row_count ... Starting add_vertex with number_of_lines %d\n", number_of_lines);
+ 
   
   vertex_list = malloc(sizeof(Vertex**));
-  for(int i = 0; i < number_of_lines; i++) {
-    add_vertex(i); // ID's
-  }  
-
-  // printf("\nRunning file_to_matrix \n");
-  printf("\nAdding children to vertices...\n");
-  add_vertex_children(vertex_list, id_file);
-  
-  hello_world();
-
+  printf("\n\n\ndfawAWDADGSEGEGEdawdawwdaw\n\n");
+  add_vertices(id_file,vertex_list, &vertex_count);
+  printf("\n\n\ndfawdawdawwdaw\n\n");
+  //display_vertex();
   printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
   printf("\nDONE\n");
 
   get_path(end_id);
-  printf("\n\n\n\n\n\n\n0\n\n\n\n\n\n\n");
+  printf("\n\nVERTEX COUNT = %d\n\n", vertex_count );
   for (int i = 0; i < vertex_count; i++){
-    //printf("\n\n\n\n\n\n\n1\n\n\n\n\n\n\n");
-    free(vertex_list[i]->children);
-    //printf("\n\n\n\n\n\n\n2\n\n\n\n\n\n\n");    
-    free(vertex_list[i]);
-    //printf("\n\n\n\n\n\n\n3\n\n\n\n\n\n\n");   
-    //free(matrix[i]);
+ 
   }
-  free(vertex_list);
-  //free(matrix);
+  
   return 0;
 }
