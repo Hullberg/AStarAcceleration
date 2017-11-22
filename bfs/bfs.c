@@ -15,9 +15,9 @@ int rear = -1;
 int front = 0;
 int queue_item_count = 0;
 
-// array of vertices
+// array of vertex pointers
 Vertex** vertex_list;//[MAX];
-int** matrix;
+//int** matrix;
 int vertex_count = 0;
 /*
   void add_vertex(int label) {
@@ -137,15 +137,17 @@ int main(int argc, char* argv[]) {
  
   char* id_file = argv[2];
   int start_id, end_id;
-  start_id = 10;
-  end_id = 90;
+  start_id = 20;
+  end_id = 767;
   
  
   
-  vertex_list = malloc(sizeof(Vertex**));
-  printf("\n\n\ndfawAWDADGSEGEGEdawdawwdaw\n\n");
-  add_vertices(id_file,vertex_list, &vertex_count);
-  printf("\n\n\ndfawdawdawwdaw\n\n");
+  vertex_list = malloc(sizeof(Vertex*) * count_lines(id_file));
+  //printf("Vertex_list size = %d\n",sizeof(vertex_list));
+  //printf("Vertex size = %d\n",sizeof(Vertex*));
+  //printf("\n\n\ndfawAWDADGSEGEGEdawdawwdaw\n\n");
+  add_vertices(id_file, vertex_list, &vertex_count);
+  //printf("\n\n\ndfawdawdawwdaw\n\n");
   //display_vertex();
   printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
