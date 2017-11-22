@@ -3,11 +3,43 @@
 #include <stdio.h>
 #include "vertex.c"
 #include <string.h>
-int count_lines(char* filename){
-  int ch = 'a';
-  int lines = 0;
-  FILE* fp = fopen(filename, "r");
 
+typedef struct Array {
+  int index;
+  struct Array* next;
+} Array;
+
+Array* create(int data, Array* next)
+{
+    Array* new_array = malloc(sizeof(Array));
+    if(new_array == NULL)
+    {
+        printf("Error creating a new node.\n");
+        exit(0);
+    }
+    new_array->index = data;
+    new_array->next = next;
+ 
+    return new_array;
+}
+
+Array* prepend(Array* head, int data)
+{
+    Array* new_node = create(data,head);
+    head = new_node;
+    return head;
+}
+
+
+int count_lines(char* filename){
+  //int ch = 'a';
+  int lines = 0;
+  char* line = NULL;
+  size_t len = 0;
+  ssize_t read;
+  
+  FILE* fp = fopen(filename, "r");
+  /*
   while(!feof(fp)){
     ch = fgetc(fp);
     if(ch == '\n') {
@@ -15,8 +47,14 @@ int count_lines(char* filename){
       lines++;
     }
   }
-
-  printf("%s  %d \n","OUT OF LOOP: ", lines);
+  */
+  while ((read = getline(&line, &len, fp)) != -1) {
+    //printf("line %s", line);
+    //printf("len %d\n", len);
+    //add_vertex_from_line(line, vertex_list, vertex_count);
+    lines++;
+  }
+  //printf("%s  %d \n","OUT OF LOOP: ", lines);
   fclose(fp);
 
   return lines;
@@ -26,7 +64,7 @@ int file_to_row_count(char* row_count_file){
   return count_lines(row_count_file);
 }
 
-
+/*
 void create_vertex(int label, Vertex** vertex_list, int* vertex_count, int count) {
   Vertex* vertex = malloc(sizeof(Vertex));
   vertex->label = label;  
@@ -34,7 +72,7 @@ void create_vertex(int label, Vertex** vertex_list, int* vertex_count, int count
   vertex->parent_index = -1;
   vertex->children = malloc(sizeof(int)*count);
   vertex_list[(*vertex_count)++] = vertex; 
-}
+  }*/
 
 Vertex* create_new_vertex(int label) {
   Vertex* vertex = malloc(sizeof(Vertex));
@@ -47,27 +85,84 @@ Vertex* create_new_vertex(int label) {
 
 void add_vertex_from_line(char* line, Vertex** vertex_list, int* vertex_count ) {
   const char space[2] = " ";
-  
+  printf("line %s \n", line);
   char* label = strtok(line, space);
-  char* child_substring = strtok(line, space);
+  // printf("1.1\n");
+  
+  char* child_substring = strtok(NULL, space);
+  //printf("first child sub  %s \n", child_substring);
+
   Vertex* new_vertex = create_new_vertex(atoi(label));
+  // printf("3\n");
+  Array* array = create(atoi(child_substring), NULL);
+  Array* head = array;
+ 
   for(int i = 0; child_substring != NULL; i++) {
+    child_substring = strtok(NULL, space);
+    //printf("child sub %s\n", child_substring);
+    if(child_substring) {
+      array = prepend(array, atoi(child_substring));
+    }
+
+    //printf("4\n");
+    /*
     if(!(new_vertex->children)) {
+      //printf("5\n");
+
       new_vertex->children = malloc(sizeof(int));
+      //printf("6\n");
+
       new_vertex->children[i] = atoi(child_substring);
+      //printf("7\n");
+
     }
     else {
-     
+      
       child_substring = strtok(NULL, space);
+      //printf("child sub %s\n", child_substring);
+  
       if(child_substring) {
-	new_vertex->children = realloc(new_vertex->children, sizeof(new_vertex->children)+sizeof(int));
+	//printf("9\n"); 
+	new_vertex->children = realloc(new_vertex->children, sizeof(int)*i);//sizeof(new_vertex->children)+sizeof(int*));
+	//printf("10\n");
 	new_vertex->children[i] = atoi(child_substring);
-      }
-    }
+	}
+	} */
   }
+  int count = 0;
+  head = array;
+  while(array->next != NULL) {
+   
+    //printf("count:  %d  array->index: %d\n", count, array->index);
+    count++;
+    array = array->next;
+   
+  }
+  // printf("count:  %d  array->index: %d\n", count, array->index);
+  array = head;
+
   
+  //printf(" count %d array index:  %d\n", count, array->index);
+  
+  //printf("after printing count\n"); 
+  new_vertex->children = malloc(sizeof(int) * count);
+  //printf("beofre loop\n"); 
+  for(int i = 0; i < count; i++) {
+    printf("before %d\n", array->index); 
+    new_vertex->children[i] = array->index;
+    printf("array->index:  %d \n", array->index); 
+    array = array->next;
+  }
+
+
+  //printf("adding new %d \n", *vertex_count);
+  //for (int i = 0; i < sizeof(new_vertex->children)/sizeof(new_vertex->children[0]); i++){
+  //  printf("i = %d, child = %d\n",i,new_vertex->children[i]);
+  //}
+  //printf("New_vertex size = %d\n",sizeof(new_vertex));
   vertex_list[(*vertex_count)++] = new_vertex;
-  
+  //vertex_list = realloc(vertex_list, sizeof(Vertex*)*(*vertex_count));
+  printf("done adding\n");
 }
 
 
@@ -79,8 +174,10 @@ void add_vertices(char* filename, Vertex** vertex_list, int* vertex_count) {
   FILE* fp = fopen(filename, "r");
 
   while ((read = getline(&line, &len, fp)) != -1) {
-  
+    //printf("line %s", line);
+    //printf("len %d\n", len);
     add_vertex_from_line(line, vertex_list, vertex_count);
+    
   }
   
   //free(line);

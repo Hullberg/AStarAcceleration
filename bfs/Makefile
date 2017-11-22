@@ -1,5 +1,6 @@
 CC = gcc 
 FLAGS = -Wall -ggdb -std=c99 -O0
+VALGRIND =  
 FILES = bfs.c
 
 run: $(FILES)
@@ -14,7 +15,7 @@ run_wiki: $(FILES)
 	./bfs.o "../data/wiki/wiki_name_id.txt" "../data/wiki/wiki_id_links.txt"
 run_google: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
-	./bfs.o "../data/google/google_id_list.txt" "../data/google/small.txt"
+	./bfs.o "../data/google/google_id_list.txt" "../data/google/google_id_links.txt"
 
 run_test: bfs_test.c
 	$(CC) $(FLAGS) bfs_test.c -o bfs_test.o
