@@ -28,14 +28,21 @@ int vertex_count = 0;
   vertex_list[vertex_count++] = vertex;
   }
 */
+void display_index(int index) {
+  printf("%d\n",vertex_list[index]->label); 
+  for(int j = 0; j < vertex_list[index]->children_size; j++){
+    printf("            %d\n",vertex_list[index]->children[j]); 
+  }
+
+  printf("===============\n");
+  
+}
 
 void display_vertex() {
   for(int i = 0; i < vertex_count; i++){
-    int size_child_list = sizeof(vertex_list[i]->children)/sizeof(int);
-    printf("===============\n");
-    printf("%d\n", vertex_list[i]->label);
-    for(int j = 0; j < size_child_list; j++){
-      printf("%d %d\n",vertex_list[i]->label, vertex_list[i]->children[j]); 
+    printf("%d\n",vertex_list[i]->label); 
+    for(int j = 0; j < vertex_list[i]->children_size; j++){
+      printf("            %d\n",vertex_list[i]->children[j]); 
     }
 
     printf("===============\n");
@@ -58,74 +65,60 @@ int remove_data() {
 
 // Look at vertex
 int get_unvisited_child(int vertex_index) {
-  int size_child_list = sizeof(vertex_list[vertex_index]->children)/sizeof(int);
   int index;
-  for (int i = 0; i < size_child_list; i++) {
+  for (int i = 0; i < vertex_list[vertex_index]->children_size; i++) {
     index = vertex_list[vertex_index]->children[i];
     if (vertex_list[index]->visited == false)
       return index;
   }
-  /*	
-	for(i = 0; i < vertex_count; i++) {
-	if (matrix[vertex_index][i] == 1 && vertex_list[i]->visited == false)
-	return i;
-	}*/
   return -1;
 }
 
 // Path from end to start
 void get_path(int end){
-  printf("Getting path %d\n",end);
+  printf("Getting path %d\n", end);
   int cursor = end;
-  printf("parent index %d",vertex_list[cursor]->parent_index);
+  //printf("parent index %d",vertex_list[cursor]->parent_index);
   while (vertex_list[cursor]->parent_index != -1) {
-    printf("path loop\n");
-    printf("%d\n", cursor);
+    display_index(cursor);
     cursor = vertex_list[cursor]->parent_index;
   }
   printf("%d\nDone!\n",cursor);
 }
 
 void breadth_first_search(int start, int end) {
-  printf("Test 0:");
-
+  printf("Start: %d --- End: %d\n", start, end);
   int i;
   int done = false;
 
   //mark first node as visited
-  printf("Test 1:");
 
   vertex_list[start]->visited = true;
-  printf("Test 2:");
+
 
   //insert vertex index in queue
   insert(start);
-  printf("Test 3:");
 
   int unvisited_vertex;
   while(!is_queue_empty() && !done) {
     
     //get the unvisited vertices of the first vertex in the queue
-    int temp_vertex_index = remove_data();   
-    
+    int temp_vertex_index = remove_data();
     //no adjacent vertex found
     while((unvisited_vertex = get_unvisited_child(temp_vertex_index)) != -1 && !done) {    
       vertex_list[unvisited_vertex]->visited = true;
       vertex_list[unvisited_vertex]->parent_index = temp_vertex_index;
-      
+      insert(unvisited_vertex);  
       if (vertex_list[unvisited_vertex]->label == end) {
         done = true;
-      }
-      insert(unvisited_vertex);               
+      }          
     }		
   }   
-  printf("Test 4:");
 
   //queue is empty, search is complete, reset the visited flag        
   for(i = 0; i < vertex_count; i++) {
     vertex_list[i]->visited = false;
   }    
-  printf("Test 5:");
 
 }
 
@@ -143,17 +136,15 @@ int main(int argc, char* argv[]) {
  
   
   vertex_list = malloc(sizeof(Vertex*) * count_lines(id_file));
-  //printf("Vertex_list size = %d\n",sizeof(vertex_list));
-  //printf("Vertex size = %d\n",sizeof(Vertex*));
-  //printf("\n\n\ndfawAWDADGSEGEGEdawdawwdaw\n\n");
   add_vertices(id_file, vertex_list, &vertex_count);
-  //printf("\n\n\ndfawdawdawwdaw\n\n");
+  //printf("Size of Children_size: %d\n",sizeof(vertex_list[0]->children_size));
   //display_vertex();
   printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
   printf("\nDONE\n");
 
   get_path(end_id);
+  display_index(start_id);
   printf("\n\nVERTEX COUNT = %d\n\n", vertex_count );
   for (int i = 0; i < vertex_count; i++){
  
