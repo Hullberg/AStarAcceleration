@@ -37,17 +37,26 @@ def space_to_underscore_dicts(filename):
 		id_dict = {}
 		prev_word = ""
 		id_count = 0
+		noname_count =0
+		copy_count =0
 		for line in f:
 			split_arr = line.split()
 			merged_name= words_to_join(split_arr,1)
 			if(len(merged_name) > 1 ):
 				#id_to_name_dict[word_links[0]]= word_links[1]
+				if merged_name in name_to_id_dict:
+					copy_count +=1
+					merged_name += "_copy_" + str(copy_count) 
+					#print merged_name  + " merged copy \n"
 				name_to_id_dict[merged_name] = split_arr[0]
 				id_to_name_dict[split_arr[0]] = merged_name
 			else:
-				#print( "NONAME \n")
-				name_to_id_dict["noname_" + split_arr[0]] = split_arr[0]
-				id_to_name_dict[split_arr[0]] = "noname_"+ split_arr[0]
+				noname_count +=1
+				noname_string = "noname_" + str(noname_count) + "_" + split_arr[0]
+				name_to_id_dict[noname_string] = split_arr[0]
+				id_to_name_dict[split_arr[0]] =noname_string
+	#print str(noname_count) + " noname count\n"
+	#print str(copy_count) + " copy count\n"
 	return name_to_id_dict, id_to_name_dict
 
 def modify_id_links_file(filename):
@@ -132,8 +141,6 @@ def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename,topcat
 	start_time = time.time()
 	name_id_dict,id_name_dict = space_to_underscore_dicts(topcats_filename)
 	print("--- space to underscore:  %s seconds ---\n" % (time.time() - start_time))
-	print str(len(id_name_dict)) + " id_name\n"
-	print str(len(name_id_dict)) + " name id\n"
 	start_time = time.time()
 	name_id_text = name_id_dict_to_text(name_id_dict)
 	print("--- name id dict to text: %s seconds --- \n" % (time.time() - start_time))
@@ -143,7 +150,6 @@ def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename,topcat
 	start_time = time.time()
 	id_links = modify_id_links_file(topcats_id_links_raw_file);
 	print("--- modify id links: %s seconds --- \n" % (time.time() - start_time))
-	print str(len(id_links )) + " id links \n"
 	start_time = time.time()
 	id_links_text = id_links_to_text(id_links,len(id_name_dict));
 	print("--- id links to text: %s seconds --- \n" % (time.time() - start_time))
