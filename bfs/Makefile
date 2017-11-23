@@ -1,10 +1,11 @@
 CC = gcc 
-FLAGS = -Wall -ggdb -std=c99 
+FLAGS = -Wall -ggdb -std=c99 -O0
+VALGRIND =  
 FILES = bfs.c
 
 run: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
-	valgrind --leak-check=yes ./bfs.o "../preprocessing/nameToID.txt" "../preprocessing/idfile.txt"
+	 ./bfs.o "../preprocessing/nameToID.txt" "../preprocessing/idfile.txt"
 
 run_topcats: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
