@@ -3,6 +3,9 @@ FLAGS = -Wall -ggdb -std=c99 -O0
 VALGRIND = valgrind --leak-check=yes
 FILES = bfs.c
 
+compile: $(FILES)
+	$(CC) $(FLAGS) bfs.c -o bfs.o
+
 run: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
 	 ./bfs.o "../preprocessing/nameToID.txt" "../preprocessing/idfile.txt"
