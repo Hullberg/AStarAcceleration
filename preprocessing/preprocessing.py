@@ -1,5 +1,7 @@
-from collections import defaultdict
 #-*- coding: utf-8 -*-
+from collections import defaultdict
+import time
+
 
 def read_name_links_file(filename):
 	with open(filename) as f:
@@ -38,11 +40,12 @@ def space_to_underscore_dicts(filename):
 		for line in f:
 			split_arr = line.split()
 			merged_name= words_to_join(split_arr,1)
-			if(len(merged_name) > 0 ):
+			if(len(merged_name) > 1 ):
 				#id_to_name_dict[word_links[0]]= word_links[1]
 				name_to_id_dict[merged_name] = split_arr[0]
 				id_to_name_dict[split_arr[0]] = merged_name
 			else:
+				#print( "NONAME \n")
 				name_to_id_dict["noname_" + split_arr[0]] = split_arr[0]
 				id_to_name_dict[split_arr[0]] = "noname_"+ split_arr[0]
 	return name_to_id_dict, id_to_name_dict
@@ -126,15 +129,33 @@ def preprocess_google(google_filename,id_links_filename,id_list_filename):
 	write_text_to_file(id_list_text,id_list_filename)
 
 def preprocess_topcats(topcats_filename,name_id_filename,id_name_filename,topcats_id_links_raw_file,topcats_id_links_file):
+	start_time = time.time()
 	name_id_dict,id_name_dict = space_to_underscore_dicts(topcats_filename)
+	print("--- space to underscore:  %s seconds ---\n" % (time.time() - start_time))
+	print str(len(id_name_dict)) + " id_name\n"
+	print str(len(name_id_dict)) + " name id\n"
+	start_time = time.time()
 	name_id_text = name_id_dict_to_text(name_id_dict)
+	print("--- name id dict to text: %s seconds --- \n" % (time.time() - start_time))
+	start_time = time.time()
 	id_name_text = id_name_dict_to_text(id_name_dict)
+	print("--- id name dict to text: %s seconds --- \n" % (time.time() - start_time))
+	start_time = time.time()
 	id_links = modify_id_links_file(topcats_id_links_raw_file);
-	id_links_text = id_links_to_text(id_links,len(name_id_dict));
+	print("--- modify id links: %s seconds --- \n" % (time.time() - start_time))
+	print str(len(id_links )) + " id links \n"
+	start_time = time.time()
+	id_links_text = id_links_to_text(id_links,len(id_name_dict));
+	print("--- id links to text: %s seconds --- \n" % (time.time() - start_time))
+	start_time = time.time()
 	write_text_to_file(name_id_text,name_id_filename)
+	print("--- write name id to fille t: %s seconds --- \n" % (time.time() - start_time))
+	start_time = time.time()
 	write_text_to_file(id_name_text,id_name_filename)
+	print("--- write id name to file : %s seconds --- \n" % (time.time() - start_time))
+	start_time = time.time()
 	write_text_to_file(id_links_text,topcats_id_links_file)
-
+	print("--- write id links to file : %s seconds --- \n" % (time.time() - start_time))
 
 
 if __name__ == "__main__":
