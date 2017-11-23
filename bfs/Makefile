@@ -1,6 +1,6 @@
 CC = gcc 
 FLAGS = -Wall -ggdb -std=c99 -O0
-VALGRIND =  
+VALGRIND = valgrind --leak-check=yes
 FILES = bfs.c
 
 run: $(FILES)
