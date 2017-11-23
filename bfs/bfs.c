@@ -123,7 +123,7 @@ void breadth_first_search(int start, int end) {
 
 }
 
-int main(int argc, char* argv[]) {
+/*int main(int argc, char* argv[]) {
   if (argc != 3) {
     printf("Please input id file and name file");
   }
@@ -157,3 +157,4 @@ int main(int argc, char* argv[]) {
   free(vertex_list);
   return 0;
 }
+*/

@@ -4,40 +4,110 @@
 
 #include "Maxfiles.h"
 #include "MaxSLiCInterface.h"
+#include "../../bfs/bfs.c"
 
 
 int main(void)
 {
+	printf("looking at start\n");
+
+	int vertex_count = 0;
+	printf("looking at id_file\n");
+	char* id_file = "../../data/wiki/wiki_id_links.txt";
+	// Get the vertices
+	printf("about to count lines\n");
+	int32_t number_of_lines = count_lines(id_file);
+	printf("about to do the vertex_list\n");
+	Vertex** vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
+	printf("vertex_list done\n");
+	add_vertices(id_file, vertex_list, &vertex_count);
+	printf("vertices added\n");
+	int start_id = 0;
+	int end_id = 5; // This should be goal ID.
+
 	// Multiple of 384 bytes due to array size (64) burst-aligned
 	const int size = 384;
 	int sizeBytes = size * sizeof(int32_t);
-	int32_t *x = malloc(sizeBytes); //TODO Change this to Vertex struct, should be ALL vertices.
-	int32_t *y = malloc(sizeBytes);
-	int32_t *s = malloc(sizeBytes);
-	int32_t *u = malloc(sizeBytes);
-	int scalar = 5; // TODO This should be goal ID.
+	// Idea: All variables combined is the whole struct.
+	// So we send in a label, a boolean for visited, parent_index, children_size, children*
+	//int32_t *x = malloc(sizeBytes); //TODO Change this to Vertex struct, should be ALL vertices.
+	//int32_t *y = malloc(sizeBytes);
+	//int32_t *s = malloc(sizeBytes);
+	//int32_t *u = malloc(sizeBytes);
 
+	Vertex* start_vertex = vertex_list[start_id];
+	int visited_vertices_count = 0;
+	int32_t *unvisited_queue = malloc(sizeBytes); // The queue from which we pull vertices to send into stream
+	unvisited_queue[visited_vertices_count] = start_id;
 
-	for(int i = 0; i<size; ++i) {
-		x[i] = random() % 100;
-		y[i] = random() % 100 +1;
-		u[i] = 0;
+	// Put this in the loop to iterate over everything, and send each vertex into stream.
+	// Make all non-pointers to scalars.
+	int vertex_label;// = malloc(sizeBytes);
+	int visited;// = malloc(sizeof(int32_t)); // Convert the boolean value to 0 or 1 ?
+	int parent_index;// = malloc(sizeBytes);
+
+	int temp = start_vertex->children_size %16;
+	printf("%d\n", temp);
+	int temp2 = 16-temp;
+	printf("%d\n", temp2);
+	int testy = temp + temp2;
+	printf("%d\n",testy);
+
+	int32_t sixteen_byte_align = start_vertex->children_size % 16;
+	if (sixteen_byte_align != 0) {
+		sixteen_byte_align = 16 - sixteen_byte_align;
 	}
+	printf("%d\n", (sixteen_byte_align+start_vertex->children_size)*4%16);
+	int32_t children_m = (sixteen_byte_align + start_vertex->children_size)*4;
+	int32_t *children = malloc(children_m);
+	//printf("Children If: %d \n", sizeof(children));
+
+	/*if (sixteen_bit_align != 0){
+		int temp = 16 - sixteen_bit_align;
+		children = malloc((start_vertex->children_size)*16);
+		printf("Children If: %d \n", sizeof(children));
+	}
+	else {
+		children = malloc(start_vertex->children_size * 16);
+		printf("Children else: %d \n", sizeof(children));
+
+	}*/
+	int32_t *output = malloc(sizeof(Vertex*));
+	printf("initiated the startvertix\n");
+
+	// Loop below here?
+
+	// while ( unvisited_queue is not empty ) do loop
+	vertex_label = start_vertex->label;
+	if (start_vertex->visited) visited = 1;
+	else visited = 0;
+	parent_index = start_vertex->parent_index;
+	children = start_vertex->children_size;
+	//int32_t bajs = children % 16;
+	printf("%d \n", output[0]);
+
+
+	// Generate data for variables
+	//for(int i = 0; i<number_of_lines; ++i) {
+	//}
 
 	// The manager gets them in EngineCode/src/memstream/MemStreamManager.maxj
 	// Write all vertices to LMem.
-	printf("Writing to LMem.\n");
-	MemStream_writeLMem(0, sizeBytes, x);
+	//printf("Writing to LMem.\n");
+	//MemStream_writeLMem(0, sizeBytes, x);
 
 
-	// First run we send in the ID of the start-vertix. Result is an int* of children's ID's.
-	// Send those ID's through the same process.
-	// Repeat until goal is found.
 	printf("Running on DFE.\n");	
-	MemStream(scalar, size, y, u, s);
+	//MemStream(endID, size, y, u, s);
+	MemStream(end_id, size, vertex_label, visited, parent_index, children, output);
 	
+	// put all of output's pointers into unvisited_queue and repeat.
 
-	for(int i=0; i<size; ++i){
+	// Append output to the queue
+	printf("Output: %i", output[0]);
+
+
+	/*for(int i=0; i<size; ++i){
 		// The line below is in kernel:  DFEVar sum = x + y + a;
 		// This will be executed for that index when the data is ready
 		// Followed by io.output("s", sum, type)
@@ -45,19 +115,10 @@ int main(void)
 		//if (s[i] != x[i] + y[i] + scalar + u[i])
 			//return 1;
 
-	}
-	//printf("First done, next one up! \n");
-	/*for(int i = 0; i<size; ++i) {
-		y[i] = s[i];
-	}
-	MemStream(scalar, size, y, s);
-	for(int i=0; i<size; ++i){
-			// The line below is in kernel:  DFEVar sum = x + y + a;
-			// This will be executed for that index when the data is ready
-			// Followed by io.output("s", sum, type)
-			printf("%d = %d + %d  \n", s[i], x[i], y[i]);
+	}*/
 
-		}*/
+	// The get_path could be done here in CPU-code once everything is done.
+	//free(vertex_list);
 	printf("Done.\n");
 	return 0;
 }

@@ -155,10 +155,10 @@ if __name__ == "__main__":
 
 
 
-	#preprocess_wiki(wiki_file,wiki_id_links_file, wiki_name_id_file,wiki_id_name_file)
+	preprocess_wiki(wiki_file,wiki_id_links_file, wiki_name_id_file,wiki_id_name_file)
 	print "Wiki DONE"
-	#preprocess_google(google_file,google_id_links_file,google_id_list_file)
+	preprocess_google(google_file,google_id_links_file,google_id_list_file)
 	print "Google DONE"
-	preprocess_topcats(topcats_file,topcats_name_id_file,topcats_id_name_file,topcats_id_links_raw_file,topcats_id_links_file)
+	#preprocess_topcats(topcats_file,topcats_name_id_file,topcats_id_name_file,topcats_id_links_raw_file,topcats_id_links_file)
 	print "Topcats DONE"
 	print(" Preprocessing DONE")
