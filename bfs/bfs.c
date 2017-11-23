@@ -78,30 +78,31 @@ int get_unvisited_child(int vertex_index) {
 void get_path(int end){
   printf("Getting path %d\n", end);
   int cursor = end;
+  int steps = 0;
   //printf("parent index %d",vertex_list[cursor]->parent_index);
   while (vertex_list[cursor]->parent_index != -1) {
     display_index(cursor);
+    steps++;
     cursor = vertex_list[cursor]->parent_index;
   }
-  printf("%d\nDone!\n",cursor);
+  printf("%d\nDone! It took %d steps.\n",cursor,steps);
 }
 
 void breadth_first_search(int start, int end) {
   printf("Start: %d --- End: %d\n", start, end);
   int i;
   int done = false;
-
+  if (start == end) return;
   //mark first node as visited
 
   vertex_list[start]->visited = true;
-
 
   //insert vertex index in queue
   insert(start);
 
   int unvisited_vertex;
+
   while(!is_queue_empty() && !done) {
-    
     //get the unvisited vertices of the first vertex in the queue
     int temp_vertex_index = remove_data();
     //no adjacent vertex found
@@ -130,25 +131,29 @@ int main(int argc, char* argv[]) {
  
   char* id_file = argv[2];
   int start_id, end_id;
-  start_id = 20;
-  end_id = 767;
+  start_id = 555;
+  end_id = 555;
   
  
-  
-  vertex_list = malloc(sizeof(Vertex*) * count_lines(id_file));
+  int number_of_lines = count_lines(id_file);
+  vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
   add_vertices(id_file, vertex_list, &vertex_count);
   //printf("Size of Children_size: %d\n",sizeof(vertex_list[0]->children_size));
   //display_vertex();
-  printf("\nBreadth First Search: \n");
+  //printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
-  printf("\nDONE\n");
+  //printf("\nDONE\n");
 
   get_path(end_id);
-  display_index(start_id);
-  printf("\n\nVERTEX COUNT = %d\n\n", vertex_count );
-  for (int i = 0; i < vertex_count; i++){
- 
+
+  //display_index(start_id);
+  //printf("\n\nVERTEX COUNT = %d\n\n", vertex_count );
+  for(int i = 0; i< number_of_lines; i++){
+    //int children_size = vertex_list[i]->children_size; 
+    //free(&(vertex_list[i]->children));
+    free(vertex_list[i]->children);
+    free(vertex_list[i]);
   }
-  
+  free(vertex_list);
   return 0;
 }

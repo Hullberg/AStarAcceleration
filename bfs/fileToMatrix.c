@@ -42,7 +42,7 @@ int count_lines(char* filename){
     lines++;
   }
   fclose(fp);
-
+  free(line);
   return lines;
 }
 
@@ -83,9 +83,12 @@ void add_vertex_from_line(char* line, Vertex** vertex_list, int* vertex_count ) 
   //printf("Sizeof: %d\n",sizeof(new_vertex->children));
   for(int i = 0; i < count; i++) {
     new_vertex->children[i] = array->index;
+    Array* temp_free = array;
     array = array->next;
+    free(temp_free);
   }
   vertex_list[(*vertex_count)++] = new_vertex;
+
 }
 
 
@@ -100,6 +103,6 @@ void add_vertices(char* filename, Vertex** vertex_list, int* vertex_count) {
     add_vertex_from_line(line, vertex_list, vertex_count);
     
   }
-
+  free(line);
   fclose(fp);
 }
