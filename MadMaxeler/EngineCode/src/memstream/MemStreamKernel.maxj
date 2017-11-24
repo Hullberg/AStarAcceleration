@@ -17,7 +17,7 @@ class MemStreamKernel extends Kernel {
 		DFEVar y = io.input("y", type);
 		DFEVar u = io.input("u", type);
 		DFEVar a = io.scalarInput("a", type);*/
-		DFEVar vertex_label = io.scalarInput("vertex_label", type);
+		DFEVar vertex_label = (!vertex_label) ? io.scalarInput("vertex_label", type): output;
 		DFEVar visited = io.scalarInput("visited", type);
 		DFEVar parent_index = io.scalarInput("parent_index", type);
 		DFEVar children = io.input("children", type);

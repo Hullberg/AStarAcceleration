@@ -9,19 +9,13 @@
 
 int main(void)
 {
-	printf("looking at start\n");
-
 	int vertex_count = 0;
-	printf("looking at id_file\n");
 	char* id_file = "../../data/wiki/wiki_id_links.txt";
 	// Get the vertices
-	printf("about to count lines\n");
 	int32_t number_of_lines = count_lines(id_file);
-	printf("about to do the vertex_list\n");
 	Vertex** vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
-	printf("vertex_list done\n");
 	add_vertices(id_file, vertex_list, &vertex_count);
-	printf("vertices added\n");
+
 	int start_id = 0;
 	int end_id = 5; // This should be goal ID.
 
@@ -62,16 +56,6 @@ int main(void)
 	int32_t *children = malloc(children_m);
 	//printf("Children If: %d \n", sizeof(children));
 
-	/*if (sixteen_bit_align != 0){
-		int temp = 16 - sixteen_bit_align;
-		children = malloc((start_vertex->children_size)*16);
-		printf("Children If: %d \n", sizeof(children));
-	}
-	else {
-		children = malloc(start_vertex->children_size * 16);
-		printf("Children else: %d \n", sizeof(children));
-
-	}*/
 	int32_t *output = malloc(sizeof(Vertex*));
 	printf("initiated the startvertix\n");
 
@@ -87,10 +71,6 @@ int main(void)
 	printf("%d \n", output[0]);
 
 
-	// Generate data for variables
-	//for(int i = 0; i<number_of_lines; ++i) {
-	//}
-
 	// The manager gets them in EngineCode/src/memstream/MemStreamManager.maxj
 	// Write all vertices to LMem.
 	//printf("Writing to LMem.\n");
@@ -99,7 +79,7 @@ int main(void)
 
 	printf("Running on DFE.\n");	
 	//MemStream(endID, size, y, u, s);
-	MemStream(end_id, size, vertex_label, visited, parent_index, children, output);
+	CPUStream(end_id, size, vertex_label, visited, parent_index, children, output);
 	
 	// put all of output's pointers into unvisited_queue and repeat.
 

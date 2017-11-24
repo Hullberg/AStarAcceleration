@@ -43,10 +43,10 @@ public class MemStreamManager {
 		EngineInterface engine_interface = new EngineInterface();
 		CPUTypes   type = CPUTypes.INT32;
 		int        size = type.sizeInBytes();
-		// I am unsure where the N and A comes from.
 		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
 		// Add a single dataset size param N
 		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
+		//InterfaceParam	fk 	 = engine_interface.addParam("test", type);
 		// Add a scalar parameters
 		InterfaceParam  end_id     = engine_interface.addParam("end_id", CPUTypes.INT);
 		InterfaceParam	vertex_label = engine_interface.addParam("vertex_label", CPUTypes.INT);
