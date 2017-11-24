@@ -2,6 +2,7 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include "fileToMatrix.c"
@@ -17,33 +18,27 @@ int queue_item_count = 0;
 
 // array of vertex pointers
 Vertex** vertex_list;//[MAX];
-//int** matrix;
+
 int vertex_count = 0;
-/*
-  void add_vertex(int label) {
-  Vertex* vertex = malloc(sizeof(Vertex));
-  vertex->label = label;  
-  vertex->visited = false;
-  vertex->parent_index = -1;
-  vertex_list[vertex_count++] = vertex;
-  }
-*/
 
 int get_name_to_id(char* file_name, char* first_name){
-  char name_check[100];
-  int name_id = -1;
+  printf("%s \n", first_name);
+  char name_check[300];
+  int id_check = -1;
+  int id_res = -1;
   char* filename = file_name;
   FILE *fp = fopen(filename,"r");
   int i =0;
-  while(!feof(fp) || name_id == -1){
+  while(!feof(fp)){
     i++;
-    fscanf(fp," %s %d",name_check,&name_id);
-    if(strcmp(first_name,name_check) == 0){
+    fscanf(fp," %s %d", name_check, &id_check);
+    if(strcmp(first_name, name_check) == 0){
+      id_res = id_check;
       break;
     }
   }
   fclose(fp);
-  return name_id;
+  return id_res;
 }
 
 
@@ -60,7 +55,8 @@ char* get_id_to_name(char* file_name, int id_name){
       return name_check;
     }
   }
-  return "";
+  fclose(fp);
+  return "Could not find the name";
 }
 
 void display_index(int index) {
@@ -116,18 +112,12 @@ void get_path(int end){
 int get_unvisited_child(int vertex_index, int* child_index) {
   int index;
   for (int i = *child_index; i < vertex_list[vertex_index]->children_size; i++) {
-    //printf("vertex_index: %d\n",vertex_index);
-    //printf("children[%d]: %d\n",i,vertex_list[vertex_index]->children[i]);
-    //printf("children_size: %d\n",vertex_list[vertex_index]->children_size);
+    
     index = vertex_list[vertex_index]->children[i];
-    //printf("AFTER indexing: index = %d\n", index);
-    //printf("visited == %d\n",vertex_list[index]->visited);
     if (vertex_list[index]->visited == false){
-      //printf("WILL return index %d\n",index);
       *child_index = i;
       return index;
     }
-    //printf("AFTER return IF statement\n");
   }
   return -1;
 }
@@ -151,15 +141,10 @@ void breadth_first_search(int start, int end) {
     //get the unvisited vertices of the first vertex in the queue
     temp_vertex_index = remove_data();
     child_index = 0;
-    //printf("Visited node: %d\n", temp_vertex_index);
-    //no adjacent vertex found
     while((unvisited_vertex = get_unvisited_child(temp_vertex_index, &child_index)) != -1 && !done) {
-      //printf("after get_unvisited_child\n");
       vertex_list[unvisited_vertex]->visited = true;
       vertex_list[unvisited_vertex]->parent_index = temp_vertex_index;
-      //printf("Before insert\n");
       insert(unvisited_vertex);  
-      //printf("After insert\n");
       if (vertex_list[unvisited_vertex]->label == end) {
 	finished_index = unvisited_vertex;
         done = true;
@@ -178,26 +163,27 @@ void breadth_first_search(int start, int end) {
 }
 
 int main(int argc, char* argv[]) {
- 
-  
- 
   char* id_file = argv[2];
   int start_id, end_id;
   if(argc == 3){
     start_id = 1;
     end_id = 46;
   }
+  else if(argc == 5 && (atoi(argv[3]) == 0 && strcmp(argv[3],"0") != 0  ) && (atoi(argv[4])  == 0 && strcmp(argv[3],"0") !=0)){
+    start_id = get_name_to_id(argv[1], argv[3]);
+    end_id = get_name_to_id(argv[1], argv[4]);
+    printf("start %d\n end %d\n", start_id, end_id);
+  }
   else if(argc == 5){
     start_id = atoi(argv[3]);
     end_id = atoi(argv[4]);
   }
+ 
   else{
     printf("Arguments not correct");
+    return 0;
   }
- 
-
- 
- 
+    
   int number_of_lines = count_lines(id_file);
 
   if (start_id >= number_of_lines || end_id >= number_of_lines) {
@@ -206,20 +192,10 @@ int main(int argc, char* argv[]) {
   }
   vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
   add_vertices(id_file, vertex_list, &vertex_count);
-  //printf("Size of Children_size: %d\n",sizeof(vertex_list[0]->children_size));
-  //display_vertex();
-
-  //printf("\nBreadth First Search: \n");
   breadth_first_search(start_id, end_id);
-  //printf("\nDONE\n");
 
   get_path(end_id);
-
-  //display_index(start_id);
-  //printf("\n\nVERTEX COUNT = %d\n\n", vertex_count );
   for(int i = 0; i< number_of_lines; i++){
-    //int children_size = vertex_list[i]->children_size; 
-    //free(&(vertex_list[i]->children));
     free(vertex_list[i]->children);
     free(vertex_list[i]);
   }
