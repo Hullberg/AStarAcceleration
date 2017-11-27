@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 #include "fileToMatrix.c"
 #define MAX 10000000
 #define DEBUG 0
@@ -163,6 +164,8 @@ void breadth_first_search(int start, int end) {
 }
 
 int main(int argc, char* argv[]) {
+  clock_t clock_start, clock_end;
+  clock_start = clock();
   char* id_file = argv[2];
   int start_id, end_id;
   if(argc == 3){
@@ -183,7 +186,7 @@ int main(int argc, char* argv[]) {
     printf("Arguments not correct");
     return 0;
   }
-    
+  
   int number_of_lines = count_lines(id_file);
 
   if (start_id >= number_of_lines || end_id >= number_of_lines) {
@@ -192,9 +195,20 @@ int main(int argc, char* argv[]) {
   }
   vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
   add_vertices(id_file, vertex_list, &vertex_count);
+  
+  clock_t bfs_start, bfs_end;
+  bfs_start = clock();
   breadth_first_search(start_id, end_id);
-
+  bfs_end = clock();
   get_path(end_id);
+  
+  clock_end = clock(); 
+  
+  
+  printf("BFS took  %f seconds to execute \n", (double) (bfs_start - bfs_end) / CLOCKS_PER_SEC);
+
+  printf("The whole program took  %f seconds to execute \n", (double) (clock_start - clock_end) / CLOCKS_PER_SEC);
+
   for(int i = 0; i< number_of_lines; i++){
     free(vertex_list[i]->children);
     free(vertex_list[i]);
