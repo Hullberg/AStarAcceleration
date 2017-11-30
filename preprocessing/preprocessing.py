@@ -25,7 +25,7 @@ def read_name_links_file(filename):
 				name_links[name].add(name)
 
 			m_id += 1
-			
+	f.close()	
 	return name_links, name_id_dict, id_name_dict
 
 
@@ -57,6 +57,7 @@ def space_to_underscore_dicts(filename):
 				id_to_name_dict[split_arr[0]] =noname_string
 	#print str(noname_count) + " noname count\n"
 	#print str(copy_count) + " copy count\n"
+	f.close()
 	return name_to_id_dict, id_to_name_dict
 
 def modify_id_links_file(filename):
