@@ -30,7 +30,6 @@ Array* prepend(Array* head, int data)
     return head;
 }
 
-
 int count_lines(char* filename){
   int lines = 0;
   char* line = NULL;
@@ -88,7 +87,6 @@ void add_vertex_from_line(char* line, Vertex** vertex_list, int* vertex_count ) 
     free(temp_free);
   }
   vertex_list[(*vertex_count)++] = new_vertex;
-
 }
 
 
