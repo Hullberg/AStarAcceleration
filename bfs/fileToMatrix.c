@@ -9,8 +9,7 @@ typedef struct Array {
   struct Array* next;
 } Array;
 
-Array* create(int data, Array* next)
-{
+Array* create(int data, Array* next){
     Array* new_array = malloc(sizeof(Array));
     if(new_array == NULL)
     {
@@ -23,8 +22,7 @@ Array* create(int data, Array* next)
     return new_array;
 }
 
-Array* prepend(Array* head, int data)
-{
+Array* prepend(Array* head, int data){
     Array* new_node = create(data,head);
     head = new_node;
     return head;
@@ -54,7 +52,7 @@ Vertex* create_new_vertex(int label) {
   return vertex;
 }
 
-void add_vertex_from_line(char* line, Vertex** vertex_list, int* vertex_count ) {
+void add_vertex_from_line(char* line, Vertex** vertex_list, int vertex_index) {
   const char space[2] = " ";
   char* label = strtok(line, space);
   char* child_substring = strtok(NULL, space);
@@ -86,20 +84,20 @@ void add_vertex_from_line(char* line, Vertex** vertex_list, int* vertex_count ) 
     array = array->next;
     free(temp_free);
   }
-  vertex_list[(*vertex_count)++] = new_vertex;
+  vertex_list[vertex_index] = new_vertex;
 }
 
 
-void add_vertices(char* filename, Vertex** vertex_list, int* vertex_count) {
+void add_vertices(char* filename, Vertex** vertex_list){//, int* vertex_count) {
   char* line = NULL;
   size_t len = 0;
   ssize_t read;
   
   FILE* fp = fopen(filename, "r");
-
+  int vertex_index = 0;
   while ((read = getline(&line, &len, fp)) != -1) {
-    add_vertex_from_line(line, vertex_list, vertex_count);
-    
+    add_vertex_from_line(line, vertex_list, vertex_index);
+    vertex_index++;
   }
   free(line);
   fclose(fp);
