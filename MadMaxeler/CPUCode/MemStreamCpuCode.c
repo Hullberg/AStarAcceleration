@@ -9,96 +9,54 @@
 
 int main(void)
 {
-	int vertex_count = 0;
+	/*int vertex_count = 0;
 	char* id_file = "../../data/wiki/wiki_id_links.txt";
 	// Get the vertices
+	int sizev = sizeof(Vertex*) * number_of_lines;
 	int32_t number_of_lines = count_lines(id_file);
-	Vertex** vertex_list = malloc(sizeof(Vertex*) * number_of_lines);
+	Vertex** vertex_list = malloc(sizev);
 	add_vertices(id_file, vertex_list, &vertex_count);
+	int sizei = sizeof(int32_t);
+	int32_t start_id = 0;
+	int32_t end_id = 5; // This should be goal ID.
+	int32_t total_steps;
+	int32_t* output;*/
 
-	int start_id = 0;
-	int end_id = 5; // This should be goal ID.
+
+	int32_t* vertices; // #children for each vertex
+	int32_t* edges; // index number of vertex
+	int32_t* data_r; // some number, value of vertex
+	int32_t* data_w; // to update data array
+	int32_t* edge_counter; // so we know how to offset the edge-array
+
+	int32_t vertex_size; // we get from the CPU team the number of vertices
+	int32_t edge_amount; // we get from the CPU team the number of edges
+
+
 
 	// Multiple of 384 bytes due to array size (64) burst-aligned
-	const int size = 384;
-	int sizeBytes = size * sizeof(int32_t);
-	// Idea: All variables combined is the whole struct.
-	// So we send in a label, a boolean for visited, parent_index, children_size, children*
-	//int32_t *x = malloc(sizeBytes); //TODO Change this to Vertex struct, should be ALL vertices.
-	//int32_t *y = malloc(sizeBytes);
-	//int32_t *s = malloc(sizeBytes);
-	//int32_t *u = malloc(sizeBytes);
+	
 
-	Vertex* start_vertex = vertex_list[start_id];
-	int visited_vertices_count = 0;
-	int32_t *unvisited_queue = malloc(sizeBytes); // The queue from which we pull vertices to send into stream
-	unvisited_queue[visited_vertices_count] = start_id;
-
-	// Put this in the loop to iterate over everything, and send each vertex into stream.
-	// Make all non-pointers to scalars.
-	int vertex_label;// = malloc(sizeBytes);
-	int visited;// = malloc(sizeof(int32_t)); // Convert the boolean value to 0 or 1 ?
-	int parent_index;// = malloc(sizeBytes);
-
-	int temp = start_vertex->children_size %16;
-	printf("%d\n", temp);
-	int temp2 = 16-temp;
-	printf("%d\n", temp2);
-	int testy = temp + temp2;
-	printf("%d\n",testy);
-
-	int32_t sixteen_byte_align = start_vertex->children_size % 16;
-	if (sixteen_byte_align != 0) {
-		sixteen_byte_align = 16 - sixteen_byte_align;
-	}
-	printf("%d\n", (sixteen_byte_align+start_vertex->children_size)*4%16);
-	int32_t children_m = (sixteen_byte_align + start_vertex->children_size)*4;
-	int32_t *children = malloc(children_m);
-	//printf("Children If: %d \n", sizeof(children));
-
-	int32_t *output = malloc(sizeof(Vertex*));
-	printf("initiated the startvertix\n");
-
-	// Loop below here?
-
-	// while ( unvisited_queue is not empty ) do loop
-	vertex_label = start_vertex->label;
-	if (start_vertex->visited) visited = 1;
-	else visited = 0;
-	parent_index = start_vertex->parent_index;
-	children = start_vertex->children_size;
-	//int32_t bajs = children % 16;
-	printf("%d \n", output[0]);
-
+	// We send the vertex-list to LMem, and send start and end ID to stream and receive path in output.
 
 	// The manager gets them in EngineCode/src/memstream/MemStreamManager.maxj
 	// Write all vertices to LMem.
-	//printf("Writing to LMem.\n");
-	//MemStream_writeLMem(0, sizeBytes, x);
+	printf("Writing all vertices to LMem.\n");
+	// address, size, object
+	int32_t edge_size = edge_amount * sizeof(int32_t);
+	MemStream_writeLMem(0, edge_size, edges);
 
 
-	printf("Running on DFE.\n");	
+	printf("Sending info to DFE.\n");	
 	//MemStream(endID, size, y, u, s);
-	CPUStream(end_id, size, vertex_label, visited, parent_index, children, output);
+	// size here is amount of vertices
+	MemStream(vertex_size, vertices, data_r, data_w, edge_counter);
 	
-	// put all of output's pointers into unvisited_queue and repeat.
+	for (int i = 0; i < total_steps; i++) {
+		printf("%i", path[i]);
+	}
 
-	// Append output to the queue
-	printf("Output: %i", output[0]);
-
-
-	/*for(int i=0; i<size; ++i){
-		// The line below is in kernel:  DFEVar sum = x + y + a;
-		// This will be executed for that index when the data is ready
-		// Followed by io.output("s", sum, type)
-		printf("s=%d, x= %d, y= %d, sc= %d, u = %d  \n", s[i], x[i+1], y[i], scalar, u[i]);
-		//if (s[i] != x[i] + y[i] + scalar + u[i])
-			//return 1;
-
-	}*/
-
-	// The get_path could be done here in CPU-code once everything is done.
-	//free(vertex_list);
+	free(vertex_list);
 	printf("Done.\n");
 	return 0;
 }

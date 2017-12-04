@@ -13,24 +13,19 @@ class MemStreamKernel extends Kernel {
 		super(parameters);
 
 		// From the MemStreamManager we get these variables from the stream.
-		/*DFEVar x = io.input("x", type);
-		DFEVar y = io.input("y", type);
-		DFEVar u = io.input("u", type);
-		DFEVar a = io.scalarInput("a", type);*/
-		DFEVar vertex_label = (!vertex_label) ? io.scalarInput("vertex_label", type): output;
-		DFEVar visited = io.scalarInput("visited", type);
-		DFEVar parent_index = io.scalarInput("parent_index", type);
-		DFEVar children = io.input("children", type);
-		DFEVar end_id = io.scalarInput("end_id", type);
+		DFEVar edges = Memory.read(0l);
 
-		// Here we do the maxeler-calculations
-		//DFEVar sum = x + y + a;// + u;
-		// Return the children
-		DFEVar output = (vertex_label.eq(end_id)) ? end_id : children;
+		DFEVar vertices = io.input("vertices", type);
+		DFEVar data_r = io.input("data_r", type);
+		DFEVar data_w = io.input("data_w", type);
+		DFEVar edge_counter = io.input("edge_counter", type);
+
+		// Do stuff
 
 		// Send back to CPUCode/MemStreamCpuCode.c
-		//io.output("s", sum, type);
-		io.output("output", children, type);
+		
+		io.output("path", children, type);
+		io.output("total_steps", total_steps, type);
 	}
 
 }

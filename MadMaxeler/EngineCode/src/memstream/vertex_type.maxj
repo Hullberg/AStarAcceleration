@@ -2,8 +2,6 @@ package memstream;
 
 import com.maxeler.maxcompiler.v2.kernelcompiler.types.composite.DFEStructType;
 
-
-
 public class vertex_type extends DFEStructType {
 
 	public int vertex_label;

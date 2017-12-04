@@ -22,16 +22,12 @@ public class MemStreamManager {
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
 		manager.setIO(
-			link("children", IODestination.CPU),
-			link("output", IODestination.CPU));
+			link("vertices", IODestination.CPU),
+			link("edges", IODestination.LMEM_LINEAR_1D),
+			link("data_r", IODestination.CPU),
+			link("data_w", IODestination.CPU),
+			link("edge_counter", IODestination.CPU));
 
-		// ^ From MemStreamCpuCode.c :
-		// MemStream_writeLMem(0, ((int const size = 384)*sizeof(int32_t)), x)
-		// MemStream(int scalar = 3, size, y, s, u)
-
-		// Create a simple default SLiC interface.
-		// This will assume all input/output streams have the same type and are of the same length.
-		// The interface is defined in function below
 		manager.createSLiCinterface(interfaceDefault());
 
 		configBuild(manager, params);
@@ -45,27 +41,19 @@ public class MemStreamManager {
 		int        size = type.sizeInBytes();
 		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
 		// Add a single dataset size param N
-		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
-		//InterfaceParam	fk 	 = engine_interface.addParam("test", type);
-		// Add a scalar parameters
-		InterfaceParam  end_id     = engine_interface.addParam("end_id", CPUTypes.INT);
-		InterfaceParam	vertex_label = engine_interface.addParam("vertex_label", CPUTypes.INT);
-		InterfaceParam 	visited	= engine_interface.addParam("visited", CPUTypes.INT);
-		InterfaceParam	parent_index = engine_interface.addParam("parent_index", CPUTypes.INT);
+		InterfaceParam  vertex_size    = engine_interface.addParam("vertex_size", CPUTypes.INT);
+		InterfaceParam	edge_size = engine_interface.addParam("edge_size", CPUTypes.INT);
 		InterfaceParam  zero = engine_interface.addConstant(0l);
 		// Set kernel to run for N ticks (Number of ticks of the block
-		engine_interface.setTicks(s_kernelName, N);
+		engine_interface.setTicks(s_kernelName, vertex_size);
 
-		// Set the streams to be of type INT32 (line 44) and size = N*sizeof(INT32)
-		// I assume the scalar (named scalar in CpuCode.c is set here)
 		// Below we set the parameters for MemStream in the CpuCode.
-		engine_interface.setScalar(s_kernelName, "end_id", end_id);
-		//engine_interface.setLMemLinear("x", zero, N * size);
-		engine_interface.setScalar(s_kernelName, "vertex_label", vertex_label);
-		engine_interface.setScalar(s_kernelName, "visited", visited);
-		engine_interface.setScalar(s_kernelName, "parent_index", parent_index);
-		engine_interface.setStream("children", type, N * size);
-		engine_interface.setStream("output", type, N * size);
+		engine_interface.setLMemLinear("edges", zero, edge_size);
+		
+		engine_interface.setStream("vertices", type, vertex_size * size);
+		engine_interface.setStream("data_r", type, vertex_size * size);
+		engine_interface.setStream("data_w", type, vertex_size * size);
+		engine_interface.setStream("edge_counter", type, vertex_size * size);
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
 		return engine_interface;
