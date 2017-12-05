@@ -8,49 +8,62 @@ import com.maxeler.maxcompiler.v2.managers.engine_interfaces.CPUTypes;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface.Direction;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.InterfaceParam;
+import com.maxeler.maxcompiler.v2.managers.standard.IOLink;
 import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
 import com.maxeler.maxcompiler.v2.managers.standard.Manager;
 
 public class MemStreamManager {
+	private static final String[] stream_names ={"child_0","child_1","child_2", "child_3", "child_4","data_w"};
 
 	private static final String s_kernelName = "MemStreamKernel";
 
 	public static void main(String[] args) {
+
 		MemStreamEngineParameters params = new MemStreamEngineParameters(args);
 		Manager manager = new Manager(params);
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
+
+		IOLink[] all_links = new IOLink[stream_names.length];
+		for(int i=0; i < stream_names.length; i++){
+			all_links[i]= link(stream_names[i], IODestination.CPU);
+		}
+
 		manager.setIO(
-			link("x", IODestination.LMEM_LINEAR_1D),
-			link("y", IODestination.CPU),
-			link("s", IODestination.CPU));
+			all_links
+			);
 
 		manager.createSLiCinterface(interfaceDefault());
 
 		configBuild(manager, params);
-	
+
 		manager.build();
 	}
 
 	private static EngineInterface interfaceDefault() {
 		EngineInterface engine_interface = new EngineInterface();
-		CPUTypes   type = CPUTypes.INT32;
+		CPUTypes   type = CPUTypes.UINT32;
 		int        size = type.sizeInBytes();
-		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
-		InterfaceParam  A    = engine_interface.addParam("A", CPUTypes.INT);
-		InterfaceParam  zero = engine_interface.addConstant(0l);
-		engine_interface.setTicks(s_kernelName, N);
+		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
+		// Add a single dataset size param N
+		InterfaceParam  vertex_size    = engine_interface.addParam("vertex_size", type);
+		// Set kernel to run for N ticks (Number of ticks of the block
+		engine_interface.setTicks(s_kernelName, vertex_size);
 
-		engine_interface.setScalar(s_kernelName, "a", A);
-		engine_interface.setLMemLinear("x", zero, N * size);
-		engine_interface.setStream("y", type, N * size);
-		engine_interface.setStream("s", type, N * size);
+
+		// Below we set the parameters for MemStream in the CpuCode.
+		for (String name: stream_names){
+			engine_interface.setStream(name, type, vertex_size * size);
+		}
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
 		return engine_interface;
+		// These parameters are sent to EngineCode/src/memstream/MemStreamKernel.maxj
 	}
-	
+
+	// Don't think we need to change things below.
 	private static void configBuild(Manager manager, MemStreamEngineParameters params) {
+
 		manager.setEnableStreamStatusBlocks(false);
 		BuildConfig buildConfig = manager.getBuildConfig();
 		buildConfig.setMPPRCostTableSearchRange(params.getMPPRStartCT(), params.getMPPREndCT());

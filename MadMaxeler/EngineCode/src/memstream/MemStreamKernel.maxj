@@ -1,25 +1,51 @@
 package memstream;
 
+import java.util.Map;
+
 import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
 import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.KernelType;
 import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
 import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
 
 class MemStreamKernel extends Kernel {
 
-	private static final DFEType type = dfeInt(32);
+	private static final DFEType type = dfeUInt(32);
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
+		DFEVar sum = io.input("data_w", type);
+		sum = sum -sum;
 
-		DFEVar x = io.input("x", type);
-		DFEVar y = io.input("y", type);
-		DFEVar a = io.scalarInput("a", type);
+		DFEVar data_w = null;
+ 		int n =0;
 
-		// TODO replace with your computation
-		DFEVar sum = x + y + a;
+		// From the MemStreamManager we get these variables from the stream.
+		Map<String,KernelType<?>> stream_map =  io.getInputs();
+		for (Map.Entry<String, KernelType<?>> entry : stream_map.entrySet())
+		{
+		    System.out.println(entry.getKey() + "/" + entry.getValue());
+		    if (entry.getKey().equals("data_w")){
+		    	data_w = io.input("data_w", type);
+		    }
+		    else{
+		    	DFEVar child = io.input(entry.getKey(), type);
+		    	sum = sum + child;
+		    	n++;
+		    }
 
-		io.output("s", sum, type);
+
+		}
+		DFEVar mean = sum/n;
+
+
+
+
+		// Do stuff
+
+		// Send back to CPUCode/MemStreamCpuCode.c
+
+		io.output("data_w", mean, type);
 	}
 
 }
