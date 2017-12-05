@@ -3,7 +3,7 @@ from collections import defaultdict
 import time
 
 
-def read_name_links_file(filename):
+def read_name_links_file(filename,shouldGetDict):
 	with open(filename) as f:
 		name_links = defaultdict(set)
 		name_set= set()
@@ -17,17 +17,29 @@ def read_name_links_file(filename):
    			name_links[from_name].add(to_name)
    			name_set.add(from_name)
    			name_set.add(to_name)
-   		
-   		for name in sorted(name_set):
-			name_id_dict[name] = m_id
-			id_name_dict[str(m_id)] = name
-			if name not in name_links:
-				name_links[name].add(name)
+   		if shouldGetDict:
 
-			m_id += 1
-	f.close()	
-	return name_links, name_id_dict, id_name_dict
+			for name in sorted(name_set):
+				name_id_dict[name] = m_id
+				id_name_dict[str(m_id)] = name
+				if name not in name_links:
+					name_links[name].add(name)
 
+				m_id += 1
+			f.close()	
+			return name_links, name_id_dict, id_name_dict
+
+		else:
+			for name in sorted(name_set):
+				if name not in name_links:
+					name_links[name].add(name)
+
+				m_id += 1
+			f.close()	
+			return name_links
+
+
+	
 
 def space_to_underscore_dicts(filename):
 	with open(filename) as f:
@@ -61,8 +73,8 @@ def space_to_underscore_dicts(filename):
 	return name_to_id_dict, id_to_name_dict
 
 def modify_id_links_file(filename):
-	id_links, name_id_dict, id_name_dict = read_name_links_file(filename)
-	return id_links
+	#id_links = read_name_links_file(filename,False)
+	return read_name_links_file(filename,False)
 
 
 def make_id_link_text(name_links,name_id_dict):
@@ -123,7 +135,7 @@ def id_links_to_text(id_links,num_of_id):
 		text_string += "\n"
 	return text_string
 def preprocess_wiki(wiki_filename, id_links_filename,name_id_filename, id_name_filename,):
-	name_links, name_id_dict, id_name_dict = read_name_links_file(wiki_filename)
+	name_links, name_id_dict, id_name_dict = read_name_links_file(wiki_filename,True)
 	id_link_text = make_id_link_text(name_links,name_id_dict)
 	name_id_text = name_id_dict_to_text(name_id_dict)
 	id_name_text = id_name_dict_to_text(id_name_dict)
@@ -132,7 +144,7 @@ def preprocess_wiki(wiki_filename, id_links_filename,name_id_filename, id_name_f
 	write_text_to_file(id_link_text,id_links_filename)
 
 def preprocess_google(google_filename,id_links_filename,id_list_filename):
-	name_links, name_id_dict, id_name_dict = read_name_links_file(google_filename)
+	name_links, name_id_dict, id_name_dict = read_name_links_file(google_filename,True)
 	id_links_text = make_id_link_text(name_links,name_id_dict)
 	id_list_text = make_id_list_text(len(name_id_dict))
 	write_text_to_file(id_links_text,id_links_filename)
