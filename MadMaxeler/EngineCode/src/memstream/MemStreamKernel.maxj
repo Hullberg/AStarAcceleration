@@ -7,26 +7,32 @@ import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
 
 class MemStreamKernel extends Kernel {
 
-	private static final DFEType type = dfeUInt(32);
+	private static final DFEType type = dfeInt(32);
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
-		//DFEVar data_w = io.input("data_w", type); // Can't use io.input("data_w") multiple times
+
+		DFEVar child_0 = io.input("child_0", type);
+		DFEVar child_1 = io.input("child_1", type);
+		DFEVar child_2 = io.input("child_2", type);
+		DFEVar child_3 = io.input("child_3", type);
+		DFEVar child_4 = io.input("child_4", type);
 
 
-		DFEVar sum = constant.var(dfeUInt(32), 0.0);
-
+		DFEVar data_w = (child_0 + child_1 + child_2 + child_3 + child_4) / 5;
 
 		//DFEVar data_w = null;
- 		int n = 0;
+
  		// import data_r as well
  		// HARD CODE //
- 		String[] stream_names = {"child_0", "child_1", "child_2", "child_3", "child_4"};
+ 		/*String[] stream_names = {"child_0", "child_1", "child_2", "child_3", "child_4"};
  		for (String name: stream_names) {
  			DFEVar child = io.input(name, type);
- 			sum = sum + child;
+ 			sum += child;
+ 			System.out.println(child);
+ 			System.out.println(sum);
  			n++;
- 		}
+ 		}*/
  		// // //
 
 		// From the MemStreamManager we get these variables from the stream.
@@ -46,14 +52,14 @@ class MemStreamKernel extends Kernel {
 
 		}*/
 
-		DFEVar mean = sum/n;
+
 
 
 		// Do stuff
 
 		// Send back to CPUCode/MemStreamCpuCode.c
 
-		io.output("data_w", mean, type);
+		io.output("data_w", data_w, type);
 
 	}
 

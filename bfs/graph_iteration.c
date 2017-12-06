@@ -10,7 +10,7 @@
 #include "vertex.c"
 
 #define EDGE_COUNT 5
-#define VERTEX_COUNT 1000000
+#define VERTEX_COUNT 50000
 
 Vertex** vertex_list;
 
@@ -25,7 +25,7 @@ int32_t* edges[EDGE_COUNT]; // [][][][][]
 
 Vertex* create_vertex(){  
   Vertex* vertex = malloc(sizeof(Vertex));
-  vertex->value = rand() % 1000001; // between 1 and 100000
+  vertex->value = (rand() % (VERTEX_COUNT))+1; // between 1 and 100000
   vertex->edges = malloc(sizeof(int) * EDGE_COUNT);
   for (int i = 0; i < EDGE_COUNT; i++) {
     vertex->edges[i] = rand() % VERTEX_COUNT;
@@ -46,6 +46,7 @@ void update_edges() {
       edges[j][i] = vertex_list[vertex_list[i]->edges[j]]->value;
     }
   }
+  printf("update end\n");
 }
 
 void init_arrays(){
@@ -106,7 +107,7 @@ bool converged(){
 /////// MAIN
 ////////////
 
-int main(int argc, char* argv[]) {
+/*int main(int argc, char* argv[]) {
   srand(time(NULL));
   vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
 
@@ -120,6 +121,10 @@ int main(int argc, char* argv[]) {
     count++;
   } while(!converged());
   printf("\nDone! Converged after %d iterations.\n", count);
+  
+  for (int i = 0; i < 10; i++) {
+    printf("%d, %d, %d, %d, %d\n", edges[0][i], edges[1][i], edges[2][i], edges[3][i], edges[4][i]);
+}
 
   for (int i = 0; i < VERTEX_COUNT; i++){
     free(vertex_list[i]->edges);
@@ -131,3 +136,5 @@ int main(int argc, char* argv[]) {
   free(vertex_list);
   return 0;
 }
+
+*/

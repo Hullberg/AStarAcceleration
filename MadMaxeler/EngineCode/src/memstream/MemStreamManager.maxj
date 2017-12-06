@@ -33,7 +33,6 @@ public class MemStreamManager {
 			all_links
 			);
 
-
 		manager.createSLiCinterface(interfaceDefault());
 
 		configBuild(manager, params);
@@ -43,20 +42,26 @@ public class MemStreamManager {
 
 	private static EngineInterface interfaceDefault() {
 		EngineInterface engine_interface = new EngineInterface();
-		CPUTypes   type = CPUTypes.UINT32;
-		int        size = type.sizeInBytes();
+		CPUTypes   type = CPUTypes.INT32;
+		int        size2 = type.sizeInBytes();
 		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
 		// Add a single dataset size param N
 
-		InterfaceParam  vertex_size    = engine_interface.addParam("vertex_size", type);
+		InterfaceParam  size    = engine_interface.addParam("size", type);
 		// Set kernel to run for N ticks (Number of ticks of the block
-		engine_interface.setTicks(s_kernelName, vertex_size);
+		engine_interface.setTicks(s_kernelName, size);
 
 
 		// Below we set the parameters for MemStream in the CpuCode.
-		for (String name: stream_names){
-			engine_interface.setStream(name, type, vertex_size * size);
-		}
+		/*for (String name: stream_names){
+			engine_interface.setStream(name, type, size * size2);
+		}*/
+		engine_interface.setStream("child_0", type, size * size2);
+		engine_interface.setStream("child_1", type, size * size2);
+		engine_interface.setStream("child_2", type, size * size2);
+		engine_interface.setStream("child_3", type, size * size2);
+		engine_interface.setStream("child_4", type, size * size2);
+		engine_interface.setStream("data_w", type, size * size2);
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
 		return engine_interface;
