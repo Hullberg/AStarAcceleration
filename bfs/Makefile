@@ -7,6 +7,10 @@ run: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
 	 ./bfs.o "../preprocessing/nameToID.txt" "../preprocessing/idfile.txt"
 
+run_graph: graph_iteration.c
+	$(CC) $(FLAGS) graph_iteration.c -o gi.o
+	./gi.o
+
 run_topcats: $(FILES)
 	$(CC) $(FLAGS) bfs.c -o bfs.o
 	./bfs.o "../data/topcats/topcats_name_id.txt" "../data/topcats/topcats_id_links.txt"
