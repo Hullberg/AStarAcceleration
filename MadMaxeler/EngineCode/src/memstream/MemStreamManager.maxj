@@ -8,10 +8,12 @@ import com.maxeler.maxcompiler.v2.managers.engine_interfaces.CPUTypes;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface.Direction;
 import com.maxeler.maxcompiler.v2.managers.engine_interfaces.InterfaceParam;
+import com.maxeler.maxcompiler.v2.managers.standard.IOLink;
 import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
 import com.maxeler.maxcompiler.v2.managers.standard.Manager;
 
 public class MemStreamManager {
+	private static final String[] stream_names ={"child_0","child_1","child_2", "child_3", "child_4","data_w"};
 
 	private static final String s_kernelName = "MemStreamKernel";
 
@@ -21,12 +23,16 @@ public class MemStreamManager {
 		Manager manager = new Manager(params);
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
+
+		IOLink[] all_links = new IOLink[stream_names.length];
+		for(int i=0; i < stream_names.length; i++){
+			all_links[i]= link(stream_names[i], IODestination.CPU);
+		}
+
 		manager.setIO(
-			link("vertices", IODestination.CPU),
-			link("edges", IODestination.LMEM_LINEAR_1D),
-			link("data_r", IODestination.CPU),
-			link("data_w", IODestination.CPU),
-			link("edge_counter", IODestination.CPU));
+			all_links
+			);
+
 
 		manager.createSLiCinterface(interfaceDefault());
 
@@ -37,23 +43,20 @@ public class MemStreamManager {
 
 	private static EngineInterface interfaceDefault() {
 		EngineInterface engine_interface = new EngineInterface();
-		CPUTypes   type = CPUTypes.INT32;
+		CPUTypes   type = CPUTypes.UINT32;
 		int        size = type.sizeInBytes();
 		// "Adds an interface parameter. The generated SLiC interface will allow users to set the value of used parameters at runtime." -docs
 		// Add a single dataset size param N
-		InterfaceParam  vertex_size    = engine_interface.addParam("vertex_size", CPUTypes.INT);
-		InterfaceParam	edge_size = engine_interface.addParam("edge_size", CPUTypes.INT);
-		InterfaceParam  zero = engine_interface.addConstant(0l);
+
+		InterfaceParam  vertex_size    = engine_interface.addParam("vertex_size", type);
 		// Set kernel to run for N ticks (Number of ticks of the block
 		engine_interface.setTicks(s_kernelName, vertex_size);
 
+
 		// Below we set the parameters for MemStream in the CpuCode.
-		engine_interface.setLMemLinear("edges", zero, edge_size);
-		
-		engine_interface.setStream("vertices", type, vertex_size * size);
-		engine_interface.setStream("data_r", type, vertex_size * size);
-		engine_interface.setStream("data_w", type, vertex_size * size);
-		engine_interface.setStream("edge_counter", type, vertex_size * size);
+		for (String name: stream_names){
+			engine_interface.setStream(name, type, vertex_size * size);
+		}
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
 		return engine_interface;

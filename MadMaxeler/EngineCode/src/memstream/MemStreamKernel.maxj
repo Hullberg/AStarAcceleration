@@ -7,25 +7,54 @@ import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
 
 class MemStreamKernel extends Kernel {
 
-	private static final DFEType type = dfeInt(32);
+	private static final DFEType type = dfeUInt(32);
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
+		//DFEVar data_w = io.input("data_w", type); // Can't use io.input("data_w") multiple times
+
+
+		DFEVar sum = constant.var(dfeUInt(32), 0.0);
+
+
+		//DFEVar data_w = null;
+ 		int n = 0;
+ 		// import data_r as well
+ 		// HARD CODE //
+ 		String[] stream_names = {"child_0", "child_1", "child_2", "child_3", "child_4"};
+ 		for (String name: stream_names) {
+ 			DFEVar child = io.input(name, type);
+ 			sum = sum + child;
+ 			n++;
+ 		}
+ 		// // //
 
 		// From the MemStreamManager we get these variables from the stream.
-		DFEVar edges = Memory.read(0l);
+		/*Map<String,KernelType<?>> stream_map =  io.getInputs();
+		for (Map.Entry<String, KernelType<?>> entry : stream_map.entrySet())
+		{
+		    System.out.println(entry.getKey() + "/" + entry.getValue());
+		   if (entry.getKey().equals(data_w)){
+		    	data_w = io.input("data_w", type);
+		    }
+		    else{
+		    	DFEVar child = io.input(entry.getKey(), type);
+		    	sum = sum + child;
+		    	n++;
+		   }
 
-		DFEVar vertices = io.input("vertices", type);
-		DFEVar data_r = io.input("data_r", type);
-		DFEVar data_w = io.input("data_w", type);
-		DFEVar edge_counter = io.input("edge_counter", type);
+
+		}*/
+
+		DFEVar mean = sum/n;
+
 
 		// Do stuff
 
 		// Send back to CPUCode/MemStreamCpuCode.c
-		
-		io.output("path", children, type);
-		io.output("total_steps", total_steps, type);
+
+		io.output("data_w", mean, type);
+
 	}
 
 }
