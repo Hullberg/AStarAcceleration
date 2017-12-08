@@ -9,7 +9,8 @@
 
 int main(void)
 {
-	//srand(time(NULL));
+	clock_t start = clock();
+	//srand(time(NULL)); // New seed, otherwise same results all the time
 	vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
 
 	init_vertices();
@@ -24,61 +25,94 @@ int main(void)
 	int32_t* child_3 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 	int32_t* child_4 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 
+	for (int i = 0; i < VERTEX_COUNT; i++) {
+					child_0[i] = edges[0][i];
+					child_1[i] = edges[1][i];
+					child_2[i] = edges[2][i];
+					child_3[i] = edges[3][i];
+					child_4[i] = edges[4][i];
+				}
 
 	int32_t size = sizeof(int32_t) * VERTEX_COUNT;
 	// Fill those with reasonable input from graph_iteration.c.
 	int32_t* data_w = malloc(sizeof(int32_t) * VERTEX_COUNT);
+
 	printf("Running on DFE.\n");
-	//MemStream(endID, size, y, u, s);
 
 	//double total_t;
+	//clock_t t, t2;
+
 	do {
-		for (int i = 0; i < VERTEX_COUNT; i++) {
-			child_0[i] = edges[0][i];
-			child_1[i] = edges[1][i];
-			child_2[i] = edges[2][i];
-			child_3[i] = edges[3][i];
-			child_4[i] = edges[4][i];
-		}
 
-		printf("before %i\n", child_3[0]);
 
-		//clock_t start_t, end_t;
-		//start_t = clock();
+		// Having issues with dynamic amount of parameters, in this solution
 		MemStream(size, child_0, child_1, child_2, child_3, child_4, data_w);
-		printf("after %i\n", child_3[0]);
-		//end_t = clock();
-		//double this_t = end_t - start_t;
-		//printf("Seconds: %f\n", this_t/CLOCKS_PER_SEC);
-		//total_t += this_t;
 
 
 		for (int i = 0; i < VERTEX_COUNT; i++) {
 			vertex_list[i]->value = data_w[i];
 		}
 
-		update_edges();
+		// Unroll update_edges into maxeler. and just keep it at children.
+		/*
+		void update_edges() {
+  	  		for (int i = 0; i < VERTEX_COUNT; i++) {
+				for (int j = 0; j < EDGE_COUNT; j++) {
+ 					edges[j][i] = vertex_list[vertex_list[i]->edges[j]]->value;
+    			}
+			}
+1
+			// UNROLL:
+			 * for (int i = 0; i < VERTEX_COUNT; i++) {
+			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
+			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
+			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
+			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
+			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
+		}
+
+		}
+		 */
+
+		//t = clock();
+		//printf("%f\n", (double)t);
+		// Unrolled: 9.84, rolled: 8.87 (update_edges)
+		for (int i = 0; i < VERTEX_COUNT; i+=5) {
+			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
+			child_0[i+1] = vertex_list[vertex_list[i+1]->edges[0]]->value;
+			child_0[i+2] = vertex_list[vertex_list[i+2]->edges[0]]->value;
+			child_0[i+3] = vertex_list[vertex_list[i+3]->edges[0]]->value;
+			child_0[i+4] = vertex_list[vertex_list[i+4]->edges[0]]->value;
+			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
+			child_1[i+1] = vertex_list[vertex_list[i+1]->edges[1]]->value;
+			child_1[i+2] = vertex_list[vertex_list[i+2]->edges[1]]->value;
+			child_1[i+3] = vertex_list[vertex_list[i+3]->edges[1]]->value;
+			child_1[i+4] = vertex_list[vertex_list[i+4]->edges[1]]->value;
+			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
+			child_2[i+1] = vertex_list[vertex_list[i+1]->edges[2]]->value;
+			child_2[i+2] = vertex_list[vertex_list[i+2]->edges[2]]->value;
+			child_2[i+3] = vertex_list[vertex_list[i+3]->edges[2]]->value;
+			child_2[i+4] = vertex_list[vertex_list[i+4]->edges[2]]->value;
+			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
+			child_3[i+1] = vertex_list[vertex_list[i+1]->edges[3]]->value;
+			child_3[i+2] = vertex_list[vertex_list[i+2]->edges[3]]->value;
+			child_3[i+3] = vertex_list[vertex_list[i+3]->edges[3]]->value;
+			child_3[i+4] = vertex_list[vertex_list[i+4]->edges[3]]->value;
+			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
+			child_4[i+1] = vertex_list[vertex_list[i+1]->edges[4]]->value;
+			child_4[i+2] = vertex_list[vertex_list[i+2]->edges[4]]->value;
+			child_4[i+3] = vertex_list[vertex_list[i+3]->edges[4]]->value;
+			child_4[i+4] = vertex_list[vertex_list[i+4]->edges[4]]->value;
+		}
+		//update_edges();
 
 		count++;
 
 	} while(!converged());
 	printf("\nDone! Converged after %d iterations.\n", count);
-	// We can free child_0 and child_1, but the others end with abort exit code return -1
-	//free(child_0);
-	//free(child_1);
-	//free(child_2);
-	//free(child_3);
-	for (int i = 0; i < 100; i++) {
-		printf("%d, %d, %d, %d, %d\n", child_0[i],child_1[i],child_2[i],child_3[i],child_4[i]);
-	}
+	printf("Converged at: %d\n", child_0[1337]);
 
-	/*printf("%d\n",child_0[0]);
-	printf("%d\n",child_1[0]);
-	printf("%d\n",child_2[0]);
-	printf("%d\n",child_3[0]);
-	printf("%d\n",child_4[0]);*/
-	free(child_4);
-	return 0;
+
 
 	free(data_w);
 	for (int i = 0; i < VERTEX_COUNT; i++){
@@ -89,7 +123,6 @@ int main(void)
 		free(edges[i]);
 	}
 	free(vertex_list);
-	printf("crashes below this.");
 	free(child_0);
 	free(child_1);
 	free(child_2);
@@ -97,7 +130,10 @@ int main(void)
 	free(child_4);
 
 	// The get_path could be done here in CPU-code once everything is done.
-	//free(vertex_list);
+
+	clock_t t = clock();
+
+	printf("Total time: %f\n", ((double)t-start)/CLOCKS_PER_SEC);
 	printf("Done.\n");
 	return 0;
 }

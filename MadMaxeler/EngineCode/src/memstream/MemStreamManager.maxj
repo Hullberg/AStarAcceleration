@@ -13,8 +13,8 @@ import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
 import com.maxeler.maxcompiler.v2.managers.standard.Manager;
 
 public class MemStreamManager {
-	private static final String[] stream_names ={"child_0","child_1","child_2", "child_3", "child_4","data_w"};
-
+	private static final String[] children_names ={"child_0","child_1","child_2", "child_3", "child_4"};
+	public static int EDGE_COUNT = children_names.length;
 	private static final String s_kernelName = "MemStreamKernel";
 
 	public static void main(String[] args) {
@@ -24,10 +24,11 @@ public class MemStreamManager {
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
 
-		IOLink[] all_links = new IOLink[stream_names.length];
-		for(int i=0; i < stream_names.length; i++){
-			all_links[i]= link(stream_names[i], IODestination.CPU);
+		IOLink[] all_links = new IOLink[EDGE_COUNT+1];
+		for(int i=0; i < EDGE_COUNT; i++){
+			all_links[i]= link(children_names[i], IODestination.CPU);
 		}
+		all_links[EDGE_COUNT] = link("data_w", IODestination.CPU);
 
 		manager.setIO(
 			all_links
@@ -53,14 +54,9 @@ public class MemStreamManager {
 
 
 		// Below we set the parameters for MemStream in the CpuCode.
-		/*for (String name: stream_names){
+		for (String name: children_names){
 			engine_interface.setStream(name, type, size * size2);
-		}*/
-		engine_interface.setStream("child_0", type, size * size2);
-		engine_interface.setStream("child_1", type, size * size2);
-		engine_interface.setStream("child_2", type, size * size2);
-		engine_interface.setStream("child_3", type, size * size2);
-		engine_interface.setStream("child_4", type, size * size2);
+		}
 		engine_interface.setStream("data_w", type, size * size2);
 
 		engine_interface.ignoreAll(Direction.IN_OUT);

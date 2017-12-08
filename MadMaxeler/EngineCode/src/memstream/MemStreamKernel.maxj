@@ -8,10 +8,27 @@ import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
 class MemStreamKernel extends Kernel {
 
 	private static final DFEType type = dfeInt(32);
+	private static String[] children_names = new String[MemStreamManager.EDGE_COUNT];
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
 
+		// Supposed to be dynamic
+		/*DFEVar [] children = new DFEVar[MemStreamManager.EDGE_COUNT];
+
+		for (int i = 0; i < MemStreamManager.EDGE_COUNT; i++) {
+			String child_name = "child_" + Integer.toString(i);
+			children_names[i] = child_name;
+			children[i] = io.input(children_names[i], type);
+		}
+
+		DFEVar data_w = children[0];
+		for (int i = 1; i < MemStreamManager.EDGE_COUNT; i++) {
+			data_w += children[i];
+		}
+		data_w = data_w / MemStreamManager.EDGE_COUNT;*/
+
+		// Hard code
 		DFEVar child_0 = io.input("child_0", type);
 		DFEVar child_1 = io.input("child_1", type);
 		DFEVar child_2 = io.input("child_2", type);
@@ -21,41 +38,6 @@ class MemStreamKernel extends Kernel {
 
 		DFEVar data_w = (child_0 + child_1 + child_2 + child_3 + child_4) / 5;
 
-		//DFEVar data_w = null;
-
- 		// import data_r as well
- 		// HARD CODE //
- 		/*String[] stream_names = {"child_0", "child_1", "child_2", "child_3", "child_4"};
- 		for (String name: stream_names) {
- 			DFEVar child = io.input(name, type);
- 			sum += child;
- 			System.out.println(child);
- 			System.out.println(sum);
- 			n++;
- 		}*/
- 		// // //
-
-		// From the MemStreamManager we get these variables from the stream.
-		/*Map<String,KernelType<?>> stream_map =  io.getInputs();
-		for (Map.Entry<String, KernelType<?>> entry : stream_map.entrySet())
-		{
-		    System.out.println(entry.getKey() + "/" + entry.getValue());
-		   if (entry.getKey().equals(data_w)){
-		    	data_w = io.input("data_w", type);
-		    }
-		    else{
-		    	DFEVar child = io.input(entry.getKey(), type);
-		    	sum = sum + child;
-		    	n++;
-		   }
-
-
-		}*/
-
-
-
-
-		// Do stuff
 
 		// Send back to CPUCode/MemStreamCpuCode.c
 
