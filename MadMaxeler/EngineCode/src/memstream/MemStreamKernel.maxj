@@ -8,12 +8,11 @@ import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
 class MemStreamKernel extends Kernel {
 
 	private static final DFEType type = dfeInt(32);
-	private static String[] children_names = new String[MemStreamManager.EDGE_COUNT];
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
 
-		// Supposed to be dynamic
+		// Supposed to be dynamic, we will instead go with hard code due to Maxelers inability to have dynamic amount of stream-parameters.
 		/*DFEVar [] children = new DFEVar[MemStreamManager.EDGE_COUNT];
 
 		for (int i = 0; i < MemStreamManager.EDGE_COUNT; i++) {

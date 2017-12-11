@@ -10,42 +10,37 @@
 int main(void)
 {
 	clock_t start = clock();
-	//srand(time(NULL)); // New seed, otherwise same results all the time
+	srand(time(NULL)); // New seed, otherwise same results all the time. Comment out to compare approaches
 	vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
 
 	init_vertices();
-
-	init_arrays();
+	init_arrays(); // We need this to init edges in update_edges.
 	int count = 0;
 
-	// Fill children from edges-pointer
 	int32_t* child_0 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 	int32_t* child_1 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 	int32_t* child_2 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 	int32_t* child_3 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 	int32_t* child_4 = malloc(sizeof(int32_t) * VERTEX_COUNT);
 
-	for (int i = 0; i < VERTEX_COUNT; i++) {
-					child_0[i] = edges[0][i];
-					child_1[i] = edges[1][i];
-					child_2[i] = edges[2][i];
-					child_3[i] = edges[3][i];
-					child_4[i] = edges[4][i];
-				}
-
 	int32_t size = sizeof(int32_t) * VERTEX_COUNT;
-	// Fill those with reasonable input from graph_iteration.c.
 	int32_t* data_w = malloc(sizeof(int32_t) * VERTEX_COUNT);
 
-	printf("Running on DFE.\n");
-
-	//double total_t;
-	//clock_t t, t2;
+	printf("Running a do/while-loop on DFE...\n");
 
 	do {
-
+		// This is update_edges, directly into child_x-arrays
+		// Can we send this to EdgeStream?
+		for (int i = 0; i < VERTEX_COUNT; i++) {
+			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
+			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
+			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
+			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
+			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
+		}
 
 		// Having issues with dynamic amount of parameters, in this solution
+		// Each loop, the kernel posts 'Mapped Elements Changed: Reloaded'.
 		MemStream(size, child_0, child_1, child_2, child_3, child_4, data_w);
 
 
@@ -53,58 +48,9 @@ int main(void)
 			vertex_list[i]->value = data_w[i];
 		}
 
-		// Unroll update_edges into maxeler. and just keep it at children.
-		/*
-		void update_edges() {
-  	  		for (int i = 0; i < VERTEX_COUNT; i++) {
-				for (int j = 0; j < EDGE_COUNT; j++) {
- 					edges[j][i] = vertex_list[vertex_list[i]->edges[j]]->value;
-    			}
-			}
-1
-			// UNROLL:
-			 * for (int i = 0; i < VERTEX_COUNT; i++) {
-			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
-			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
-			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
-			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
-			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
-		}
-
-		}
-		 */
-
-		//t = clock();
-		//printf("%f\n", (double)t);
-		// Unrolled: 9.84, rolled: 8.87 (update_edges)
-		for (int i = 0; i < VERTEX_COUNT; i+=5) {
-			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
-			child_0[i+1] = vertex_list[vertex_list[i+1]->edges[0]]->value;
-			child_0[i+2] = vertex_list[vertex_list[i+2]->edges[0]]->value;
-			child_0[i+3] = vertex_list[vertex_list[i+3]->edges[0]]->value;
-			child_0[i+4] = vertex_list[vertex_list[i+4]->edges[0]]->value;
-			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
-			child_1[i+1] = vertex_list[vertex_list[i+1]->edges[1]]->value;
-			child_1[i+2] = vertex_list[vertex_list[i+2]->edges[1]]->value;
-			child_1[i+3] = vertex_list[vertex_list[i+3]->edges[1]]->value;
-			child_1[i+4] = vertex_list[vertex_list[i+4]->edges[1]]->value;
-			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
-			child_2[i+1] = vertex_list[vertex_list[i+1]->edges[2]]->value;
-			child_2[i+2] = vertex_list[vertex_list[i+2]->edges[2]]->value;
-			child_2[i+3] = vertex_list[vertex_list[i+3]->edges[2]]->value;
-			child_2[i+4] = vertex_list[vertex_list[i+4]->edges[2]]->value;
-			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
-			child_3[i+1] = vertex_list[vertex_list[i+1]->edges[3]]->value;
-			child_3[i+2] = vertex_list[vertex_list[i+2]->edges[3]]->value;
-			child_3[i+3] = vertex_list[vertex_list[i+3]->edges[3]]->value;
-			child_3[i+4] = vertex_list[vertex_list[i+4]->edges[3]]->value;
-			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
-			child_4[i+1] = vertex_list[vertex_list[i+1]->edges[4]]->value;
-			child_4[i+2] = vertex_list[vertex_list[i+2]->edges[4]]->value;
-			child_4[i+3] = vertex_list[vertex_list[i+3]->edges[4]]->value;
-			child_4[i+4] = vertex_list[vertex_list[i+4]->edges[4]]->value;
-		}
-		//update_edges();
+		// Need to find a way to send all edges values to stream, and update children in output.
+		// The idea was to send the update_edges into Maxeler to possibly speed up further.
+		//EdgeStream(size, a,b);
 
 		count++;
 
@@ -129,11 +75,10 @@ int main(void)
 	free(child_3);
 	free(child_4);
 
-	// The get_path could be done here in CPU-code once everything is done.
-
 	clock_t t = clock();
 
-	printf("Total time: %f\n", ((double)t-start)/CLOCKS_PER_SEC);
+	printf("Some form of simulation time: %f\n", ((double)t-start)/CLOCKS_PER_SEC);
+	printf("Not accurate, just used to compare different approaches.\n");
 	printf("Done.\n");
 	return 0;
 }
