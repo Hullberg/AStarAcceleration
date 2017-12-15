@@ -9,8 +9,8 @@
 
 #include "vertex.c"
 
-#define EDGE_COUNT 5
-#define VERTEX_COUNT 50000
+#define EDGE_COUNT 8
+#define VERTEX_COUNT 10240000
 
 Vertex** vertex_list;
 
@@ -46,7 +46,6 @@ void update_edges() {
       edges[j][i] = vertex_list[vertex_list[i]->edges[j]]->value;
     }
   }
-  printf("update end\n");
 }
 
 void init_arrays(){
@@ -85,7 +84,7 @@ bool converged(){
   int index_one, index_two, value_one, value_two;
   bool is_eq;
   int counter = 0;
-  int max = 1000;
+  int max = VERTEX_COUNT/1000;
   for (int i = 0; i < max; i++) {
     index_one = rand() % (VERTEX_COUNT);
     index_two = rand() % (VERTEX_COUNT);
@@ -93,13 +92,25 @@ bool converged(){
     value_two = vertex_list[index_two]->value;
     
     is_eq = is_equal(value_one, value_two);
-    if (is_eq) {
-      //printf("PASS ---- %d == %d at indices %d and %d\n", value_one, value_two, index_one, index_two);
-      counter++;
-    } 
-    //else printf("FAIL ---- %d != %d indices %d and %d\n", value_one, value_one, index_one, index_two);
+    if (!is_eq) {
+	printf("FAIL in random ---- %d != %d indices %d and %d\n", value_one, value_two, index_one, index_two);
+      
+      return false;
+    }
+	counter++; 
+    
   }
-  if (counter == max) return true;
+  if (counter == max){
+	int first_val = vertex_list[0]->value;
+	for (int i =1; i <VERTEX_COUNT; i++){
+		if (!is_equal(first_val, vertex_list[i]->value)){
+			printf("FAIL in loop ---- %d", i);
+			return false;
+		}
+	
+	}
+	return true;
+  }
   else return false;
 }
 
@@ -107,7 +118,7 @@ bool converged(){
 /////// MAIN
 ////////////
 
-/*int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
   srand(time(NULL));
   vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
 
@@ -119,11 +130,11 @@ bool converged(){
   do {
     iterate();
     count++;
-  } while(!converged());
+  } while(false);
   printf("\nDone! Converged after %d iterations.\n", count);
   
   for (int i = 0; i < 10; i++) {
-    printf("%d, %d, %d, %d, %d\n", edges[0][i], edges[1][i], edges[2][i], edges[3][i], edges[4][i]);
+    //printf("%d, %d, %d, %d, %d\n", edges[0][i], edges[1][i], edges[2][i], edges[3][i], [i]);
 }
 
   for (int i = 0; i < VERTEX_COUNT; i++){
@@ -137,4 +148,3 @@ bool converged(){
   return 0;
 }
 
-*/

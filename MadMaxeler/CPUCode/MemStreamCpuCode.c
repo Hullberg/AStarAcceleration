@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	clock_t start = clock();
+	clock_t start_simulation_time = clock();
 	srand(time(NULL)); // New seed, otherwise same results all the time. Comment out to compare approaches
 	vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
 
@@ -17,11 +17,15 @@ int main(void)
 	init_arrays(); // We need this to init edges in update_edges.
 	int count = 0;
 
-	int32_t* child_0 = malloc(sizeof(int32_t) * VERTEX_COUNT);
-	int32_t* child_1 = malloc(sizeof(int32_t) * VERTEX_COUNT);
-	int32_t* child_2 = malloc(sizeof(int32_t) * VERTEX_COUNT);
-	int32_t* child_3 = malloc(sizeof(int32_t) * VERTEX_COUNT);
-	int32_t* child_4 = malloc(sizeof(int32_t) * VERTEX_COUNT);
+	//Time variables:
+	clock_t start_time_memstream;
+	clock_t end_time_memstream;
+	double memstream_time_sum = 0;
+	int32_t** child_array = malloc(sizeof(int32_t*) * EDGE_COUNT);
+
+	for(int i = 0; i < EDGE_COUNT;i++){
+		child_array[i]=malloc(sizeof(int32_t) * VERTEX_COUNT);
+	}
 
 	int32_t size = sizeof(int32_t) * VERTEX_COUNT;
 	int32_t* data_w = malloc(sizeof(int32_t) * VERTEX_COUNT);
@@ -32,16 +36,24 @@ int main(void)
 		// This is update_edges, directly into child_x-arrays
 		// Can we send this to EdgeStream?
 		for (int i = 0; i < VERTEX_COUNT; i++) {
-			child_0[i] = vertex_list[vertex_list[i]->edges[0]]->value;
-			child_1[i] = vertex_list[vertex_list[i]->edges[1]]->value;
-			child_2[i] = vertex_list[vertex_list[i]->edges[2]]->value;
-			child_3[i] = vertex_list[vertex_list[i]->edges[3]]->value;
-			child_4[i] = vertex_list[vertex_list[i]->edges[4]]->value;
+			for(int j = 0; j < EDGE_COUNT; j++){
+				child_array[j][i]=vertex_list[vertex_list[i]->edges[j]]->value;
+			}
 		}
 
 		// Having issues with dynamic amount of parameters, in this solution
 		// Each loop, the kernel posts 'Mapped Elements Changed: Reloaded'.
-		MemStream(size, child_0, child_1, child_2, child_3, child_4, data_w);
+		start_time_memstream = clock();
+
+		//MemStream(size, child_array[0], child_array[1], child_array[2], child_array[3], data_w);
+		MemStream(size, child_array[0], child_array[1], child_array[2], child_array[3], child_array[4], child_array[5], child_array[6], child_array[7], data_w);
+
+		end_time_memstream = clock();
+		memstream_time_sum += (end_time_memstream-start_time_memstream);
+
+
+
+		//printf("Memstream time: %f\n", ((double)end_time_memstream-start_time_memstream)/CLOCKS_PER_SEC);
 
 
 		for (int i = 0; i < VERTEX_COUNT; i++) {
@@ -54,9 +66,11 @@ int main(void)
 
 		count++;
 
-	} while(!converged());
+	}while(false);
+	//while(!converged());
 	printf("\nDone! Converged after %d iterations.\n", count);
-	printf("Converged at: %d\n", child_0[1337]);
+
+	//printf("Converged at: %d\n", child_array[0][0]);
 
 
 
@@ -68,16 +82,19 @@ int main(void)
 	for (int i = 0; i < EDGE_COUNT; i++) {
 		free(edges[i]);
 	}
+
 	free(vertex_list);
-	free(child_0);
-	free(child_1);
-	free(child_2);
-	free(child_3);
-	free(child_4);
+	for(int i = 0; i < EDGE_COUNT;i++){
+		free(child_array[i]);
+	}
+	free(child_array);
+	clock_t end_simulation_time = clock();
 
-	clock_t t = clock();
 
-	printf("Some form of simulation time: %f\n", ((double)t-start)/CLOCKS_PER_SEC);
+
+	printf("Only CPU time: %f s\n", ((double)end_simulation_time-memstream_time_sum)/CLOCKS_PER_SEC);
+	printf("Average Memstream time: %f\n", (memstream_time_sum/count)/CLOCKS_PER_SEC);
+	printf("Total time: %f s\n", ((double)end_simulation_time-start_simulation_time)/CLOCKS_PER_SEC);
 	printf("Not accurate, just used to compare different approaches.\n");
 	printf("Done.\n");
 	return 0;

@@ -13,36 +13,55 @@ import com.maxeler.maxcompiler.v2.managers.standard.IOLink.IODestination;
 import com.maxeler.maxcompiler.v2.managers.standard.Manager;
 
 public class MemStreamManager {
-	private static final String[] children_names = {"child_0","child_1","child_2", "child_3", "child_4"};
-	public static int EDGE_COUNT = children_names.length;
+	public static int EDGE_COUNT = 8;
+	//private static final String[] children_names = {"child_0","child_1","child_2", "child_3", "child_4"};
+
+	private static final String child_name = "child_";
+	private static final String[] children_names = new String[EDGE_COUNT];
+
+	//private static final String[] children_names = {"child_0","child_1","child_2", "child_3", "child_4","child_5","child_6","child_7"};
+
+
+
 	private static final String s_kernelName = "MemStreamKernel";
 
 	public static void main(String[] args) {
+		long start_time_link = System.nanoTime();
 
 		MemStreamEngineParameters params = new MemStreamEngineParameters(args);
 		Manager manager = new Manager(params);
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
 
-		// Input link for all children, then the data_write.
+		// Input link for all children, then tnamehe data_write.
+		for(int i = 0; i < EDGE_COUNT;i++){
+			children_names[i] = child_name+Integer.toString(i);
+		}
+
+
 		IOLink[] all_links = new IOLink[EDGE_COUNT+1];
 		for(int i=0; i < EDGE_COUNT; i++){
 			all_links[i]= link(children_names[i], IODestination.CPU);
 		}
+
 		all_links[EDGE_COUNT] = link("data_w", IODestination.CPU);
+
 
 		manager.setIO(
 			all_links
 			);
 
 		manager.createSLiCinterface(interfaceDefault());
-
 		configBuild(manager, params);
 
 		manager.build();
+		long end_time_link = System.nanoTime();
+		System.out.println("Time for linking is: " + (end_time_link - start_time_link)/1000 + "microseconds");
+
 	}
 
 	private static EngineInterface interfaceDefault() {
+		long start_time_link = System.nanoTime();
 		EngineInterface engine_interface = new EngineInterface();
 		CPUTypes   type = CPUTypes.INT32;
 		int        manager_size = type.sizeInBytes();
@@ -53,24 +72,33 @@ public class MemStreamManager {
 		engine_interface.setTicks(s_kernelName, size);
 
 		// Below we set the parameters for MemStream in the CpuCode.
-		for (String name: children_names){
+		/*for (String name: children_names){
 			engine_interface.setStream(name, type, size * manager_size);
+		}
+		*/
+
+		for(int i=0; i < EDGE_COUNT; i++){
+			engine_interface.setStream(children_names[i], type, size * manager_size);
 		}
 		// Output stream
 		engine_interface.setStream("data_w", type, size * manager_size);
 
 		engine_interface.ignoreAll(Direction.IN_OUT);
+		long end_time_link = System.nanoTime();
+		System.out.println("Time for engine interface is: " + (end_time_link - start_time_link)/1000 + "microseconds");
 		return engine_interface;
 		// These parameters are sent to EngineCode/src/memstream/MemStreamKernel.maxj
 	}
 
 	// Don't think we need to change things below.
 	private static void configBuild(Manager manager, MemStreamEngineParameters params) {
-
+		long start_time_link = System.nanoTime();
 		manager.setEnableStreamStatusBlocks(false);
 		BuildConfig buildConfig = manager.getBuildConfig();
 		buildConfig.setMPPRCostTableSearchRange(params.getMPPRStartCT(), params.getMPPREndCT());
 		buildConfig.setMPPRParallelism(params.getMPPRThreads());
 		buildConfig.setMPPRRetryNearMissesThreshold(params.getMPPRRetryThreshold());
+		long end_time_link = System.nanoTime();
+		System.out.println("Time for config build is: " + (end_time_link - start_time_link)/1000 + "microseconds");
 	}
 }

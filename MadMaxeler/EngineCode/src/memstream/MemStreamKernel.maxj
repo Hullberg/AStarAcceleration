@@ -11,6 +11,8 @@ class MemStreamKernel extends Kernel {
 
 	protected MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
+		long start_time_link = System.nanoTime();
+
 
 		// Supposed to be dynamic, we will instead go with hard code due to Maxelers inability to have dynamic amount of stream-parameters.
 		/*DFEVar [] children = new DFEVar[MemStreamManager.EDGE_COUNT];
@@ -28,19 +30,33 @@ class MemStreamKernel extends Kernel {
 		data_w = data_w / MemStreamManager.EDGE_COUNT;*/
 
 		// Hard code
+
 		DFEVar child_0 = io.input("child_0", type);
 		DFEVar child_1 = io.input("child_1", type);
 		DFEVar child_2 = io.input("child_2", type);
 		DFEVar child_3 = io.input("child_3", type);
+
+		//Comment out if 4 edges
 		DFEVar child_4 = io.input("child_4", type);
+		DFEVar child_5 = io.input("child_5", type);
+		DFEVar child_6 = io.input("child_6", type);
+		DFEVar child_7 = io.input("child_7", type);
 
 
-		DFEVar data_w = (child_0 + child_1 + child_2 + child_3 + child_4) / 5;
+		//If edges is 4
+		//DFEVar data_w = (child_0 + child_1 + child_2 + child_3) / 4;
+
+		//If edges is 8
+		DFEVar data_w = (child_0 + child_1 + child_2 + child_3 + child_4 + child_5 + child_6 + child_7) / 8;
+
 
 
 		// Send back to CPUCode/MemStreamCpuCode.c
-
+		System.out.println("Before output");
 		io.output("data_w", data_w, type);
+
+		long end_time_link = System.nanoTime();
+		System.out.println("Time for maxeler operation is: " + (end_time_link - start_time_link)/1000 + "microseconds");
 
 	}
 
