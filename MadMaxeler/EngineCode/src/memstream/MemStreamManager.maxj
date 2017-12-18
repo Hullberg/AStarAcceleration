@@ -14,14 +14,8 @@ import com.maxeler.maxcompiler.v2.managers.standard.Manager;
 
 public class MemStreamManager {
 	public static int EDGE_COUNT = 8;
-	//private static final String[] children_names = {"child_0","child_1","child_2", "child_3", "child_4"};
-
 	private static final String child_name = "child_";
 	private static final String[] children_names = new String[EDGE_COUNT];
-
-	//private static final String[] children_names = {"child_0","child_1","child_2", "child_3", "child_4","child_5","child_6","child_7"};
-
-
 
 	private static final String s_kernelName = "MemStreamKernel";
 
@@ -33,7 +27,7 @@ public class MemStreamManager {
 		Kernel  kernel  = new MemStreamKernel(manager.makeKernelParameters(s_kernelName));
 		manager.setKernel(kernel);
 
-		// Input link for all children, then tnamehe data_write.
+		// Input link for all children, then name the data_write.
 		for(int i = 0; i < EDGE_COUNT;i++){
 			children_names[i] = child_name+Integer.toString(i);
 		}
@@ -72,11 +66,6 @@ public class MemStreamManager {
 		engine_interface.setTicks(s_kernelName, size);
 
 		// Below we set the parameters for MemStream in the CpuCode.
-		/*for (String name: children_names){
-			engine_interface.setStream(name, type, size * manager_size);
-		}
-		*/
-
 		for(int i=0; i < EDGE_COUNT; i++){
 			engine_interface.setStream(children_names[i], type, size * manager_size);
 		}

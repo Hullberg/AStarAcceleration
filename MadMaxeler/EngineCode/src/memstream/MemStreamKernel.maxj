@@ -47,7 +47,8 @@ class MemStreamKernel extends Kernel {
 		//DFEVar data_w = (child_0 + child_1 + child_2 + child_3) / 4;
 
 		//If edges is 8
-		DFEVar data_w = (child_0 + child_1 + child_2 + child_3 + child_4 + child_5 + child_6 + child_7) / 8;
+		DFEVar sum = child_0 + child_1 + child_2 + child_3 + child_4 + child_5 + child_6 + child_7;
+		DFEVar data_w = sum / 8;
 
 
 
