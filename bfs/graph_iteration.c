@@ -10,7 +10,7 @@
 #include "vertex.c"
 
 #define EDGE_COUNT 8
-#define VERTEX_COUNT 5120000
+#define VERTEX_COUNT 40000
 
 Vertex** vertex_list;
 

@@ -189,35 +189,35 @@ MANAGER_STREAM(Stream_61, output, Stream_26, input, 32)
 
 #ifdef MANAGER_NODE_STACK_TRACE
 #define MANAGER_NODE_STACK_TRACE_PRESENT 1
-MANAGER_NODE_STACK_TRACE(MemStreamKernel, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_0, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_1, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_2, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_3, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_4, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_5, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_6, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(child_7, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:27)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(data_w, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamToCPU(CustomManager.java:1144)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:29)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-MANAGER_NODE_STACK_TRACE(Stream_1, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_4, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_7, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_10, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_13, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_16, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_19, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_22, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_26, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_63, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_31, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_35, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_39, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_43, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_47, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_51, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_55, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_59, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
-MANAGER_NODE_STACK_TRACE(Stream_61, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:63)\n")
+MANAGER_NODE_STACK_TRACE(MemStreamKernel, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_0, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_1, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_2, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_3, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_4, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_5, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_6, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(child_7, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamFromCPU(CustomManager.java:1133)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:20)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(data_w, "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addStreamToCPU(CustomManager.java:1144)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:22)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+MANAGER_NODE_STACK_TRACE(Stream_1, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_4, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_7, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_10, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_13, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_16, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_19, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_22, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_26, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_63, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_31, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_35, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_39, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_43, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_47, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_51, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_55, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_59, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
+MANAGER_NODE_STACK_TRACE(Stream_61, "com.maxeler.maxcompiler.v2.managers.DFEManager.build(DFEManager.java:431)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:58)\n")
 #endif
 
 
@@ -288,7 +288,7 @@ MANAGER_NODE_CPP_SIM_MODEL_CTOR(data_w, PCIePushSinkSync16, "data_w")
 MANAGER_NODE_CPP_SIM_MODEL_CTOR(CapabilityReg, CapRegs, "CapabilityReg", 0, 8, 1, 0, 0, 0, 0, 0, 44)
 MANAGER_NODE_CPP_SIM_MODEL_CTOR(ifpga, IFPGARegs)
 MANAGER_NODE_CPP_SIM_MODEL_CTOR(sfa, SFARegs)
-MANAGER_NODE_CPP_SIM_MODEL_CTOR(ChecksumMemory, ChecksumMem, "ChecksumMemory", "e1d1209bf9ee7a495cf004970c88688d25ec652a5334db30d90317414c0b62c8")
+MANAGER_NODE_CPP_SIM_MODEL_CTOR(ChecksumMemory, ChecksumMem, "ChecksumMemory", "e1d1209bf9ee7a495cf004970c88688d0af373942cc53fbcaf0cdeac14ddd2d2")
 #endif
 
 #ifdef MANAGER_NODE_CPP_SIM_MODEL_SETUP
@@ -395,7 +395,7 @@ REG_V2(SignalForwardingAdapter.SFA_FORWARD_EN, 0x28, 4, hwBits(32), HOST_READ_WR
 
 #ifdef CHECKSUM
 #define CHECKSUM_PRESENT 1
-CHECKSUM("e1d1209bf9ee7a495cf004970c88688d25ec652a5334db30d90317414c0b62c8")
+CHECKSUM("e1d1209bf9ee7a495cf004970c88688d0af373942cc53fbcaf0cdeac14ddd2d2")
 #endif
 
 
@@ -435,15 +435,15 @@ extern "C" {
  * \brief Basic static function for the interface 'default'.
  * 
  * \param [in] param_N Interface Parameter "N".
- * \param [in] instream_child_0 The stream should be of size 16 bytes.
- * \param [in] instream_child_1 The stream should be of size 16 bytes.
- * \param [in] instream_child_2 The stream should be of size 16 bytes.
- * \param [in] instream_child_3 The stream should be of size 16 bytes.
- * \param [in] instream_child_4 The stream should be of size 16 bytes.
- * \param [in] instream_child_5 The stream should be of size 16 bytes.
- * \param [in] instream_child_6 The stream should be of size 16 bytes.
- * \param [in] instream_child_7 The stream should be of size 16 bytes.
- * \param [out] outstream_data_w The stream should be of size 16 bytes.
+ * \param [in] instream_child_0 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_1 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_2 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_3 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_4 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_5 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_6 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_7 The stream should be of size (param_N * 4) bytes.
+ * \param [out] outstream_data_w The stream should be of size (param_N * 4) bytes.
  */
 void MemStream(
 	int64_t param_N,
@@ -466,15 +466,15 @@ void MemStream(
  * 
  * 
  * \param [in] param_N Interface Parameter "N".
- * \param [in] instream_child_0 The stream should be of size 16 bytes.
- * \param [in] instream_child_1 The stream should be of size 16 bytes.
- * \param [in] instream_child_2 The stream should be of size 16 bytes.
- * \param [in] instream_child_3 The stream should be of size 16 bytes.
- * \param [in] instream_child_4 The stream should be of size 16 bytes.
- * \param [in] instream_child_5 The stream should be of size 16 bytes.
- * \param [in] instream_child_6 The stream should be of size 16 bytes.
- * \param [in] instream_child_7 The stream should be of size 16 bytes.
- * \param [out] outstream_data_w The stream should be of size 16 bytes.
+ * \param [in] instream_child_0 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_1 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_2 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_3 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_4 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_5 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_6 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_7 The stream should be of size (param_N * 4) bytes.
+ * \param [out] outstream_data_w The stream should be of size (param_N * 4) bytes.
  * \return A handle on the execution status, or NULL in case of error.
  */
 max_run_t *MemStream_nonblock(
@@ -495,15 +495,15 @@ max_run_t *MemStream_nonblock(
  */
 typedef struct { 
 	int64_t param_N; /**<  [in] Interface Parameter "N". */
-	const int32_t *instream_child_0; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_1; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_2; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_3; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_4; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_5; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_6; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_7; /**<  [in] The stream should be of size 16 bytes. */
-	int32_t *outstream_data_w; /**<  [out] The stream should be of size 16 bytes. */
+	const int32_t *instream_child_0; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_1; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_2; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_3; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_4; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_5; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_6; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_7; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	int32_t *outstream_data_w; /**<  [out] The stream should be of size (param_N * 4) bytes. */
 } MemStream_actions_t;
 
 /**
@@ -619,54 +619,54 @@ int MemStream_simulator_stop(void);
 
 #ifdef PHOTON_NODE_DATA
 #define PHOTON_NODE_DATA_PRESENT 1
-PHOTON_NODE_DATA(MemStreamKernel, 34, NodeInputMappedReg, "Scalar input (io_data_w_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 35, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 0, NodeInputMappedReg, "Scalar input (io_child_0_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 1, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 2, NodeInput, "Input(child_0)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 3, NodeInputMappedReg, "Scalar input (io_child_1_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 4, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 5, NodeInput, "Input(child_1)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 24, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 6, NodeInputMappedReg, "Scalar input (io_child_2_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 7, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 8, NodeInput, "Input(child_2)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 25, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 9, NodeInputMappedReg, "Scalar input (io_child_3_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 10, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 11, NodeInput, "Input(child_3)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 26, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 12, NodeInputMappedReg, "Scalar input (io_child_4_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 13, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 14, NodeInput, "Input(child_4)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 27, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 15, NodeInputMappedReg, "Scalar input (io_child_5_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 16, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 17, NodeInput, "Input(child_5)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 28, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 18, NodeInputMappedReg, "Scalar input (io_child_6_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 19, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 20, NodeInput, "Input(child_6)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 29, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 21, NodeInputMappedReg, "Scalar input (io_child_7_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 22, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 23, NodeInput, "Input(child_7)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 30, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 50, NodeReinterpret, "<{HWOffsetFix:32, -3, TWOSCOMPLEMENT}>", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:33)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 51, NodeCast, "{HWOffsetFix:32, 0, TWOSCOMPLEMENT}", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:33)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 37, NodeOutput, "Output(data_w)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 42, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 54, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 39, NodeConstantRawBits, "{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 40, NodeCounter, "Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 41, NodeStreamOffset, "stream offset: 1", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 43, NodeOutputMappedReg, "Scalar output (current_run_cycle_count)", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 53, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 45, NodeConstantRawBits, "{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 46, NodeCounter, "Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 48, NodeInputMappedReg, "Scalar input (run_cycle_count)", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 52, NodeEqInlined, "==", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
-PHOTON_NODE_DATA(MemStreamKernel, 47, NodeFlush, "flush on trigger", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:24)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:62)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 34, NodeInputMappedReg, "Scalar input (io_data_w_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 35, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 0, NodeInputMappedReg, "Scalar input (io_child_0_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 1, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 2, NodeInput, "Input(child_0)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:16)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 3, NodeInputMappedReg, "Scalar input (io_child_1_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 4, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 5, NodeInput, "Input(child_1)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:17)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 24, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 6, NodeInputMappedReg, "Scalar input (io_child_2_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 7, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 8, NodeInput, "Input(child_2)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:18)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 25, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 9, NodeInputMappedReg, "Scalar input (io_child_3_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 10, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 11, NodeInput, "Input(child_3)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:19)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 26, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 12, NodeInputMappedReg, "Scalar input (io_child_4_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 13, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 14, NodeInput, "Input(child_4)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:22)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 27, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 15, NodeInputMappedReg, "Scalar input (io_child_5_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 16, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 17, NodeInput, "Input(child_5)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:23)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 28, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 18, NodeInputMappedReg, "Scalar input (io_child_6_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 19, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 20, NodeInput, "Input(child_6)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:24)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 29, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 21, NodeInputMappedReg, "Scalar input (io_child_7_force_disabled)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 22, NodeNot, "~", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 23, NodeInput, "Input(child_7)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:25)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 30, NodeAdd, "+", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:32)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 50, NodeReinterpret, "<{HWOffsetFix:32, -3, TWOSCOMPLEMENT}>", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:33)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 51, NodeCast, "{HWOffsetFix:32, 0, TWOSCOMPLEMENT}", "com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:33)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 37, NodeOutput, "Output(data_w)", "com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)\nmemstream.MemStreamKernel.<init>(MemStreamKernel.maxj:39)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 42, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 54, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 39, NodeConstantRawBits, "{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 40, NodeCounter, "Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 41, NodeStreamOffset, "stream offset: 1", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 43, NodeOutputMappedReg, "Scalar output (current_run_cycle_count)", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 53, NodeConstantRawBits, "{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 45, NodeConstantRawBits, "{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 46, NodeCounter, "Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 48, NodeInputMappedReg, "Scalar input (run_cycle_count)", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 52, NodeEqInlined, "==", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
+PHOTON_NODE_DATA(MemStreamKernel, 47, NodeFlush, "flush on trigger", "com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)\nmemstream.MemStreamManager.<init>(MemStreamManager.maxj:17)\nmemstream.MemStreamManager.main(MemStreamManager.maxj:57)\n")
 #endif
 
 #ifdef SLIC_USE_DEFINITIONS
@@ -934,8 +934,10 @@ static max_actions_t* MemStream_convert_internal(
 	CHECK_ERRORS;
 	/* end of code for scalar MemStreamKernel.run_cycle_count*/
 	
+	int64_t tmp_0 = (param_N * 4);
+	
 	/* code for stream child_0 */
-	size_t instream_size_child_0 = 16;
+	size_t instream_size_child_0 = tmp_0;
 	if (instream_size_child_0 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_0;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_0))) {
@@ -957,8 +959,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_0 */
 	
+	int64_t tmp_1 = (param_N * 4);
+	
 	/* code for stream child_1 */
-	size_t instream_size_child_1 = 16;
+	size_t instream_size_child_1 = tmp_1;
 	if (instream_size_child_1 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_1;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_1))) {
@@ -980,8 +984,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_1 */
 	
+	int64_t tmp_2 = (param_N * 4);
+	
 	/* code for stream child_2 */
-	size_t instream_size_child_2 = 16;
+	size_t instream_size_child_2 = tmp_2;
 	if (instream_size_child_2 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_2;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_2))) {
@@ -1003,8 +1009,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_2 */
 	
+	int64_t tmp_3 = (param_N * 4);
+	
 	/* code for stream child_3 */
-	size_t instream_size_child_3 = 16;
+	size_t instream_size_child_3 = tmp_3;
 	if (instream_size_child_3 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_3;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_3))) {
@@ -1026,8 +1034,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_3 */
 	
+	int64_t tmp_4 = (param_N * 4);
+	
 	/* code for stream child_4 */
-	size_t instream_size_child_4 = 16;
+	size_t instream_size_child_4 = tmp_4;
 	if (instream_size_child_4 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_4;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_4))) {
@@ -1049,8 +1059,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_4 */
 	
+	int64_t tmp_5 = (param_N * 4);
+	
 	/* code for stream child_5 */
-	size_t instream_size_child_5 = 16;
+	size_t instream_size_child_5 = tmp_5;
 	if (instream_size_child_5 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_5;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_5))) {
@@ -1072,8 +1084,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_5 */
 	
+	int64_t tmp_6 = (param_N * 4);
+	
 	/* code for stream child_6 */
-	size_t instream_size_child_6 = 16;
+	size_t instream_size_child_6 = tmp_6;
 	if (instream_size_child_6 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_6;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_6))) {
@@ -1095,8 +1109,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_6 */
 	
+	int64_t tmp_7 = (param_N * 4);
+	
 	/* code for stream child_7 */
-	size_t instream_size_child_7 = 16;
+	size_t instream_size_child_7 = tmp_7;
 	if (instream_size_child_7 > 0) {
 		const int32_t *stream_ptr = interface_actions->instream_child_7;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->instream_child_7))) {
@@ -1118,8 +1134,10 @@ static max_actions_t* MemStream_convert_internal(
 	}
 	/* end of code for stream child_7 */
 	
+	int64_t tmp_8 = (param_N * 4);
+	
 	/* code for stream data_w */
-	size_t outstream_size_data_w = 16;
+	size_t outstream_size_data_w = tmp_8;
 	if (outstream_size_data_w > 0) {
 		int32_t *stream_ptr = interface_actions->outstream_data_w;
 		if (use_callback && (1 == MemStream_check_aligned(interface_actions->outstream_data_w))) {
@@ -1362,15 +1380,24 @@ max_actions_t* MemStream_convert(max_file_t *maxfile, MemStream_actions_t *inter
 SLIC_MODE_START(default)	
 SLIC_PARAMETER_UINT64(int64_t, N, param_N)	
 SLIC_SET_TICKS(MemStreamKernel, param_N)	
-SLIC_STREAM(child_0, 16)	
-SLIC_STREAM(child_1, 16)	
-SLIC_STREAM(child_2, 16)	
-SLIC_STREAM(child_3, 16)	
-SLIC_STREAM(child_4, 16)	
-SLIC_STREAM(child_5, 16)	
-SLIC_STREAM(child_6, 16)	
-SLIC_STREAM(child_7, 16)	
-SLIC_STREAM(data_w, 16)	
+SLIC_TEMP_VAR(int64_t tmp_0 = (param_N * 4);)	
+SLIC_STREAM(child_0, tmp_0)	
+SLIC_TEMP_VAR(int64_t tmp_1 = (param_N * 4);)	
+SLIC_STREAM(child_1, tmp_1)	
+SLIC_TEMP_VAR(int64_t tmp_2 = (param_N * 4);)	
+SLIC_STREAM(child_2, tmp_2)	
+SLIC_TEMP_VAR(int64_t tmp_3 = (param_N * 4);)	
+SLIC_STREAM(child_3, tmp_3)	
+SLIC_TEMP_VAR(int64_t tmp_4 = (param_N * 4);)	
+SLIC_STREAM(child_4, tmp_4)	
+SLIC_TEMP_VAR(int64_t tmp_5 = (param_N * 4);)	
+SLIC_STREAM(child_5, tmp_5)	
+SLIC_TEMP_VAR(int64_t tmp_6 = (param_N * 4);)	
+SLIC_STREAM(child_6, tmp_6)	
+SLIC_TEMP_VAR(int64_t tmp_7 = (param_N * 4);)	
+SLIC_STREAM(child_7, tmp_7)	
+SLIC_TEMP_VAR(int64_t tmp_8 = (param_N * 4);)	
+SLIC_STREAM(data_w, tmp_8)	
 SLIC_MODE_END(default)
 
 #endif /* SLIC_DYNAMIC_CODE */
@@ -1382,62 +1409,88 @@ PSJNZW1TdHJlYW0iPjxjb25zdGFudCBuYW1lPSJQQ0lFX0FMSUdOTUVOVCIgdHlwZT0ibG9uZyIg
 dmFsdWU9IjE2Ii8+PGVuZ2luZW1vZGUgbmFtZT0iZGVmYXVsdCI+PGZ1bmN0aW9uIG5hbWU9Ik1l
 bVN0cmVhbSIgcmV0dXJuLXZhbHVlPSJ2b2lkIj48c2NhbGFyIGRlc2M9IkludGVyZmFjZSBQYXJh
 bWV0ZXIgJnF1b3Q7TiZxdW90Oy4iIGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9InBhcmFtX04iIHR5
-cGU9ImludDY0X3QiLz48YXJyYXkgZGVzYz0iVGhlIHN0cmVhbSBzaG91bGQgYmUgb2Ygc2l6ZSAx
-NiBieXRlcy4iIGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9Imluc3RyZWFtX2NoaWxkXzAiIHNpemU9
-IjE2IiB0cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxkaW1lbnNpb24gaW5kZXg9IjAi
-PjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9Ii8iIHZh
-bHVlPSIoMTYgLyA0KSI+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjE2Ii8+PGNvbnN0YW50VmFsdWUg
-dmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjwvbGVuZ3RoPjwv
-ZGltZW5zaW9uPjwvYXJyYXk+PGFycmF5IGRlc2M9IlRoZSBzdHJlYW0gc2hvdWxkIGJlIG9mIHNp
-emUgMTYgYnl0ZXMuIiBkaXJlY3Rpb249IklucHV0IiBuYW1lPSJpbnN0cmVhbV9jaGlsZF8xIiBz
-aXplPSIxNiIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJpbnQzMl90Ij48ZGltZW5zaW9uIGluZGV4
-PSIwIj48bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9wZXJhdG9yIG9wZXJhdG9yPSIv
-IiB2YWx1ZT0iKDE2IC8gNCkiPjxjb25zdGFudFZhbHVlIHZhbHVlPSIxNiIvPjxjb25zdGFudFZh
-bHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5hcnlPcGVyYXRvcj48L2Z1bmN0aW9uQ2FsbD48L2xlbmd0
-aD48L2RpbWVuc2lvbj48L2FycmF5PjxhcnJheSBkZXNjPSJUaGUgc3RyZWFtIHNob3VsZCBiZSBv
-ZiBzaXplIDE2IGJ5dGVzLiIgZGlyZWN0aW9uPSJJbnB1dCIgbmFtZT0iaW5zdHJlYW1fY2hpbGRf
-MiIgc2l6ZT0iMTYiIHRyYW5zcG9zZT0idHJ1ZSIgdHlwZT0iaW50MzJfdCI+PGRpbWVuc2lvbiBp
-bmRleD0iMCI+PGxlbmd0aD48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVyYXRvciBvcGVyYXRv
-cj0iLyIgdmFsdWU9IigxNiAvIDQpIj48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iMTYiLz48Y29uc3Rh
-bnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0b3I+PC9mdW5jdGlvbkNhbGw+PC9s
-ZW5ndGg+PC9kaW1lbnNpb24+PC9hcnJheT48YXJyYXkgZGVzYz0iVGhlIHN0cmVhbSBzaG91bGQg
-YmUgb2Ygc2l6ZSAxNiBieXRlcy4iIGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9Imluc3RyZWFtX2No
-aWxkXzMiIHNpemU9IjE2IiB0cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxkaW1lbnNp
-b24gaW5kZXg9IjAiPjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3Bl
-cmF0b3I9Ii8iIHZhbHVlPSIoMTYgLyA0KSI+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjE2Ii8+PGNv
-bnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwvZnVuY3Rpb25DYWxs
-PjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PGFycmF5IGRlc2M9IlRoZSBzdHJlYW0gc2hv
-dWxkIGJlIG9mIHNpemUgMTYgYnl0ZXMuIiBkaXJlY3Rpb249IklucHV0IiBuYW1lPSJpbnN0cmVh
-bV9jaGlsZF80IiBzaXplPSIxNiIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJpbnQzMl90Ij48ZGlt
-ZW5zaW9uIGluZGV4PSIwIj48bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9wZXJhdG9y
-IG9wZXJhdG9yPSIvIiB2YWx1ZT0iKDE2IC8gNCkiPjxjb25zdGFudFZhbHVlIHZhbHVlPSIxNiIv
-Pjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5hcnlPcGVyYXRvcj48L2Z1bmN0aW9u
-Q2FsbD48L2xlbmd0aD48L2RpbWVuc2lvbj48L2FycmF5PjxhcnJheSBkZXNjPSJUaGUgc3RyZWFt
-IHNob3VsZCBiZSBvZiBzaXplIDE2IGJ5dGVzLiIgZGlyZWN0aW9uPSJJbnB1dCIgbmFtZT0iaW5z
-dHJlYW1fY2hpbGRfNSIgc2l6ZT0iMTYiIHRyYW5zcG9zZT0idHJ1ZSIgdHlwZT0iaW50MzJfdCI+
-PGRpbWVuc2lvbiBpbmRleD0iMCI+PGxlbmd0aD48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVy
-YXRvciBvcGVyYXRvcj0iLyIgdmFsdWU9IigxNiAvIDQpIj48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0i
-MTYiLz48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0b3I+PC9mdW5j
-dGlvbkNhbGw+PC9sZW5ndGg+PC9kaW1lbnNpb24+PC9hcnJheT48YXJyYXkgZGVzYz0iVGhlIHN0
-cmVhbSBzaG91bGQgYmUgb2Ygc2l6ZSAxNiBieXRlcy4iIGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9
-Imluc3RyZWFtX2NoaWxkXzYiIHNpemU9IjE2IiB0cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMy
-X3QiPjxkaW1lbnNpb24gaW5kZXg9IjAiPjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5
-T3BlcmF0b3Igb3BlcmF0b3I9Ii8iIHZhbHVlPSIoMTYgLyA0KSI+PGNvbnN0YW50VmFsdWUgdmFs
-dWU9IjE2Ii8+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwv
-ZnVuY3Rpb25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PGFycmF5IGRlc2M9IlRo
-ZSBzdHJlYW0gc2hvdWxkIGJlIG9mIHNpemUgMTYgYnl0ZXMuIiBkaXJlY3Rpb249IklucHV0IiBu
-YW1lPSJpbnN0cmVhbV9jaGlsZF83IiBzaXplPSIxNiIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJp
-bnQzMl90Ij48ZGltZW5zaW9uIGluZGV4PSIwIj48bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJp
-bmFyeU9wZXJhdG9yIG9wZXJhdG9yPSIvIiB2YWx1ZT0iKDE2IC8gNCkiPjxjb25zdGFudFZhbHVl
-IHZhbHVlPSIxNiIvPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5hcnlPcGVyYXRv
-cj48L2Z1bmN0aW9uQ2FsbD48L2xlbmd0aD48L2RpbWVuc2lvbj48L2FycmF5PjxhcnJheSBkZXNj
-PSJUaGUgc3RyZWFtIHNob3VsZCBiZSBvZiBzaXplIDE2IGJ5dGVzLiIgZGlyZWN0aW9uPSJPdXRw
-dXQiIG5hbWU9Im91dHN0cmVhbV9kYXRhX3ciIHNpemU9IjE2IiB0cmFuc3Bvc2U9InRydWUiIHR5
-cGU9ImludDMyX3QiPjxkaW1lbnNpb24gaW5kZXg9IjAiPjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48
-bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9Ii8iIHZhbHVlPSIoMTYgLyA0KSI+PGNvbnN0YW50
-VmFsdWUgdmFsdWU9IjE2Ii8+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9w
-ZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PC9mdW5j
-dGlvbj48L2VuZ2luZW1vZGU+PC9tYXhmaWxlPg==
+cGU9ImludDY0X3QiLz48YXJyYXkgZGVzYz0iVGhlIHN0cmVhbSBzaG91bGQgYmUgb2Ygc2l6ZSAo
+cGFyYW1fTiAqIDQpIGJ5dGVzLiIgZGlyZWN0aW9uPSJJbnB1dCIgbmFtZT0iaW5zdHJlYW1fY2hp
+bGRfMCIgc2l6ZT0iKHBhcmFtX04gKiA0KSIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJpbnQzMl90
+Ij48ZGltZW5zaW9uIGluZGV4PSIwIj48bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9w
+ZXJhdG9yIG9wZXJhdG9yPSIvIiB2YWx1ZT0iKChwYXJhbV9OICogNCkgLyA0KSI+PGZ1bmN0aW9u
+Q2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9IioiIHZhbHVlPSIocGFyYW1fTiAqIDQp
+Ij48dXNlclBhcmFtIHZhbHVlPSJwYXJhbV9OIi8+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48
+L251bUJpbmFyeU9wZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0
+Ii8+PC9udW1CaW5hcnlPcGVyYXRvcj48L2Z1bmN0aW9uQ2FsbD48L2xlbmd0aD48L2RpbWVuc2lv
+bj48L2FycmF5PjxhcnJheSBkZXNjPSJUaGUgc3RyZWFtIHNob3VsZCBiZSBvZiBzaXplIChwYXJh
+bV9OICogNCkgYnl0ZXMuIiBkaXJlY3Rpb249IklucHV0IiBuYW1lPSJpbnN0cmVhbV9jaGlsZF8x
+IiBzaXplPSIocGFyYW1fTiAqIDQpIiB0cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxk
+aW1lbnNpb24gaW5kZXg9IjAiPjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0
+b3Igb3BlcmF0b3I9Ii8iIHZhbHVlPSIoKHBhcmFtX04gKiA0KSAvIDQpIj48ZnVuY3Rpb25DYWxs
+PjxudW1CaW5hcnlPcGVyYXRvciBvcGVyYXRvcj0iKiIgdmFsdWU9IihwYXJhbV9OICogNCkiPjx1
+c2VyUGFyYW0gdmFsdWU9InBhcmFtX04iLz48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVt
+QmluYXJ5T3BlcmF0b3I+PC9mdW5jdGlvbkNhbGw+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48
+L251bUJpbmFyeU9wZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwv
+YXJyYXk+PGFycmF5IGRlc2M9IlRoZSBzdHJlYW0gc2hvdWxkIGJlIG9mIHNpemUgKHBhcmFtX04g
+KiA0KSBieXRlcy4iIGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9Imluc3RyZWFtX2NoaWxkXzIiIHNp
+emU9IihwYXJhbV9OICogNCkiIHRyYW5zcG9zZT0idHJ1ZSIgdHlwZT0iaW50MzJfdCI+PGRpbWVu
+c2lvbiBpbmRleD0iMCI+PGxlbmd0aD48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVyYXRvciBv
+cGVyYXRvcj0iLyIgdmFsdWU9IigocGFyYW1fTiAqIDQpIC8gNCkiPjxmdW5jdGlvbkNhbGw+PG51
+bUJpbmFyeU9wZXJhdG9yIG9wZXJhdG9yPSIqIiB2YWx1ZT0iKHBhcmFtX04gKiA0KSI+PHVzZXJQ
+YXJhbSB2YWx1ZT0icGFyYW1fTiIvPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5h
+cnlPcGVyYXRvcj48L2Z1bmN0aW9uQ2FsbD48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVt
+QmluYXJ5T3BlcmF0b3I+PC9mdW5jdGlvbkNhbGw+PC9sZW5ndGg+PC9kaW1lbnNpb24+PC9hcnJh
+eT48YXJyYXkgZGVzYz0iVGhlIHN0cmVhbSBzaG91bGQgYmUgb2Ygc2l6ZSAocGFyYW1fTiAqIDQp
+IGJ5dGVzLiIgZGlyZWN0aW9uPSJJbnB1dCIgbmFtZT0iaW5zdHJlYW1fY2hpbGRfMyIgc2l6ZT0i
+KHBhcmFtX04gKiA0KSIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJpbnQzMl90Ij48ZGltZW5zaW9u
+IGluZGV4PSIwIj48bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9wZXJhdG9yIG9wZXJh
+dG9yPSIvIiB2YWx1ZT0iKChwYXJhbV9OICogNCkgLyA0KSI+PGZ1bmN0aW9uQ2FsbD48bnVtQmlu
+YXJ5T3BlcmF0b3Igb3BlcmF0b3I9IioiIHZhbHVlPSIocGFyYW1fTiAqIDQpIj48dXNlclBhcmFt
+IHZhbHVlPSJwYXJhbV9OIi8+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9w
+ZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5h
+cnlPcGVyYXRvcj48L2Z1bmN0aW9uQ2FsbD48L2xlbmd0aD48L2RpbWVuc2lvbj48L2FycmF5Pjxh
+cnJheSBkZXNjPSJUaGUgc3RyZWFtIHNob3VsZCBiZSBvZiBzaXplIChwYXJhbV9OICogNCkgYnl0
+ZXMuIiBkaXJlY3Rpb249IklucHV0IiBuYW1lPSJpbnN0cmVhbV9jaGlsZF80IiBzaXplPSIocGFy
+YW1fTiAqIDQpIiB0cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxkaW1lbnNpb24gaW5k
+ZXg9IjAiPjxsZW5ndGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9
+Ii8iIHZhbHVlPSIoKHBhcmFtX04gKiA0KSAvIDQpIj48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlP
+cGVyYXRvciBvcGVyYXRvcj0iKiIgdmFsdWU9IihwYXJhbV9OICogNCkiPjx1c2VyUGFyYW0gdmFs
+dWU9InBhcmFtX04iLz48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0
+b3I+PC9mdW5jdGlvbkNhbGw+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9w
+ZXJhdG9yPjwvZnVuY3Rpb25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PGFycmF5
+IGRlc2M9IlRoZSBzdHJlYW0gc2hvdWxkIGJlIG9mIHNpemUgKHBhcmFtX04gKiA0KSBieXRlcy4i
+IGRpcmVjdGlvbj0iSW5wdXQiIG5hbWU9Imluc3RyZWFtX2NoaWxkXzUiIHNpemU9IihwYXJhbV9O
+ICogNCkiIHRyYW5zcG9zZT0idHJ1ZSIgdHlwZT0iaW50MzJfdCI+PGRpbWVuc2lvbiBpbmRleD0i
+MCI+PGxlbmd0aD48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVyYXRvciBvcGVyYXRvcj0iLyIg
+dmFsdWU9IigocGFyYW1fTiAqIDQpIC8gNCkiPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9wZXJh
+dG9yIG9wZXJhdG9yPSIqIiB2YWx1ZT0iKHBhcmFtX04gKiA0KSI+PHVzZXJQYXJhbSB2YWx1ZT0i
+cGFyYW1fTiIvPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5hcnlPcGVyYXRvcj48
+L2Z1bmN0aW9uQ2FsbD48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0
+b3I+PC9mdW5jdGlvbkNhbGw+PC9sZW5ndGg+PC9kaW1lbnNpb24+PC9hcnJheT48YXJyYXkgZGVz
+Yz0iVGhlIHN0cmVhbSBzaG91bGQgYmUgb2Ygc2l6ZSAocGFyYW1fTiAqIDQpIGJ5dGVzLiIgZGly
+ZWN0aW9uPSJJbnB1dCIgbmFtZT0iaW5zdHJlYW1fY2hpbGRfNiIgc2l6ZT0iKHBhcmFtX04gKiA0
+KSIgdHJhbnNwb3NlPSJ0cnVlIiB0eXBlPSJpbnQzMl90Ij48ZGltZW5zaW9uIGluZGV4PSIwIj48
+bGVuZ3RoPjxmdW5jdGlvbkNhbGw+PG51bUJpbmFyeU9wZXJhdG9yIG9wZXJhdG9yPSIvIiB2YWx1
+ZT0iKChwYXJhbV9OICogNCkgLyA0KSI+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Ig
+b3BlcmF0b3I9IioiIHZhbHVlPSIocGFyYW1fTiAqIDQpIj48dXNlclBhcmFtIHZhbHVlPSJwYXJh
+bV9OIi8+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwvZnVu
+Y3Rpb25DYWxsPjxjb25zdGFudFZhbHVlIHZhbHVlPSI0Ii8+PC9udW1CaW5hcnlPcGVyYXRvcj48
+L2Z1bmN0aW9uQ2FsbD48L2xlbmd0aD48L2RpbWVuc2lvbj48L2FycmF5PjxhcnJheSBkZXNjPSJU
+aGUgc3RyZWFtIHNob3VsZCBiZSBvZiBzaXplIChwYXJhbV9OICogNCkgYnl0ZXMuIiBkaXJlY3Rp
+b249IklucHV0IiBuYW1lPSJpbnN0cmVhbV9jaGlsZF83IiBzaXplPSIocGFyYW1fTiAqIDQpIiB0
+cmFuc3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxkaW1lbnNpb24gaW5kZXg9IjAiPjxsZW5n
+dGg+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9Ii8iIHZhbHVlPSIo
+KHBhcmFtX04gKiA0KSAvIDQpIj48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVyYXRvciBvcGVy
+YXRvcj0iKiIgdmFsdWU9IihwYXJhbV9OICogNCkiPjx1c2VyUGFyYW0gdmFsdWU9InBhcmFtX04i
+Lz48Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0b3I+PC9mdW5jdGlv
+bkNhbGw+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwvZnVu
+Y3Rpb25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PGFycmF5IGRlc2M9IlRoZSBz
+dHJlYW0gc2hvdWxkIGJlIG9mIHNpemUgKHBhcmFtX04gKiA0KSBieXRlcy4iIGRpcmVjdGlvbj0i
+T3V0cHV0IiBuYW1lPSJvdXRzdHJlYW1fZGF0YV93IiBzaXplPSIocGFyYW1fTiAqIDQpIiB0cmFu
+c3Bvc2U9InRydWUiIHR5cGU9ImludDMyX3QiPjxkaW1lbnNpb24gaW5kZXg9IjAiPjxsZW5ndGg+
+PGZ1bmN0aW9uQ2FsbD48bnVtQmluYXJ5T3BlcmF0b3Igb3BlcmF0b3I9Ii8iIHZhbHVlPSIoKHBh
+cmFtX04gKiA0KSAvIDQpIj48ZnVuY3Rpb25DYWxsPjxudW1CaW5hcnlPcGVyYXRvciBvcGVyYXRv
+cj0iKiIgdmFsdWU9IihwYXJhbV9OICogNCkiPjx1c2VyUGFyYW0gdmFsdWU9InBhcmFtX04iLz48
+Y29uc3RhbnRWYWx1ZSB2YWx1ZT0iNCIvPjwvbnVtQmluYXJ5T3BlcmF0b3I+PC9mdW5jdGlvbkNh
+bGw+PGNvbnN0YW50VmFsdWUgdmFsdWU9IjQiLz48L251bUJpbmFyeU9wZXJhdG9yPjwvZnVuY3Rp
+b25DYWxsPjwvbGVuZ3RoPjwvZGltZW5zaW9uPjwvYXJyYXk+PC9mdW5jdGlvbj48L2VuZ2luZW1v
+ZGU+PC9tYXhmaWxlPg==
 #endif /* SKIN_META_DATA */
 
 #ifdef SLIC_B64_DEFINITIONS
@@ -1583,320 +1636,326 @@ KiBjb2RlIGZvciBzY2FsYXIgTWVtU3RyZWFtS2VybmVsLnJ1bl9jeWNsZV9jb3VudCAqLwoJdWlu
 dDY0X3QgdGlja3NfTWVtU3RyZWFtS2VybmVsID0gcGFyYW1fTjsKCW1heF9zZXRfdGlja3MoYWN0
 aW9ucywgIk1lbVN0cmVhbUtlcm5lbCIsIHBhcmFtX04pOwoJQ0hFQ0tfRVJST1JTOwoJLyogZW5k
 IG9mIGNvZGUgZm9yIHNjYWxhciBNZW1TdHJlYW1LZXJuZWwucnVuX2N5Y2xlX2NvdW50Ki8KCQoJ
-LyogY29kZSBmb3Igc3RyZWFtIGNoaWxkXzAgKi8KCXNpemVfdCBpbnN0cmVhbV9zaXplX2NoaWxk
-XzAgPSAxNjsKCWlmIChpbnN0cmVhbV9zaXplX2NoaWxkXzAgPiAwKSB7CgkJY29uc3QgaW50MzJf
-dCAqc3RyZWFtX3B0ciA9IGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF8wOwoJCWlm
-ICh1c2VfY2FsbGJhY2sgJiYgKDEgPT0gTWVtU3RyZWFtX2NoZWNrX2FsaWduZWQoaW50ZXJmYWNl
-X2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzApKSkgewoJCQlpbnQzMl90ICphbGlnbmVkX2luc3Ry
-ZWFtX2NoaWxkXzAgPSBtYWxsb2MoaW5zdHJlYW1fc2l6ZV9jaGlsZF8wKTsKCQkJaWYgKGFsaWdu
-ZWRfaW5zdHJlYW1fY2hpbGRfMCA9PSBOVUxMKSB7CgkJCQltYXhfcmVwb3J0X2Vycm9yX3NsaWMo
-YWN0aW9ucy0+ZXJyb3JzLCBfX0ZJTEVfXywgX19MSU5FX18sIDUyNiwgIkZhaWxlZCB0byBhbGxv
-Y2F0ZSBhbGlnbmVkIG1lbW9yeSBmb3Igc3RyZWFtICdjaGlsZF8wJyIpOwoJCQkJQ0hFQ0tfRVJS
-T1JTOwoJCQl9CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnVzZXJfcHRy
-ICAgID0gKHVpbnQ4X3QqKSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMDsKCQkJ
-KCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+YWxpZ25lZF9wdHIgPSAodWludDhf
-dCopIGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMDsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0
-YS0+Y291bnRdKS0+c2l6ZSAgICAgICAgPSBpbnN0cmVhbV9zaXplX2NoaWxkXzA7CgkJCSgmY2Jf
-ZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmlzX291dHB1dCAgID0gMDsKCQkJY2JfZGF0
-YS0+Y291bnQgKz0gMTsKCQkJbWVtY3B5KGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMCwgaW50ZXJm
-YWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzAsIGluc3RyZWFtX3NpemVfY2hpbGRfMCk7CgkJ
-CXN0cmVhbV9wdHIgPSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzA7CgkJfQoJCW1heF9xdWV1ZV9p
-bnB1dChhY3Rpb25zLCAiY2hpbGRfMCIsIHN0cmVhbV9wdHIsIGluc3RyZWFtX3NpemVfY2hpbGRf
-MCk7CgkJQ0hFQ0tfRVJST1JTOwoJfQoJLyogZW5kIG9mIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF8w
-ICovCgkKCS8qIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF8xICovCglzaXplX3QgaW5zdHJlYW1fc2l6
-ZV9jaGlsZF8xID0gMTY7CglpZiAoaW5zdHJlYW1fc2l6ZV9jaGlsZF8xID4gMCkgewoJCWNvbnN0
-IGludDMyX3QgKnN0cmVhbV9wdHIgPSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRf
-MTsKCQlpZiAodXNlX2NhbGxiYWNrICYmICgxID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGlu
-dGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF8xKSkpIHsKCQkJaW50MzJfdCAqYWxpZ25l
-ZF9pbnN0cmVhbV9jaGlsZF8xID0gbWFsbG9jKGluc3RyZWFtX3NpemVfY2hpbGRfMSk7CgkJCWlm
-IChhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzEgPT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJv
-cl9zbGljKGFjdGlvbnMtPmVycm9ycywgX19GSUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQg
-dG8gYWxsb2NhdGUgYWxpZ25lZCBtZW1vcnkgZm9yIHN0cmVhbSAnY2hpbGRfMSciKTsKCQkJCUNI
-RUNLX0VSUk9SUzsKCQkJfQoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT51
-c2VyX3B0ciAgICA9ICh1aW50OF90KikgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxk
-XzE7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmFsaWduZWRfcHRyID0g
-KHVpbnQ4X3QqKSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzE7CgkJCSgmY2JfZGF0YS0+c3RyZWFt
-W2NiX2RhdGEtPmNvdW50XSktPnNpemUgICAgICAgID0gaW5zdHJlYW1fc2l6ZV9jaGlsZF8xOwoJ
-CQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5pc19vdXRwdXQgICA9IDA7CgkJ
-CWNiX2RhdGEtPmNvdW50ICs9IDE7CgkJCW1lbWNweShhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzEs
-IGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF8xLCBpbnN0cmVhbV9zaXplX2NoaWxk
-XzEpOwoJCQlzdHJlYW1fcHRyID0gYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8xOwoJCX0KCQltYXhf
-cXVldWVfaW5wdXQoYWN0aW9ucywgImNoaWxkXzEiLCBzdHJlYW1fcHRyLCBpbnN0cmVhbV9zaXpl
-X2NoaWxkXzEpOwoJCUNIRUNLX0VSUk9SUzsKCX0KCS8qIGVuZCBvZiBjb2RlIGZvciBzdHJlYW0g
-Y2hpbGRfMSAqLwoJCgkvKiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfMiAqLwoJc2l6ZV90IGluc3Ry
-ZWFtX3NpemVfY2hpbGRfMiA9IDE2OwoJaWYgKGluc3RyZWFtX3NpemVfY2hpbGRfMiA+IDApIHsK
-CQljb25zdCBpbnQzMl90ICpzdHJlYW1fcHRyID0gaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFt
-X2NoaWxkXzI7CgkJaWYgKHVzZV9jYWxsYmFjayAmJiAoMSA9PSBNZW1TdHJlYW1fY2hlY2tfYWxp
-Z25lZChpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMikpKSB7CgkJCWludDMyX3Qg
-KmFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMiA9IG1hbGxvYyhpbnN0cmVhbV9zaXplX2NoaWxkXzIp
-OwoJCQlpZiAoYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8yID09IE5VTEwpIHsKCQkJCW1heF9yZXBv
-cnRfZXJyb3Jfc2xpYyhhY3Rpb25zLT5lcnJvcnMsIF9fRklMRV9fLCBfX0xJTkVfXywgNTI2LCAi
-RmFpbGVkIHRvIGFsbG9jYXRlIGFsaWduZWQgbWVtb3J5IGZvciBzdHJlYW0gJ2NoaWxkXzInIik7
-CgkJCQlDSEVDS19FUlJPUlM7CgkJCX0KCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291
-bnRdKS0+dXNlcl9wdHIgICAgPSAodWludDhfdCopIGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVh
-bV9jaGlsZF8yOwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5hbGlnbmVk
-X3B0ciA9ICh1aW50OF90KikgYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8yOwoJCQkoJmNiX2RhdGEt
-PnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5zaXplICAgICAgICA9IGluc3RyZWFtX3NpemVfY2hp
-bGRfMjsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+aXNfb3V0cHV0ICAg
-PSAwOwoJCQljYl9kYXRhLT5jb3VudCArPSAxOwoJCQltZW1jcHkoYWxpZ25lZF9pbnN0cmVhbV9j
-aGlsZF8yLCBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMiwgaW5zdHJlYW1fc2l6
-ZV9jaGlsZF8yKTsKCQkJc3RyZWFtX3B0ciA9IGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMjsKCQl9
-CgkJbWF4X3F1ZXVlX2lucHV0KGFjdGlvbnMsICJjaGlsZF8yIiwgc3RyZWFtX3B0ciwgaW5zdHJl
-YW1fc2l6ZV9jaGlsZF8yKTsKCQlDSEVDS19FUlJPUlM7Cgl9CgkvKiBlbmQgb2YgY29kZSBmb3Ig
-c3RyZWFtIGNoaWxkXzIgKi8KCQoJLyogY29kZSBmb3Igc3RyZWFtIGNoaWxkXzMgKi8KCXNpemVf
-dCBpbnN0cmVhbV9zaXplX2NoaWxkXzMgPSAxNjsKCWlmIChpbnN0cmVhbV9zaXplX2NoaWxkXzMg
-PiAwKSB7CgkJY29uc3QgaW50MzJfdCAqc3RyZWFtX3B0ciA9IGludGVyZmFjZV9hY3Rpb25zLT5p
-bnN0cmVhbV9jaGlsZF8zOwoJCWlmICh1c2VfY2FsbGJhY2sgJiYgKDEgPT0gTWVtU3RyZWFtX2No
-ZWNrX2FsaWduZWQoaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzMpKSkgewoJCQlp
-bnQzMl90ICphbGlnbmVkX2luc3RyZWFtX2NoaWxkXzMgPSBtYWxsb2MoaW5zdHJlYW1fc2l6ZV9j
-aGlsZF8zKTsKCQkJaWYgKGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMyA9PSBOVUxMKSB7CgkJCQlt
-YXhfcmVwb3J0X2Vycm9yX3NsaWMoYWN0aW9ucy0+ZXJyb3JzLCBfX0ZJTEVfXywgX19MSU5FX18s
-IDUyNiwgIkZhaWxlZCB0byBhbGxvY2F0ZSBhbGlnbmVkIG1lbW9yeSBmb3Igc3RyZWFtICdjaGls
-ZF8zJyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2Rh
-dGEtPmNvdW50XSktPnVzZXJfcHRyICAgID0gKHVpbnQ4X3QqKSBpbnRlcmZhY2VfYWN0aW9ucy0+
-aW5zdHJlYW1fY2hpbGRfMzsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+
-YWxpZ25lZF9wdHIgPSAodWludDhfdCopIGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMzsKCQkJKCZj
-Yl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+c2l6ZSAgICAgICAgPSBpbnN0cmVhbV9z
-aXplX2NoaWxkXzM7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmlzX291
-dHB1dCAgID0gMDsKCQkJY2JfZGF0YS0+Y291bnQgKz0gMTsKCQkJbWVtY3B5KGFsaWduZWRfaW5z
-dHJlYW1fY2hpbGRfMywgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzMsIGluc3Ry
-ZWFtX3NpemVfY2hpbGRfMyk7CgkJCXN0cmVhbV9wdHIgPSBhbGlnbmVkX2luc3RyZWFtX2NoaWxk
-XzM7CgkJfQoJCW1heF9xdWV1ZV9pbnB1dChhY3Rpb25zLCAiY2hpbGRfMyIsIHN0cmVhbV9wdHIs
-IGluc3RyZWFtX3NpemVfY2hpbGRfMyk7CgkJQ0hFQ0tfRVJST1JTOwoJfQoJLyogZW5kIG9mIGNv
-ZGUgZm9yIHN0cmVhbSBjaGlsZF8zICovCgkKCS8qIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF80ICov
-CglzaXplX3QgaW5zdHJlYW1fc2l6ZV9jaGlsZF80ID0gMTY7CglpZiAoaW5zdHJlYW1fc2l6ZV9j
-aGlsZF80ID4gMCkgewoJCWNvbnN0IGludDMyX3QgKnN0cmVhbV9wdHIgPSBpbnRlcmZhY2VfYWN0
-aW9ucy0+aW5zdHJlYW1fY2hpbGRfNDsKCQlpZiAodXNlX2NhbGxiYWNrICYmICgxID09IE1lbVN0
-cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF80KSkp
-IHsKCQkJaW50MzJfdCAqYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF80ID0gbWFsbG9jKGluc3RyZWFt
-X3NpemVfY2hpbGRfNCk7CgkJCWlmIChhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzQgPT0gTlVMTCkg
-ewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFjdGlvbnMtPmVycm9ycywgX19GSUxFX18sIF9f
-TElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxpZ25lZCBtZW1vcnkgZm9yIHN0cmVh
-bSAnY2hpbGRfNCciKTsKCQkJCUNIRUNLX0VSUk9SUzsKCQkJfQoJCQkoJmNiX2RhdGEtPnN0cmVh
-bVtjYl9kYXRhLT5jb3VudF0pLT51c2VyX3B0ciAgICA9ICh1aW50OF90KikgaW50ZXJmYWNlX2Fj
-dGlvbnMtPmluc3RyZWFtX2NoaWxkXzQ7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNv
-dW50XSktPmFsaWduZWRfcHRyID0gKHVpbnQ4X3QqKSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzQ7
-CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnNpemUgICAgICAgID0gaW5z
-dHJlYW1fc2l6ZV9jaGlsZF80OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0p
-LT5pc19vdXRwdXQgICA9IDA7CgkJCWNiX2RhdGEtPmNvdW50ICs9IDE7CgkJCW1lbWNweShhbGln
-bmVkX2luc3RyZWFtX2NoaWxkXzQsIGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF80
-LCBpbnN0cmVhbV9zaXplX2NoaWxkXzQpOwoJCQlzdHJlYW1fcHRyID0gYWxpZ25lZF9pbnN0cmVh
-bV9jaGlsZF80OwoJCX0KCQltYXhfcXVldWVfaW5wdXQoYWN0aW9ucywgImNoaWxkXzQiLCBzdHJl
-YW1fcHRyLCBpbnN0cmVhbV9zaXplX2NoaWxkXzQpOwoJCUNIRUNLX0VSUk9SUzsKCX0KCS8qIGVu
-ZCBvZiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfNCAqLwoJCgkvKiBjb2RlIGZvciBzdHJlYW0gY2hp
-bGRfNSAqLwoJc2l6ZV90IGluc3RyZWFtX3NpemVfY2hpbGRfNSA9IDE2OwoJaWYgKGluc3RyZWFt
-X3NpemVfY2hpbGRfNSA+IDApIHsKCQljb25zdCBpbnQzMl90ICpzdHJlYW1fcHRyID0gaW50ZXJm
-YWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzU7CgkJaWYgKHVzZV9jYWxsYmFjayAmJiAoMSA9
-PSBNZW1TdHJlYW1fY2hlY2tfYWxpZ25lZChpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hp
-bGRfNSkpKSB7CgkJCWludDMyX3QgKmFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNSA9IG1hbGxvYyhp
-bnN0cmVhbV9zaXplX2NoaWxkXzUpOwoJCQlpZiAoYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF81ID09
-IE5VTEwpIHsKCQkJCW1heF9yZXBvcnRfZXJyb3Jfc2xpYyhhY3Rpb25zLT5lcnJvcnMsIF9fRklM
-RV9fLCBfX0xJTkVfXywgNTI2LCAiRmFpbGVkIHRvIGFsbG9jYXRlIGFsaWduZWQgbWVtb3J5IGZv
-ciBzdHJlYW0gJ2NoaWxkXzUnIik7CgkJCQlDSEVDS19FUlJPUlM7CgkJCX0KCQkJKCZjYl9kYXRh
-LT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+dXNlcl9wdHIgICAgPSAodWludDhfdCopIGludGVy
-ZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF81OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9k
-YXRhLT5jb3VudF0pLT5hbGlnbmVkX3B0ciA9ICh1aW50OF90KikgYWxpZ25lZF9pbnN0cmVhbV9j
-aGlsZF81OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5zaXplICAgICAg
-ICA9IGluc3RyZWFtX3NpemVfY2hpbGRfNTsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+
-Y291bnRdKS0+aXNfb3V0cHV0ICAgPSAwOwoJCQljYl9kYXRhLT5jb3VudCArPSAxOwoJCQltZW1j
-cHkoYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF81LCBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1f
-Y2hpbGRfNSwgaW5zdHJlYW1fc2l6ZV9jaGlsZF81KTsKCQkJc3RyZWFtX3B0ciA9IGFsaWduZWRf
-aW5zdHJlYW1fY2hpbGRfNTsKCQl9CgkJbWF4X3F1ZXVlX2lucHV0KGFjdGlvbnMsICJjaGlsZF81
-Iiwgc3RyZWFtX3B0ciwgaW5zdHJlYW1fc2l6ZV9jaGlsZF81KTsKCQlDSEVDS19FUlJPUlM7Cgl9
-CgkvKiBlbmQgb2YgY29kZSBmb3Igc3RyZWFtIGNoaWxkXzUgKi8KCQoJLyogY29kZSBmb3Igc3Ry
-ZWFtIGNoaWxkXzYgKi8KCXNpemVfdCBpbnN0cmVhbV9zaXplX2NoaWxkXzYgPSAxNjsKCWlmIChp
-bnN0cmVhbV9zaXplX2NoaWxkXzYgPiAwKSB7CgkJY29uc3QgaW50MzJfdCAqc3RyZWFtX3B0ciA9
-IGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF82OwoJCWlmICh1c2VfY2FsbGJhY2sg
+aW50NjRfdCB0bXBfMCA9IChwYXJhbV9OICogNCk7CgkKCS8qIGNvZGUgZm9yIHN0cmVhbSBjaGls
+ZF8wICovCglzaXplX3QgaW5zdHJlYW1fc2l6ZV9jaGlsZF8wID0gdG1wXzA7CglpZiAoaW5zdHJl
+YW1fc2l6ZV9jaGlsZF8wID4gMCkgewoJCWNvbnN0IGludDMyX3QgKnN0cmVhbV9wdHIgPSBpbnRl
+cmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMDsKCQlpZiAodXNlX2NhbGxiYWNrICYmICgx
+ID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9j
+aGlsZF8wKSkpIHsKCQkJaW50MzJfdCAqYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8wID0gbWFsbG9j
+KGluc3RyZWFtX3NpemVfY2hpbGRfMCk7CgkJCWlmIChhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzAg
+PT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFjdGlvbnMtPmVycm9ycywgX19G
+SUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxpZ25lZCBtZW1vcnkg
+Zm9yIHN0cmVhbSAnY2hpbGRfMCciKTsKCQkJCUNIRUNLX0VSUk9SUzsKCQkJfQoJCQkoJmNiX2Rh
+dGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT51c2VyX3B0ciAgICA9ICh1aW50OF90KikgaW50
+ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzA7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2Ni
+X2RhdGEtPmNvdW50XSktPmFsaWduZWRfcHRyID0gKHVpbnQ4X3QqKSBhbGlnbmVkX2luc3RyZWFt
+X2NoaWxkXzA7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnNpemUgICAg
+ICAgID0gaW5zdHJlYW1fc2l6ZV9jaGlsZF8wOwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRh
+LT5jb3VudF0pLT5pc19vdXRwdXQgICA9IDA7CgkJCWNiX2RhdGEtPmNvdW50ICs9IDE7CgkJCW1l
+bWNweShhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzAsIGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVh
+bV9jaGlsZF8wLCBpbnN0cmVhbV9zaXplX2NoaWxkXzApOwoJCQlzdHJlYW1fcHRyID0gYWxpZ25l
+ZF9pbnN0cmVhbV9jaGlsZF8wOwoJCX0KCQltYXhfcXVldWVfaW5wdXQoYWN0aW9ucywgImNoaWxk
+XzAiLCBzdHJlYW1fcHRyLCBpbnN0cmVhbV9zaXplX2NoaWxkXzApOwoJCUNIRUNLX0VSUk9SUzsK
+CX0KCS8qIGVuZCBvZiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfMCAqLwoJCglpbnQ2NF90IHRtcF8x
+ID0gKHBhcmFtX04gKiA0KTsKCQoJLyogY29kZSBmb3Igc3RyZWFtIGNoaWxkXzEgKi8KCXNpemVf
+dCBpbnN0cmVhbV9zaXplX2NoaWxkXzEgPSB0bXBfMTsKCWlmIChpbnN0cmVhbV9zaXplX2NoaWxk
+XzEgPiAwKSB7CgkJY29uc3QgaW50MzJfdCAqc3RyZWFtX3B0ciA9IGludGVyZmFjZV9hY3Rpb25z
+LT5pbnN0cmVhbV9jaGlsZF8xOwoJCWlmICh1c2VfY2FsbGJhY2sgJiYgKDEgPT0gTWVtU3RyZWFt
+X2NoZWNrX2FsaWduZWQoaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzEpKSkgewoJ
+CQlpbnQzMl90ICphbGlnbmVkX2luc3RyZWFtX2NoaWxkXzEgPSBtYWxsb2MoaW5zdHJlYW1fc2l6
+ZV9jaGlsZF8xKTsKCQkJaWYgKGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMSA9PSBOVUxMKSB7CgkJ
+CQltYXhfcmVwb3J0X2Vycm9yX3NsaWMoYWN0aW9ucy0+ZXJyb3JzLCBfX0ZJTEVfXywgX19MSU5F
+X18sIDUyNiwgIkZhaWxlZCB0byBhbGxvY2F0ZSBhbGlnbmVkIG1lbW9yeSBmb3Igc3RyZWFtICdj
+aGlsZF8xJyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2Ni
+X2RhdGEtPmNvdW50XSktPnVzZXJfcHRyICAgID0gKHVpbnQ4X3QqKSBpbnRlcmZhY2VfYWN0aW9u
+cy0+aW5zdHJlYW1fY2hpbGRfMTsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRd
+KS0+YWxpZ25lZF9wdHIgPSAodWludDhfdCopIGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMTsKCQkJ
+KCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+c2l6ZSAgICAgICAgPSBpbnN0cmVh
+bV9zaXplX2NoaWxkXzE7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmlz
+X291dHB1dCAgID0gMDsKCQkJY2JfZGF0YS0+Y291bnQgKz0gMTsKCQkJbWVtY3B5KGFsaWduZWRf
+aW5zdHJlYW1fY2hpbGRfMSwgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzEsIGlu
+c3RyZWFtX3NpemVfY2hpbGRfMSk7CgkJCXN0cmVhbV9wdHIgPSBhbGlnbmVkX2luc3RyZWFtX2No
+aWxkXzE7CgkJfQoJCW1heF9xdWV1ZV9pbnB1dChhY3Rpb25zLCAiY2hpbGRfMSIsIHN0cmVhbV9w
+dHIsIGluc3RyZWFtX3NpemVfY2hpbGRfMSk7CgkJQ0hFQ0tfRVJST1JTOwoJfQoJLyogZW5kIG9m
+IGNvZGUgZm9yIHN0cmVhbSBjaGlsZF8xICovCgkKCWludDY0X3QgdG1wXzIgPSAocGFyYW1fTiAq
+IDQpOwoJCgkvKiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfMiAqLwoJc2l6ZV90IGluc3RyZWFtX3Np
+emVfY2hpbGRfMiA9IHRtcF8yOwoJaWYgKGluc3RyZWFtX3NpemVfY2hpbGRfMiA+IDApIHsKCQlj
+b25zdCBpbnQzMl90ICpzdHJlYW1fcHRyID0gaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2No
+aWxkXzI7CgkJaWYgKHVzZV9jYWxsYmFjayAmJiAoMSA9PSBNZW1TdHJlYW1fY2hlY2tfYWxpZ25l
+ZChpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMikpKSB7CgkJCWludDMyX3QgKmFs
+aWduZWRfaW5zdHJlYW1fY2hpbGRfMiA9IG1hbGxvYyhpbnN0cmVhbV9zaXplX2NoaWxkXzIpOwoJ
+CQlpZiAoYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8yID09IE5VTEwpIHsKCQkJCW1heF9yZXBvcnRf
+ZXJyb3Jfc2xpYyhhY3Rpb25zLT5lcnJvcnMsIF9fRklMRV9fLCBfX0xJTkVfXywgNTI2LCAiRmFp
+bGVkIHRvIGFsbG9jYXRlIGFsaWduZWQgbWVtb3J5IGZvciBzdHJlYW0gJ2NoaWxkXzInIik7CgkJ
+CQlDSEVDS19FUlJPUlM7CgkJCX0KCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRd
+KS0+dXNlcl9wdHIgICAgPSAodWludDhfdCopIGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9j
+aGlsZF8yOwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5hbGlnbmVkX3B0
+ciA9ICh1aW50OF90KikgYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8yOwoJCQkoJmNiX2RhdGEtPnN0
+cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5zaXplICAgICAgICA9IGluc3RyZWFtX3NpemVfY2hpbGRf
+MjsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+aXNfb3V0cHV0ICAgPSAw
+OwoJCQljYl9kYXRhLT5jb3VudCArPSAxOwoJCQltZW1jcHkoYWxpZ25lZF9pbnN0cmVhbV9jaGls
+ZF8yLCBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMiwgaW5zdHJlYW1fc2l6ZV9j
+aGlsZF8yKTsKCQkJc3RyZWFtX3B0ciA9IGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfMjsKCQl9CgkJ
+bWF4X3F1ZXVlX2lucHV0KGFjdGlvbnMsICJjaGlsZF8yIiwgc3RyZWFtX3B0ciwgaW5zdHJlYW1f
+c2l6ZV9jaGlsZF8yKTsKCQlDSEVDS19FUlJPUlM7Cgl9CgkvKiBlbmQgb2YgY29kZSBmb3Igc3Ry
+ZWFtIGNoaWxkXzIgKi8KCQoJaW50NjRfdCB0bXBfMyA9IChwYXJhbV9OICogNCk7CgkKCS8qIGNv
+ZGUgZm9yIHN0cmVhbSBjaGlsZF8zICovCglzaXplX3QgaW5zdHJlYW1fc2l6ZV9jaGlsZF8zID0g
+dG1wXzM7CglpZiAoaW5zdHJlYW1fc2l6ZV9jaGlsZF8zID4gMCkgewoJCWNvbnN0IGludDMyX3Qg
+KnN0cmVhbV9wdHIgPSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfMzsKCQlpZiAo
+dXNlX2NhbGxiYWNrICYmICgxID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9h
+Y3Rpb25zLT5pbnN0cmVhbV9jaGlsZF8zKSkpIHsKCQkJaW50MzJfdCAqYWxpZ25lZF9pbnN0cmVh
+bV9jaGlsZF8zID0gbWFsbG9jKGluc3RyZWFtX3NpemVfY2hpbGRfMyk7CgkJCWlmIChhbGlnbmVk
+X2luc3RyZWFtX2NoaWxkXzMgPT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFj
+dGlvbnMtPmVycm9ycywgX19GSUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2Nh
+dGUgYWxpZ25lZCBtZW1vcnkgZm9yIHN0cmVhbSAnY2hpbGRfMyciKTsKCQkJCUNIRUNLX0VSUk9S
+UzsKCQkJfQoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT51c2VyX3B0ciAg
+ICA9ICh1aW50OF90KikgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzM7CgkJCSgm
+Y2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmFsaWduZWRfcHRyID0gKHVpbnQ4X3Qq
+KSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzM7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEt
+PmNvdW50XSktPnNpemUgICAgICAgID0gaW5zdHJlYW1fc2l6ZV9jaGlsZF8zOwoJCQkoJmNiX2Rh
+dGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5pc19vdXRwdXQgICA9IDA7CgkJCWNiX2RhdGEt
+PmNvdW50ICs9IDE7CgkJCW1lbWNweShhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzMsIGludGVyZmFj
+ZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF8zLCBpbnN0cmVhbV9zaXplX2NoaWxkXzMpOwoJCQlz
+dHJlYW1fcHRyID0gYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF8zOwoJCX0KCQltYXhfcXVldWVfaW5w
+dXQoYWN0aW9ucywgImNoaWxkXzMiLCBzdHJlYW1fcHRyLCBpbnN0cmVhbV9zaXplX2NoaWxkXzMp
+OwoJCUNIRUNLX0VSUk9SUzsKCX0KCS8qIGVuZCBvZiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfMyAq
+LwoJCglpbnQ2NF90IHRtcF80ID0gKHBhcmFtX04gKiA0KTsKCQoJLyogY29kZSBmb3Igc3RyZWFt
+IGNoaWxkXzQgKi8KCXNpemVfdCBpbnN0cmVhbV9zaXplX2NoaWxkXzQgPSB0bXBfNDsKCWlmIChp
+bnN0cmVhbV9zaXplX2NoaWxkXzQgPiAwKSB7CgkJY29uc3QgaW50MzJfdCAqc3RyZWFtX3B0ciA9
+IGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF80OwoJCWlmICh1c2VfY2FsbGJhY2sg
 JiYgKDEgPT0gTWVtU3RyZWFtX2NoZWNrX2FsaWduZWQoaW50ZXJmYWNlX2FjdGlvbnMtPmluc3Ry
-ZWFtX2NoaWxkXzYpKSkgewoJCQlpbnQzMl90ICphbGlnbmVkX2luc3RyZWFtX2NoaWxkXzYgPSBt
-YWxsb2MoaW5zdHJlYW1fc2l6ZV9jaGlsZF82KTsKCQkJaWYgKGFsaWduZWRfaW5zdHJlYW1fY2hp
-bGRfNiA9PSBOVUxMKSB7CgkJCQltYXhfcmVwb3J0X2Vycm9yX3NsaWMoYWN0aW9ucy0+ZXJyb3Jz
+ZWFtX2NoaWxkXzQpKSkgewoJCQlpbnQzMl90ICphbGlnbmVkX2luc3RyZWFtX2NoaWxkXzQgPSBt
+YWxsb2MoaW5zdHJlYW1fc2l6ZV9jaGlsZF80KTsKCQkJaWYgKGFsaWduZWRfaW5zdHJlYW1fY2hp
+bGRfNCA9PSBOVUxMKSB7CgkJCQltYXhfcmVwb3J0X2Vycm9yX3NsaWMoYWN0aW9ucy0+ZXJyb3Jz
 LCBfX0ZJTEVfXywgX19MSU5FX18sIDUyNiwgIkZhaWxlZCB0byBhbGxvY2F0ZSBhbGlnbmVkIG1l
-bW9yeSBmb3Igc3RyZWFtICdjaGlsZF82JyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9CgkJCSgm
+bW9yeSBmb3Igc3RyZWFtICdjaGlsZF80JyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9CgkJCSgm
 Y2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnVzZXJfcHRyICAgID0gKHVpbnQ4X3Qq
-KSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfNjsKCQkJKCZjYl9kYXRhLT5zdHJl
+KSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfNDsKCQkJKCZjYl9kYXRhLT5zdHJl
 YW1bY2JfZGF0YS0+Y291bnRdKS0+YWxpZ25lZF9wdHIgPSAodWludDhfdCopIGFsaWduZWRfaW5z
-dHJlYW1fY2hpbGRfNjsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+c2l6
-ZSAgICAgICAgPSBpbnN0cmVhbV9zaXplX2NoaWxkXzY7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2Ni
+dHJlYW1fY2hpbGRfNDsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+c2l6
+ZSAgICAgICAgPSBpbnN0cmVhbV9zaXplX2NoaWxkXzQ7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2Ni
 X2RhdGEtPmNvdW50XSktPmlzX291dHB1dCAgID0gMDsKCQkJY2JfZGF0YS0+Y291bnQgKz0gMTsK
-CQkJbWVtY3B5KGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNiwgaW50ZXJmYWNlX2FjdGlvbnMtPmlu
-c3RyZWFtX2NoaWxkXzYsIGluc3RyZWFtX3NpemVfY2hpbGRfNik7CgkJCXN0cmVhbV9wdHIgPSBh
-bGlnbmVkX2luc3RyZWFtX2NoaWxkXzY7CgkJfQoJCW1heF9xdWV1ZV9pbnB1dChhY3Rpb25zLCAi
-Y2hpbGRfNiIsIHN0cmVhbV9wdHIsIGluc3RyZWFtX3NpemVfY2hpbGRfNik7CgkJQ0hFQ0tfRVJS
-T1JTOwoJfQoJLyogZW5kIG9mIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF82ICovCgkKCS8qIGNvZGUg
-Zm9yIHN0cmVhbSBjaGlsZF83ICovCglzaXplX3QgaW5zdHJlYW1fc2l6ZV9jaGlsZF83ID0gMTY7
-CglpZiAoaW5zdHJlYW1fc2l6ZV9jaGlsZF83ID4gMCkgewoJCWNvbnN0IGludDMyX3QgKnN0cmVh
-bV9wdHIgPSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfNzsKCQlpZiAodXNlX2Nh
-bGxiYWNrICYmICgxID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9hY3Rpb25z
-LT5pbnN0cmVhbV9jaGlsZF83KSkpIHsKCQkJaW50MzJfdCAqYWxpZ25lZF9pbnN0cmVhbV9jaGls
-ZF83ID0gbWFsbG9jKGluc3RyZWFtX3NpemVfY2hpbGRfNyk7CgkJCWlmIChhbGlnbmVkX2luc3Ry
-ZWFtX2NoaWxkXzcgPT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFjdGlvbnMt
-PmVycm9ycywgX19GSUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxp
-Z25lZCBtZW1vcnkgZm9yIHN0cmVhbSAnY2hpbGRfNyciKTsKCQkJCUNIRUNLX0VSUk9SUzsKCQkJ
-fQoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT51c2VyX3B0ciAgICA9ICh1
-aW50OF90KikgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzc7CgkJCSgmY2JfZGF0
-YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmFsaWduZWRfcHRyID0gKHVpbnQ4X3QqKSBhbGln
-bmVkX2luc3RyZWFtX2NoaWxkXzc7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50
-XSktPnNpemUgICAgICAgID0gaW5zdHJlYW1fc2l6ZV9jaGlsZF83OwoJCQkoJmNiX2RhdGEtPnN0
-cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5pc19vdXRwdXQgICA9IDA7CgkJCWNiX2RhdGEtPmNvdW50
-ICs9IDE7CgkJCW1lbWNweShhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzcsIGludGVyZmFjZV9hY3Rp
-b25zLT5pbnN0cmVhbV9jaGlsZF83LCBpbnN0cmVhbV9zaXplX2NoaWxkXzcpOwoJCQlzdHJlYW1f
-cHRyID0gYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF83OwoJCX0KCQltYXhfcXVldWVfaW5wdXQoYWN0
-aW9ucywgImNoaWxkXzciLCBzdHJlYW1fcHRyLCBpbnN0cmVhbV9zaXplX2NoaWxkXzcpOwoJCUNI
-RUNLX0VSUk9SUzsKCX0KCS8qIGVuZCBvZiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfNyAqLwoJCgkv
-KiBjb2RlIGZvciBzdHJlYW0gZGF0YV93ICovCglzaXplX3Qgb3V0c3RyZWFtX3NpemVfZGF0YV93
-ID0gMTY7CglpZiAob3V0c3RyZWFtX3NpemVfZGF0YV93ID4gMCkgewoJCWludDMyX3QgKnN0cmVh
-bV9wdHIgPSBpbnRlcmZhY2VfYWN0aW9ucy0+b3V0c3RyZWFtX2RhdGFfdzsKCQlpZiAodXNlX2Nh
-bGxiYWNrICYmICgxID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9hY3Rpb25z
-LT5vdXRzdHJlYW1fZGF0YV93KSkpIHsKCQkJaW50MzJfdCAqYWxpZ25lZF9vdXRzdHJlYW1fZGF0
-YV93ID0gbWFsbG9jKG91dHN0cmVhbV9zaXplX2RhdGFfdyk7CgkJCWlmIChhbGlnbmVkX291dHN0
-cmVhbV9kYXRhX3cgPT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFjdGlvbnMt
-PmVycm9ycywgX19GSUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxp
-Z25lZCBtZW1vcnkgZm9yIHN0cmVhbSAnZGF0YV93JyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9
-CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnVzZXJfcHRyICAgID0gKHVp
-bnQ4X3QqKSBpbnRlcmZhY2VfYWN0aW9ucy0+b3V0c3RyZWFtX2RhdGFfdzsKCQkJKCZjYl9kYXRh
-LT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+YWxpZ25lZF9wdHIgPSAodWludDhfdCopIGFsaWdu
-ZWRfb3V0c3RyZWFtX2RhdGFfdzsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRd
-KS0+c2l6ZSAgICAgICAgPSBvdXRzdHJlYW1fc2l6ZV9kYXRhX3c7CgkJCSgmY2JfZGF0YS0+c3Ry
-ZWFtW2NiX2RhdGEtPmNvdW50XSktPmlzX291dHB1dCAgID0gMTsKCQkJY2JfZGF0YS0+Y291bnQg
-Kz0gMTsKCQkJc3RyZWFtX3B0ciA9IGFsaWduZWRfb3V0c3RyZWFtX2RhdGFfdzsKCQl9CgkJbWF4
-X3F1ZXVlX291dHB1dChhY3Rpb25zLCAiZGF0YV93Iiwgc3RyZWFtX3B0ciwgb3V0c3RyZWFtX3Np
-emVfZGF0YV93KTsKCQlDSEVDS19FUlJPUlM7Cgl9CgkvKiBlbmQgb2YgY29kZSBmb3Igc3RyZWFt
-IGRhdGFfdyAqLwoJCglpZiAodXNlX2NhbGxiYWNrICYmIGNiX2RhdGEtPmNvdW50ID09IDApIHsK
-CQkqY2FsbGJhY2tfZGF0YSA9IE5VTEw7CgkJKmNhbGxiYWNrX2Z1bmMgPSBOVUxMOwoJCWZyZWUo
-Y2JfZGF0YSk7Cgl9CglyZXR1cm4gYWN0aW9uczsKI3VuZGVmIENIRUNLX0VSUk9SUwp9Cgp2b2lk
-IE1lbVN0cmVhbSgKCWludDY0X3QgcGFyYW1fTiwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2No
-aWxkXzAsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF8xLAoJY29uc3QgaW50MzJfdCAq
-aW5zdHJlYW1fY2hpbGRfMiwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzMsCgljb25z
-dCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF80LAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1fY2hp
-bGRfNSwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzYsCgljb25zdCBpbnQzMl90ICpp
-bnN0cmVhbV9jaGlsZF83LAoJaW50MzJfdCAqb3V0c3RyZWFtX2RhdGFfdykKewoJKHZvaWQpIHB0
-aHJlYWRfb25jZSgmc2xpY19ic19pc19pbml0aWFsaXNlZCwgTWVtU3RyZWFtX3N0YXRpY19pbml0
-KTsKCUNIRUNLX05VTEwoc3RvcmVkX21heGZpbGUsICJNYXhmaWxlIHdhcyBub3QgbG9hZGVkIiwg
-KTsKCW1heF9ydW5fdCAqcnVuID0gTWVtU3RyZWFtX25vbmJsb2NrKHBhcmFtX04sIGluc3RyZWFt
-X2NoaWxkXzAsIGluc3RyZWFtX2NoaWxkXzEsIGluc3RyZWFtX2NoaWxkXzIsIGluc3RyZWFtX2No
-aWxkXzMsIGluc3RyZWFtX2NoaWxkXzQsIGluc3RyZWFtX2NoaWxkXzUsIGluc3RyZWFtX2NoaWxk
-XzYsIGluc3RyZWFtX2NoaWxkXzcsIG91dHN0cmVhbV9kYXRhX3cpOwoJQ0hFQ0tfTlVMTChydW4s
-ICJVbmFibGUgdG8gcnVuIGFjdGlvbnMiLCApOwoJbWF4X3dhaXQocnVuKTsKfQoKbWF4X3J1bl90
-ICpNZW1TdHJlYW1fbm9uYmxvY2soCglpbnQ2NF90IHBhcmFtX04sCgljb25zdCBpbnQzMl90ICpp
-bnN0cmVhbV9jaGlsZF8wLAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfMSwKCWNvbnN0
-IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzIsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGls
-ZF8zLAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfNCwKCWNvbnN0IGludDMyX3QgKmlu
-c3RyZWFtX2NoaWxkXzUsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF82LAoJY29uc3Qg
-aW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfNywKCWludDMyX3QgKm91dHN0cmVhbV9kYXRhX3cpCnsK
-CU1lbVN0cmVhbV9hY3Rpb25zX3QgaW50ZXJmYWNlX2FjdGlvbnM7CglpbnRlcmZhY2VfYWN0aW9u
-cy5wYXJhbV9OID0gcGFyYW1fTjsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzAg
-PSBpbnN0cmVhbV9jaGlsZF8wOwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfMSA9
-IGluc3RyZWFtX2NoaWxkXzE7CglpbnRlcmZhY2VfYWN0aW9ucy5pbnN0cmVhbV9jaGlsZF8yID0g
-aW5zdHJlYW1fY2hpbGRfMjsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzMgPSBp
-bnN0cmVhbV9jaGlsZF8zOwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfNCA9IGlu
-c3RyZWFtX2NoaWxkXzQ7CglpbnRlcmZhY2VfYWN0aW9ucy5pbnN0cmVhbV9jaGlsZF81ID0gaW5z
-dHJlYW1fY2hpbGRfNTsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzYgPSBpbnN0
-cmVhbV9jaGlsZF82OwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfNyA9IGluc3Ry
-ZWFtX2NoaWxkXzc7CglpbnRlcmZhY2VfYWN0aW9ucy5vdXRzdHJlYW1fZGF0YV93ID0gb3V0c3Ry
-ZWFtX2RhdGFfdzsKCSh2b2lkKSBwdGhyZWFkX29uY2UoJnNsaWNfYnNfaXNfaW5pdGlhbGlzZWQs
-IE1lbVN0cmVhbV9zdGF0aWNfaW5pdCk7CglDSEVDS19OVUxMKHN0b3JlZF9tYXhmaWxlLCAiTWF4
-ZmlsZSB3YXMgbm90IGxvYWRlZCIsIE5VTEwpOwoJdm9pZCAoKmNiX2Z1bmMpKHZvaWQqKSA9IE5V
-TEw7Cgl2b2lkICAqY2JfZGF0YSAgICAgICAgID0gTlVMTDsKCW1heF9hY3Rpb25zX3QgKmFjdGlv
-bnMgPSBNZW1TdHJlYW1fY29udmVydF9pbnRlcm5hbChzdG9yZWRfbWF4ZmlsZSwgJmludGVyZmFj
-ZV9hY3Rpb25zLCAxLCAmY2JfZnVuYywgJmNiX2RhdGEpOwoJQ0hFQ0tfTlVMTChhY3Rpb25zLCAi
-VW5hYmxlIHRvIGJ1aWxkIGFjdGlvbnMiLCBOVUxMKTsKCW1heF92YWxpZGF0ZShhY3Rpb25zKTsK
-CUNIRUNLX0VSUk9SU19TVChhY3Rpb25zLCBOVUxMKTsKCUNIRUNLX0VSUk9SU19TVChzdG9yZWRf
-ZW5naW5lLCBOVUxMKTsKCW1heF9ydW5fdCAqcnVuOwoJaWYgKGNiX2Z1bmMgPT0gTlVMTCkgewoJ
-CXJ1biA9IG1heF9ydW5fbm9uYmxvY2soc3RvcmVkX2VuZ2luZSwgYWN0aW9ucyk7Cgl9IGVsc2Ug
-ewoJCXJ1biA9IG1heF9ydW5fbm9uYmxvY2tfd2l0aF9jYihzdG9yZWRfZW5naW5lLCBhY3Rpb25z
-LCBjYl9mdW5jLCBjYl9kYXRhKTsKCX0KCUNIRUNLX05VTEwocnVuLCAiVW5hYmxlIHRvIHJ1biBh
-Y3Rpb25zIiwgTlVMTCk7CglDSEVDS19FUlJPUlNfU1QoYWN0aW9ucywgTlVMTCk7CgltYXhfYWN0
-aW9uc19mcmVlKGFjdGlvbnMpOwoJcmV0dXJuIHJ1bjsKfQoKdm9pZCBNZW1TdHJlYW1fcnVuKAoJ
-bWF4X2VuZ2luZV90ICplbmdpbmUsCglNZW1TdHJlYW1fYWN0aW9uc190ICppbnRlcmZhY2VfYWN0
-aW9ucykKewoJbWF4X3J1bl90ICpydW4gPSBNZW1TdHJlYW1fcnVuX25vbmJsb2NrKGVuZ2luZSwg
-aW50ZXJmYWNlX2FjdGlvbnMpOwoJQ0hFQ0tfTlVMTChydW4sICJVbmFibGUgdG8gcnVuIGFjdGlv
-bnMiLCApOwoJbWF4X3dhaXQocnVuKTsKfQoKbWF4X3J1bl90ICpNZW1TdHJlYW1fcnVuX25vbmJs
-b2NrKAoJbWF4X2VuZ2luZV90ICplbmdpbmUsCglNZW1TdHJlYW1fYWN0aW9uc190ICppbnRlcmZh
-Y2VfYWN0aW9ucykKewoJbWF4X2ZpbGVfdCAqbWF4ZmlsZSA9IG1heF9lbmdpbmVfZ2V0X21heF9m
-aWxlKGVuZ2luZSk7IAoJdm9pZCAoKmNiX2Z1bmMpKHZvaWQqKSA9IE5VTEw7Cgl2b2lkICAqY2Jf
-ZGF0YSAgICAgICAgID0gTlVMTDsKCW1heF9hY3Rpb25zX3QgKmFjdGlvbnMgPSBNZW1TdHJlYW1f
-Y29udmVydF9pbnRlcm5hbChtYXhmaWxlLCBpbnRlcmZhY2VfYWN0aW9ucywgMSwgJmNiX2Z1bmMs
-ICZjYl9kYXRhKTsKCUNIRUNLX05VTEwoYWN0aW9ucywgIlVuYWJsZSB0byBidWlsZCBhY3Rpb25z
-IiwgTlVMTCk7CgltYXhfdmFsaWRhdGUoYWN0aW9ucyk7CglDSEVDS19FUlJPUlNfU1QoYWN0aW9u
-cywgTlVMTCk7CgltYXhfcnVuX3QgKnJ1bjsKCWlmIChjYl9mdW5jID09IE5VTEwpIHsKCQlydW4g
-PSBtYXhfcnVuX25vbmJsb2NrKGVuZ2luZSwgYWN0aW9ucyk7Cgl9IGVsc2UgewoJCXJ1biA9IG1h
-eF9ydW5fbm9uYmxvY2tfd2l0aF9jYihlbmdpbmUsIGFjdGlvbnMsIGNiX2Z1bmMsIGNiX2RhdGEp
-OwoJfQoJQ0hFQ0tfTlVMTChydW4sICJVbmFibGUgdG8gcnVuIGFjdGlvbnMiLCBOVUxMKTsKCW1h
-eF9hY3Rpb25zX2ZyZWUoYWN0aW9ucyk7CglyZXR1cm4gcnVuOwp9CgoKLyoqCiAqIFxicmllZiBH
-cm91cCBydW4gYWR2YW5jZWQgc3RhdGljIGZ1bmN0aW9uIGZvciB0aGUgaW50ZXJmYWNlICdkZWZh
-dWx0Jy4KICogCiAqIFxwYXJhbSBbaW5dIGdyb3VwIEdyb3VwIHRvIHVzZS4KICogXHBhcmFtIFtp
-bixvdXRdIGludGVyZmFjZV9hY3Rpb25zIEFjdGlvbnMgdG8gcnVuLgogKgogKiBSdW4gdGhlIGFj
-dGlvbnMgb24gdGhlIGZpcnN0IGRldmljZSBhdmFpbGFibGUgaW4gdGhlIGdyb3VwLgogKi8Kdm9p
-ZCBNZW1TdHJlYW1fcnVuX2dyb3VwKG1heF9ncm91cF90ICpncm91cCwgTWVtU3RyZWFtX2FjdGlv
-bnNfdCAqaW50ZXJmYWNlX2FjdGlvbnMpCnsKCW1heF9ydW5fdCAqcnVuID0gTWVtU3RyZWFtX3J1
-bl9ncm91cF9ub25ibG9jayhncm91cCwgaW50ZXJmYWNlX2FjdGlvbnMpOwoJQ0hFQ0tfTlVMTChy
-dW4sICJVbmFibGUgdG8gcnVuIGFjdGlvbnMiLCApOwoJbWF4X3dhaXQocnVuKTsKfQoKCi8qKgog
-KiBcYnJpZWYgR3JvdXAgcnVuIGFkdmFuY2VkIHN0YXRpYyBub24tYmxvY2tpbmcgZnVuY3Rpb24g
-Zm9yIHRoZSBpbnRlcmZhY2UgJ2RlZmF1bHQnLgogKiAKICoKICogU2NoZWR1bGUgdGhlIGFjdGlv
-bnMgdG8gcnVuIG9uIHRoZSBmaXJzdCBkZXZpY2UgYXZhaWxhYmxlIGluIHRoZSBncm91cCBhbmQg
-cmV0dXJuIGltbWVkaWF0ZWx5LgogKiBUaGUgc3RhdHVzIG9mIHRoZSBydW4gbXVzdCBiZSBjaGVj
-a2VkIHdpdGggOjptYXhfd2FpdC4gCiAqIE5vdGUgdGhhdCB1c2Ugb2YgOjptYXhfbm93YWl0IGlz
-IHByb2hpYml0ZWQgd2l0aCBub24tYmxvY2tpbmcgcnVubmluZyBvbiBncm91cHM6CiAqIHNlZSB0
-aGUgOjptYXhfcnVuX2dyb3VwX25vbmJsb2NrIGRvY3VtZW50YXRpb24gZm9yIG1vcmUgZXhwbGFu
-YXRpb24uCiAqCiAqIFxwYXJhbSBbaW5dIGdyb3VwIEdyb3VwIHRvIHVzZS4KICogXHBhcmFtIFtp
-bl0gaW50ZXJmYWNlX2FjdGlvbnMgQWN0aW9ucyB0byBydW4uCiAqIFxyZXR1cm4gQSBoYW5kbGUg
-b24gdGhlIGV4ZWN1dGlvbiBzdGF0dXMgb2YgdGhlIGFjdGlvbnMsIG9yIE5VTEwgaW4gY2FzZSBv
-ZiBlcnJvci4KICovCm1heF9ydW5fdCAqTWVtU3RyZWFtX3J1bl9ncm91cF9ub25ibG9jayhtYXhf
-Z3JvdXBfdCAqZ3JvdXAsIE1lbVN0cmVhbV9hY3Rpb25zX3QgKmludGVyZmFjZV9hY3Rpb25zKQp7
-CgltYXhfZmlsZV90ICptYXhmaWxlID0gbWF4X2dyb3VwX2dldF9tYXhfZmlsZShncm91cCk7Cglt
-YXhfYWN0aW9uc190ICphY3Rpb25zID0gTWVtU3RyZWFtX2NvbnZlcnRfaW50ZXJuYWwobWF4Zmls
-ZSwgaW50ZXJmYWNlX2FjdGlvbnMsIDEsIE5VTEwsIE5VTEwpOwoJaWYoYWN0aW9ucyA9PSBOVUxM
-KSByZXR1cm4gTlVMTDsKCWlmKCFtYXhfb2soYWN0aW9ucy0+ZXJyb3JzKSkgcmV0dXJuIE5VTEw7
-CgltYXhfdmFsaWRhdGUoYWN0aW9ucyk7CgltYXhfcnVuX3QgKnJ1biA9IG1heF9ydW5fZ3JvdXBf
-bm9uYmxvY2soZ3JvdXAsIGFjdGlvbnMpOwoJbWF4X2FjdGlvbnNfZnJlZShhY3Rpb25zKTsKCXJl
-dHVybiBydW47Cn0KCgovKioKICogXGJyaWVmIEFycmF5IHJ1biBhZHZhbmNlZCBzdGF0aWMgZnVu
-Y3Rpb24gZm9yIHRoZSBpbnRlcmZhY2UgJ2RlZmF1bHQnLgogKiAKICogXHBhcmFtIFtpbl0gZW5n
-YXJyYXkgVGhlIGFycmF5IG9mIGRldmljZXMgdG8gdXNlLgogKiBccGFyYW0gW2luLG91dF0gaW50
-ZXJmYWNlX2FjdGlvbnMgVGhlIGFycmF5IG9mIGFjdGlvbnMgdG8gcnVuLgogKgogKiBSdW4gdGhl
-IGFycmF5IG9mIGFjdGlvbnMgb24gdGhlIGFycmF5IG9mIGVuZ2luZXMuICBUaGUgbGVuZ3RoIG9m
-IGludGVyZmFjZV9hY3Rpb25zCiAqIG11c3QgbWF0Y2ggdGhlIHNpemUgb2YgZW5nYXJyYXkuCiAq
-Lwp2b2lkIE1lbVN0cmVhbV9ydW5fYXJyYXkobWF4X2VuZ2FycmF5X3QgKmVuZ2FycmF5LCBNZW1T
-dHJlYW1fYWN0aW9uc190ICppbnRlcmZhY2VfYWN0aW9uc1tdKQp7CgltYXhfcnVuX3QgKnJ1biA9
-IE1lbVN0cmVhbV9ydW5fYXJyYXlfbm9uYmxvY2soZW5nYXJyYXksIGludGVyZmFjZV9hY3Rpb25z
-KTsKCUNIRUNLX05VTEwocnVuLCAiVW5hYmxlIHRvIHJ1biBhY3Rpb25zIiwgKTsKCW1heF93YWl0
-KHJ1bik7Cn0KCgovKioKICogXGJyaWVmIEFycmF5IHJ1biBhZHZhbmNlZCBzdGF0aWMgbm9uLWJs
-b2NraW5nIGZ1bmN0aW9uIGZvciB0aGUgaW50ZXJmYWNlICdkZWZhdWx0Jy4KICogCiAqCiAqIFNj
-aGVkdWxlIHRvIHJ1biB0aGUgYXJyYXkgb2YgYWN0aW9ucyBvbiB0aGUgYXJyYXkgb2YgZW5naW5l
-cywgYW5kIHJldHVybiBpbW1lZGlhdGVseS4KICogVGhlIGxlbmd0aCBvZiBpbnRlcmZhY2VfYWN0
-aW9ucyBtdXN0IG1hdGNoIHRoZSBzaXplIG9mIGVuZ2FycmF5LgogKiBUaGUgc3RhdHVzIG9mIHRo
-ZSBydW4gY2FuIGJlIGNoZWNrZWQgZWl0aGVyIGJ5IDo6bWF4X3dhaXQgb3IgOjptYXhfbm93YWl0
-OwogKiBub3RlIHRoYXQgb25lIG9mIHRoZXNlICptdXN0KiBiZSBjYWxsZWQsIHNvIHRoYXQgYXNz
-b2NpYXRlZCBtZW1vcnkgY2FuIGJlIHJlbGVhc2VkLgogKgogKiBccGFyYW0gW2luXSBlbmdhcnJh
-eSBUaGUgYXJyYXkgb2YgZGV2aWNlcyB0byB1c2UuCiAqIFxwYXJhbSBbaW5dIGludGVyZmFjZV9h
-Y3Rpb25zIFRoZSBhcnJheSBvZiBhY3Rpb25zIHRvIHJ1bi4KICogXHJldHVybiBBIGhhbmRsZSBv
-biB0aGUgZXhlY3V0aW9uIHN0YXR1cyBvZiB0aGUgYWN0aW9ucywgb3IgTlVMTCBpbiBjYXNlIG9m
-IGVycm9yLgogKi8KbWF4X3J1bl90ICpNZW1TdHJlYW1fcnVuX2FycmF5X25vbmJsb2NrKG1heF9l
-bmdhcnJheV90ICplbmdhcnJheSwgTWVtU3RyZWFtX2FjdGlvbnNfdCAqaW50ZXJmYWNlX2FjdGlv
-bnNbXSkKewoJbWF4X2ZpbGVfdCAqbWF4ZmlsZSA9IG1heF9lbmdhcnJheV9nZXRfbWF4X2ZpbGUo
-ZW5nYXJyYXksIDApOwoJaW50IGk7CgltYXhfYWN0YXJyYXlfdCAqYWN0YXJyYXkgPSBtYXhfYWN0
-YXJyYXlfaW5pdChtYXhmaWxlLCBlbmdhcnJheS0+c2l6ZSk7CglpZiAoYWN0YXJyYXkgPT0gTlVM
-TCkgcmV0dXJuIE5VTEw7CgltYXhfYWN0aW9uc190ICoqYXJyX2FjdGlvbnMgPSBtYWxsb2MoZW5n
-YXJyYXktPnNpemUgKiBzaXplb2YobWF4X2FjdGlvbnNfdCopKTsKCWZvciAoIGkgPSAwIDsgaSA8
-IGFjdGFycmF5LT5zaXplOyBpKysgKSB7CgkJbWF4X2FjdGlvbnNfdCAqYWN0aW9ucyA9IE1lbVN0
-cmVhbV9jb252ZXJ0X2ludGVybmFsKG1heGZpbGUsIGludGVyZmFjZV9hY3Rpb25zW2ldLCAxLCBO
-VUxMLCBOVUxMKTsKCQlpZiAoYWN0aW9ucyA9PSBOVUxMKSByZXR1cm4gTlVMTDsKCQlhcnJfYWN0
-aW9uc1tpXSA9IGFjdGlvbnM7CgkJbWF4X3NldF9hY3Rpb24oYWN0YXJyYXksIGksIGFjdGlvbnMp
-OwoJfQoJbWF4X3J1bl90ICpydW4gPSBtYXhfcnVuX2FycmF5X25vbmJsb2NrKGVuZ2FycmF5LCBh
-Y3RhcnJheSk7Cglmb3IgKCBpID0gMCA7IGkgPCBhY3RhcnJheS0+c2l6ZSA7IGkrKyApIHsgbWF4
-X2FjdGlvbnNfZnJlZShhcnJfYWN0aW9uc1tpXSk7IH0KCW1heF9hY3RhcnJheV9mcmVlKGFjdGFy
-cmF5KTsKCWZyZWUoYXJyX2FjdGlvbnMpOwoJcmV0dXJuIHJ1bjsKfQoKCi8qKgogKiBcYnJpZWYg
-Q29udmVydHMgYSBzdGF0aWMtaW50ZXJmYWNlIGFjdGlvbiBzdHJ1Y3QgaW50byBhIGR5bmFtaWMt
-aW50ZXJmYWNlIG1heF9hY3Rpb25zX3Qgc3RydWN0LgogKgogKiBOb3RlIHRoYXQgdGhpcyBpcyBh
-biBpbnRlcm5hbCB1dGlsaXR5IGZ1bmN0aW9uIHVzZWQgYnkgb3RoZXIgZnVuY3Rpb25zIGluIHRo
-ZSBzdGF0aWMgaW50ZXJmYWNlLgogKgogKiBccGFyYW0gW2luXSBtYXhmaWxlIFRoZSBtYXhmaWxl
-IHRvIHVzZS4KICogXHBhcmFtIFtpbl0gaW50ZXJmYWNlX2FjdGlvbnMgVGhlIGludGVyZmFjZS1z
-cGVjaWZpYyBhY3Rpb25zIHRvIHJ1bi4KICogXHJldHVybiBUaGUgZHluYW1pYy1pbnRlcmZhY2Ug
-YWN0aW9ucyB0byBydW4sIG9yIE5VTEwgaW4gY2FzZSBvZiBlcnJvci4KICovCm1heF9hY3Rpb25z
-X3QqIE1lbVN0cmVhbV9jb252ZXJ0KG1heF9maWxlX3QgKm1heGZpbGUsIE1lbVN0cmVhbV9hY3Rp
-b25zX3QgKmludGVyZmFjZV9hY3Rpb25zKQp7CglyZXR1cm4gTWVtU3RyZWFtX2NvbnZlcnRfaW50
-ZXJuYWwobWF4ZmlsZSwgaW50ZXJmYWNlX2FjdGlvbnMsIDAsIE5VTEwsIE5VTEwpOwp9CgojdW5k
-ZWYgQ0hFQ0tfRVJST1JTX1NUCiN1bmRlZiBDSEVDS19OVUxMCgoK
+CQkJbWVtY3B5KGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNCwgaW50ZXJmYWNlX2FjdGlvbnMtPmlu
+c3RyZWFtX2NoaWxkXzQsIGluc3RyZWFtX3NpemVfY2hpbGRfNCk7CgkJCXN0cmVhbV9wdHIgPSBh
+bGlnbmVkX2luc3RyZWFtX2NoaWxkXzQ7CgkJfQoJCW1heF9xdWV1ZV9pbnB1dChhY3Rpb25zLCAi
+Y2hpbGRfNCIsIHN0cmVhbV9wdHIsIGluc3RyZWFtX3NpemVfY2hpbGRfNCk7CgkJQ0hFQ0tfRVJS
+T1JTOwoJfQoJLyogZW5kIG9mIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF80ICovCgkKCWludDY0X3Qg
+dG1wXzUgPSAocGFyYW1fTiAqIDQpOwoJCgkvKiBjb2RlIGZvciBzdHJlYW0gY2hpbGRfNSAqLwoJ
+c2l6ZV90IGluc3RyZWFtX3NpemVfY2hpbGRfNSA9IHRtcF81OwoJaWYgKGluc3RyZWFtX3NpemVf
+Y2hpbGRfNSA+IDApIHsKCQljb25zdCBpbnQzMl90ICpzdHJlYW1fcHRyID0gaW50ZXJmYWNlX2Fj
+dGlvbnMtPmluc3RyZWFtX2NoaWxkXzU7CgkJaWYgKHVzZV9jYWxsYmFjayAmJiAoMSA9PSBNZW1T
+dHJlYW1fY2hlY2tfYWxpZ25lZChpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfNSkp
+KSB7CgkJCWludDMyX3QgKmFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNSA9IG1hbGxvYyhpbnN0cmVh
+bV9zaXplX2NoaWxkXzUpOwoJCQlpZiAoYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF81ID09IE5VTEwp
+IHsKCQkJCW1heF9yZXBvcnRfZXJyb3Jfc2xpYyhhY3Rpb25zLT5lcnJvcnMsIF9fRklMRV9fLCBf
+X0xJTkVfXywgNTI2LCAiRmFpbGVkIHRvIGFsbG9jYXRlIGFsaWduZWQgbWVtb3J5IGZvciBzdHJl
+YW0gJ2NoaWxkXzUnIik7CgkJCQlDSEVDS19FUlJPUlM7CgkJCX0KCQkJKCZjYl9kYXRhLT5zdHJl
+YW1bY2JfZGF0YS0+Y291bnRdKS0+dXNlcl9wdHIgICAgPSAodWludDhfdCopIGludGVyZmFjZV9h
+Y3Rpb25zLT5pbnN0cmVhbV9jaGlsZF81OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5j
+b3VudF0pLT5hbGlnbmVkX3B0ciA9ICh1aW50OF90KikgYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF81
+OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5zaXplICAgICAgICA9IGlu
+c3RyZWFtX3NpemVfY2hpbGRfNTsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRd
+KS0+aXNfb3V0cHV0ICAgPSAwOwoJCQljYl9kYXRhLT5jb3VudCArPSAxOwoJCQltZW1jcHkoYWxp
+Z25lZF9pbnN0cmVhbV9jaGlsZF81LCBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRf
+NSwgaW5zdHJlYW1fc2l6ZV9jaGlsZF81KTsKCQkJc3RyZWFtX3B0ciA9IGFsaWduZWRfaW5zdHJl
+YW1fY2hpbGRfNTsKCQl9CgkJbWF4X3F1ZXVlX2lucHV0KGFjdGlvbnMsICJjaGlsZF81Iiwgc3Ry
+ZWFtX3B0ciwgaW5zdHJlYW1fc2l6ZV9jaGlsZF81KTsKCQlDSEVDS19FUlJPUlM7Cgl9CgkvKiBl
+bmQgb2YgY29kZSBmb3Igc3RyZWFtIGNoaWxkXzUgKi8KCQoJaW50NjRfdCB0bXBfNiA9IChwYXJh
+bV9OICogNCk7CgkKCS8qIGNvZGUgZm9yIHN0cmVhbSBjaGlsZF82ICovCglzaXplX3QgaW5zdHJl
+YW1fc2l6ZV9jaGlsZF82ID0gdG1wXzY7CglpZiAoaW5zdHJlYW1fc2l6ZV9jaGlsZF82ID4gMCkg
+ewoJCWNvbnN0IGludDMyX3QgKnN0cmVhbV9wdHIgPSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJl
+YW1fY2hpbGRfNjsKCQlpZiAodXNlX2NhbGxiYWNrICYmICgxID09IE1lbVN0cmVhbV9jaGVja19h
+bGlnbmVkKGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF82KSkpIHsKCQkJaW50MzJf
+dCAqYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF82ID0gbWFsbG9jKGluc3RyZWFtX3NpemVfY2hpbGRf
+Nik7CgkJCWlmIChhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzYgPT0gTlVMTCkgewoJCQkJbWF4X3Jl
+cG9ydF9lcnJvcl9zbGljKGFjdGlvbnMtPmVycm9ycywgX19GSUxFX18sIF9fTElORV9fLCA1MjYs
+ICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxpZ25lZCBtZW1vcnkgZm9yIHN0cmVhbSAnY2hpbGRfNici
+KTsKCQkJCUNIRUNLX0VSUk9SUzsKCQkJfQoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5j
+b3VudF0pLT51c2VyX3B0ciAgICA9ICh1aW50OF90KikgaW50ZXJmYWNlX2FjdGlvbnMtPmluc3Ry
+ZWFtX2NoaWxkXzY7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmFsaWdu
+ZWRfcHRyID0gKHVpbnQ4X3QqKSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzY7CgkJCSgmY2JfZGF0
+YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnNpemUgICAgICAgID0gaW5zdHJlYW1fc2l6ZV9j
+aGlsZF82OwoJCQkoJmNiX2RhdGEtPnN0cmVhbVtjYl9kYXRhLT5jb3VudF0pLT5pc19vdXRwdXQg
+ICA9IDA7CgkJCWNiX2RhdGEtPmNvdW50ICs9IDE7CgkJCW1lbWNweShhbGlnbmVkX2luc3RyZWFt
+X2NoaWxkXzYsIGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF82LCBpbnN0cmVhbV9z
+aXplX2NoaWxkXzYpOwoJCQlzdHJlYW1fcHRyID0gYWxpZ25lZF9pbnN0cmVhbV9jaGlsZF82OwoJ
+CX0KCQltYXhfcXVldWVfaW5wdXQoYWN0aW9ucywgImNoaWxkXzYiLCBzdHJlYW1fcHRyLCBpbnN0
+cmVhbV9zaXplX2NoaWxkXzYpOwoJCUNIRUNLX0VSUk9SUzsKCX0KCS8qIGVuZCBvZiBjb2RlIGZv
+ciBzdHJlYW0gY2hpbGRfNiAqLwoJCglpbnQ2NF90IHRtcF83ID0gKHBhcmFtX04gKiA0KTsKCQoJ
+LyogY29kZSBmb3Igc3RyZWFtIGNoaWxkXzcgKi8KCXNpemVfdCBpbnN0cmVhbV9zaXplX2NoaWxk
+XzcgPSB0bXBfNzsKCWlmIChpbnN0cmVhbV9zaXplX2NoaWxkXzcgPiAwKSB7CgkJY29uc3QgaW50
+MzJfdCAqc3RyZWFtX3B0ciA9IGludGVyZmFjZV9hY3Rpb25zLT5pbnN0cmVhbV9jaGlsZF83OwoJ
+CWlmICh1c2VfY2FsbGJhY2sgJiYgKDEgPT0gTWVtU3RyZWFtX2NoZWNrX2FsaWduZWQoaW50ZXJm
+YWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzcpKSkgewoJCQlpbnQzMl90ICphbGlnbmVkX2lu
+c3RyZWFtX2NoaWxkXzcgPSBtYWxsb2MoaW5zdHJlYW1fc2l6ZV9jaGlsZF83KTsKCQkJaWYgKGFs
+aWduZWRfaW5zdHJlYW1fY2hpbGRfNyA9PSBOVUxMKSB7CgkJCQltYXhfcmVwb3J0X2Vycm9yX3Ns
+aWMoYWN0aW9ucy0+ZXJyb3JzLCBfX0ZJTEVfXywgX19MSU5FX18sIDUyNiwgIkZhaWxlZCB0byBh
+bGxvY2F0ZSBhbGlnbmVkIG1lbW9yeSBmb3Igc3RyZWFtICdjaGlsZF83JyIpOwoJCQkJQ0hFQ0tf
+RVJST1JTOwoJCQl9CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnVzZXJf
+cHRyICAgID0gKHVpbnQ4X3QqKSBpbnRlcmZhY2VfYWN0aW9ucy0+aW5zdHJlYW1fY2hpbGRfNzsK
+CQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+YWxpZ25lZF9wdHIgPSAodWlu
+dDhfdCopIGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNzsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2Jf
+ZGF0YS0+Y291bnRdKS0+c2l6ZSAgICAgICAgPSBpbnN0cmVhbV9zaXplX2NoaWxkXzc7CgkJCSgm
+Y2JfZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPmlzX291dHB1dCAgID0gMDsKCQkJY2Jf
+ZGF0YS0+Y291bnQgKz0gMTsKCQkJbWVtY3B5KGFsaWduZWRfaW5zdHJlYW1fY2hpbGRfNywgaW50
+ZXJmYWNlX2FjdGlvbnMtPmluc3RyZWFtX2NoaWxkXzcsIGluc3RyZWFtX3NpemVfY2hpbGRfNyk7
+CgkJCXN0cmVhbV9wdHIgPSBhbGlnbmVkX2luc3RyZWFtX2NoaWxkXzc7CgkJfQoJCW1heF9xdWV1
+ZV9pbnB1dChhY3Rpb25zLCAiY2hpbGRfNyIsIHN0cmVhbV9wdHIsIGluc3RyZWFtX3NpemVfY2hp
+bGRfNyk7CgkJQ0hFQ0tfRVJST1JTOwoJfQoJLyogZW5kIG9mIGNvZGUgZm9yIHN0cmVhbSBjaGls
+ZF83ICovCgkKCWludDY0X3QgdG1wXzggPSAocGFyYW1fTiAqIDQpOwoJCgkvKiBjb2RlIGZvciBz
+dHJlYW0gZGF0YV93ICovCglzaXplX3Qgb3V0c3RyZWFtX3NpemVfZGF0YV93ID0gdG1wXzg7Cglp
+ZiAob3V0c3RyZWFtX3NpemVfZGF0YV93ID4gMCkgewoJCWludDMyX3QgKnN0cmVhbV9wdHIgPSBp
+bnRlcmZhY2VfYWN0aW9ucy0+b3V0c3RyZWFtX2RhdGFfdzsKCQlpZiAodXNlX2NhbGxiYWNrICYm
+ICgxID09IE1lbVN0cmVhbV9jaGVja19hbGlnbmVkKGludGVyZmFjZV9hY3Rpb25zLT5vdXRzdHJl
+YW1fZGF0YV93KSkpIHsKCQkJaW50MzJfdCAqYWxpZ25lZF9vdXRzdHJlYW1fZGF0YV93ID0gbWFs
+bG9jKG91dHN0cmVhbV9zaXplX2RhdGFfdyk7CgkJCWlmIChhbGlnbmVkX291dHN0cmVhbV9kYXRh
+X3cgPT0gTlVMTCkgewoJCQkJbWF4X3JlcG9ydF9lcnJvcl9zbGljKGFjdGlvbnMtPmVycm9ycywg
+X19GSUxFX18sIF9fTElORV9fLCA1MjYsICJGYWlsZWQgdG8gYWxsb2NhdGUgYWxpZ25lZCBtZW1v
+cnkgZm9yIHN0cmVhbSAnZGF0YV93JyIpOwoJCQkJQ0hFQ0tfRVJST1JTOwoJCQl9CgkJCSgmY2Jf
+ZGF0YS0+c3RyZWFtW2NiX2RhdGEtPmNvdW50XSktPnVzZXJfcHRyICAgID0gKHVpbnQ4X3QqKSBp
+bnRlcmZhY2VfYWN0aW9ucy0+b3V0c3RyZWFtX2RhdGFfdzsKCQkJKCZjYl9kYXRhLT5zdHJlYW1b
+Y2JfZGF0YS0+Y291bnRdKS0+YWxpZ25lZF9wdHIgPSAodWludDhfdCopIGFsaWduZWRfb3V0c3Ry
+ZWFtX2RhdGFfdzsKCQkJKCZjYl9kYXRhLT5zdHJlYW1bY2JfZGF0YS0+Y291bnRdKS0+c2l6ZSAg
+ICAgICAgPSBvdXRzdHJlYW1fc2l6ZV9kYXRhX3c7CgkJCSgmY2JfZGF0YS0+c3RyZWFtW2NiX2Rh
+dGEtPmNvdW50XSktPmlzX291dHB1dCAgID0gMTsKCQkJY2JfZGF0YS0+Y291bnQgKz0gMTsKCQkJ
+c3RyZWFtX3B0ciA9IGFsaWduZWRfb3V0c3RyZWFtX2RhdGFfdzsKCQl9CgkJbWF4X3F1ZXVlX291
+dHB1dChhY3Rpb25zLCAiZGF0YV93Iiwgc3RyZWFtX3B0ciwgb3V0c3RyZWFtX3NpemVfZGF0YV93
+KTsKCQlDSEVDS19FUlJPUlM7Cgl9CgkvKiBlbmQgb2YgY29kZSBmb3Igc3RyZWFtIGRhdGFfdyAq
+LwoJCglpZiAodXNlX2NhbGxiYWNrICYmIGNiX2RhdGEtPmNvdW50ID09IDApIHsKCQkqY2FsbGJh
+Y2tfZGF0YSA9IE5VTEw7CgkJKmNhbGxiYWNrX2Z1bmMgPSBOVUxMOwoJCWZyZWUoY2JfZGF0YSk7
+Cgl9CglyZXR1cm4gYWN0aW9uczsKI3VuZGVmIENIRUNLX0VSUk9SUwp9Cgp2b2lkIE1lbVN0cmVh
+bSgKCWludDY0X3QgcGFyYW1fTiwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzAsCglj
+b25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF8xLAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1f
+Y2hpbGRfMiwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzMsCgljb25zdCBpbnQzMl90
+ICppbnN0cmVhbV9jaGlsZF80LAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfNSwKCWNv
+bnN0IGludDMyX3QgKmluc3RyZWFtX2NoaWxkXzYsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9j
+aGlsZF83LAoJaW50MzJfdCAqb3V0c3RyZWFtX2RhdGFfdykKewoJKHZvaWQpIHB0aHJlYWRfb25j
+ZSgmc2xpY19ic19pc19pbml0aWFsaXNlZCwgTWVtU3RyZWFtX3N0YXRpY19pbml0KTsKCUNIRUNL
+X05VTEwoc3RvcmVkX21heGZpbGUsICJNYXhmaWxlIHdhcyBub3QgbG9hZGVkIiwgKTsKCW1heF9y
+dW5fdCAqcnVuID0gTWVtU3RyZWFtX25vbmJsb2NrKHBhcmFtX04sIGluc3RyZWFtX2NoaWxkXzAs
+IGluc3RyZWFtX2NoaWxkXzEsIGluc3RyZWFtX2NoaWxkXzIsIGluc3RyZWFtX2NoaWxkXzMsIGlu
+c3RyZWFtX2NoaWxkXzQsIGluc3RyZWFtX2NoaWxkXzUsIGluc3RyZWFtX2NoaWxkXzYsIGluc3Ry
+ZWFtX2NoaWxkXzcsIG91dHN0cmVhbV9kYXRhX3cpOwoJQ0hFQ0tfTlVMTChydW4sICJVbmFibGUg
+dG8gcnVuIGFjdGlvbnMiLCApOwoJbWF4X3dhaXQocnVuKTsKfQoKbWF4X3J1bl90ICpNZW1TdHJl
+YW1fbm9uYmxvY2soCglpbnQ2NF90IHBhcmFtX04sCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9j
+aGlsZF8wLAoJY29uc3QgaW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfMSwKCWNvbnN0IGludDMyX3Qg
+Kmluc3RyZWFtX2NoaWxkXzIsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF8zLAoJY29u
+c3QgaW50MzJfdCAqaW5zdHJlYW1fY2hpbGRfNCwKCWNvbnN0IGludDMyX3QgKmluc3RyZWFtX2No
+aWxkXzUsCgljb25zdCBpbnQzMl90ICppbnN0cmVhbV9jaGlsZF82LAoJY29uc3QgaW50MzJfdCAq
+aW5zdHJlYW1fY2hpbGRfNywKCWludDMyX3QgKm91dHN0cmVhbV9kYXRhX3cpCnsKCU1lbVN0cmVh
+bV9hY3Rpb25zX3QgaW50ZXJmYWNlX2FjdGlvbnM7CglpbnRlcmZhY2VfYWN0aW9ucy5wYXJhbV9O
+ID0gcGFyYW1fTjsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzAgPSBpbnN0cmVh
+bV9jaGlsZF8wOwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfMSA9IGluc3RyZWFt
+X2NoaWxkXzE7CglpbnRlcmZhY2VfYWN0aW9ucy5pbnN0cmVhbV9jaGlsZF8yID0gaW5zdHJlYW1f
+Y2hpbGRfMjsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzMgPSBpbnN0cmVhbV9j
+aGlsZF8zOwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfNCA9IGluc3RyZWFtX2No
+aWxkXzQ7CglpbnRlcmZhY2VfYWN0aW9ucy5pbnN0cmVhbV9jaGlsZF81ID0gaW5zdHJlYW1fY2hp
+bGRfNTsKCWludGVyZmFjZV9hY3Rpb25zLmluc3RyZWFtX2NoaWxkXzYgPSBpbnN0cmVhbV9jaGls
+ZF82OwoJaW50ZXJmYWNlX2FjdGlvbnMuaW5zdHJlYW1fY2hpbGRfNyA9IGluc3RyZWFtX2NoaWxk
+Xzc7CglpbnRlcmZhY2VfYWN0aW9ucy5vdXRzdHJlYW1fZGF0YV93ID0gb3V0c3RyZWFtX2RhdGFf
+dzsKCSh2b2lkKSBwdGhyZWFkX29uY2UoJnNsaWNfYnNfaXNfaW5pdGlhbGlzZWQsIE1lbVN0cmVh
+bV9zdGF0aWNfaW5pdCk7CglDSEVDS19OVUxMKHN0b3JlZF9tYXhmaWxlLCAiTWF4ZmlsZSB3YXMg
+bm90IGxvYWRlZCIsIE5VTEwpOwoJdm9pZCAoKmNiX2Z1bmMpKHZvaWQqKSA9IE5VTEw7Cgl2b2lk
+ICAqY2JfZGF0YSAgICAgICAgID0gTlVMTDsKCW1heF9hY3Rpb25zX3QgKmFjdGlvbnMgPSBNZW1T
+dHJlYW1fY29udmVydF9pbnRlcm5hbChzdG9yZWRfbWF4ZmlsZSwgJmludGVyZmFjZV9hY3Rpb25z
+LCAxLCAmY2JfZnVuYywgJmNiX2RhdGEpOwoJQ0hFQ0tfTlVMTChhY3Rpb25zLCAiVW5hYmxlIHRv
+IGJ1aWxkIGFjdGlvbnMiLCBOVUxMKTsKCW1heF92YWxpZGF0ZShhY3Rpb25zKTsKCUNIRUNLX0VS
+Uk9SU19TVChhY3Rpb25zLCBOVUxMKTsKCUNIRUNLX0VSUk9SU19TVChzdG9yZWRfZW5naW5lLCBO
+VUxMKTsKCW1heF9ydW5fdCAqcnVuOwoJaWYgKGNiX2Z1bmMgPT0gTlVMTCkgewoJCXJ1biA9IG1h
+eF9ydW5fbm9uYmxvY2soc3RvcmVkX2VuZ2luZSwgYWN0aW9ucyk7Cgl9IGVsc2UgewoJCXJ1biA9
+IG1heF9ydW5fbm9uYmxvY2tfd2l0aF9jYihzdG9yZWRfZW5naW5lLCBhY3Rpb25zLCBjYl9mdW5j
+LCBjYl9kYXRhKTsKCX0KCUNIRUNLX05VTEwocnVuLCAiVW5hYmxlIHRvIHJ1biBhY3Rpb25zIiwg
+TlVMTCk7CglDSEVDS19FUlJPUlNfU1QoYWN0aW9ucywgTlVMTCk7CgltYXhfYWN0aW9uc19mcmVl
+KGFjdGlvbnMpOwoJcmV0dXJuIHJ1bjsKfQoKdm9pZCBNZW1TdHJlYW1fcnVuKAoJbWF4X2VuZ2lu
+ZV90ICplbmdpbmUsCglNZW1TdHJlYW1fYWN0aW9uc190ICppbnRlcmZhY2VfYWN0aW9ucykKewoJ
+bWF4X3J1bl90ICpydW4gPSBNZW1TdHJlYW1fcnVuX25vbmJsb2NrKGVuZ2luZSwgaW50ZXJmYWNl
+X2FjdGlvbnMpOwoJQ0hFQ0tfTlVMTChydW4sICJVbmFibGUgdG8gcnVuIGFjdGlvbnMiLCApOwoJ
+bWF4X3dhaXQocnVuKTsKfQoKbWF4X3J1bl90ICpNZW1TdHJlYW1fcnVuX25vbmJsb2NrKAoJbWF4
+X2VuZ2luZV90ICplbmdpbmUsCglNZW1TdHJlYW1fYWN0aW9uc190ICppbnRlcmZhY2VfYWN0aW9u
+cykKewoJbWF4X2ZpbGVfdCAqbWF4ZmlsZSA9IG1heF9lbmdpbmVfZ2V0X21heF9maWxlKGVuZ2lu
+ZSk7IAoJdm9pZCAoKmNiX2Z1bmMpKHZvaWQqKSA9IE5VTEw7Cgl2b2lkICAqY2JfZGF0YSAgICAg
+ICAgID0gTlVMTDsKCW1heF9hY3Rpb25zX3QgKmFjdGlvbnMgPSBNZW1TdHJlYW1fY29udmVydF9p
+bnRlcm5hbChtYXhmaWxlLCBpbnRlcmZhY2VfYWN0aW9ucywgMSwgJmNiX2Z1bmMsICZjYl9kYXRh
+KTsKCUNIRUNLX05VTEwoYWN0aW9ucywgIlVuYWJsZSB0byBidWlsZCBhY3Rpb25zIiwgTlVMTCk7
+CgltYXhfdmFsaWRhdGUoYWN0aW9ucyk7CglDSEVDS19FUlJPUlNfU1QoYWN0aW9ucywgTlVMTCk7
+CgltYXhfcnVuX3QgKnJ1bjsKCWlmIChjYl9mdW5jID09IE5VTEwpIHsKCQlydW4gPSBtYXhfcnVu
+X25vbmJsb2NrKGVuZ2luZSwgYWN0aW9ucyk7Cgl9IGVsc2UgewoJCXJ1biA9IG1heF9ydW5fbm9u
+YmxvY2tfd2l0aF9jYihlbmdpbmUsIGFjdGlvbnMsIGNiX2Z1bmMsIGNiX2RhdGEpOwoJfQoJQ0hF
+Q0tfTlVMTChydW4sICJVbmFibGUgdG8gcnVuIGFjdGlvbnMiLCBOVUxMKTsKCW1heF9hY3Rpb25z
+X2ZyZWUoYWN0aW9ucyk7CglyZXR1cm4gcnVuOwp9CgoKLyoqCiAqIFxicmllZiBHcm91cCBydW4g
+YWR2YW5jZWQgc3RhdGljIGZ1bmN0aW9uIGZvciB0aGUgaW50ZXJmYWNlICdkZWZhdWx0Jy4KICog
+CiAqIFxwYXJhbSBbaW5dIGdyb3VwIEdyb3VwIHRvIHVzZS4KICogXHBhcmFtIFtpbixvdXRdIGlu
+dGVyZmFjZV9hY3Rpb25zIEFjdGlvbnMgdG8gcnVuLgogKgogKiBSdW4gdGhlIGFjdGlvbnMgb24g
+dGhlIGZpcnN0IGRldmljZSBhdmFpbGFibGUgaW4gdGhlIGdyb3VwLgogKi8Kdm9pZCBNZW1TdHJl
+YW1fcnVuX2dyb3VwKG1heF9ncm91cF90ICpncm91cCwgTWVtU3RyZWFtX2FjdGlvbnNfdCAqaW50
+ZXJmYWNlX2FjdGlvbnMpCnsKCW1heF9ydW5fdCAqcnVuID0gTWVtU3RyZWFtX3J1bl9ncm91cF9u
+b25ibG9jayhncm91cCwgaW50ZXJmYWNlX2FjdGlvbnMpOwoJQ0hFQ0tfTlVMTChydW4sICJVbmFi
+bGUgdG8gcnVuIGFjdGlvbnMiLCApOwoJbWF4X3dhaXQocnVuKTsKfQoKCi8qKgogKiBcYnJpZWYg
+R3JvdXAgcnVuIGFkdmFuY2VkIHN0YXRpYyBub24tYmxvY2tpbmcgZnVuY3Rpb24gZm9yIHRoZSBp
+bnRlcmZhY2UgJ2RlZmF1bHQnLgogKiAKICoKICogU2NoZWR1bGUgdGhlIGFjdGlvbnMgdG8gcnVu
+IG9uIHRoZSBmaXJzdCBkZXZpY2UgYXZhaWxhYmxlIGluIHRoZSBncm91cCBhbmQgcmV0dXJuIGlt
+bWVkaWF0ZWx5LgogKiBUaGUgc3RhdHVzIG9mIHRoZSBydW4gbXVzdCBiZSBjaGVja2VkIHdpdGgg
+OjptYXhfd2FpdC4gCiAqIE5vdGUgdGhhdCB1c2Ugb2YgOjptYXhfbm93YWl0IGlzIHByb2hpYml0
+ZWQgd2l0aCBub24tYmxvY2tpbmcgcnVubmluZyBvbiBncm91cHM6CiAqIHNlZSB0aGUgOjptYXhf
+cnVuX2dyb3VwX25vbmJsb2NrIGRvY3VtZW50YXRpb24gZm9yIG1vcmUgZXhwbGFuYXRpb24uCiAq
+CiAqIFxwYXJhbSBbaW5dIGdyb3VwIEdyb3VwIHRvIHVzZS4KICogXHBhcmFtIFtpbl0gaW50ZXJm
+YWNlX2FjdGlvbnMgQWN0aW9ucyB0byBydW4uCiAqIFxyZXR1cm4gQSBoYW5kbGUgb24gdGhlIGV4
+ZWN1dGlvbiBzdGF0dXMgb2YgdGhlIGFjdGlvbnMsIG9yIE5VTEwgaW4gY2FzZSBvZiBlcnJvci4K
+ICovCm1heF9ydW5fdCAqTWVtU3RyZWFtX3J1bl9ncm91cF9ub25ibG9jayhtYXhfZ3JvdXBfdCAq
+Z3JvdXAsIE1lbVN0cmVhbV9hY3Rpb25zX3QgKmludGVyZmFjZV9hY3Rpb25zKQp7CgltYXhfZmls
+ZV90ICptYXhmaWxlID0gbWF4X2dyb3VwX2dldF9tYXhfZmlsZShncm91cCk7CgltYXhfYWN0aW9u
+c190ICphY3Rpb25zID0gTWVtU3RyZWFtX2NvbnZlcnRfaW50ZXJuYWwobWF4ZmlsZSwgaW50ZXJm
+YWNlX2FjdGlvbnMsIDEsIE5VTEwsIE5VTEwpOwoJaWYoYWN0aW9ucyA9PSBOVUxMKSByZXR1cm4g
+TlVMTDsKCWlmKCFtYXhfb2soYWN0aW9ucy0+ZXJyb3JzKSkgcmV0dXJuIE5VTEw7CgltYXhfdmFs
+aWRhdGUoYWN0aW9ucyk7CgltYXhfcnVuX3QgKnJ1biA9IG1heF9ydW5fZ3JvdXBfbm9uYmxvY2so
+Z3JvdXAsIGFjdGlvbnMpOwoJbWF4X2FjdGlvbnNfZnJlZShhY3Rpb25zKTsKCXJldHVybiBydW47
+Cn0KCgovKioKICogXGJyaWVmIEFycmF5IHJ1biBhZHZhbmNlZCBzdGF0aWMgZnVuY3Rpb24gZm9y
+IHRoZSBpbnRlcmZhY2UgJ2RlZmF1bHQnLgogKiAKICogXHBhcmFtIFtpbl0gZW5nYXJyYXkgVGhl
+IGFycmF5IG9mIGRldmljZXMgdG8gdXNlLgogKiBccGFyYW0gW2luLG91dF0gaW50ZXJmYWNlX2Fj
+dGlvbnMgVGhlIGFycmF5IG9mIGFjdGlvbnMgdG8gcnVuLgogKgogKiBSdW4gdGhlIGFycmF5IG9m
+IGFjdGlvbnMgb24gdGhlIGFycmF5IG9mIGVuZ2luZXMuICBUaGUgbGVuZ3RoIG9mIGludGVyZmFj
+ZV9hY3Rpb25zCiAqIG11c3QgbWF0Y2ggdGhlIHNpemUgb2YgZW5nYXJyYXkuCiAqLwp2b2lkIE1l
+bVN0cmVhbV9ydW5fYXJyYXkobWF4X2VuZ2FycmF5X3QgKmVuZ2FycmF5LCBNZW1TdHJlYW1fYWN0
+aW9uc190ICppbnRlcmZhY2VfYWN0aW9uc1tdKQp7CgltYXhfcnVuX3QgKnJ1biA9IE1lbVN0cmVh
+bV9ydW5fYXJyYXlfbm9uYmxvY2soZW5nYXJyYXksIGludGVyZmFjZV9hY3Rpb25zKTsKCUNIRUNL
+X05VTEwocnVuLCAiVW5hYmxlIHRvIHJ1biBhY3Rpb25zIiwgKTsKCW1heF93YWl0KHJ1bik7Cn0K
+CgovKioKICogXGJyaWVmIEFycmF5IHJ1biBhZHZhbmNlZCBzdGF0aWMgbm9uLWJsb2NraW5nIGZ1
+bmN0aW9uIGZvciB0aGUgaW50ZXJmYWNlICdkZWZhdWx0Jy4KICogCiAqCiAqIFNjaGVkdWxlIHRv
+IHJ1biB0aGUgYXJyYXkgb2YgYWN0aW9ucyBvbiB0aGUgYXJyYXkgb2YgZW5naW5lcywgYW5kIHJl
+dHVybiBpbW1lZGlhdGVseS4KICogVGhlIGxlbmd0aCBvZiBpbnRlcmZhY2VfYWN0aW9ucyBtdXN0
+IG1hdGNoIHRoZSBzaXplIG9mIGVuZ2FycmF5LgogKiBUaGUgc3RhdHVzIG9mIHRoZSBydW4gY2Fu
+IGJlIGNoZWNrZWQgZWl0aGVyIGJ5IDo6bWF4X3dhaXQgb3IgOjptYXhfbm93YWl0OwogKiBub3Rl
+IHRoYXQgb25lIG9mIHRoZXNlICptdXN0KiBiZSBjYWxsZWQsIHNvIHRoYXQgYXNzb2NpYXRlZCBt
+ZW1vcnkgY2FuIGJlIHJlbGVhc2VkLgogKgogKiBccGFyYW0gW2luXSBlbmdhcnJheSBUaGUgYXJy
+YXkgb2YgZGV2aWNlcyB0byB1c2UuCiAqIFxwYXJhbSBbaW5dIGludGVyZmFjZV9hY3Rpb25zIFRo
+ZSBhcnJheSBvZiBhY3Rpb25zIHRvIHJ1bi4KICogXHJldHVybiBBIGhhbmRsZSBvbiB0aGUgZXhl
+Y3V0aW9uIHN0YXR1cyBvZiB0aGUgYWN0aW9ucywgb3IgTlVMTCBpbiBjYXNlIG9mIGVycm9yLgog
+Ki8KbWF4X3J1bl90ICpNZW1TdHJlYW1fcnVuX2FycmF5X25vbmJsb2NrKG1heF9lbmdhcnJheV90
+ICplbmdhcnJheSwgTWVtU3RyZWFtX2FjdGlvbnNfdCAqaW50ZXJmYWNlX2FjdGlvbnNbXSkKewoJ
+bWF4X2ZpbGVfdCAqbWF4ZmlsZSA9IG1heF9lbmdhcnJheV9nZXRfbWF4X2ZpbGUoZW5nYXJyYXks
+IDApOwoJaW50IGk7CgltYXhfYWN0YXJyYXlfdCAqYWN0YXJyYXkgPSBtYXhfYWN0YXJyYXlfaW5p
+dChtYXhmaWxlLCBlbmdhcnJheS0+c2l6ZSk7CglpZiAoYWN0YXJyYXkgPT0gTlVMTCkgcmV0dXJu
+IE5VTEw7CgltYXhfYWN0aW9uc190ICoqYXJyX2FjdGlvbnMgPSBtYWxsb2MoZW5nYXJyYXktPnNp
+emUgKiBzaXplb2YobWF4X2FjdGlvbnNfdCopKTsKCWZvciAoIGkgPSAwIDsgaSA8IGFjdGFycmF5
+LT5zaXplOyBpKysgKSB7CgkJbWF4X2FjdGlvbnNfdCAqYWN0aW9ucyA9IE1lbVN0cmVhbV9jb252
+ZXJ0X2ludGVybmFsKG1heGZpbGUsIGludGVyZmFjZV9hY3Rpb25zW2ldLCAxLCBOVUxMLCBOVUxM
+KTsKCQlpZiAoYWN0aW9ucyA9PSBOVUxMKSByZXR1cm4gTlVMTDsKCQlhcnJfYWN0aW9uc1tpXSA9
+IGFjdGlvbnM7CgkJbWF4X3NldF9hY3Rpb24oYWN0YXJyYXksIGksIGFjdGlvbnMpOwoJfQoJbWF4
+X3J1bl90ICpydW4gPSBtYXhfcnVuX2FycmF5X25vbmJsb2NrKGVuZ2FycmF5LCBhY3RhcnJheSk7
+Cglmb3IgKCBpID0gMCA7IGkgPCBhY3RhcnJheS0+c2l6ZSA7IGkrKyApIHsgbWF4X2FjdGlvbnNf
+ZnJlZShhcnJfYWN0aW9uc1tpXSk7IH0KCW1heF9hY3RhcnJheV9mcmVlKGFjdGFycmF5KTsKCWZy
+ZWUoYXJyX2FjdGlvbnMpOwoJcmV0dXJuIHJ1bjsKfQoKCi8qKgogKiBcYnJpZWYgQ29udmVydHMg
+YSBzdGF0aWMtaW50ZXJmYWNlIGFjdGlvbiBzdHJ1Y3QgaW50byBhIGR5bmFtaWMtaW50ZXJmYWNl
+IG1heF9hY3Rpb25zX3Qgc3RydWN0LgogKgogKiBOb3RlIHRoYXQgdGhpcyBpcyBhbiBpbnRlcm5h
+bCB1dGlsaXR5IGZ1bmN0aW9uIHVzZWQgYnkgb3RoZXIgZnVuY3Rpb25zIGluIHRoZSBzdGF0aWMg
+aW50ZXJmYWNlLgogKgogKiBccGFyYW0gW2luXSBtYXhmaWxlIFRoZSBtYXhmaWxlIHRvIHVzZS4K
+ICogXHBhcmFtIFtpbl0gaW50ZXJmYWNlX2FjdGlvbnMgVGhlIGludGVyZmFjZS1zcGVjaWZpYyBh
+Y3Rpb25zIHRvIHJ1bi4KICogXHJldHVybiBUaGUgZHluYW1pYy1pbnRlcmZhY2UgYWN0aW9ucyB0
+byBydW4sIG9yIE5VTEwgaW4gY2FzZSBvZiBlcnJvci4KICovCm1heF9hY3Rpb25zX3QqIE1lbVN0
+cmVhbV9jb252ZXJ0KG1heF9maWxlX3QgKm1heGZpbGUsIE1lbVN0cmVhbV9hY3Rpb25zX3QgKmlu
+dGVyZmFjZV9hY3Rpb25zKQp7CglyZXR1cm4gTWVtU3RyZWFtX2NvbnZlcnRfaW50ZXJuYWwobWF4
+ZmlsZSwgaW50ZXJmYWNlX2FjdGlvbnMsIDAsIE5VTEwsIE5VTEwpOwp9CgojdW5kZWYgQ0hFQ0tf
+RVJST1JTX1NUCiN1bmRlZiBDSEVDS19OVUxMCgoK
 #endif /* SLIC_B64_DEFINITIONS */
 
 #ifdef SLIC_EXTRA_FILES
@@ -1958,6 +2017,6 @@ PHOTON_NODE_ADD_DATA(MemStreamKernel, 47, "SquashFactor", 0.0)
 
 #ifdef MAXFILE_SIGNATURE
 #define MAXFILE_SIGNATURE_PRESENT 1
-MAXFILE_SIGNATURE("302d0214612ca772057c856472d3a5a3f60234c505ab6102021500824bc3af6ebc9d1d3b52ab3698e1a36be4f5c9bc")
+MAXFILE_SIGNATURE("302c02147cc8744e0d126ad6aaee78b8b5d1653b12a6334c021467e8f09b327d96e247872ccbab65af2bc65ae5bc")
 #endif
 

@@ -9,7 +9,7 @@ class MemStreamKernel extends Kernel {
 
 	private static final DFEType type = dfeInt(32);
 
-	protected MemStreamKernel(KernelParameters parameters) {
+	MemStreamKernel(KernelParameters parameters) {
 		super(parameters);
 		long start_time_link = System.nanoTime();
 

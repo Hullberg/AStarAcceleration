@@ -56,8 +56,9 @@ int main(void)
 		start_time_memstream = clock();
 
 		//MemStream(size, child_array[0], child_array[1], child_array[2], child_array[3], data_w);
+		printf("Into stream\n");
 		MemStream(size, child_array[0], child_array[1], child_array[2], child_array[3], child_array[4], child_array[5], child_array[6], child_array[7], data_w);
-
+		printf("Done with stream\n");
 		end_time_memstream = clock();
 		memstream_time_sum += (end_time_memstream-start_time_memstream);
 

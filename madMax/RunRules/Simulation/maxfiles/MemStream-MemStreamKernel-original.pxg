@@ -5,8 +5,8 @@
 		<Text>{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:39)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1</Value>
 		<HexValue>0x1</HexValue>
 		<NumericValue>1.0</NumericValue>
@@ -17,8 +17,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_data_w_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:39)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_data_w_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="35" dst_node_input="a" src_node_id="34" src_node_output="io_data_w_force_disabled" />
@@ -28,8 +28,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:39)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="36" dst_node_input="b" src_node_id="35" src_node_output="result" />
 	<Node group="[]" id="36" isControl="false" isVisible="false" pipelineFactor="0.0" type="NodeAnd">
@@ -39,8 +39,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>&amp;</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:39)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="37" dst_node_input="output_control" src_node_id="36" src_node_output="result" />
 	<Node group="[]" id="0" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -48,8 +48,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_0_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:16)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_0_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="1" dst_node_input="a" src_node_id="0" src_node_output="io_child_0_force_disabled" />
@@ -59,8 +59,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:16)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="2" dst_node_input="enable" src_node_id="1" src_node_output="result" />
 	<Node group="[]" id="2" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -69,8 +69,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_0)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:16)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_0</Name>
 	</Node>
 	<Edge dst_node_id="24" dst_node_input="a" src_node_id="2" src_node_output="data" />
@@ -79,8 +79,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_1_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:17)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_1_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="4" dst_node_input="a" src_node_id="3" src_node_output="io_child_1_force_disabled" />
@@ -90,8 +90,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:17)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="5" dst_node_input="enable" src_node_id="4" src_node_output="result" />
 	<Node group="[]" id="5" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -100,8 +100,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_1)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:17)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_1</Name>
 	</Node>
 	<Edge dst_node_id="24" dst_node_input="b" src_node_id="5" src_node_output="data" />
@@ -112,8 +112,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="25" dst_node_input="a" src_node_id="24" src_node_output="result" />
 	<Node group="[]" id="6" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -121,8 +121,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_2_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:18)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_2_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="7" dst_node_input="a" src_node_id="6" src_node_output="io_child_2_force_disabled" />
@@ -132,8 +132,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:18)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="8" dst_node_input="enable" src_node_id="7" src_node_output="result" />
 	<Node group="[]" id="8" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -142,8 +142,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_2)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:18)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_2</Name>
 	</Node>
 	<Edge dst_node_id="25" dst_node_input="b" src_node_id="8" src_node_output="data" />
@@ -154,8 +154,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="26" dst_node_input="a" src_node_id="25" src_node_output="result" />
 	<Node group="[]" id="9" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -163,8 +163,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_3_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:19)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_3_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="10" dst_node_input="a" src_node_id="9" src_node_output="io_child_3_force_disabled" />
@@ -174,8 +174,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:19)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="11" dst_node_input="enable" src_node_id="10" src_node_output="result" />
 	<Node group="[]" id="11" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -184,8 +184,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_3)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:19)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_3</Name>
 	</Node>
 	<Edge dst_node_id="26" dst_node_input="b" src_node_id="11" src_node_output="data" />
@@ -196,8 +196,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="27" dst_node_input="a" src_node_id="26" src_node_output="result" />
 	<Node group="[]" id="12" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -205,8 +205,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_4_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:22)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_4_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="13" dst_node_input="a" src_node_id="12" src_node_output="io_child_4_force_disabled" />
@@ -216,8 +216,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:22)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="14" dst_node_input="enable" src_node_id="13" src_node_output="result" />
 	<Node group="[]" id="14" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -226,8 +226,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_4)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:22)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_4</Name>
 	</Node>
 	<Edge dst_node_id="27" dst_node_input="b" src_node_id="14" src_node_output="data" />
@@ -238,8 +238,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="28" dst_node_input="a" src_node_id="27" src_node_output="result" />
 	<Node group="[]" id="15" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -247,8 +247,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_5_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:23)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_5_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="16" dst_node_input="a" src_node_id="15" src_node_output="io_child_5_force_disabled" />
@@ -258,8 +258,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:23)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="17" dst_node_input="enable" src_node_id="16" src_node_output="result" />
 	<Node group="[]" id="17" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -268,8 +268,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_5)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:23)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_5</Name>
 	</Node>
 	<Edge dst_node_id="28" dst_node_input="b" src_node_id="17" src_node_output="data" />
@@ -280,8 +280,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="29" dst_node_input="a" src_node_id="28" src_node_output="result" />
 	<Node group="[]" id="18" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -289,8 +289,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_6_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:24)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_6_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="19" dst_node_input="a" src_node_id="18" src_node_output="io_child_6_force_disabled" />
@@ -300,8 +300,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:24)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="20" dst_node_input="enable" src_node_id="19" src_node_output="result" />
 	<Node group="[]" id="20" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -310,8 +310,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_6)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:24)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_6</Name>
 	</Node>
 	<Edge dst_node_id="29" dst_node_input="b" src_node_id="20" src_node_output="data" />
@@ -322,8 +322,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="30" dst_node_input="a" src_node_id="29" src_node_output="result" />
 	<Node group="[]" id="21" isControl="true" isVisible="false" pipelineFactor="1.0" type="NodeInputMappedReg">
@@ -331,8 +331,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Scalar input (io_child_7_force_disabled)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:25)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>io_child_7_force_disabled</Name>
 	</Node>
 	<Edge dst_node_id="22" dst_node_input="a" src_node_id="21" src_node_output="io_child_7_force_disabled" />
@@ -342,8 +342,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>~</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:25)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="23" dst_node_input="enable" src_node_id="22" src_node_output="result" />
 	<Node group="[]" id="23" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeInput">
@@ -352,8 +352,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Input(child_7)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.input(IO.java:630)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:25)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>child_7</Name>
 	</Node>
 	<Edge dst_node_id="30" dst_node_input="b" src_node_id="23" src_node_output="data" />
@@ -364,8 +364,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>+</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.add(DFEVar.java:1003)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:32)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="32" dst_node_input="a" src_node_id="30" src_node_output="result" />
 	<Node group="[]" id="31" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeConstantDouble">
@@ -373,8 +373,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>8.0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:33)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>8.0</Value>
 	</Node>
 	<Edge dst_node_id="32" dst_node_input="b" src_node_id="31" src_node_output="value" />
@@ -385,8 +385,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>/</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar.div(DFEVar.java:1183)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:33)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="37" dst_node_input="data" src_node_id="32" src_node_output="result" />
 	<Node group="[]" id="37" isControl="false" isVisible="true" pipelineFactor="1.0" type="NodeOutput">
@@ -395,16 +395,16 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Text>Output(data_w)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.kernelcompiler.stdlib.core.IO.output(IO.java:836)
 memstream.MemStreamKernel.&lt;init&gt;(MemStreamKernel.maxj:39)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>data_w</Name>
 	</Node>
 	<Node group="[]" id="42" isControl="false" isVisible="false" pipelineFactor="1.0" type="NodeConstantRawBits">
 		<Output latency="0" name="value" type="dfeOffsetFix(1, 0, UNSIGNED)" />
 		<Text>{HWOffsetFix:1, 0, UNSIGNED}\n0x1; 1.0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1</Value>
 		<HexValue>0x1</HexValue>
 		<NumericValue>1.0</NumericValue>
@@ -414,8 +414,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="value" type="dfeUntypedConst()" />
 		<Text>1.0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1.0</Value>
 	</Node>
 	<Edge dst_node_id="40" dst_node_input="enable" src_node_id="38" src_node_output="value" />
@@ -423,8 +423,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="value" type="dfeOffsetFix(49, 0, UNSIGNED)" />
 		<Text>{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1000000000000000000000000000000000000000000000000</Value>
 		<HexValue>0x1000000000000</HexValue>
 		<NumericValue>2.81474976710656E14</NumericValue>
@@ -437,8 +437,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="wrap" type="dfeOffsetFix(1, 0, UNSIGNED)" />
 		<Text>Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Increment>1</Increment>
 		<WrapValue>0</WrapValue>
 		<InitValue>0</InitValue>
@@ -451,8 +451,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="1" name="output" type="dfeOffsetFix(48, 0, UNSIGNED)" />
 		<Text>stream offset: 1</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="43" dst_node_input="data" src_node_id="41" src_node_output="output" />
 	<Node group="[]" id="43" isControl="false" isVisible="false" pipelineFactor="1.0" type="NodeOutputMappedReg">
@@ -460,16 +460,16 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Input name="data" type="dfeOffsetFix(48, 0, UNSIGNED)" />
 		<Text>Scalar output (current_run_cycle_count)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>current_run_cycle_count</Name>
 	</Node>
 	<Node group="[]" id="44" isControl="false" isVisible="false" pipelineFactor="1.0" type="NodeConstantDouble">
 		<Output latency="0" name="value" type="dfeUntypedConst()" />
 		<Text>1.0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1.0</Value>
 	</Node>
 	<Edge dst_node_id="46" dst_node_input="enable" src_node_id="44" src_node_output="value" />
@@ -477,8 +477,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="value" type="dfeOffsetFix(49, 0, UNSIGNED)" />
 		<Text>{HWOffsetFix:49, 0, UNSIGNED}\n0x1000000000000; 2.81474976710656E14</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Value>1000000000000000000000000000000000000000000000000</Value>
 		<HexValue>0x1000000000000</HexValue>
 		<NumericValue>2.81474976710656E14</NumericValue>
@@ -491,8 +491,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="wrap" type="dfeOffsetFix(1, 0, UNSIGNED)" />
 		<Text>Counter(NUMERIC_INCREMENTING)\nInc: 1\nReset: 0\nInit: 0</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Increment>1</Increment>
 		<WrapValue>0</WrapValue>
 		<InitValue>0</InitValue>
@@ -504,8 +504,8 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="0" name="run_cycle_count" type="dfeOffsetFix(48, 0, UNSIGNED)" />
 		<Text>Scalar input (run_cycle_count)</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 		<Name>run_cycle_count</Name>
 	</Node>
 	<Edge dst_node_id="49" dst_node_input="b" src_node_id="48" src_node_output="run_cycle_count" />
@@ -515,15 +515,15 @@ memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
 		<Output latency="1" name="result" type="dfeOffsetFix(1, 0, UNSIGNED)" />
 		<Text>==</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 	<Edge dst_node_id="47" dst_node_input="start" src_node_id="49" src_node_output="result" />
 	<Node group="[]" id="47" isControl="false" isVisible="false" pipelineFactor="1.0" type="NodeFlush">
 		<Input name="start" type="dfeOffsetFix(1, 0, UNSIGNED)" />
 		<Text>flush on trigger</Text>
 		<OriginStackTrace>com.maxeler.maxcompiler.v2.managers.custom.CustomManager.addKernel(CustomManager.java:956)
-memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:24)
-memstream.MemStreamManager.main(MemStreamManager.maxj:62)</OriginStackTrace>
+memstream.MemStreamManager.&lt;init&gt;(MemStreamManager.maxj:17)
+memstream.MemStreamManager.main(MemStreamManager.maxj:57)</OriginStackTrace>
 	</Node>
 </Graph>

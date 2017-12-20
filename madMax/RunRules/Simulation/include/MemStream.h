@@ -20,15 +20,15 @@ extern "C" {
  * \brief Basic static function for the interface 'default'.
  * 
  * \param [in] param_N Interface Parameter "N".
- * \param [in] instream_child_0 The stream should be of size 16 bytes.
- * \param [in] instream_child_1 The stream should be of size 16 bytes.
- * \param [in] instream_child_2 The stream should be of size 16 bytes.
- * \param [in] instream_child_3 The stream should be of size 16 bytes.
- * \param [in] instream_child_4 The stream should be of size 16 bytes.
- * \param [in] instream_child_5 The stream should be of size 16 bytes.
- * \param [in] instream_child_6 The stream should be of size 16 bytes.
- * \param [in] instream_child_7 The stream should be of size 16 bytes.
- * \param [out] outstream_data_w The stream should be of size 16 bytes.
+ * \param [in] instream_child_0 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_1 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_2 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_3 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_4 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_5 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_6 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_7 The stream should be of size (param_N * 4) bytes.
+ * \param [out] outstream_data_w The stream should be of size (param_N * 4) bytes.
  */
 void MemStream(
 	int64_t param_N,
@@ -51,15 +51,15 @@ void MemStream(
  * 
  * 
  * \param [in] param_N Interface Parameter "N".
- * \param [in] instream_child_0 The stream should be of size 16 bytes.
- * \param [in] instream_child_1 The stream should be of size 16 bytes.
- * \param [in] instream_child_2 The stream should be of size 16 bytes.
- * \param [in] instream_child_3 The stream should be of size 16 bytes.
- * \param [in] instream_child_4 The stream should be of size 16 bytes.
- * \param [in] instream_child_5 The stream should be of size 16 bytes.
- * \param [in] instream_child_6 The stream should be of size 16 bytes.
- * \param [in] instream_child_7 The stream should be of size 16 bytes.
- * \param [out] outstream_data_w The stream should be of size 16 bytes.
+ * \param [in] instream_child_0 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_1 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_2 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_3 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_4 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_5 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_6 The stream should be of size (param_N * 4) bytes.
+ * \param [in] instream_child_7 The stream should be of size (param_N * 4) bytes.
+ * \param [out] outstream_data_w The stream should be of size (param_N * 4) bytes.
  * \return A handle on the execution status, or NULL in case of error.
  */
 max_run_t *MemStream_nonblock(
@@ -80,15 +80,15 @@ max_run_t *MemStream_nonblock(
  */
 typedef struct { 
 	int64_t param_N; /**<  [in] Interface Parameter "N". */
-	const int32_t *instream_child_0; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_1; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_2; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_3; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_4; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_5; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_6; /**<  [in] The stream should be of size 16 bytes. */
-	const int32_t *instream_child_7; /**<  [in] The stream should be of size 16 bytes. */
-	int32_t *outstream_data_w; /**<  [out] The stream should be of size 16 bytes. */
+	const int32_t *instream_child_0; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_1; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_2; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_3; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_4; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_5; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_6; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	const int32_t *instream_child_7; /**<  [in] The stream should be of size (param_N * 4) bytes. */
+	int32_t *outstream_data_w; /**<  [out] The stream should be of size (param_N * 4) bytes. */
 } MemStream_actions_t;
 
 /**
