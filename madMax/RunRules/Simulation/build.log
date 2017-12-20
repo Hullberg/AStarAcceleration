@@ -1,0 +1,89 @@
+Wed 13:02: ########################################## 
+Wed 13:02: Compiling.
+Wed 13:02: ########################################## 
+
+Wed 13:02: MaxCompiler version: 2017.2.1.
+Wed 13:02: Build Simulation run rule for madMax start time: Wed Dec 20 13:02:05 GMT 2017.
+Wed 13:02: Project location: /home/demo/BreadthFirstSearchAcceleration/madMax.
+Wed 13:02: Detailed build log: /home/demo/BreadthFirstSearchAcceleration/madMax/RunRules/Simulation/build.log.
+
+Wed 13:02: Compiling Engine Code.
+Wed 13:02: Building MemStream.max file. 
+Wed 13:02: Setting environment variable:
+Wed 13:02: MAXCOMPILER_BUILD_DIR : /home/demo/BreadthFirstSearchAcceleration/madMax/RunRules/Simulation/maxfiles
+Wed 13:02: MAX_BUILDPARAMS : DFEModel='VECTIS' target='DFE_SIM' maxFileName='MemStream'  
+Wed 13:02: Building output:
+Wed 13:02: MaxCompiler version: 2017.2.1
+Wed 13:02: Build "MemStream" start time: Wed Dec 20 13:02:06 GMT 2017
+Wed 13:02: Main build process running as user demo on host localhost.localdomain
+Wed 13:02: Build location: /home/demo/Desktop/MaxCompiler-Builds/MemStream_VECTIS_DFE_SIM
+Wed 13:02: Detailed build log available in "_build.log"
+Wed 13:02: WARNING: No valid license for the component 'MaxCompiler_core' was found
+Wed 13:02: WARNING: but a valid 'MaxCompiler_core_sim' license was found.
+Wed 13:02: WARNING: Falling back to sim-only support
+Wed 13:02: 
+Wed 13:02: ENGINE BUILD PARAMETERS
+Wed 13:02: 	 Build name: MemStream_VECTIS_DFE_SIM
+Wed 13:02: 	   DFEModel: VECTIS                  
+Wed 13:02: 	maxFileName: MemStream               
+Wed 13:02: 	     target: DFE_SIM                 
+Wed 13:02: 	 enableMPCX: false                   
+Wed 13:02: Instantiating kernel "MemStreamKernel"
+Wed 13:02: Before output
+Wed 13:02: Time for maxeler operation is: 60825microseconds
+Wed 13:02: 
+Wed 13:02: Compiling kernel "MemStreamKernel"
+Wed 13:02: Running back-end simulation build (3 phases)
+Wed 13:02: (1/3) - Prepare MaxFile Data (GenerateMaxFileDataFile)
+Wed 13:02: (2/3) - Compile Simulation Modules (SimCompilePass)
+Wed 13:02: (3/3) - Generate MaxFile (AddSimObjectToMaxFilePass)
+Wed 13:02: MaxFile: /home/demo/Desktop/MaxCompiler-Builds/MemStream_VECTIS_DFE_SIM/results/MemStream.max (MD5Sum: 69ee026a1d61759bea1b43b54ee72995)
+Wed 13:02: Build completed: Wed Dec 20 13:02:11 GMT 2017 (took 4 secs)
+Wed 13:02: Executing command:
+Wed 13:02: cp /home/demo/BreadthFirstSearchAcceleration/madMax/RunRules/Simulation/maxfiles/MemStream.h /home/demo/BreadthFirstSearchAcceleration/madMax/RunRules/Simulation/include/MemStream.h 
+Wed 13:02: Command output:
+Wed 13:02: Building: MemStream.max file finished.
+Wed 13:02: Engine build finished.
+Wed 13:02: Compiling CPU Code.
+Wed 13:02: Run CPU project make files updating
+Wed 13:02: Executing command:
+Wed 13:02: java -jar /opt/maxeler/maxcompiler/lib/MaxIDE/projectAdmin.jar -u /home/demo/BreadthFirstSearchAcceleration/madMax Simulation 
+Wed 13:02: Command output:
+
+Wed 13:02: MaxCompiler Project Admin Tool Version 2016.1.00001
+Wed 13:02:  Copyright Maxeler Technologies 2010 - 2016. All rights reserved.
+Wed 13:02: Handler version 2
+Wed 13:02: Updating RunRule dependent Makefiles for RunRule 'Simulation'
+Wed 13:02: 	Updating: Simulation
+Wed 13:02: Found makefiles: 1
+Wed 13:02: 	Updated: Simulation
+Wed 13:02: Run CPU make.
+Wed 13:02: make RUNRULE=Simulation 
+Wed 13:02: Command output:
+Wed 13:02: make -f Makefile.rules build
+Wed 13:02: make[1]: Entering directory `/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode'
+Wed 13:02: set -e; rm -f ../RunRules/Simulation/objects/c/MemStreamCpuCode.d ;                                                             \
+Wed 13:02: 	  cc -M -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompilernet-2017.2.1/include/slicnet' -I '/opt/maxeler/maxcompiler/include/slic'  -Wno-error MemStreamCpuCode.c > ../RunRules/Simulation/objects/c/MemStreamCpuCode.d.$$ ;                                 \
+Wed 13:02:       sed 's,\(MemStreamCpuCode\)\.o[ :]*,../RunRules/Simulation/objects/c/\1.o ../RunRules/Simulation/objects/c/MemStreamCpuCode.d : ,g' < ../RunRules/Simulation/objects/c/MemStreamCpuCode.d.$$ > ../RunRules/Simulation/objects/c/MemStreamCpuCode.d; \
+Wed 13:02:       rm -f ../RunRules/Simulation/objects/c/MemStreamCpuCode.d.$$
+Wed 13:02: make[1]: Leaving directory `/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode'
+Wed 13:02: make[1]: Entering directory `/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode'
+Wed 13:02: "/opt/maxeler/maxcompiler/bin/sliccompile" ../RunRules/Simulation/maxfiles/MemStream.max ../RunRules/Simulation/objects/maxfiles/slic_MemStream.o
+Wed 13:02: Processing maxfile for VECTIS_SIM from '../RunRules/Simulation/maxfiles/MemStream.max'.
+Wed 13:02: /opt/maxeler/maxcompiler/lib/clang/bin/start.sh clang -fgnu89-inline -pipe -O0 -std=gnu99 -Wall -Werror -frandom-seed=foo -Wno-unused-variable -Wno-unused-function -fPIC -I /opt/maxeler/maxcompiler/include/slic -I /opt/maxeler/maxcompilernet-2017.2.1/include/slicnet -DMAXFILE_INC="/dev/null" -DSLIC_NO_DESTRUCTORS -c /tmp/sliccompile_135528855290636848/cobject/max_3047951339691340778.c -o /tmp/sliccompile_135528855290636848/cobject/max_3047951339691340778.c.o 
+Wed 13:02: /opt/maxeler/maxcompiler/lib/clang/bin/start.sh clang -fgnu89-inline -pipe -O0 -std=gnu99 -Wall -Werror -frandom-seed=foo -Wno-unused-variable -Wno-unused-function -fPIC -I /opt/maxeler/maxcompiler/include/slic -I /opt/maxeler/maxcompilernet-2017.2.1/include/slicnet -DMAXFILE_INC="/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode/../RunRules/Simulation/maxfiles/MemStream.max" -DSLIC_NO_DESTRUCTORS -c /opt/maxeler/maxcompiler/src/slicinterface/MaxFileInit.c -o max_3805546912106984299.o 
+Wed 13:02: ld -r /tmp/sliccompile_135528855290636848/cobject/max_3047951339691340778.c.o max_3805546912106984299.o -o slic_MemStream.o 
+Wed 13:02: Copying .max file C object into '/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode/../RunRules/Simulation/objects/maxfiles'
+Wed 13:02: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompilernet-2017.2.1/include/slicnet' -I '/opt/maxeler/maxcompiler/include/slic'  -c MemStreamCpuCode.c -o ../RunRules/Simulation/objects/c/MemStreamCpuCode.o
+Wed 13:02: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompilernet-2017.2.1/include/slicnet' -I '/opt/maxeler/maxcompiler/include/slic'  -o ../RunRules/Simulation/binaries/MemStream ../RunRules/Simulation/objects/maxfiles/slic_MemStream.o ../RunRules/Simulation/objects/c/MemStreamCpuCode.o -g -O3  -L '/opt/maxeler/maxcompilernet-2017.2.1/lib' -lslicnet -L '/opt/maxeler/maxcompiler/lib' -lslic -L '/opt/maxeler/maxcompiler/lib/maxeleros-sim/lib' -lmaxeleros -lpthread -lm -lrt 
+Wed 13:02: make[1]: Leaving directory `/home/demo/BreadthFirstSearchAcceleration/madMax/CPUCode'
+Wed 13:02: Build completed: Wed Dec 20 13:02:12 GMT 2017
+
+
+Wed 13:02: ########################################## 
+Wed 13:02: Running
+Wed 13:02: ########################################## 
+Wed 13:02: Executing command:
+Wed 13:02: '/home/demo/BreadthFirstSearchAcceleration/madMax/RunRules/Simulation/binaries/MemStream' 
+Wed 13:02: Command output:
+Wed 13:02: Running a do/while-loop on DFE...

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maxCompilerManager version="2">
+<enginePart internalEngineSubproject="madMax_EngineCode" isSrcBin="false" isUseDefaultSelected="false" outputLocation="/madMax_EngineCode/bin" projectName="madMax"/>
+<cpuPart internalCpuSubproject="madMax_CPUCode"/>
+<watchedFiles/>
+</maxCompilerManager>
