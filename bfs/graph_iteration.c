@@ -10,7 +10,7 @@
 #include "vertex.c"
 
 #define EDGE_COUNT 8
-#define VERTEX_COUNT 10240000
+#define VERTEX_COUNT 5120000
 
 Vertex** vertex_list;
 
@@ -117,7 +117,7 @@ bool converged(){
 ////////////
 /////// MAIN
 ////////////
-
+/*
 int main(int argc, char* argv[]) {
   srand(time(NULL));
   vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
@@ -146,5 +146,5 @@ int main(int argc, char* argv[]) {
   }
   free(vertex_list);
   return 0;
-}
+}*/
 
