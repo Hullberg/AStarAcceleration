@@ -1,0 +1,8 @@
+Input files:
+	DAT:     ../MaxCompilerDesignData.dat
+	Periph RBF:	asm/altera_quartus/MAX4GALAVAPeripheryTop.periph.rbf
+	Core RBF:	asm/altera_quartus/MAX4GALAVAPeripheryTop.core.rbf
+Output files:
+	MAX:     CpuStream.max
+Hash: d6d80ffa781eeb468396f5fae83bcb025158d00a9f7f9c573f34ba8ddd5d7cbe
+Timing score: 0

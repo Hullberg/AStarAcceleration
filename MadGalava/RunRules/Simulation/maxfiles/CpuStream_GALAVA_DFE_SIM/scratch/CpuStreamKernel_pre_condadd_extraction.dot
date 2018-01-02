@@ -1,0 +1,21 @@
+digraph CpuStreamKernel_pre_condadd_extraction{
+	NodeInput2 [shape=invhouse, label="child_0\nID: 2"];
+	NodeInput5 [shape=invhouse, label="child_1\nID: 5"];
+	NodeAdd37 [label="+\nID: 37"];
+	NodeInput8 [shape=invhouse, label="child_2\nID: 8"];
+	NodeInput11 [shape=invhouse, label="child_3\nID: 11"];
+	NodeAdd38 [label="+\nID: 38"];
+	NodeAdd39 [label="+\nID: 39"];
+	NodeReinterpret34 [label="<{HWOffsetFix:32, -2, TWOSCOMPLEMENT}>\nID: 34"];
+	NodeCast35 [label="{HWOffsetFix:32, 0, TWOSCOMPLEMENT}\nID: 35"];
+	NodeOutput21 [shape=house, label="data_w\nID: 21"];
+	NodeInput2 -> NodeAdd37[color="/dark28/1" photon_data="EDGE,SrcNode:2,SrcNodePort:data"];
+	NodeInput5 -> NodeAdd37[color="/dark28/2" photon_data="EDGE,SrcNode:5,SrcNodePort:data"];
+	NodeInput8 -> NodeAdd38[color="/dark28/3" photon_data="EDGE,SrcNode:8,SrcNodePort:data"];
+	NodeInput11 -> NodeAdd38[color="/dark28/4" photon_data="EDGE,SrcNode:11,SrcNodePort:data"];
+	NodeAdd37 -> NodeAdd39[color="/dark28/5" photon_data="EDGE,SrcNode:37,SrcNodePort:result"];
+	NodeAdd38 -> NodeAdd39[color="/dark28/6" photon_data="EDGE,SrcNode:38,SrcNodePort:result"];
+	NodeAdd39 -> NodeReinterpret34[color="/dark28/7" photon_data="EDGE,SrcNode:39,SrcNodePort:result"];
+	NodeReinterpret34 -> NodeCast35[color="/dark28/8" photon_data="EDGE,SrcNode:34,SrcNodePort:output"];
+	NodeCast35 -> NodeOutput21[color="/dark28/1" photon_data="EDGE,SrcNode:35,SrcNodePort:o"];
+}

@@ -1,0 +1,256 @@
+Tue 11:29: ########################################## 
+Tue 11:29: Compiling.
+Tue 11:29: ########################################## 
+
+Tue 11:29: MaxCompiler version: 2017.2.1.
+Tue 11:29: Build Simulation run rule for MadGalava start time: Tue Jan 02 11:29:27 CET 2018.
+Tue 11:29: Project location: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava.
+Tue 11:29: Detailed build log: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/Simulation/build.log.
+
+Tue 11:29: Compiling Engine Code.
+Tue 11:29: Engine building skipped (no changes on .max files).
+Tue 11:29: Compiling CPU Code.
+Tue 11:29: Run CPU project make files updating
+Tue 11:29: Executing command:
+Tue 11:29: java -jar /opt/maxcompiler/lib/MaxIDE/projectAdmin.jar -u /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava Simulation 
+Tue 11:29: Command output:
+
+Tue 11:29: MaxCompiler Project Admin Tool Version 2016.1.00001
+Tue 11:29:  Copyright Maxeler Technologies 2010 - 2016. All rights reserved.
+Tue 11:29: Handler version 2
+Tue 11:29: Updating RunRule dependent Makefiles for RunRule 'Simulation'
+Tue 11:29: 	Updating: Simulation
+Tue 11:29: Found makefiles: 1
+Tue 11:29: 	Updated: Simulation
+Tue 11:29: Run CPU make.
+Tue 11:29: make RUNRULE=Simulation 
+Tue 11:29: Command output:
+Tue 11:29: make -f Makefile.rules build
+Tue 11:29: make[1]: Entering directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 11:29: set -e; rm -f ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d ;                                                             \
+Tue 11:29: 	  cc -M -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxcompiler/include/slic'  -Wno-error CpuStreamCpuCode.c > ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$ ;                                 \
+Tue 11:29:       sed 's,\(CpuStreamCpuCode\)\.o[ :]*,../RunRules/Simulation/objects/c/\1.o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d : ,g' < ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$ > ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d; \
+Tue 11:29:       rm -f ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$
+Tue 11:29: make[1]: Leaving directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 11:29: make[1]: Entering directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 11:29: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxcompiler/include/slic'  -c CpuStreamCpuCode.c -o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.o
+Tue 11:29: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxcompiler/include/slic'  -o ../RunRules/Simulation/binaries/CpuStream ../RunRules/Simulation/objects/maxfiles/slic_CpuStream.o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.o -g -O3  -L '/opt/maxcompiler/lib' -lslic -L '/opt/maxeler/maxeleros/lib' -lmaxeleros -lpthread -lm -lrt 
+Tue 11:29: make[1]: Leaving directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 11:29: Build completed: Tue Jan 02 11:29:27 CET 2018
+
+
+Tue 11:29: ########################################## 
+Tue 11:29: Running
+Tue 11:29: ########################################## 
+Tue 11:29: Executing command:
+Tue 11:29: '/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/Simulation/binaries/CpuStream' 
+Tue 11:29: Command output:
+Tue 11:29: Running a do/while-loop on DFE...
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:29: Done with stream
+Tue 11:29: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+Tue 11:30: Into stream
+Tue 11:30: Done with stream
+
+Tue 11:30: Done! Converged after 100 iterations.
+Tue 11:30: Average Only CPU time: 0.000100 s
+Tue 11:30: Average Memstream time: 0.298100
+Tue 11:30: Average Total time: 0.298200 s
+Tue 11:30: Total time: 29.820000 s
+Tue 11:30: Done.
+Tue 11:30: Process terminated with exit code 0.

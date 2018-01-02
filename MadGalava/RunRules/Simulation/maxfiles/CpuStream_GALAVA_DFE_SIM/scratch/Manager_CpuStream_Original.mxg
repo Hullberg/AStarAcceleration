@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagerGraph version="2017.2.1" design_name="Manager_CpuStream" compilation_phase="Original" hardwareBuild="false">
+	<Node id="2" instanceName="child_0" type="Input">
+		<Output clock="PCIE" name="child_0" type="PUSH 2" width="128">
+			<Stream name="Stream_3" sink="0" />
+		</Output>
+	</Node>
+	<Node id="5" instanceName="child_1" type="Input">
+		<Output clock="PCIE" name="child_1" type="PUSH 2" width="128">
+			<Stream name="Stream_6" sink="0" />
+		</Output>
+	</Node>
+	<Node id="8" instanceName="child_2" type="Input">
+		<Output clock="PCIE" name="child_2" type="PUSH 2" width="128">
+			<Stream name="Stream_9" sink="0" />
+		</Output>
+	</Node>
+	<Node id="11" instanceName="child_3" type="Input">
+		<Output clock="PCIE" name="child_3" type="PUSH 2" width="128">
+			<Stream name="Stream_12" sink="0" />
+		</Output>
+	</Node>
+	<Node id="0" instanceName="CpuStreamKernel" type="Kernel">
+		<PxgFile phase="original">CpuStream-CpuStreamKernel-original.pxg</PxgFile>
+		<PxgFile phase="final-simulation">CpuStream-CpuStreamKernel-final-simulation.pxg</PxgFile>
+		<Input clock="STREAM" name="child_0" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_1" source="2" />
+		</Input>
+		<Input clock="STREAM" name="child_1" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_4" source="5" />
+		</Input>
+		<Input clock="STREAM" name="child_2" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_7" source="8" />
+		</Input>
+		<Input clock="STREAM" name="child_3" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_10" source="11" />
+		</Input>
+		<Output clock="STREAM" name="data_w" type="PUSH 5" width="32">
+			<Stream name="Stream_15" sink="13" />
+		</Output>
+	</Node>
+	<Node id="13" instanceName="data_w" type="Output">
+		<Input clock="PCIE" name="data_w" type="PUSH 1" width="128">
+			<Stream name="Stream_14" source="0" />
+		</Input>
+	</Node>
+</ManagerGraph>

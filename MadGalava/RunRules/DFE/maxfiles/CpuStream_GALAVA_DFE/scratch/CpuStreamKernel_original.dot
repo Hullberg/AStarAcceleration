@@ -1,0 +1,21 @@
+digraph CpuStreamKernel_original{
+	NodeInput2 [shape=invhouse, label="child_0\nID: 2"];
+	NodeInput5 [shape=invhouse, label="child_1\nID: 5"];
+	NodeAdd12 [label="+\nID: 12"];
+	NodeInput8 [shape=invhouse, label="child_2\nID: 8"];
+	NodeAdd13 [label="+\nID: 13"];
+	NodeInput11 [shape=invhouse, label="child_3\nID: 11"];
+	NodeAdd14 [label="+\nID: 14"];
+	NodeConstantDouble15 [shape=box, label="4.0\nID: 15"];
+	NodeDiv16 [label="/\nID: 16"];
+	NodeOutput21 [shape=house, label="data_w\nID: 21"];
+	NodeInput2 -> NodeAdd12[color="/dark28/1" photon_data="EDGE,SrcNode:2,SrcNodePort:data"];
+	NodeInput5 -> NodeAdd12[color="/dark28/2" photon_data="EDGE,SrcNode:5,SrcNodePort:data"];
+	NodeAdd12 -> NodeAdd13[color="/dark28/3" photon_data="EDGE,SrcNode:12,SrcNodePort:result"];
+	NodeInput8 -> NodeAdd13[color="/dark28/4" photon_data="EDGE,SrcNode:8,SrcNodePort:data"];
+	NodeAdd13 -> NodeAdd14[color="/dark28/5" photon_data="EDGE,SrcNode:13,SrcNodePort:result"];
+	NodeInput11 -> NodeAdd14[color="/dark28/6" photon_data="EDGE,SrcNode:11,SrcNodePort:data"];
+	NodeAdd14 -> NodeDiv16[color="/dark28/7" photon_data="EDGE,SrcNode:14,SrcNodePort:result"];
+	NodeConstantDouble15 -> NodeDiv16[color="/dark28/8" photon_data="EDGE,SrcNode:15,SrcNodePort:value"];
+	NodeDiv16 -> NodeOutput21[color="/dark28/1" photon_data="EDGE,SrcNode:16,SrcNodePort:result"];
+}

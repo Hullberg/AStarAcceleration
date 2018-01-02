@@ -1,0 +1,25 @@
+Fitter Status : Successful - Wed Dec 20 16:29:38 2017
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : MAX4GALAVAPeripheryTop
+Top-level Entity Name : MAX4GALAVAPeripheryTop
+Family : Stratix V
+Device : 5SGXMA5N3F45C4
+Timing Models : Final
+Logic utilization (in ALMs) : 10,701 / 185,000 ( 6 % )
+Total registers : 18846
+Total pins : 465 / 1,064 ( 44 % )
+Total virtual pins : 39
+Total block memory bits : 1,471,822 / 47,185,920 ( 3 % )
+Total DSP Blocks : 0 / 256 ( 0 % )
+Total HSSI STD RX PCSs : 9 / 48 ( 19 % )
+Total HSSI 10G RX PCSs : 0 / 48 ( 0 % )
+Total HSSI GEN3 RX PCSs : 0 / 48 ( 0 % )
+Total HSSI PMA RX Deserializers : 8 / 48 ( 17 % )
+Total HSSI STD TX PCSs : 9 / 48 ( 19 % )
+Total HSSI 10G TX PCSs : 0 / 48 ( 0 % )
+Total HSSI GEN3 TX PCSs : 0 / 48 ( 0 % )
+Total HSSI TX Channels : 9 / 48 ( 19 % )
+Total HSSI PIPE GEN1_2s : 9 / 48 ( 19 % )
+Total HSSI GEN3s : 9 / 48 ( 19 % )
+Total PLLs : 1 / 92 ( 1 % )
+Total DLLs : 0 / 4 ( 0 % )

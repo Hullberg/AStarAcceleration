@@ -1,0 +1,154 @@
+Flow report for MAX4GALAVAPeripheryTop
+Wed Dec 20 16:22:42 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Wed Dec 20 16:22:42 2017       ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                   ; MAX4GALAVAPeripheryTop                      ;
+; Top-level Entity Name           ; MAX4GALAVAPeripheryTop                      ;
+; Family                          ; Stratix V                                   ;
+; Device                          ; 5SGXMA5N3F45C4                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 19226                                       ;
+; Total pins                      ; 54                                          ;
+; Total virtual pins              ; 39                                          ;
+; Total block memory bits         ; 1,475,732                                   ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI STD RX PCSs          ; 9                                           ;
+; Total HSSI 10G RX PCSs          ; 0                                           ;
+; Total HSSI GEN3 RX PCSs         ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 8                                           ;
+; Total HSSI STD TX PCSs          ; 9                                           ;
+; Total HSSI 10G TX PCSs          ; 0                                           ;
+; Total HSSI GEN3 TX PCSs         ; 0                                           ;
+; Total HSSI TX Channels          ; 9                                           ;
+; Total HSSI PIPE GEN1_2s         ; 9                                           ;
+; Total HSSI GEN3s                ; 9                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++--------------------------------------------+
+; Flow Settings                              ;
++-------------------+------------------------+
+; Option            ; Setting                ;
++-------------------+------------------------+
+; Start date & time ; 12/20/2017 16:20:21    ;
+; Main task         ; Compilation            ;
+; Revision Name     ; MAX4GALAVAPeripheryTop ;
++-------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                         ;
++-------------------------------------------------+---------------------------------------------------------+---------------+--------------------------+-----------------------------------+
+; Assignment Name                                 ; Value                                                   ; Default Value ; Entity Name              ; Section Id                        ;
++-------------------------------------------------+---------------------------------------------------------+---------------+--------------------------+-----------------------------------+
+; ALLOW_SHIFT_REGISTER_MERGING_ACROSS_HIERARCHIES ; Off                                                     ; Auto          ; --                       ; --                                ;
+; COMPILER_SIGNATURE_ID                           ; 71125535005615.151378322020124                          ; --            ; --                       ; --                                ;
+; FITTER_AUTO_EFFORT_DESIRED_SLACK_MARGIN         ; 250 ps                                                  ; 0 ns          ; --                       ; --                                ;
+; FIT_ONLY_ONE_ATTEMPT                            ; On                                                      ; Off           ; --                       ; --                                ;
+; IP_TOOL_ENV                                     ; mwpim                                                   ; --            ; alt_xcvr_reconfig        ; --                                ;
+; IP_TOOL_ENV                                     ; mwpim                                                   ; --            ; altpcie_sv_hip_ast_hwtcl ; --                                ;
+; IP_TOOL_ENV                                     ; mwpim                                                   ; --            ; pcie_SV_hard_ip          ; --                                ;
+; IP_TOOL_ENV                                     ; mwpim                                                   ; --            ; pcie_reconfig_SV         ; --                                ;
+; IP_TOOL_NAME                                    ; alt_xcvr_reconfig                                       ; --            ; alt_xcvr_reconfig        ; --                                ;
+; IP_TOOL_NAME                                    ; altera_pcie_sv_hip_ast                                  ; --            ; altpcie_sv_hip_ast_hwtcl ; --                                ;
+; IP_TOOL_NAME                                    ; altera_pcie_sv_hip_ast                                  ; --            ; pcie_SV_hard_ip          ; --                                ;
+; IP_TOOL_NAME                                    ; alt_xcvr_reconfig                                       ; --            ; pcie_reconfig_SV         ; --                                ;
+; IP_TOOL_VERSION                                 ; 13.1                                                    ; --            ; alt_xcvr_reconfig        ; --                                ;
+; IP_TOOL_VERSION                                 ; 13.1                                                    ; --            ; altpcie_sv_hip_ast_hwtcl ; --                                ;
+; IP_TOOL_VERSION                                 ; 13.1                                                    ; --            ; pcie_SV_hard_ip          ; --                                ;
+; IP_TOOL_VERSION                                 ; 13.1                                                    ; --            ; pcie_reconfig_SV         ; --                                ;
+; MISC_FILE                                       ; ../../../pcie_xcvr_reconfig_SV/pcie_reconfig_SV.cmp     ; --            ; --                       ; --                                ;
+; MISC_FILE                                       ; ../../../pcie_SV_hard_ip/pcie_SV_hard_ip.cmp            ; --            ; --                       ; --                                ;
+; MUX_RESTRUCTURE                                 ; On                                                      ; Auto          ; --                       ; --                                ;
+; OPTIMIZATION_TECHNIQUE                          ; Speed                                                   ; Balanced      ; --                       ; --                                ;
+; PARTITION_COLOR                                 ; 39423                                                   ; --            ; --                       ; MAX4FPGATop:MAX4GalavaFabricTop_i ;
+; PARTITION_COLOR                                 ; 16764057                                                ; --            ; --                       ; Top                               ;
+; PARTITION_NETLIST_TYPE                          ; SOURCE                                                  ; --            ; --                       ; MAX4FPGATop:MAX4GalavaFabricTop_i ;
+; PARTITION_NETLIST_TYPE                          ; SOURCE                                                  ; --            ; --                       ; Top                               ;
+; PROGRAMMABLE_POWER_TECHNOLOGY_SETTING           ; Force All Tiles with Failing Timing Paths to High Speed ; Automatic     ; --                       ; --                                ;
+; SYNTHESIS_ONLY_QIP                              ; On                                                      ; --            ; --                       ; --                                ;
+; SYNTHESIS_ONLY_QIP                              ; On                                                      ; --            ; --                       ; --                                ;
+; TIMEQUEST_DO_REPORT_TIMING                      ; On                                                      ; Off           ; --                       ; --                                ;
+; TIMEQUEST_REPORT_NUM_WORST_CASE_TIMING_PATHS    ; 20                                                      ; 100           ; --                       ; --                                ;
+; TIMEQUEST_REPORT_WORST_CASE_TIMING_PATHS        ; On                                                      ; Off           ; --                       ; --                                ;
+; VCCA_GXBL_USER_VOLTAGE                          ; 3.0V                                                    ; --            ; --                       ; --                                ;
+; VCCA_GXBR_USER_VOLTAGE                          ; 3.0V                                                    ; --            ; --                       ; --                                ;
+; VCCR_GXBL_USER_VOLTAGE                          ; 1.0V                                                    ; --            ; --                       ; --                                ;
+; VCCR_GXBR_USER_VOLTAGE                          ; 1.0V                                                    ; --            ; --                       ; --                                ;
+; VCCT_GXBL_USER_VOLTAGE                          ; 1.0V                                                    ; --            ; --                       ; --                                ;
+; VCCT_GXBR_USER_VOLTAGE                          ; 1.0V                                                    ; --            ; --                       ; --                                ;
++-------------------------------------------------+---------------------------------------------------------+---------------+--------------------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:02:11     ; 1.0                     ; 1675 MB             ; 00:02:10                           ;
+; Partition Merge      ; 00:00:06     ; 1.0                     ; 1194 MB             ; 00:00:06                           ;
+; Total                ; 00:02:17     ; --                      ; --                  ; 00:02:16                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++----------------------+----------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname     ; OS Name        ; OS Version ; Processor type ;
++----------------------+----------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; dhcp-15-239.it.uu.se ; CentOS release ; 6          ; x86_64         ;
+; Partition Merge      ; dhcp-15-239.it.uu.se ; CentOS release ; 6          ; x86_64         ;
++----------------------+----------------------+----------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map MAX4GALAVAPeripheryTop --parallel=1
+quartus_cdb MAX4GALAVAPeripheryTop --write_settings_files=off --merge=on
+
+
+

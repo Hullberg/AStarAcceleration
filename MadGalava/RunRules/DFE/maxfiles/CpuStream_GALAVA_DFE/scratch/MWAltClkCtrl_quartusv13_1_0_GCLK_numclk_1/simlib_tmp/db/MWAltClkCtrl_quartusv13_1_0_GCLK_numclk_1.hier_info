@@ -1,0 +1,14 @@
+|MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1
+inclk => MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh:MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh_component.inclk[0]
+outclk <= MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh:MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh_component.outclk
+
+
+|MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1|MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh:MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh_component
+ena => stratixv_clkena:sd1.ENA
+inclk[0] => stratixv_clkena:sd1.INCLK
+inclk[1] => ~NO_FANOUT~
+inclk[2] => ~NO_FANOUT~
+inclk[3] => ~NO_FANOUT~
+outclk <= stratixv_clkena:sd1.OUTCLK
+
+

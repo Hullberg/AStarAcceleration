@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagerGraph version="2017.2.1" design_name="Manager_CpuStream" compilation_phase="Final" hardwareBuild="true">
+	<Node id="2" instanceName="child_0" type="Input">
+		<Output clock="PCIE" name="child_0" type="PUSH 2" width="128">
+			<Stream name="Stream_3" sink="40" />
+		</Output>
+	</Node>
+	<Node id="5" instanceName="child_1" type="Input">
+		<Output clock="PCIE" name="child_1" type="PUSH 2" width="128">
+			<Stream name="Stream_6" sink="44" />
+		</Output>
+	</Node>
+	<Node id="8" instanceName="child_2" type="Input">
+		<Output clock="PCIE" name="child_2" type="PUSH 2" width="128">
+			<Stream name="Stream_9" sink="48" />
+		</Output>
+	</Node>
+	<Node id="11" instanceName="child_3" type="Input">
+		<Output clock="PCIE" name="child_3" type="PUSH 2" width="128">
+			<Stream name="Stream_12" sink="52" />
+		</Output>
+	</Node>
+	<Node id="40" instanceName="Stream_17" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="128">
+			<Stream name="Stream_41" source="2" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="128">
+			<Stream name="Stream_42" sink="16" />
+		</Output>
+	</Node>
+	<Node id="44" instanceName="Stream_21" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="128">
+			<Stream name="Stream_45" source="5" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="128">
+			<Stream name="Stream_46" sink="20" />
+		</Output>
+	</Node>
+	<Node id="48" instanceName="Stream_25" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="128">
+			<Stream name="Stream_49" source="8" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="128">
+			<Stream name="Stream_50" sink="24" />
+		</Output>
+	</Node>
+	<Node id="52" instanceName="Stream_29" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="128">
+			<Stream name="Stream_53" source="11" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="128">
+			<Stream name="Stream_54" sink="28" />
+		</Output>
+	</Node>
+	<Node id="16" instanceName="Stream_1" type="DualAspectMux">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="128">
+			<Stream name="Stream_43" source="40" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PUSH 2" width="32">
+			<Stream name="Stream_18" sink="56" />
+		</Output>
+	</Node>
+	<Node id="20" instanceName="Stream_4" type="DualAspectMux">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="128">
+			<Stream name="Stream_47" source="44" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PUSH 2" width="32">
+			<Stream name="Stream_22" sink="60" />
+		</Output>
+	</Node>
+	<Node id="24" instanceName="Stream_7" type="DualAspectMux">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="128">
+			<Stream name="Stream_51" source="48" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PUSH 2" width="32">
+			<Stream name="Stream_26" sink="64" />
+		</Output>
+	</Node>
+	<Node id="28" instanceName="Stream_10" type="DualAspectMux">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="128">
+			<Stream name="Stream_55" source="52" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PUSH 2" width="32">
+			<Stream name="Stream_30" sink="68" />
+		</Output>
+	</Node>
+	<Node id="56" instanceName="Stream_19" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="32">
+			<Stream name="Stream_57" source="16" />
+		</Input>
+		<Output clock="STREAM" name="output" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_58" sink="0" />
+		</Output>
+	</Node>
+	<Node id="60" instanceName="Stream_23" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="32">
+			<Stream name="Stream_61" source="20" />
+		</Input>
+		<Output clock="STREAM" name="output" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_62" sink="0" />
+		</Output>
+	</Node>
+	<Node id="64" instanceName="Stream_27" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="32">
+			<Stream name="Stream_65" source="24" />
+		</Input>
+		<Output clock="STREAM" name="output" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_66" sink="0" />
+		</Output>
+	</Node>
+	<Node id="68" instanceName="Stream_31" type="Fifo">
+		<Input clock="PCIE" name="input" type="PUSH 2" width="32">
+			<Stream name="Stream_69" source="28" />
+		</Input>
+		<Output clock="STREAM" name="output" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_70" sink="0" />
+		</Output>
+	</Node>
+	<Node id="0" instanceName="CpuStreamKernel" type="Kernel">
+		<PxgFile phase="original">CpuStream-CpuStreamKernel-original.pxg</PxgFile>
+		<PxgFile phase="final-hardware">CpuStream-CpuStreamKernel-final-hardware.pxg</PxgFile>
+		<Input clock="STREAM" name="child_0" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_59" source="56" />
+		</Input>
+		<Input clock="STREAM" name="child_1" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_63" source="60" />
+		</Input>
+		<Input clock="STREAM" name="child_2" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_67" source="64" />
+		</Input>
+		<Input clock="STREAM" name="child_3" type="PULL el=1 ael=2" width="32">
+			<Stream name="Stream_71" source="68" />
+		</Input>
+		<Output clock="STREAM" name="data_w" type="PUSH 5" width="32">
+			<Stream name="Stream_15" sink="72" />
+		</Output>
+	</Node>
+	<Node id="72" instanceName="Stream_33" type="Fifo">
+		<Input clock="STREAM" name="input" type="PUSH 5" width="32">
+			<Stream name="Stream_73" source="0" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="32">
+			<Stream name="Stream_74" sink="32" />
+		</Output>
+	</Node>
+	<Node id="32" instanceName="Stream_14" type="DualAspectReg">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="32">
+			<Stream name="Stream_75" source="72" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PULL el=1" width="128">
+			<Stream name="Stream_34" sink="36" />
+		</Output>
+	</Node>
+	<Node id="36" instanceName="Stream_35" type="PullPushAdapter">
+		<Input clock="PCIE" name="input" type="PULL el=1" width="128">
+			<Stream name="Stream_37" source="32" />
+		</Input>
+		<Output clock="PCIE" name="output" type="PUSH 1" width="128">
+			<Stream name="Stream_38" sink="13" />
+		</Output>
+	</Node>
+	<Node id="13" instanceName="data_w" type="Output">
+		<Input clock="PCIE" name="data_w" type="PUSH 1" width="128">
+			<Stream name="Stream_39" source="36" />
+		</Input>
+	</Node>
+</ManagerGraph>

@@ -1,0 +1,29 @@
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_adce_datactrl_sv.sv(211): object "RR_DONE" differs only in case from object "rr_done" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_adce_datactrl_sv.sv(243): object "OC_DELAY" differs only in case from object "oc_delay" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_addr_router.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_addr_router.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_addr_router_001.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_addr_router_001.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_id_router.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_id_router.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_id_router_001.sv(48): object "DEFAULT_WR_CHANNEL" differs only in case from object "default_wr_channel" in the same scope
+Info (10281): Verilog HDL Declaration information at alt_xcvr_reconfig_cpu_mm_interconnect_0_id_router_001.sv(49): object "DEFAULT_RD_CHANNEL" differs only in case from object "default_rd_channel" in the same scope
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(6662): overriding existing value for attribute "altera_attribute"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(6663): overriding existing value for attribute "altera_attribute"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(6664): overriding existing value for attribute "altera_attribute"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7207): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7208): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7209): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7210): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7211): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7212): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7213): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7214): overriding existing value for attribute "noprune"
+Warning (10890): Verilog HDL Attribute warning at altpcie_hip_256_pipen1b.v(7215): overriding existing value for attribute "noprune"
+Warning (10720): Verilog HDL or VHDL warning at ../../../pcie_SV_hard_ip/pcie_SV_hard_ip/sv_reconfig_bundle_to_xcvr.sv(26): MESSAGE_ON or MESSAGE_OFF directive cannot process the non-HDL message ID 13024.
+Warning (10720): Verilog HDL or VHDL warning at ../../../pcie_SV_hard_ip/pcie_SV_hard_ip/sv_reconfig_bundle_to_xcvr.sv(26): MESSAGE_ON or MESSAGE_OFF directive cannot process the non-HDL message ID 21074.
+Info (10281): Verilog HDL Declaration information at altpcie_reconfig_driver.sv(298): object "ADCE_TRIG_DONE" differs only in case from object "adce_trig_done" in the same scope
+Info (10281): Verilog HDL Declaration information at altera_pll_reconfig_top.v(97): object "LOCKED" differs only in case from object "locked" in the same scope
+Info (10281): Verilog HDL Declaration information at altera_pll_reconfig_top.v(1743): object "dps_done" differs only in case from object "DPS_DONE" in the same scope
+Info (10281): Verilog HDL Declaration information at altera_pll_reconfig_top.v(1735): object "dps_changed" differs only in case from object "DPS_CHANGED" in the same scope
+Warning (13024): Output pins are stuck at VCC or GND

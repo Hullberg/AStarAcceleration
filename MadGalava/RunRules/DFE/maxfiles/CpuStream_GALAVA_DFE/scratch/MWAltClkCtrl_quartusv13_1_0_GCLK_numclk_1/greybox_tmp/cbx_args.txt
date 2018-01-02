@@ -1,0 +1,10 @@
+ENA_REGISTER_MODE="always enabled"
+INTENDED_DEVICE_FAMILY="Stratix V"
+USE_GLITCH_FREE_SWITCH_OVER_IMPLEMENTATION=OFF
+clock_type="Global Clock"
+DEVICE_FAMILY="Stratix V"
+CBX_AUTO_BLACKBOX=ALL
+ena
+inclk
+inclk
+outclk

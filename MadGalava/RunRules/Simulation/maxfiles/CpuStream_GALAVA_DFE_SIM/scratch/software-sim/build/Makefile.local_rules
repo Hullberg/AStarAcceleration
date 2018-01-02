@@ -1,0 +1,52 @@
+CXXFLAGS_OPTIONAL := -DHAVE_KERNELS -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS 
+CFLAGS_OPTIONAL   := -DMAXFILE_INC="../../MaxCompilerDesignData.dat" -g0  -DSLIC_NO_DECLARATIONS 
+LDFLAGS_OPTIONAL  := -O2 -s
+TARGET_BIN := CpuStream.so
+HDRDIR := stdsimheader.h.gch
+HDRS := stdsimheader.h.O0Impl stdsimheader.h.O2
+OBJS :=  \
+	$(OBJDIR)/CpuStreamKernel_exec0.NoTplInst.O2.o \
+	$(OBJDIR)/CpuStreamKernel.O0.o \
+	$(OBJDIR)/CpuStreamKernel_Templates.O2.o \
+	$(OBJDIR)/PipelinedStreams.o \
+	$(OBJDIR)/max_msi.O0.o
+PRECOMPILED_OBJS :=  \
+	StructToGroupDummy.o \
+	Mux.o \
+	DualAspectMux.o \
+	Demux.o \
+	Fanout.o \
+	CapRegs.o \
+	IFPGARegs.o \
+	ChecksumMem.o \
+	PCIe.o \
+	KernelManagerBlockSync.o \
+	DualAspectReg.o \
+	PullPushAdapter.o \
+	FilePullSource.o \
+	max_shared_fifo.o \
+	SharedFIFO.o \
+	Fifos.o \
+	FilePushSink.o \
+	SimTerminator.o \
+	Watch.o \
+	StreamStatus.o \
+	RunLengthExpander.o \
+	ManagerBlock.o \
+	MappedElements.o \
+	Thread.o \
+	ManagerSync.o \
+	PullSync.o \
+	PushSync.o \
+	DynamicVarUInt.o \
+	DebugStreams.o \
+	AddressGenerator.o \
+	MemoryControllerPro.o \
+	MemoryControllerRAM.o \
+	MemoryControllerCommand.o \
+	MemoryControllerStreams.o \
+	MemoryControllerConfig.o \
+	LMemSimRAM.o \
+	LMemSim.o \
+	LMemSimConfig.o \
+	Timestamp.o

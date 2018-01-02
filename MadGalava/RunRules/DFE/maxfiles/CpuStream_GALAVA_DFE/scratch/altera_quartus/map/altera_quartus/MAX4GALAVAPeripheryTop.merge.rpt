@@ -1,0 +1,1122 @@
+Partition Merge report for MAX4GALAVAPeripheryTop
+Wed Dec 20 16:22:42 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Partition Merge Partition Warnings
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge INI Usage
+ 10. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Partition Merge Summary                                                       ;
++---------------------------------+---------------------------------------------+
+; Partition Merge Status          ; Successful - Wed Dec 20 16:22:42 2017       ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                   ; MAX4GALAVAPeripheryTop                      ;
+; Top-level Entity Name           ; MAX4GALAVAPeripheryTop                      ;
+; Family                          ; Stratix V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 19226                                       ;
+; Total pins                      ; 54                                          ;
+; Total virtual pins              ; 39                                          ;
+; Total block memory bits         ; 1,475,732                                   ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI STD RX PCSs          ; 9                                           ;
+; Total HSSI 10G RX PCSs          ; 0                                           ;
+; Total HSSI GEN3 RX PCSs         ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 8                                           ;
+; Total HSSI STD TX PCSs          ; 9                                           ;
+; Total HSSI 10G TX PCSs          ; 0                                           ;
+; Total HSSI GEN3 TX PCSs         ; 0                                           ;
+; Total HSSI TX Channels          ; 9                                           ;
+; Total HSSI PIPE GEN1_2s         ; 9                                           ;
+; Total HSSI GEN3s                ; 9                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                                  ;
++-----------------------------------+----------------+-------------------+------------------------+-----------------------------------+
+; Partition Name                    ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents                ;
++-----------------------------------+----------------+-------------------+------------------------+-----------------------------------+
+; Top                               ; User-created   ; Source File       ; Source File            ;                                   ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i ; User-created   ; Source File       ; Source File            ; MAX4FPGATop:MAX4GalavaFabricTop_i ;
+; hard_block:auto_generated_inst    ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst    ;
++-----------------------------------+----------------+-------------------+------------------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Warnings                                                                                               ;
++---------------------------------------------------------------------+-----------------------------------+------------------------+
+; Port                                                                ; Partition                         ; Info                   ;
++---------------------------------------------------------------------+-----------------------------------+------------------------+
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rev_BUILD_REV[1]                  ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rev_BUILD_REV[0]                  ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[96]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[95]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[94]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[93]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[92]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[91]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[90]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[89]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[88]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[87]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[86]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[85]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[84]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[83]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[82]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[81]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[80]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[79]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[78]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[77]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[76]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[75]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[74]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[73]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[72]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[71]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[70]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[69]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[68]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[67]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[66]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[65]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[64]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[63]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[62]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[61]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[60]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[59]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[58]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[57]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[56]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[55]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[54]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[53]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[52]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[51]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[50]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[49]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[48]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[47]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[46]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[45]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[44]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[43]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[42]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[41]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[40]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[39]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[38]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[37]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[36]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[35]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[34]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[33]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[32]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[31]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[30]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[29]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[28]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[27]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[26]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[25]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[24]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[23]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[22]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[21]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[20]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[19]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[18]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[17]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[16]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[15]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[14]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[13]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[12]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[11]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[10]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[9]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[8]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[31]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[30]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[29]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[28]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[27]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[26]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[25]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[24]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[23]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[22]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[21]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[20]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[19]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[18]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[17]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[16]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[15]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[14]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[13]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[12]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[11]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[10]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[9]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[8]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[7]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[6]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[5]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[4]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[3]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[2]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[1]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[0]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|sys_clk                           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[96]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[95]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[94]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[93]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[92]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[91]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[90]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[89]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[88]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[87]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[86]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[85]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[84]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[83]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[82]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[81]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[80]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[79]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[78]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[77]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[76]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[75]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[74]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[73]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[72]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[71]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[70]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[69]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[68]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[67]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[66]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[65]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[64]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[63]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[62]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[61]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[60]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[59]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[58]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[57]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[56]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[55]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[54]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[53]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[52]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[51]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[50]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[49]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[48]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[47]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[46]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[45]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[44]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[43]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[42]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[41]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[40]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[39]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[38]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[37]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[36]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[35]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[34]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[33]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[32]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[31]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[30]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[29]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[28]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[27]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[26]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[25]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[24]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[23]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[22]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[21]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[20]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[19]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[18]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[17]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[16]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[15]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[14]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[13]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[12]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[11]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[10]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[9]                 ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[8]                 ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_pending                       ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[6]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[5]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[4]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[3]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[2]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[1]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|cpl_err[0]                        ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tx_st_err                         ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_tc[2]                     ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_tc[1]                     ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_tc[0]                     ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_num[4]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_num[3]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_num[2]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_num[1]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|app_msi_num[0]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_write0                   ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_read0                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant GND ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_ready                       ; MAX4FPGATop:MAX4GalavaFabricTop_i ; Driven by constant VCC ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_rst0                     ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[0]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[1]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[2]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[3]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[4]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_address0[5]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[0]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[1]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[2]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[3]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[4]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[5]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[6]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[7]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[8]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[9]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[10]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[11]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[12]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[13]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[14]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[15]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[16]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[17]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[18]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[19]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[20]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[21]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[22]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[23]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[24]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[25]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[26]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[27]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[28]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[29]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[30]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_writedata0[31]           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[16]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[17]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[18]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[19]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[20]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[21]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[22]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[23]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[24]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[25]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[26]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[27]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[28]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[29]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[30]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[31]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[58]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[59]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[60]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|flash_control_flash_tx_d[61]      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_clk0                     ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_read0                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_write0                   ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[8]                 ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[9]                 ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[10]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[11]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[12]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[13]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[14]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[15]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[16]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[17]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[18]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[19]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[20]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[21]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[22]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[23]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[24]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[25]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[26]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[27]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[28]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[29]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[30]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[31]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[32]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[33]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[34]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[35]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[36]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[37]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[38]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[39]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[40]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[41]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[42]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[43]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[44]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[45]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[46]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[47]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[48]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[49]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[50]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[51]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[52]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[53]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[54]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[55]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[56]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[57]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[58]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[59]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[60]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[61]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[62]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[63]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[64]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[65]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[66]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[67]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[68]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[69]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[70]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[71]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[72]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[73]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[74]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[75]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[76]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[77]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[78]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[79]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[80]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[81]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[82]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[83]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[84]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[85]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[86]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[87]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[88]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[89]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[90]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[91]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[92]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[93]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[94]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[95]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_ack[96]                ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|sys_clk                           ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[0]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[1]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[2]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[3]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[4]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[5]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[6]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[7]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[8]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[9]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[10]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[11]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[12]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[13]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[14]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[15]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[16]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[17]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[18]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[19]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[20]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[21]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[22]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[23]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[24]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[25]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[26]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[27]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[28]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[29]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[30]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_readdata0[31]            ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|pll_mgmt_waitrequest0             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|stream_clocks_gen_output_clk_inv0 ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[13]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[14]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[15]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[16]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[17]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[18]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[19]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[20]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[21]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[22]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[23]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[24]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[25]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[26]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[27]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[28]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[29]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[30]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[31]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_empty[1]                    ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_err                         ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[1]                      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[3]                      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[5]                      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[6]                      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[7]                      ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[8]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[9]              ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[10]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[11]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[12]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[13]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[14]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[15]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[16]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[17]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[18]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[19]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[20]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[21]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[22]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[23]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[24]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[25]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[26]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[27]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[28]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[29]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[30]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[31]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[32]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[33]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[34]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[35]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[36]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[37]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[38]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[39]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[40]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[41]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[42]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[43]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[44]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[45]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[46]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[47]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[48]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[49]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[50]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[51]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[52]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[53]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[54]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[55]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[56]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[57]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[58]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[59]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[60]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[61]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[62]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[63]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[64]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[65]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[66]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[67]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[68]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[69]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[70]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[71]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[72]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[73]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[74]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[75]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[76]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[77]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[78]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[79]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[80]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[81]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[82]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[83]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[84]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[85]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[86]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[87]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[88]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[89]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[90]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[91]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[92]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[93]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[94]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[95]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|host_event_status[96]             ; MAX4FPGATop:MAX4GalavaFabricTop_i ; No fanout              ;
++---------------------------------------------------------------------+-----------------------------------+------------------------+
+Note: The Incremental Compilation Advisor can be used to get more detailed recommendations.
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                     ;
++---------------------------------------------+-------+-----------------------------------+--------------------------------+
+; Statistic                                   ; Top   ; MAX4FPGATop:MAX4GalavaFabricTop_i ; hard_block:auto_generated_inst ;
++---------------------------------------------+-------+-----------------------------------+--------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1274  ; 10322                             ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Combinational ALUT usage for logic          ; 1999  ; 12525                             ; 0                              ;
+;     -- 7 input functions                    ; 14    ; 102                               ; 0                              ;
+;     -- 6 input functions                    ; 322   ; 2513                              ; 0                              ;
+;     -- 5 input functions                    ; 484   ; 1393                              ; 0                              ;
+;     -- 4 input functions                    ; 465   ; 2348                              ; 0                              ;
+;     -- <=3 input functions                  ; 714   ; 6164                              ; 0                              ;
+; Memory ALUT usage                           ; 0     ; 5                                 ; 0                              ;
+;     -- 64-address deep                      ; 0     ; 0                                 ; 0                              ;
+;     -- 32-address deep                      ; 0     ; 0                                 ; 0                              ;
+;     -- 16-address deep                      ; 0     ; 5                                 ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Dedicated logic registers                   ; 1555  ; 17671                             ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+;                                             ;       ;                                   ;                                ;
+; I/O pins                                    ; 35    ; 0                                 ; 19                             ;
+; I/O registers                               ; 0     ; 0                                 ; 0                              ;
+; Total block memory bits                     ; 94208 ; 1381524                           ; 0                              ;
+; Total block memory implementation bits      ; 0     ; 0                                 ; 0                              ;
+; MLAB cell                                   ; 0     ; 5                                 ; 0                              ;
+; HSSI AVMM INTERFACE3                        ; 0     ; 0                                 ; 8                              ;
+; CHANNEL PLL                                 ; 0     ; 0                                 ; 9                              ;
+; Standard RX PCS                             ; 0     ; 0                                 ; 9                              ;
+; Standard TX PCS                             ; 0     ; 0                                 ; 9                              ;
+; HSSI Common PCS PMA Interface               ; 0     ; 0                                 ; 9                              ;
+; HSSI Common PLD PCS Interface               ; 0     ; 0                                 ; 9                              ;
+; HSSI Pipe Gen1-2                            ; 0     ; 0                                 ; 9                              ;
+; HSSI PMA Aux. block                         ; 0     ; 0                                 ; 16                             ;
+; HSSI PMA CDR REFCLK Select Mux              ; 0     ; 0                                 ; 9                              ;
+; HSSI PMA RX Buffer                          ; 0     ; 0                                 ; 8                              ;
+; HSSI PMA RX Deserializer                    ; 0     ; 0                                 ; 8                              ;
+; HSSI PMA TX Buffer                          ; 0     ; 0                                 ; 8                              ;
+; Clock Divider                               ; 0     ; 0                                 ; 9                              ;
+; HSSI PMA TX Serializer                      ; 0     ; 0                                 ; 9                              ;
+; HSSI RX PCS PMA Interface                   ; 0     ; 0                                 ; 9                              ;
+; HSSI RX PLD PCS Interface                   ; 0     ; 0                                 ; 9                              ;
+; HSSI TX PCS PMA Interface                   ; 0     ; 0                                 ; 9                              ;
+; HSSI TX PLD PCS Interface                   ; 0     ; 0                                 ; 9                              ;
+; HSSI Pipe Gen3                              ; 0     ; 0                                 ; 9                              ;
+; PCI Express hard IP                         ; 0     ; 0                                 ; 1                              ;
+;                                             ;       ;                                   ;                                ;
+; Connections                                 ;       ;                                   ;                                ;
+;     -- Input Connections                    ; 2017  ; 25317                             ; 2757                           ;
+;     -- Registered Input Connections         ; 1465  ; 19677                             ; 0                              ;
+;     -- Output Connections                   ; 5803  ; 394                               ; 23894                          ;
+;     -- Registered Output Connections        ; 1020  ; 180                               ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Internal Connections                        ;       ;                                   ;                                ;
+;     -- Total Connections                    ; 24206 ; 169596                            ; 45342                          ;
+;     -- Registered Connections               ; 12054 ; 105025                            ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; External Connections                        ;       ;                                   ;                                ;
+;     -- Top                                  ; 52    ; 3414                              ; 4354                           ;
+;     -- MAX4FPGATop:MAX4GalavaFabricTop_i    ; 3414  ; 0                                 ; 22297                          ;
+;     -- hard_block:auto_generated_inst       ; 4354  ; 22297                             ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Partition Interface                         ;       ;                                   ;                                ;
+;     -- Input Ports                          ; 18    ; 419                               ; 2768                           ;
+;     -- Output Ports                         ; 10    ; 372                               ; 548                            ;
+;     -- Bidir Ports                          ; 26    ; 0                                 ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Registered Ports                            ;       ;                                   ;                                ;
+;     -- Registered Input Ports               ; 0     ; 164                               ; 0                              ;
+;     -- Registered Output Ports              ; 0     ; 128                               ; 0                              ;
+;                                             ;       ;                                   ;                                ;
+; Port Connectivity                           ;       ;                                   ;                                ;
+;     -- Input Ports driven by GND            ; 0     ; 124                               ; 2147                           ;
+;     -- Output Ports driven by GND           ; 0     ; 108                               ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0     ; 1                                 ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0     ; 1                                 ; 0                              ;
+;     -- Input Ports with no Source           ; 0     ; 0                                 ; 0                              ;
+;     -- Output Ports with no Source          ; 0     ; 0                                 ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0     ; 149                               ; 2250                           ;
+;     -- Output Ports with no Fanout          ; 0     ; 113                               ; 0                              ;
++---------------------------------------------+-------+-----------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                                   ;
++----------------------------------------+-----------+---------------+----------+--------------------------------------------+
+; Name                                   ; Partition ; Type          ; Location ; Status                                     ;
++----------------------------------------+-----------+---------------+----------+--------------------------------------------+
+; cclk                                   ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- cclk                            ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- cclk~input                      ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[0]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[0]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[0]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[1]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[1]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[1]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[2]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[2]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[2]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[3]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[3]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[3]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[4]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[4]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[4]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[5]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[5]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[5]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[6]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[6]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[6]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[7]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[7]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[7]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[8]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[8]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[8]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; flash_data[9]                          ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- flash_data[9]                   ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- flash_data[9]~output            ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[0]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[0]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[0]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[10]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[10]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[10]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[11]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[11]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[11]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[12]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[12]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[12]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[13]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[13]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[13]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[14]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[14]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[14]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[15]               ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[15]        ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[15]~output ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[1]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[1]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[1]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[2]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[2]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[2]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[3]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[3]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[3]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[4]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[4]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[4]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[5]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[5]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[5]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[6]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[6]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[6]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[7]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[7]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[7]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[8]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[8]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[8]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; fpga_config_fpp_data[9]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- fpga_config_fpp_data[9]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- fpga_config_fpp_data[9]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                        ;           ;               ;          ;                                            ;
+; from_flash_valid                       ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- from_flash_valid                ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- from_flash_valid~input          ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; left_pll_ref_clk                       ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- left_pll_ref_clk                ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- left_pll_ref_clk~input          ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; maxring_refclk                         ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- maxring_refclk                  ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- maxring_refclk~input            ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; pcie_pin_perst                         ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- pcie_pin_perst                  ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- pcie_pin_perst~input            ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; pcie_ref_clk                           ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- pcie_ref_clk                    ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- pcie_ref_clk~input              ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; right_pll_ref_clk                      ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- right_pll_ref_clk               ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- right_pll_ref_clk~input         ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in0                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in0                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in0~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in1                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in1                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in1~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in2                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in2                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in2~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in3                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in3                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in3~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in4                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in4                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in4~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in5                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in5                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in5~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in6                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in6                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in6~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; rx_in7                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- rx_in7                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- rx_in7~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; sda_in                                 ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- sda_in                          ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- sda_in~input                    ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; sda_out                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sda_out                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sda_out~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; ssync_in                               ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- ssync_in                        ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- ssync_in~input                  ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; sys_rst_n                              ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- sys_rst_n                       ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- sys_rst_n~input                 ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; to_flash_valid                         ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- to_flash_valid                  ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- to_flash_valid~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out0                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out0                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out0~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out1                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out1                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out1~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out2                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out2                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out2~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out3                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out3                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out3~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out4                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out4                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out4~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out5                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out5                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out5~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out6                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out6                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out6~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
+; tx_out7                                ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- tx_out7                         ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- tx_out7~output                  ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                        ;           ;               ;          ;                                            ;
++----------------------------------------+-----------+---------------+----------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                                                                                                                                                                                                                                                                   ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                                                                                                                                                                      ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 11632                                                                                                                                                                                                                                                                      ;
+;                                             ;                                                                                                                                                                                                                                                                            ;
+; Combinational ALUT usage for logic          ; 14519                                                                                                                                                                                                                                                                      ;
+;     -- 7 input functions                    ; 116                                                                                                                                                                                                                                                                        ;
+;     -- 6 input functions                    ; 2835                                                                                                                                                                                                                                                                       ;
+;     -- 5 input functions                    ; 1877                                                                                                                                                                                                                                                                       ;
+;     -- 4 input functions                    ; 2813                                                                                                                                                                                                                                                                       ;
+;     -- <=3 input functions                  ; 6878                                                                                                                                                                                                                                                                       ;
+; Memory ALUT usage                           ; 5                                                                                                                                                                                                                                                                          ;
+;     -- 64-address deep                      ; 0                                                                                                                                                                                                                                                                          ;
+;     -- 32-address deep                      ; 0                                                                                                                                                                                                                                                                          ;
+;     -- 16-address deep                      ; 5                                                                                                                                                                                                                                                                          ;
+;                                             ;                                                                                                                                                                                                                                                                            ;
+; Dedicated logic registers                   ; 19226                                                                                                                                                                                                                                                                      ;
+;                                             ;                                                                                                                                                                                                                                                                            ;
+; Virtual pins                                ; 39                                                                                                                                                                                                                                                                         ;
+; I/O pins                                    ; 54                                                                                                                                                                                                                                                                         ;
+; Total MLAB memory bits                      ; 18                                                                                                                                                                                                                                                                         ;
+; Total block memory bits                     ; 1475732                                                                                                                                                                                                                                                                    ;
+; Total DSP Blocks                            ; 0                                                                                                                                                                                                                                                                          ;
+; Total PLLs                                  ; 11                                                                                                                                                                                                                                                                         ;
+;     -- PLLs                                 ; 2                                                                                                                                                                                                                                                                          ;
+;     -- CHANNEL PLLs                         ; 9                                                                                                                                                                                                                                                                          ;
+;                                             ;                                                                                                                                                                                                                                                                            ;
+; HSSI RX PCSs                                ; 9                                                                                                                                                                                                                                                                          ;
+; HSSI PMA RX Deserializers                   ; 8                                                                                                                                                                                                                                                                          ;
+; HSSI TX PCSs                                ; 9                                                                                                                                                                                                                                                                          ;
+; HSSI PMA TX Serializers                     ; 9                                                                                                                                                                                                                                                                          ;
+; Maximum fan-out node                        ; StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1:pcie_altclkctrl_i|MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh:MWAltClkCtrl_quartusv13_1_0_GCLK_numclk_1_altclkctrl_blh_component|wire_sd1_outclk ;
+; Maximum fan-out                             ; 17342                                                                                                                                                                                                                                                                      ;
+; Total fan-out                               ; 181374                                                                                                                                                                                                                                                                     ;
+; Average fan-out                             ; 4.82                                                                                                                                                                                                                                                                       ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------------------+
+; Name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; Type       ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------------------+
+; MAX4CPLDInterface:max4_cpld_top_level|max4_cpld_flash_if:cpld_flash_ext_inst|dcfifo_mixed_widths:rx_cmd_fifo|dcfifo_0q52:auto_generated|altsyncram_c8e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                                                                                                                                                                    ; AUTO       ; Simple Dual Port ; 512          ; 64           ; 512          ; 64           ; 32768 ; None                                                               ;
+; MAX4CPLDInterface:max4_cpld_top_level|max4_cpld_flash_if:cpld_flash_ext_inst|dcfifo_mixed_widths:tx_cmd_fifo|dcfifo_hj62:auto_generated|altsyncram_c8e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                                                                                                                                                                    ; AUTO       ; Simple Dual Port ; 512          ; 64           ; 512          ; 64           ; 32768 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|AlteraFifoEntity_34_512_34_dualclock_aclr_wrusedw_fwft_pfv495:ftb_MappedElementsSwitchPCIeEA|dcfifo:inst_ln44_mwfifo|dcfifo_ge72:auto_generated|altsyncram_t0c1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                                                                                                                          ; AUTO       ; Simple Dual Port ; 512          ; 34           ; 512          ; 34           ; 17408 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|CpuStreamKernel:CpuStreamKernel_core|SRLDelay_1x4_reg2:inst_ln61_alterasrldelay1|SimpleSR:inst_ln34_alterasrldelay|altdpram:\mlab_opt:sreg_mlab_rtl_0|dpram_1nt1:auto_generated|ALTDPRAM_INSTANCE                                                                                    ; MLAB       ; Simple Dual Port ; 4            ; 1            ; 4            ; 1            ; 4     ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|CpuStreamKernel:CpuStreamKernel_core|SRLDelay_1x4_reg2:inst_ln61_alterasrldelay2|SimpleSR:inst_ln34_alterasrldelay|altdpram:\mlab_opt:sreg_mlab_rtl_0|dpram_1nt1:auto_generated|ALTDPRAM_INSTANCE                                                                                    ; MLAB       ; Simple Dual Port ; 4            ; 1            ; 4            ; 1            ; 4     ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|CpuStreamKernel:CpuStreamKernel_core|SRLDelay_1x4_reg2:inst_ln61_alterasrldelay3|SimpleSR:inst_ln34_alterasrldelay|altdpram:\mlab_opt:sreg_mlab_rtl_0|dpram_1nt1:auto_generated|ALTDPRAM_INSTANCE                                                                                    ; MLAB       ; Simple Dual Port ; 4            ; 1            ; 4            ; 1            ; 4     ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|CpuStreamKernel:CpuStreamKernel_core|SRLDelay_1x4_reg2:inst_ln61_alterasrldelay|SimpleSR:inst_ln34_alterasrldelay|altdpram:\mlab_opt:sreg_mlab_rtl_0|dpram_1nt1:auto_generated|ALTDPRAM_INSTANCE                                                                                     ; MLAB       ; Simple Dual Port ; 4            ; 1            ; 4            ; 1            ; 4     ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|MappedRegBlock_e8cba5601e8a42a294dafc2aba54dbf4:mapped_reg_block|mapped_register:inst_ln525_mappedregblock4|altshift_taps:mapped_registers_rtl_0|shift_taps_ks31:auto_generated|altsyncram_h6e1:altsyncram5|ALTSYNCRAM                                                               ; AUTO       ; Simple Dual Port ; 5            ; 7            ; 5            ; 7            ; 35    ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_17:Stream_17|StreamFifo_altera_128_128_512_pushin_sl2_pullout_el1_singleclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_128_512_128_afv477_of_uf:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_ree1:auto_generated|a_dpfifo_nhb1:dpfifo|dpram_4ob1:FIFOram|altsyncram_muu1:altsyncram1|ALTSYNCRAM                                                      ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_19:Stream_19|StreamFifo_altera_32_32_512_pushin_sl2_pullout_el1_ael2_dualclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_32_512_32_dualclock_aclr_rdusedw_wrusedw_of_uf_pfv476_pev7:inst_ln47_alterafifo|dcfifo:inst_ln44_mwfifo|dcfifo_8a82:auto_generated|altsyncram_28e1:fifo_ram|ALTSYNCRAM                                                              ; AUTO       ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_21:Stream_21|StreamFifo_altera_128_128_512_pushin_sl2_pullout_el1_singleclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_128_512_128_afv477_of_uf:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_ree1:auto_generated|a_dpfifo_nhb1:dpfifo|dpram_4ob1:FIFOram|altsyncram_muu1:altsyncram1|ALTSYNCRAM                                                      ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_23:Stream_23|StreamFifo_altera_32_32_512_pushin_sl2_pullout_el1_ael2_dualclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_32_512_32_dualclock_aclr_rdusedw_wrusedw_of_uf_pfv476_pev7:inst_ln47_alterafifo|dcfifo:inst_ln44_mwfifo|dcfifo_8a82:auto_generated|altsyncram_28e1:fifo_ram|ALTSYNCRAM                                                              ; AUTO       ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_25:Stream_25|StreamFifo_altera_128_128_512_pushin_sl2_pullout_el1_singleclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_128_512_128_afv477_of_uf:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_ree1:auto_generated|a_dpfifo_nhb1:dpfifo|dpram_4ob1:FIFOram|altsyncram_muu1:altsyncram1|ALTSYNCRAM                                                      ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_27:Stream_27|StreamFifo_altera_32_32_512_pushin_sl2_pullout_el1_ael2_dualclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_32_512_32_dualclock_aclr_rdusedw_wrusedw_of_uf_pfv476_pev7:inst_ln47_alterafifo|dcfifo:inst_ln44_mwfifo|dcfifo_8a82:auto_generated|altsyncram_28e1:fifo_ram|ALTSYNCRAM                                                              ; AUTO       ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_29:Stream_29|StreamFifo_altera_128_128_512_pushin_sl2_pullout_el1_singleclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_128_512_128_afv477_of_uf:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_ree1:auto_generated|a_dpfifo_nhb1:dpfifo|dpram_4ob1:FIFOram|altsyncram_muu1:altsyncram1|ALTSYNCRAM                                                      ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_31:Stream_31|StreamFifo_altera_32_32_512_pushin_sl2_pullout_el1_ael2_dualclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_32_512_32_dualclock_aclr_rdusedw_wrusedw_of_uf_pfv476_pev7:inst_ln47_alterafifo|dcfifo:inst_ln44_mwfifo|dcfifo_8a82:auto_generated|altsyncram_28e1:fifo_ram|ALTSYNCRAM                                                              ; AUTO       ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_Stream_33:Stream_33|StreamFifo_altera_32_32_512_pushin_sl5_pullout_el1_dualclock_errflgs:inst_ln31_streamingblock|AlteraFifoEntity_32_512_32_dualclock_aclr_wrusedw_of_uf_pfv473:inst_ln47_alterafifo|dcfifo:inst_ln44_mwfifo|dcfifo_ah72:auto_generated|altsyncram_28e1:fifo_ram|ALTSYNCRAM                                                                                ; AUTO       ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedDRP_Addr_3c0000_ChecksumMappedDRP:checksum_mem_drp|ChecksumMappedDRP_RAM:mappeddrp_addr_3c0000_checksummappeddrp_i|SRLDelay_1x2_reg1:rd_delay|SimpleSR:inst_ln34_alterasrldelay|altdpram:\mlab_opt:sreg_mlab_rtl_0|dpram_7ks1:auto_generated|ALTDPRAM_INSTANCE                                                                                                                                                                             ; MLAB       ; Simple Dual Port ; 2            ; 1            ; 2            ; 1            ; 2     ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedDRP_Addr_3c0000_ChecksumMappedDRP:checksum_mem_drp|ChecksumMappedDRP_RAM:mappeddrp_addr_3c0000_checksummappeddrp_i|altsyncram:checksum_mem|altsyncram_8754:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                                       ; AUTO       ; ROM              ; 512          ; 32           ; --           ; --           ; 16384 ; 32x512_ROM_SINGLE_PORT_ireg_checksum.mif                           ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|AlteraFifoEntity_36_512_36_dualclock_aclr:response_fifo_STREAM|dcfifo:inst_ln44_mwfifo|dcfifo_1o62:auto_generated|altsyncram_a8e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                               ; AUTO       ; Simple Dual Port ; 512          ; 36           ; 512          ; 36           ; 18432 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|AlteraFifoEntity_36_512_36_dualclock_aclr:response_fifo_drp|dcfifo:inst_ln44_mwfifo|dcfifo_1o62:auto_generated|altsyncram_a8e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                  ; AUTO       ; Simple Dual Port ; 512          ; 36           ; 512          ; 36           ; 18432 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|AlteraFifoEntity_71_512_71_dualclock_aclr:request_fifo_STREAM|dcfifo:inst_ln44_mwfifo|dcfifo_vn62:auto_generated|altsyncram_88e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                ; AUTO       ; Simple Dual Port ; 512          ; 71           ; 512          ; 71           ; 36352 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|AlteraFifoEntity_71_512_71_dualclock_aclr:request_fifo_drp|dcfifo:inst_ln44_mwfifo|dcfifo_vn62:auto_generated|altsyncram_88e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                   ; AUTO       ; Simple Dual Port ; 512          ; 71           ; 512          ; 71           ; 36352 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_0|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_1|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_0|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_1|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_0|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_1|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_0|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_1|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_0|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|AlteraBlockMem_RAM_TWO_PORT_64x256_RAM_TWO_PORT_ireg:rd_buffer_1|altsyncram:inst_ln101_mwblockmem|altsyncram_ra34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 256          ; 64           ; 256          ; 64           ; 16384 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost0|AlteraFifoEntity_128_512_128_afv448_aev2_usedw_fwft:inputBuffer|scfifo:inst_ln44_mwfifo|scfifo_a9i1:auto_generated|a_dpfifo_peb1:dpfifo|altsyncram_v8j1:FIFOram|ALTSYNCRAM                                                                                                                                                                                                          ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost1|AlteraFifoEntity_128_512_128_afv448_aev2_usedw_fwft:inputBuffer|scfifo:inst_ln44_mwfifo|scfifo_a9i1:auto_generated|a_dpfifo_peb1:dpfifo|altsyncram_v8j1:FIFOram|ALTSYNCRAM                                                                                                                                                                                                          ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|RequestEncoder:RequestEncoder_i|AlteraFifoEntity_115_512_115_fwft:wr_req_buffer_i|scfifo:inst_ln44_mwfifo|scfifo_q4b1:auto_generated|a_dpfifo_dsa1:dpfifo|altsyncram_n8j1:FIFOram|ALTSYNCRAM                                                                                                                                                                                                                           ; AUTO       ; Simple Dual Port ; 512          ; 115          ; 512          ; 115          ; 58880 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|RequestEncoder:RequestEncoder_i|AlteraFifoEntity_128_512_128_afv448:wr_req_data_buffer_i|scfifo:inst_ln44_mwfifo|scfifo_pee1:auto_generated|a_dpfifo_nhb1:dpfifo|dpram_4ob1:FIFOram|altsyncram_muu1:altsyncram1|ALTSYNCRAM                                                                                                                                                                                             ; AUTO       ; Simple Dual Port ; 512          ; 128          ; 512          ; 128          ; 65536 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|AlteraBlockMem_RAM_DUAL_PORT_64x512_RAM_DUAL_PORT_bw_ireg_readfirst:dma_control_ram|altsyncram:inst_ln101_mwblockmem|altsyncram_ca74:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                   ; AUTO       ; True Dual Port   ; 512          ; 64           ; 512          ; 64           ; 32768 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sfh0|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sfh1|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sfh2|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sfh3|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sfh4|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sth0|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGFifo:sg_fifo_sth1|AlteraFifoEntity_72_512_72_afv480:inst_ln47_alterafifo|scfifo:inst_ln44_mwfifo|scfifo_3de1:auto_generated|a_dpfifo_5gb1:dpfifo|dpram_imb1:FIFOram|altsyncram_mou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                     ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGGen2InputBuffer:sg_gen2_input_buffer|AlteraFifoEntity_28_512_28:metadata_fifo|scfifo:inst_ln44_mwfifo|scfifo_b6b1:auto_generated|a_dpfifo_uta1:dpfifo|dpram_jmb1:FIFOram|altsyncram_eou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                ; AUTO       ; Simple Dual Port ; 512          ; 28           ; 512          ; 28           ; 14336 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGGen2InputBuffer:sg_gen2_input_buffer|AlteraFifoEntity_65_512_65:data_fifo_0|scfifo:inst_ln44_mwfifo|scfifo_c6b1:auto_generated|a_dpfifo_vta1:dpfifo|dpram_kmb1:FIFOram|altsyncram_qou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                  ; AUTO       ; Simple Dual Port ; 512          ; 65           ; 512          ; 65           ; 33280 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|SGGen2InputBuffer:sg_gen2_input_buffer|AlteraFifoEntity_65_512_65:data_fifo_1|scfifo:inst_ln44_mwfifo|scfifo_c6b1:auto_generated|a_dpfifo_vta1:dpfifo|dpram_kmb1:FIFOram|altsyncram_qou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                  ; AUTO       ; Simple Dual Port ; 512          ; 65           ; 512          ; 65           ; 33280 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_fetcher:sg_fetcher_external|sg_fetch_responder:i_responder|altshift_taps:latency_buffer_rtl_0|shift_taps_6u31:auto_generated|altsyncram_l9e1:altsyncram5|ALTSYNCRAM                                                                                                                                                                                                           ; AUTO       ; Simple Dual Port ; 7            ; 61           ; 7            ; 61           ; 427   ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_ring:SGRing_sfh4_i|sg_buffer:sg_buffer_i|AlteraBlockMem_RAM_TWO_PORT_72x512_RAM_TWO_PORT_dck_ireg:wrapped_AlteraBlockMem_RAM_TWO_PORT_72x512_RAM_TWO_PORT_dck_ireg|altsyncram:inst_ln101_mwblockmem|altsyncram_ht34:auto_generated|ALTSYNCRAM                                                                                                                                 ; AUTO       ; Simple Dual Port ; 512          ; 72           ; 512          ; 72           ; 36864 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|AlteraBlockMem_RAM_TWO_PORT_36x512_RAM_TWO_PORT_ireg:metadata_db_i|altsyncram:inst_ln101_mwblockmem|altsyncram_ha34:auto_generated|ALTSYNCRAM                                                                                                                                                                                                                                                  ; AUTO       ; Simple Dual Port ; 512          ; 36           ; 512          ; 36           ; 18432 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|tag_manager:TagManagerExternal_i|altshift_taps:data_delay_reg_rtl_0|shift_taps_2e31:auto_generated|altsyncram_5ce1:altsyncram4|ALTSYNCRAM                                                                                                                                                                                                                                                      ; AUTO       ; Simple Dual Port ; 3            ; 130          ; 3            ; 130          ; 390   ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|tag_manager:TagManagerExternal_i|tag_fifo:tag_fifo_i|AlteraFifoEntity_5_64_5_fwft:wrapped_AlteraFifoEntity_5_64_5_fwft|scfifo:inst_ln44_mwfifo|scfifo_70b1:auto_generated|a_dpfifo_qna1:dpfifo|altsyncram_hvi1:FIFOram|ALTSYNCRAM                                                                                                                                                              ; AUTO       ; Simple Dual Port ; 64           ; 5            ; 64           ; 5            ; 320   ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|SignalForwardingAdapter_stream_reset_memory_interrupt_crash_packet_sysmon_reset_pcc_switch_regs_pcc_start_pcc_reset_partial_reconfig_0:SignalForwardingAdapter_i|MappedRegBlock_4cdf0f923c75d2a0461d279b0adb9830:inst_ln131_mappedregblock|mapped_register:inst_ln525_mappedregblock|altshift_taps:mapped_registers_rtl_0|shift_taps_ls31:auto_generated|altsyncram_f6e1:altsyncram4|ALTSYNCRAM                                                  ; AUTO       ; Simple Dual Port ; 4            ; 8            ; 4            ; 8            ; 32    ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|MAX4PCIeSlaveInterface:MAX4PCIeSlaveInterface_i|max_SV_pcie_slave:PCIeSlaveInterface_imp|compl_fifo:cfifo|scfifo:wrapped_scfifo|scfifo_09e1:auto_generated|a_dpfifo_gsb1:dpfifo|dpram_emb1:FIFOram|altsyncram_8ou1:altsyncram1|ALTSYNCRAM                                                                                                                                                                                                                                                    ; AUTO       ; Simple Dual Port ; 32           ; 45           ; 32           ; 45           ; 1440  ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|PCIeEA:PCIeEA_i|AlteraFifoEntity_34_512_34_dualclock_aclr_wrusedw_fwft_pfv383:slave_from_host_fifo|dcfifo:inst_ln44_mwfifo|dcfifo_ge72:auto_generated|altsyncram_t0c1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                                                                                                                    ; AUTO       ; Simple Dual Port ; 512          ; 34           ; 512          ; 34           ; 17408 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|PCIeEA:PCIeEA_i|AlteraFifoEntity_34_512_34_dualclock_aclr_wrusedw_pfv495:fifo_to_host|dcfifo:inst_ln44_mwfifo|dcfifo_eh72:auto_generated|altsyncram_68e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                                                                                                                                 ; AUTO       ; Simple Dual Port ; 512          ; 34           ; 512          ; 34           ; 17408 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|StratixPCIeInterface:StratixPCIeInterface_i|max_SV_pcie_tx:StratixVPCIeTX_i|pcie_tx_fifo:pcie_tx_fifo_i|scfifo:wrapped_scfifo|scfifo_kee1:auto_generated|a_dpfifo_ihb1:dpfifo|dpram_vnb1:FIFOram|altsyncram_euu1:altsyncram1|ALTSYNCRAM                                                                                                                                                                                                                                                      ; AUTO       ; Simple Dual Port ; 512          ; 132          ; 512          ; 132          ; 67584 ; None                                                               ;
+; MAX4FPGATop:MAX4GalavaFabricTop_i|StreamFifo_altera_128_64_128_pushin_sl16_pushout_singleclock:ftb_ARChange_MappedElementsSwitchPCIeEA|AlteraFifoEntity_128_128_64_dualclock_aclr_wrusedw_pfv78:inst_ln70_alterafifo|dcfifo_mixed_widths:inst_ln44_mwfifo|dcfifo_ng72:auto_generated|altsyncram_q9e1:fifo_ram|ALTSYNCRAM                                                                                                                                                                                                       ; AUTO       ; Simple Dual Port ; 128          ; 128          ; 256          ; 64           ; 16384 ; None                                                               ;
+; StratixPCIeBase:PCIeBase_i|TransceiverReconfig:pcie_xcvr_reconfig_i|pcie_xcvr_reconfig_SV:inst_ln13_tranceiverreconfigext_v13_1|pcie_reconfig_SV:pcie_reconfig_inst|alt_xcvr_reconfig:pcie_reconfig_sv_inst|alt_xcvr_reconfig_basic:basic|sv_xcvr_reconfig_basic:s5|sv_xrbasic_lif:lif[0].logical_if|sv_xrbasic_lif_csr:lif_csr|sv_xrbasic_l2p_rom:l2pch|altsyncram:rom_l2p_ch_rtl_0|altsyncram_1282:auto_generated|ALTSYNCRAM                                                                                                 ; M20K block ; True Dual Port   ; 128          ; 32           ; 128          ; 32           ; 4096  ; db/MAX4GALAVAPeripheryTop.ram0_sv_xrbasic_l2p_rom_a2c9d7fe.hdl.mif ;
+; StratixPCIeBase:PCIeBase_i|TransceiverReconfig:pcie_xcvr_reconfig_i|pcie_xcvr_reconfig_SV:inst_ln13_tranceiverreconfigext_v13_1|pcie_reconfig_SV:pcie_reconfig_inst|alt_xcvr_reconfig:pcie_reconfig_sv_inst|alt_xcvr_reconfig_soc:soc.sc_soc|alt_xcvr_reconfig_cpu:alt_xcvr_reconfig_cpu_inst|alt_xcvr_reconfig_cpu_reconfig_cpu:reconfig_cpu|alt_xcvr_reconfig_cpu_reconfig_cpu_register_bank_a_module:alt_xcvr_reconfig_cpu_reconfig_cpu_register_bank_a|altsyncram:the_altsyncram|altsyncram_b5t1:auto_generated|ALTSYNCRAM ; AUTO       ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif                    ;
+; StratixPCIeBase:PCIeBase_i|TransceiverReconfig:pcie_xcvr_reconfig_i|pcie_xcvr_reconfig_SV:inst_ln13_tranceiverreconfigext_v13_1|pcie_reconfig_SV:pcie_reconfig_inst|alt_xcvr_reconfig:pcie_reconfig_sv_inst|alt_xcvr_reconfig_soc:soc.sc_soc|alt_xcvr_reconfig_cpu:alt_xcvr_reconfig_cpu_inst|alt_xcvr_reconfig_cpu_reconfig_cpu:reconfig_cpu|alt_xcvr_reconfig_cpu_reconfig_cpu_register_bank_b_module:alt_xcvr_reconfig_cpu_reconfig_cpu_register_bank_b|altsyncram:the_altsyncram|altsyncram_c5t1:auto_generated|ALTSYNCRAM ; AUTO       ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024  ; alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif                    ;
+; StratixPCIeBase:PCIeBase_i|TransceiverReconfig:pcie_xcvr_reconfig_i|pcie_xcvr_reconfig_SV:inst_ln13_tranceiverreconfigext_v13_1|pcie_reconfig_SV:pcie_reconfig_inst|alt_xcvr_reconfig:pcie_reconfig_sv_inst|alt_xcvr_reconfig_soc:soc.sc_soc|alt_xcvr_reconfig_cpu_ram:alt_xcvr_reconfig_cpu_ram_inst|altsyncram:altsyncram_component|altsyncram_ru53:auto_generated|ALTSYNCRAM                                                                                                                                                ; AUTO       ; True Dual Port   ; 1024         ; 32           ; 1024         ; 32           ; 32768 ; alt_xcvr_reconfig_cpu_ram.hex                                      ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge INI Usage                                                                                                                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Option                                      ; Usage                                                                                                                                                              ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Initialization file:                        ; /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/map/altera_quartus/quartus.ini ;
+; skip_hssi_gen3_pcie_hip_cvp_enable_rule     ; on                                                                                                                                                                 ;
+; skip_hssi_gen3_pcie_hip_hip_hard_reset_rule ; on                                                                                                                                                                 ;
+; skip_hssi_gen3_pcie_hip_hrdrstctrl_en_rule  ; on                                                                                                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Partition Merge
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Wed Dec 20 16:22:36 2017
+Info: Command: quartus_cdb MAX4GALAVAPeripheryTop --write_settings_files=off --merge=on
+Info: Using INI file /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/map/altera_quartus/quartus.ini
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "MAX4FPGATop:MAX4GalavaFabricTop_i"
+Info (35002): Resolved and merged 2 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 218 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
+Info (35048): Found 233 ports with constant drivers. For more information, refer to the Partition Merger report
+Info (35047): Found 301 ports with no fan-out. For more information, refer to the Partition Merger report
+Warning (35016): Found partition port(s) not driving logic, possibly wasting area
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[1]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[3]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[5]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[6]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_bar[7]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|rx_st_empty[1]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[13]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[14]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[15]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[16]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[17]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[18]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[19]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[20]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[21]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[22]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[23]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[24]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[25]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35018): Partition port "MAX4FPGATop:MAX4GalavaFabricTop_i|tl_cfg_ctl[26]", driven by node "StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip", does not drive logic
+    Warning (35039): Only the first 20 ports are reported. For a full list of ports, refer to the Partition Warnings panel in the Partition Merge report
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "left_pll_ref_clk"
+    Warning (15610): No output dependent on input pin "right_pll_ref_clk"
+Info (21057): Implemented 29661 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21060): Implemented 26 bidirectional pins
+    Info (21061): Implemented 25898 logic cells
+    Info (21064): Implemented 3529 RAM segments
+    Info (21065): Implemented 2 PLLs
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 1194 megabytes
+    Info: Processing ended: Wed Dec 20 16:22:43 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+

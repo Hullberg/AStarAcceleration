@@ -1,0 +1,526 @@
+
+State Machine - |MAX4GALAVAPeripheryTop|StratixPCIeBase:PCIeBase_i|StratixVHardIPPCIe:StratixVHardIPPCIe_i|pcie_SV_hard_ip:pcie_SV_hard_ip_i|altpcie_sv_hip_ast_hwtcl:pcie_sv_hard_ip_inst|altpcie_hip_256_pipen1b:altpcie_hip_256_pipen1b|g2g3_hold_ltssm.hold_state
+Name g2g3_hold_ltssm.hold_state.INACT g2g3_hold_ltssm.hold_state.HOLD_AEQ g2g3_hold_ltssm.hold_state.HOLD 
+g2g3_hold_ltssm.hold_state.INACT 0 0 0 
+g2g3_hold_ltssm.hold_state.HOLD 1 0 1 
+g2g3_hold_ltssm.hold_state.HOLD_AEQ 1 1 0 
+
+State Machine - |MAX4GALAVAPeripheryTop|AlteraClockGenerator_250_100_STREAM:STREAM0_clock_gen_i|StratixVClockManager_in250_out_f100p0dc50_f100p180dc50:inst_ln11_clockmanager|altera_pll_reconfig_top:altera_pll_reconfig_i|current_read_state
+Name current_read_state.READ current_read_state.READ_IDLE current_read_state.READ_WAIT 
+current_read_state.READ_IDLE 0 0 0 
+current_read_state.READ_WAIT 0 1 1 
+current_read_state.READ 1 1 0 
+
+State Machine - |MAX4GALAVAPeripheryTop|AlteraClockGenerator_250_100_STREAM:STREAM0_clock_gen_i|StratixVClockManager_in250_out_f100p0dc50_f100p180dc50:inst_ln11_clockmanager|altera_pll_reconfig_top:altera_pll_reconfig_i|operation_address
+Name operation_address.CP_CURRENT_REG operation_address.BWCTRL_REG operation_address.DSM_REG operation_address.DPS_REG operation_address.C_COUNTERS_REG operation_address.M_REG operation_address.N_REG operation_address.000000 operation_address.ANY_DPRIO 
+operation_address.000000 0 0 0 0 0 0 0 0 0 
+operation_address.N_REG 0 0 0 0 0 0 1 1 0 
+operation_address.M_REG 0 0 0 0 0 1 0 1 0 
+operation_address.C_COUNTERS_REG 0 0 0 0 1 0 0 1 0 
+operation_address.DPS_REG 0 0 0 1 0 0 0 1 0 
+operation_address.DSM_REG 0 0 1 0 0 0 0 1 0 
+operation_address.BWCTRL_REG 0 1 0 0 0 0 0 1 0 
+operation_address.CP_CURRENT_REG 1 0 0 0 0 0 0 1 0 
+operation_address.ANY_DPRIO 0 0 0 0 0 0 0 1 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|AlteraClockGenerator_250_100_STREAM:STREAM0_clock_gen_i|StratixVClockManager_in250_out_f100p0dc50_f100p180dc50:inst_ln11_clockmanager|altera_pll_reconfig_top:altera_pll_reconfig_i|current_state
+Name current_state.IDLE current_state.LOCKED current_state.WAIT_ON_LOCK 
+current_state.IDLE 0 0 0 
+current_state.WAIT_ON_LOCK 1 0 1 
+current_state.LOCKED 1 1 0 
+
+State Machine - |MAX4GALAVAPeripheryTop|AlteraClockGenerator_250_100_STREAM:STREAM0_clock_gen_i|StratixVClockManager_in250_out_f100p0dc50_f100p180dc50:inst_ln11_clockmanager|altera_pll_reconfig_top:altera_pll_reconfig_i|dprio_cur_state
+Name dprio_cur_state.DPRIO_DONE dprio_cur_state.TEN dprio_cur_state.NINE dprio_cur_state.EIGHT dprio_cur_state.SEVEN dprio_cur_state.SIX dprio_cur_state.FIVE dprio_cur_state.FOUR dprio_cur_state.THREE dprio_cur_state.TWO dprio_cur_state.ONE dprio_cur_state.DPRIO_IDLE 
+dprio_cur_state.DPRIO_IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+dprio_cur_state.ONE 0 0 0 0 0 0 0 0 0 0 1 1 
+dprio_cur_state.TWO 0 0 0 0 0 0 0 0 0 1 0 1 
+dprio_cur_state.THREE 0 0 0 0 0 0 0 0 1 0 0 1 
+dprio_cur_state.FOUR 0 0 0 0 0 0 0 1 0 0 0 1 
+dprio_cur_state.FIVE 0 0 0 0 0 0 1 0 0 0 0 1 
+dprio_cur_state.SIX 0 0 0 0 0 1 0 0 0 0 0 1 
+dprio_cur_state.SEVEN 0 0 0 0 1 0 0 0 0 0 0 1 
+dprio_cur_state.EIGHT 0 0 0 1 0 0 0 0 0 0 0 1 
+dprio_cur_state.NINE 0 0 1 0 0 0 0 0 0 0 0 1 
+dprio_cur_state.TEN 0 1 0 0 0 0 0 0 0 0 0 1 
+dprio_cur_state.DPRIO_DONE 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|AlteraClockGenerator_250_100_STREAM:STREAM0_clock_gen_i|StratixVClockManager_in250_out_f100p0dc50_f100p180dc50:inst_ln11_clockmanager|altera_pll_reconfig_top:altera_pll_reconfig_i|dyn_phase_shift:dyn_phase_shift_inst|dps_current_state
+Name dps_current_state.DPS_CHANGED dps_current_state.DPS_WAIT_DPRIO_WRITING dps_current_state.DPS_WAIT_PHASE_EN dps_current_state.DPS_START dps_current_state.DPS_WAIT_PHASE_DONE dps_current_state.DPS_DONE 
+dps_current_state.DPS_DONE 0 0 0 0 0 0 
+dps_current_state.DPS_WAIT_PHASE_DONE 0 0 0 0 1 1 
+dps_current_state.DPS_START 0 0 0 1 0 1 
+dps_current_state.DPS_WAIT_PHASE_EN 0 0 1 0 0 1 
+dps_current_state.DPS_WAIT_DPRIO_WRITING 0 1 0 0 0 1 
+dps_current_state.DPS_CHANGED 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|pcie_stream_from_host:stream_imp|pcie_stream_from_host_streamer:streamer|stream_currstate
+Name stream_currstate.STREAM_LAST stream_currstate.STREAM_PUSH stream_currstate.STREAM_STALL stream_currstate.STREAM_ALMOST_STALL stream_currstate.STREAM_SETUP stream_currstate.STREAM_IDLE 
+stream_currstate.STREAM_IDLE 0 0 0 0 0 0 
+stream_currstate.STREAM_SETUP 0 0 0 0 1 1 
+stream_currstate.STREAM_ALMOST_STALL 0 0 0 1 0 1 
+stream_currstate.STREAM_STALL 0 0 1 0 0 1 
+stream_currstate.STREAM_PUSH 0 1 0 0 0 1 
+stream_currstate.STREAM_LAST 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|pcie_stream_from_host:stream_imp|pcie_stream_from_host_streamer:streamer|stream_currstate
+Name stream_currstate.STREAM_LAST stream_currstate.STREAM_PUSH stream_currstate.STREAM_STALL stream_currstate.STREAM_ALMOST_STALL stream_currstate.STREAM_SETUP stream_currstate.STREAM_IDLE 
+stream_currstate.STREAM_IDLE 0 0 0 0 0 0 
+stream_currstate.STREAM_SETUP 0 0 0 0 1 1 
+stream_currstate.STREAM_ALMOST_STALL 0 0 0 1 0 1 
+stream_currstate.STREAM_STALL 0 0 1 0 0 1 
+stream_currstate.STREAM_PUSH 0 1 0 0 0 1 
+stream_currstate.STREAM_LAST 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|mapped_memories_adapter:mapped_memories_domain_adapter_STREAM|req_current_state
+Name req_current_state.REQ_ASSERT req_current_state.REQ_STROBE_DELAY req_current_state.REQ_READ_FIFO req_current_state.REQ_IDLE 
+req_current_state.REQ_IDLE 0 0 0 0 
+req_current_state.REQ_READ_FIFO 0 0 1 1 
+req_current_state.REQ_STROBE_DELAY 0 1 0 1 
+req_current_state.REQ_ASSERT 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|mapped_memories_adapter:mapped_memories_domain_adapter_drp|req_current_state
+Name req_current_state.REQ_ASSERT req_current_state.REQ_STROBE_DELAY req_current_state.REQ_READ_FIFO req_current_state.REQ_IDLE 
+req_current_state.REQ_IDLE 0 0 0 0 
+req_current_state.REQ_READ_FIFO 0 0 1 1 
+req_current_state.REQ_STROBE_DELAY 0 1 0 1 
+req_current_state.REQ_ASSERT 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|StratixPCIeInterface:StratixPCIeInterface_i|max_SV_pcie_rx:StratixVPCIeRX_i|data_writer_state
+Name data_writer_state.SL_DATA_ALIGNED data_writer_state.DATA_WR32_UNALIGNED data_writer_state.DATA_WR64_UNALIGNED data_writer_state.DATA_ALIGNED data_writer_state.IDLE_WRITER 
+data_writer_state.IDLE_WRITER 0 0 0 0 0 
+data_writer_state.DATA_ALIGNED 0 0 0 1 1 
+data_writer_state.DATA_WR64_UNALIGNED 0 0 1 0 1 
+data_writer_state.DATA_WR32_UNALIGNED 0 1 0 0 1 
+data_writer_state.SL_DATA_ALIGNED 1 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|pcie_stream_from_host:stream_imp|pcie_stream_from_host_requester:requester|req_currstate
+Name req_currstate.REQ_DONE_DELAY req_currstate.REQ_DONE req_currstate.REQ_EVAL req_currstate.REQ_SELECTED req_currstate.REQ_READY req_currstate.REQ_NEW req_currstate.REQ_WAIT_FOR_SPACE2 req_currstate.REQ_WAIT_FOR_SPACE1 req_currstate.REQ_READ_ENTRY req_currstate.REQ_IDLE 
+req_currstate.REQ_IDLE 0 0 0 0 0 0 0 0 0 0 
+req_currstate.REQ_READ_ENTRY 0 0 0 0 0 0 0 0 1 1 
+req_currstate.REQ_WAIT_FOR_SPACE1 0 0 0 0 0 0 0 1 0 1 
+req_currstate.REQ_WAIT_FOR_SPACE2 0 0 0 0 0 0 1 0 0 1 
+req_currstate.REQ_NEW 0 0 0 0 0 1 0 0 0 1 
+req_currstate.REQ_READY 0 0 0 0 1 0 0 0 0 1 
+req_currstate.REQ_SELECTED 0 0 0 1 0 0 0 0 0 1 
+req_currstate.REQ_EVAL 0 0 1 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE 0 1 0 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE_DELAY 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|pcie_stream_from_host:stream_imp|pcie_stream_from_host_streamer:streamer|stream_currstate
+Name stream_currstate.STREAM_LAST stream_currstate.STREAM_PUSH stream_currstate.STREAM_STALL stream_currstate.STREAM_ALMOST_STALL stream_currstate.STREAM_SETUP stream_currstate.STREAM_IDLE 
+stream_currstate.STREAM_IDLE 0 0 0 0 0 0 
+stream_currstate.STREAM_SETUP 0 0 0 0 1 1 
+stream_currstate.STREAM_ALMOST_STALL 0 0 0 1 0 1 
+stream_currstate.STREAM_STALL 0 0 1 0 0 1 
+stream_currstate.STREAM_PUSH 0 1 0 0 0 1 
+stream_currstate.STREAM_LAST 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|pcie_stream_from_host:stream_imp|pcie_stream_from_host_requester:requester|req_currstate
+Name req_currstate.REQ_DONE_DELAY req_currstate.REQ_DONE req_currstate.REQ_EVAL req_currstate.REQ_SELECTED req_currstate.REQ_READY req_currstate.REQ_NEW req_currstate.REQ_WAIT_FOR_SPACE2 req_currstate.REQ_WAIT_FOR_SPACE1 req_currstate.REQ_READ_ENTRY req_currstate.REQ_IDLE 
+req_currstate.REQ_IDLE 0 0 0 0 0 0 0 0 0 0 
+req_currstate.REQ_READ_ENTRY 0 0 0 0 0 0 0 0 1 1 
+req_currstate.REQ_WAIT_FOR_SPACE1 0 0 0 0 0 0 0 1 0 1 
+req_currstate.REQ_WAIT_FOR_SPACE2 0 0 0 0 0 0 1 0 0 1 
+req_currstate.REQ_NEW 0 0 0 0 0 1 0 0 0 1 
+req_currstate.REQ_READY 0 0 0 0 1 0 0 0 0 1 
+req_currstate.REQ_SELECTED 0 0 0 1 0 0 0 0 0 1 
+req_currstate.REQ_EVAL 0 0 1 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE 0 1 0 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE_DELAY 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|pcie_stream_from_host:stream_imp|pcie_stream_from_host_requester:requester|req_currstate
+Name req_currstate.REQ_DONE_DELAY req_currstate.REQ_DONE req_currstate.REQ_EVAL req_currstate.REQ_SELECTED req_currstate.REQ_READY req_currstate.REQ_NEW req_currstate.REQ_WAIT_FOR_SPACE2 req_currstate.REQ_WAIT_FOR_SPACE1 req_currstate.REQ_READ_ENTRY req_currstate.REQ_IDLE 
+req_currstate.REQ_IDLE 0 0 0 0 0 0 0 0 0 0 
+req_currstate.REQ_READ_ENTRY 0 0 0 0 0 0 0 0 1 1 
+req_currstate.REQ_WAIT_FOR_SPACE1 0 0 0 0 0 0 0 1 0 1 
+req_currstate.REQ_WAIT_FOR_SPACE2 0 0 0 0 0 0 1 0 0 1 
+req_currstate.REQ_NEW 0 0 0 0 0 1 0 0 0 1 
+req_currstate.REQ_READY 0 0 0 0 1 0 0 0 0 1 
+req_currstate.REQ_SELECTED 0 0 0 1 0 0 0 0 0 1 
+req_currstate.REQ_EVAL 0 0 1 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE 0 1 0 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE_DELAY 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|pcie_stream_from_host:stream_imp|pcie_stream_from_host_requester:requester|req_currstate
+Name req_currstate.REQ_DONE_DELAY req_currstate.REQ_DONE req_currstate.REQ_EVAL req_currstate.REQ_SELECTED req_currstate.REQ_READY req_currstate.REQ_NEW req_currstate.REQ_WAIT_FOR_SPACE2 req_currstate.REQ_WAIT_FOR_SPACE1 req_currstate.REQ_READ_ENTRY req_currstate.REQ_IDLE 
+req_currstate.REQ_IDLE 0 0 0 0 0 0 0 0 0 0 
+req_currstate.REQ_READ_ENTRY 0 0 0 0 0 0 0 0 1 1 
+req_currstate.REQ_WAIT_FOR_SPACE1 0 0 0 0 0 0 0 1 0 1 
+req_currstate.REQ_WAIT_FOR_SPACE2 0 0 0 0 0 0 1 0 0 1 
+req_currstate.REQ_NEW 0 0 0 0 0 1 0 0 0 1 
+req_currstate.REQ_READY 0 0 0 0 1 0 0 0 0 1 
+req_currstate.REQ_SELECTED 0 0 0 1 0 0 0 0 0 1 
+req_currstate.REQ_EVAL 0 0 1 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE 0 1 0 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE_DELAY 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|pcie_stream_from_host:stream_imp|pcie_stream_from_host_requester:requester|req_currstate
+Name req_currstate.REQ_DONE_DELAY req_currstate.REQ_DONE req_currstate.REQ_EVAL req_currstate.REQ_SELECTED req_currstate.REQ_READY req_currstate.REQ_NEW req_currstate.REQ_WAIT_FOR_SPACE2 req_currstate.REQ_WAIT_FOR_SPACE1 req_currstate.REQ_READ_ENTRY req_currstate.REQ_IDLE 
+req_currstate.REQ_IDLE 0 0 0 0 0 0 0 0 0 0 
+req_currstate.REQ_READ_ENTRY 0 0 0 0 0 0 0 0 1 1 
+req_currstate.REQ_WAIT_FOR_SPACE1 0 0 0 0 0 0 0 1 0 1 
+req_currstate.REQ_WAIT_FOR_SPACE2 0 0 0 0 0 0 1 0 0 1 
+req_currstate.REQ_NEW 0 0 0 0 0 1 0 0 0 1 
+req_currstate.REQ_READY 0 0 0 0 1 0 0 0 0 1 
+req_currstate.REQ_SELECTED 0 0 0 1 0 0 0 0 0 1 
+req_currstate.REQ_EVAL 0 0 1 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE 0 1 0 0 0 0 0 0 0 1 
+req_currstate.REQ_DONE_DELAY 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|MemWriteRequestArbiter:MemWriteRequestArbiter_i|FastRequestArbiter_req3:internal_arbiter_i|fast_request_arbiter:fast_request_arbiter_i|prefetcher_state
+Name prefetcher_state.P_READY prefetcher_state.P_EVAL prefetcher_state.P_IDLE 
+prefetcher_state.P_IDLE 0 0 0 
+prefetcher_state.P_EVAL 0 1 1 
+prefetcher_state.P_READY 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|StratixPCIeInterface:StratixPCIeInterface_i|max_SV_pcie_tx:StratixVPCIeTX_i|tx_state
+Name tx_state.MEM_RD_COMPL_DATA_STATE tx_state.MEM_RD_COMPL_HEADER_STATE tx_state.MEM_RD_COMPL_PIPE tx_state.DONE_STATE tx_state.MEM_QW_DATA_STATE tx_state.MEM_QW_STATE tx_state.COMPL_DATA_STATE tx_state.RST_STATE 
+tx_state.RST_STATE 0 0 0 0 0 0 0 0 
+tx_state.COMPL_DATA_STATE 0 0 0 0 0 0 1 1 
+tx_state.MEM_QW_STATE 0 0 0 0 0 1 0 1 
+tx_state.MEM_QW_DATA_STATE 0 0 0 0 1 0 0 1 
+tx_state.DONE_STATE 0 0 0 1 0 0 0 1 
+tx_state.MEM_RD_COMPL_PIPE 0 0 1 0 0 0 0 1 
+tx_state.MEM_RD_COMPL_HEADER_STATE 0 1 0 0 0 0 0 1 
+tx_state.MEM_RD_COMPL_DATA_STATE 1 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|MAX4PCIeSlaveInterface:MAX4PCIeSlaveInterface_i|max_SV_pcie_slave:PCIeSlaveInterface_imp|slave_state
+Name slave_state.WAIT_ACK slave_state.WAIT_READ_4 slave_state.WAIT_READ_3 slave_state.WAIT_READ_2 slave_state.WAIT_READ slave_state.START 
+slave_state.START 0 0 0 0 0 0 
+slave_state.WAIT_READ 0 0 0 0 1 1 
+slave_state.WAIT_READ_2 0 0 0 1 0 1 
+slave_state.WAIT_READ_3 0 0 1 0 0 1 
+slave_state.WAIT_READ_4 0 1 0 0 0 1 
+slave_state.WAIT_ACK 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|RequestEncoder:RequestEncoder_i|write_request_encoder:inst_ln10_writerequestencoderexternal|exec_state
+Name exec_state.EXE_STREAMING exec_state.EXE_SETUP exec_state.EXE_IDLE 
+exec_state.EXE_IDLE 0 0 0 
+exec_state.EXE_SETUP 0 1 1 
+exec_state.EXE_STREAMING 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|SignalForwardingAdapter_stream_reset_memory_interrupt_crash_packet_sysmon_reset_pcc_switch_regs_pcc_start_pcc_reset_partial_reconfig_0:SignalForwardingAdapter_i|signal_forwarding_adapter:SignalForwardingAdapterExternal_i|curr_state
+Name curr_state.ASSERT_EA_FINISHED curr_state.UPDATE_INPUTS_R2 curr_state.WRITE_SFHEAD_1 curr_state.WRITE_SWITCH_HEAD_2 curr_state.WRITE_SWITCH_HEAD_1 curr_state.WAIT_EA_START curr_state.ASSERT_EA_MANUAL curr_state.WRITE_DELIMITER curr_state.WRITE_WORK_COMPLETION_HEADER curr_state.WRITE_HOST_HEADER curr_state.IDLE 
+curr_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+curr_state.WRITE_HOST_HEADER 0 0 0 0 0 0 0 0 0 1 1 
+curr_state.WRITE_WORK_COMPLETION_HEADER 0 0 0 0 0 0 0 0 1 0 1 
+curr_state.WRITE_DELIMITER 0 0 0 0 0 0 0 1 0 0 1 
+curr_state.ASSERT_EA_MANUAL 0 0 0 0 0 0 1 0 0 0 1 
+curr_state.WAIT_EA_START 0 0 0 0 0 1 0 0 0 0 1 
+curr_state.WRITE_SWITCH_HEAD_1 0 0 0 0 1 0 0 0 0 0 1 
+curr_state.WRITE_SWITCH_HEAD_2 0 0 0 1 0 0 0 0 0 0 1 
+curr_state.WRITE_SFHEAD_1 0 0 1 0 0 0 0 0 0 0 1 
+curr_state.UPDATE_INPUTS_R2 0 1 0 0 0 0 0 0 0 0 1 
+curr_state.ASSERT_EA_FINISHED 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|SignalForwardingAdapter_stream_reset_memory_interrupt_crash_packet_sysmon_reset_pcc_switch_regs_pcc_start_pcc_reset_partial_reconfig_0:SignalForwardingAdapter_i|SignalForwardingEA:SignalForwardingEA_i|CommonPacketParser_SignalForwarding:CommonPacketParser_i|common_packet_parser:CommonPacketParserExternal_SignalForwarding|curr_state
+Name curr_state.EA_CONTROL curr_state.EA_HEADER_WAIT_READ curr_state.EA_HEADER_SHIFT_SAMPLE curr_state.RESPONSE_HEADER_FORWARD curr_state.RESPONSE_HEADER_WAIT_READ curr_state.RESET 
+curr_state.RESET 0 0 0 0 0 0 
+curr_state.RESPONSE_HEADER_WAIT_READ 0 0 0 0 1 1 
+curr_state.RESPONSE_HEADER_FORWARD 0 0 0 1 0 1 
+curr_state.EA_HEADER_SHIFT_SAMPLE 0 0 1 0 0 1 
+curr_state.EA_HEADER_WAIT_READ 0 1 0 0 0 1 
+curr_state.EA_CONTROL 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|MappedMemoriesEA:MappedmemoriesEA_i|CommonPacketParser_MappedMemories:CommonPacketParser_i|common_packet_parser:CommonPacketParserExternal_MappedMemories|curr_state
+Name curr_state.EA_CONTROL curr_state.EA_HEADER_WAIT_READ curr_state.EA_HEADER_SHIFT_SAMPLE curr_state.RESPONSE_HEADER_FORWARD curr_state.RESPONSE_HEADER_WAIT_READ curr_state.RESET 
+curr_state.RESET 0 0 0 0 0 0 
+curr_state.RESPONSE_HEADER_WAIT_READ 0 0 0 0 1 1 
+curr_state.RESPONSE_HEADER_FORWARD 0 0 0 1 0 1 
+curr_state.EA_HEADER_SHIFT_SAMPLE 0 0 1 0 0 1 
+curr_state.EA_HEADER_WAIT_READ 0 1 0 0 0 1 
+curr_state.EA_CONTROL 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|mapped_memories_controller_core:MappedMemoriesControllerCoreExternal_i|res_current_state
+Name res_current_state.RES_FINISHED res_current_state.RES_DELIMITER res_current_state.RES_PUSHOUT res_current_state.RES_ASPECT res_current_state.RES_SAMPLE_WAIT res_current_state.RES_READ res_current_state.RES_SEND_STATUS res_current_state.RES_THROTTLE res_current_state.RES_START res_current_state.RES_IDLE 
+res_current_state.RES_IDLE 0 0 0 0 0 0 0 0 0 0 
+res_current_state.RES_START 0 0 0 0 0 0 0 0 1 1 
+res_current_state.RES_THROTTLE 0 0 0 0 0 0 0 1 0 1 
+res_current_state.RES_SEND_STATUS 0 0 0 0 0 0 1 0 0 1 
+res_current_state.RES_READ 0 0 0 0 0 1 0 0 0 1 
+res_current_state.RES_SAMPLE_WAIT 0 0 0 0 1 0 0 0 0 1 
+res_current_state.RES_ASPECT 0 0 0 1 0 0 0 0 0 1 
+res_current_state.RES_PUSHOUT 0 0 1 0 0 0 0 0 0 1 
+res_current_state.RES_DELIMITER 0 1 0 0 0 0 0 0 0 1 
+res_current_state.RES_FINISHED 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedRegistersController_50:MappedRegistersController_i|MappedRegistersEA:MappedRegistersEA_i|CommonPacketParser_MappedRegisters:CommonPacketParser_i|common_packet_parser:CommonPacketParserExternal_MappedRegisters|curr_state
+Name curr_state.EA_CONTROL curr_state.EA_HEADER_WAIT_READ curr_state.EA_HEADER_SHIFT_SAMPLE curr_state.RESPONSE_HEADER_FORWARD curr_state.RESPONSE_HEADER_WAIT_READ curr_state.RESET 
+curr_state.RESET 0 0 0 0 0 0 
+curr_state.RESPONSE_HEADER_WAIT_READ 0 0 0 0 1 1 
+curr_state.RESPONSE_HEADER_FORWARD 0 0 0 1 0 1 
+curr_state.EA_HEADER_SHIFT_SAMPLE 0 0 1 0 0 1 
+curr_state.EA_HEADER_WAIT_READ 0 1 0 0 0 1 
+curr_state.EA_CONTROL 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedElementSwitch_MappedRegisters_MappedMemories_SignalForwarding_PCIe:MappedElementSwitch_i|mapped_element_switch:MappedElementSwitchExternal_i|src_to_dst_control:response_source_control|current_state
+Name current_state.CONNECTED current_state.PIPE_ABORT2 current_state.PIPE_ABORT1 current_state.GET_HEADER current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 
+current_state.GET_HEADER 0 0 0 1 1 
+current_state.PIPE_ABORT1 0 0 1 0 1 
+current_state.PIPE_ABORT2 0 1 0 0 1 
+current_state.CONNECTED 1 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedElementSwitch_MappedRegisters_MappedMemories_SignalForwarding_PCIe:MappedElementSwitch_i|mapped_element_switch:MappedElementSwitchExternal_i|src_to_dst_control:request_source_control|current_state
+Name current_state.CONNECTED current_state.PIPE_ABORT2 current_state.PIPE_ABORT1 current_state.GET_HEADER current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 
+current_state.GET_HEADER 0 0 0 1 1 
+current_state.PIPE_ABORT1 0 0 1 0 1 
+current_state.PIPE_ABORT2 0 1 0 0 1 
+current_state.CONNECTED 1 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedElementSwitch_MappedRegisters_MappedMemories_SignalForwarding_PCIe:MappedElementSwitch_i|mapped_element_switch:MappedElementSwitchExternal_i|mec_switch_arbiter:request_source_arbiter|currstate
+Name currstate.WAIT_EVAL currstate.SELECTED currstate.EVALUATION currstate.IDLE 
+currstate.IDLE 0 0 0 0 
+currstate.EVALUATION 0 0 1 1 
+currstate.SELECTED 0 1 0 1 
+currstate.WAIT_EVAL 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|MAX4PCIeSlaveInterface:MAX4PCIeSlaveInterface_i|max_SV_pcie_slave:PCIeSlaveInterface_imp|trig_st
+Name trig_st.TRIG_IMM trig_st.TRIG_PCIE trig_st.TRIG_MODE trig_st.TRIG_IDLE 
+trig_st.TRIG_IDLE 0 0 0 0 
+trig_st.TRIG_MODE 0 0 1 1 
+trig_st.TRIG_PCIE 0 1 0 1 
+trig_st.TRIG_IMM 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_ring:SGRing_sfh4_i|ring_state
+Name ring_state.RING_PIPE2 ring_state.RING_PIPE1 ring_state.RING_INC ring_state.RING_IDLE 
+ring_state.RING_IDLE 0 0 0 0 
+ring_state.RING_INC 0 0 1 1 
+ring_state.RING_PIPE1 0 1 0 1 
+ring_state.RING_PIPE2 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_ring:SGRing_sfh4_i|update_state
+Name update_state.UPDATE_END update_state.UPDATE_ASSERT update_state.UPDATE_REQUEST update_state.UPDATE_IDLE update_state.UPDATE_WAIT_POINTER 
+update_state.UPDATE_WAIT_POINTER 0 0 0 0 0 
+update_state.UPDATE_IDLE 0 0 0 1 1 
+update_state.UPDATE_REQUEST 0 0 1 0 1 
+update_state.UPDATE_ASSERT 0 1 0 0 1 
+update_state.UPDATE_END 1 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_fetcher:sg_fetcher_external|sg_fetch_requester:i_requester|cur_st
+Name cur_st.REQ_WAIT1 cur_st.REQ_WAIT0 cur_st.REQ_DONE cur_st.REQ_SELECTED cur_st.REQ_READY cur_st.REQ_NEW cur_st.REQ_EVAL cur_st.REQ_READ_RAM cur_st.REQ_IDLE 
+cur_st.REQ_IDLE 0 0 0 0 0 0 0 0 0 
+cur_st.REQ_READ_RAM 0 0 0 0 0 0 0 1 1 
+cur_st.REQ_EVAL 0 0 0 0 0 0 1 0 1 
+cur_st.REQ_NEW 0 0 0 0 0 1 0 0 1 
+cur_st.REQ_READY 0 0 0 0 1 0 0 0 1 
+cur_st.REQ_SELECTED 0 0 0 1 0 0 0 0 1 
+cur_st.REQ_DONE 0 0 1 0 0 0 0 0 1 
+cur_st.REQ_WAIT0 0 1 0 0 0 0 0 0 1 
+cur_st.REQ_WAIT1 1 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_fetcher:sg_fetcher_external|sg_fetch_requester:i_requester|request_arbiter:i_req_arb|currstate
+Name currstate.SELECTED currstate.EVALUATION currstate.IDLE 
+currstate.IDLE 0 0 0 
+currstate.EVALUATION 0 1 1 
+currstate.SELECTED 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost1|pcie_stream_to_host:stream_imp|cur_st
+Name cur_st.complete_on_abort cur_st.current_scatter_progress cur_st.data_available cur_st.wait_address cur_st.get_scatter_address cur_st.initialise 
+cur_st.initialise 0 0 0 0 0 0 
+cur_st.get_scatter_address 0 0 0 0 1 1 
+cur_st.wait_address 0 0 0 1 0 1 
+cur_st.data_available 0 0 1 0 0 1 
+cur_st.current_scatter_progress 0 1 0 0 0 1 
+cur_st.complete_on_abort 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost1|pcie_stream_to_host:stream_imp|data_ready_state
+Name data_ready_state.RDY_PIPE data_ready_state.RDY_ASSERT data_ready_state.RDY_EVAL data_ready_state.RDY_IDLE 
+data_ready_state.RDY_IDLE 0 0 0 0 
+data_ready_state.RDY_EVAL 0 0 1 1 
+data_ready_state.RDY_ASSERT 0 1 0 1 
+data_ready_state.RDY_PIPE 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|RequestEncoder:RequestEncoder_i|write_request_encoder:inst_ln10_writerequestencoderexternal|pf_state
+Name pf_state.PF_WAIT pf_state.PF_FILL pf_state.PF_ARB_PIPE 
+pf_state.PF_ARB_PIPE 0 0 0 
+pf_state.PF_FILL 0 1 1 
+pf_state.PF_WAIT 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|pcie_stream_from_host:stream_imp|pcie_stream_from_host_streamer:streamer|stream_currstate
+Name stream_currstate.STREAM_LAST stream_currstate.STREAM_PUSH stream_currstate.STREAM_STALL stream_currstate.STREAM_ALMOST_STALL stream_currstate.STREAM_SETUP stream_currstate.STREAM_IDLE 
+stream_currstate.STREAM_IDLE 0 0 0 0 0 0 
+stream_currstate.STREAM_SETUP 0 0 0 0 1 1 
+stream_currstate.STREAM_ALMOST_STALL 0 0 0 1 0 1 
+stream_currstate.STREAM_STALL 0 0 1 0 0 1 
+stream_currstate.STREAM_PUSH 0 1 0 0 0 1 
+stream_currstate.STREAM_LAST 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|MemReadRequestArbiter:MemReadRequestArbiter_i|FastRequestArbiter_req6:internal_arbiter_i|fast_request_arbiter:fast_request_arbiter_i|prefetcher_state
+Name prefetcher_state.P_READY prefetcher_state.P_EVAL prefetcher_state.P_IDLE 
+prefetcher_state.P_IDLE 0 0 0 
+prefetcher_state.P_EVAL 0 1 1 
+prefetcher_state.P_READY 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|tag_manager:TagManagerExternal_i|mux_currstate
+Name mux_currstate.OPERATIONAL mux_currstate.INIT mux_currstate.RECOVER_RESET mux_currstate.RESET 
+mux_currstate.RESET 0 0 0 0 
+mux_currstate.RECOVER_RESET 0 0 1 1 
+mux_currstate.INIT 0 1 0 1 
+mux_currstate.OPERATIONAL 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|tag_manager:TagManagerExternal_i|req_currstate
+Name req_currstate.REQ_READY_PIPE req_currstate.REQ_READY req_currstate.REQ_IDLE req_currstate.REQ_INIT 
+req_currstate.REQ_INIT 0 0 0 0 
+req_currstate.REQ_IDLE 0 0 1 1 
+req_currstate.REQ_READY 0 1 0 1 
+req_currstate.REQ_READY_PIPE 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|TagManager:TagManager_i|tag_manager:TagManagerExternal_i|rsp_currstate
+Name rsp_currstate.RSP_WORKING rsp_currstate.RSP_IDLE rsp_currstate.RSP_INIT 
+rsp_currstate.RSP_INIT 0 0 0 
+rsp_currstate.RSP_IDLE 0 1 1 
+rsp_currstate.RSP_WORKING 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|pcie_stream_from_host:stream_imp|decomposer_current_state
+Name decomposer_current_state.RAW decomposer_current_state.DECOMPOSE_2 decomposer_current_state.DECOMPOSE_1 decomposer_current_state.EVALUATE decomposer_current_state.READ_PROPAGATE2 decomposer_current_state.READ_PROPAGATE1 decomposer_current_state.IDLE 
+decomposer_current_state.IDLE 0 0 0 0 0 0 0 
+decomposer_current_state.READ_PROPAGATE1 0 0 0 0 0 1 1 
+decomposer_current_state.READ_PROPAGATE2 0 0 0 0 1 0 1 
+decomposer_current_state.EVALUATE 0 0 0 1 0 0 1 
+decomposer_current_state.DECOMPOSE_1 0 0 1 0 0 0 1 
+decomposer_current_state.DECOMPOSE_2 0 1 0 0 0 0 1 
+decomposer_current_state.RAW 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid4:PCIeStreamFromHost4|pcie_stream_from_host:stream_imp|decomposer_source_select_r
+Name decomposer_source_select_r.SOURCE_DECOMPOSED_2 decomposer_source_select_r.SOURCE_DECOMPOSED_1 decomposer_source_select_r.SOURCE_RAW 
+decomposer_source_select_r.SOURCE_RAW 0 0 0 
+decomposer_source_select_r.SOURCE_DECOMPOSED_1 0 1 1 
+decomposer_source_select_r.SOURCE_DECOMPOSED_2 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|pcie_stream_from_host:stream_imp|decomposer_current_state
+Name decomposer_current_state.RAW decomposer_current_state.DECOMPOSE_2 decomposer_current_state.DECOMPOSE_1 decomposer_current_state.EVALUATE decomposer_current_state.READ_PROPAGATE2 decomposer_current_state.READ_PROPAGATE1 decomposer_current_state.IDLE 
+decomposer_current_state.IDLE 0 0 0 0 0 0 0 
+decomposer_current_state.READ_PROPAGATE1 0 0 0 0 0 1 1 
+decomposer_current_state.READ_PROPAGATE2 0 0 0 0 1 0 1 
+decomposer_current_state.EVALUATE 0 0 0 1 0 0 1 
+decomposer_current_state.DECOMPOSE_1 0 0 1 0 0 0 1 
+decomposer_current_state.DECOMPOSE_2 0 1 0 0 0 0 1 
+decomposer_current_state.RAW 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid3:PCIeStreamFromHost3|pcie_stream_from_host:stream_imp|decomposer_source_select_r
+Name decomposer_source_select_r.SOURCE_DECOMPOSED_2 decomposer_source_select_r.SOURCE_DECOMPOSED_1 decomposer_source_select_r.SOURCE_RAW 
+decomposer_source_select_r.SOURCE_RAW 0 0 0 
+decomposer_source_select_r.SOURCE_DECOMPOSED_1 0 1 1 
+decomposer_source_select_r.SOURCE_DECOMPOSED_2 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|pcie_stream_from_host:stream_imp|decomposer_current_state
+Name decomposer_current_state.RAW decomposer_current_state.DECOMPOSE_2 decomposer_current_state.DECOMPOSE_1 decomposer_current_state.EVALUATE decomposer_current_state.READ_PROPAGATE2 decomposer_current_state.READ_PROPAGATE1 decomposer_current_state.IDLE 
+decomposer_current_state.IDLE 0 0 0 0 0 0 0 
+decomposer_current_state.READ_PROPAGATE1 0 0 0 0 0 1 1 
+decomposer_current_state.READ_PROPAGATE2 0 0 0 0 1 0 1 
+decomposer_current_state.EVALUATE 0 0 0 1 0 0 1 
+decomposer_current_state.DECOMPOSE_1 0 0 1 0 0 0 1 
+decomposer_current_state.DECOMPOSE_2 0 1 0 0 0 0 1 
+decomposer_current_state.RAW 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid2:PCIeStreamFromHost2|pcie_stream_from_host:stream_imp|decomposer_source_select_r
+Name decomposer_source_select_r.SOURCE_DECOMPOSED_2 decomposer_source_select_r.SOURCE_DECOMPOSED_1 decomposer_source_select_r.SOURCE_RAW 
+decomposer_source_select_r.SOURCE_RAW 0 0 0 
+decomposer_source_select_r.SOURCE_DECOMPOSED_1 0 1 1 
+decomposer_source_select_r.SOURCE_DECOMPOSED_2 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|pcie_stream_from_host:stream_imp|decomposer_current_state
+Name decomposer_current_state.RAW decomposer_current_state.DECOMPOSE_2 decomposer_current_state.DECOMPOSE_1 decomposer_current_state.EVALUATE decomposer_current_state.READ_PROPAGATE2 decomposer_current_state.READ_PROPAGATE1 decomposer_current_state.IDLE 
+decomposer_current_state.IDLE 0 0 0 0 0 0 0 
+decomposer_current_state.READ_PROPAGATE1 0 0 0 0 0 1 1 
+decomposer_current_state.READ_PROPAGATE2 0 0 0 0 1 0 1 
+decomposer_current_state.EVALUATE 0 0 0 1 0 0 1 
+decomposer_current_state.DECOMPOSE_1 0 0 1 0 0 0 1 
+decomposer_current_state.DECOMPOSE_2 0 1 0 0 0 0 1 
+decomposer_current_state.RAW 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid1:PCIeStreamFromHost1|pcie_stream_from_host:stream_imp|decomposer_source_select_r
+Name decomposer_source_select_r.SOURCE_DECOMPOSED_2 decomposer_source_select_r.SOURCE_DECOMPOSED_1 decomposer_source_select_r.SOURCE_RAW 
+decomposer_source_select_r.SOURCE_RAW 0 0 0 
+decomposer_source_select_r.SOURCE_DECOMPOSED_1 0 1 1 
+decomposer_source_select_r.SOURCE_DECOMPOSED_2 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|pcie_stream_from_host:stream_imp|decomposer_current_state
+Name decomposer_current_state.RAW decomposer_current_state.DECOMPOSE_2 decomposer_current_state.DECOMPOSE_1 decomposer_current_state.EVALUATE decomposer_current_state.READ_PROPAGATE2 decomposer_current_state.READ_PROPAGATE1 decomposer_current_state.IDLE 
+decomposer_current_state.IDLE 0 0 0 0 0 0 0 
+decomposer_current_state.READ_PROPAGATE1 0 0 0 0 0 1 1 
+decomposer_current_state.READ_PROPAGATE2 0 0 0 0 1 0 1 
+decomposer_current_state.EVALUATE 0 0 0 1 0 0 1 
+decomposer_current_state.DECOMPOSE_1 0 0 1 0 0 0 1 
+decomposer_current_state.DECOMPOSE_2 0 1 0 0 0 0 1 
+decomposer_current_state.RAW 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|pcie_stream_from_host:stream_imp|decomposer_source_select_r
+Name decomposer_source_select_r.SOURCE_DECOMPOSED_2 decomposer_source_select_r.SOURCE_DECOMPOSED_1 decomposer_source_select_r.SOURCE_RAW 
+decomposer_source_select_r.SOURCE_RAW 0 0 0 
+decomposer_source_select_r.SOURCE_DECOMPOSED_1 0 1 1 
+decomposer_source_select_r.SOURCE_DECOMPOSED_2 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamFromHostuid0:PCIeStreamFromHost0|pcie_stream_from_host:stream_imp|pcie_stream_from_host_streamer:streamer|stream_currstate
+Name stream_currstate.STREAM_LAST stream_currstate.STREAM_PUSH stream_currstate.STREAM_STALL stream_currstate.STREAM_ALMOST_STALL stream_currstate.STREAM_SETUP stream_currstate.STREAM_IDLE 
+stream_currstate.STREAM_IDLE 0 0 0 0 0 0 
+stream_currstate.STREAM_SETUP 0 0 0 0 1 1 
+stream_currstate.STREAM_ALMOST_STALL 0 0 0 1 0 1 
+stream_currstate.STREAM_STALL 0 0 1 0 0 1 
+stream_currstate.STREAM_PUSH 0 1 0 0 0 1 
+stream_currstate.STREAM_LAST 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost0|pcie_stream_to_host:stream_imp|cur_st
+Name cur_st.complete_on_abort cur_st.current_scatter_progress cur_st.data_available cur_st.wait_address cur_st.get_scatter_address cur_st.initialise 
+cur_st.initialise 0 0 0 0 0 0 
+cur_st.get_scatter_address 0 0 0 0 1 1 
+cur_st.wait_address 0 0 0 1 0 1 
+cur_st.data_available 0 0 1 0 0 1 
+cur_st.current_scatter_progress 0 1 0 0 0 1 
+cur_st.complete_on_abort 1 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|PCIeStreamToHost:PCIeStreamToHost0|pcie_stream_to_host:stream_imp|data_ready_state
+Name data_ready_state.RDY_PIPE data_ready_state.RDY_ASSERT data_ready_state.RDY_EVAL data_ready_state.RDY_IDLE 
+data_ready_state.RDY_IDLE 0 0 0 0 
+data_ready_state.RDY_EVAL 0 0 1 1 
+data_ready_state.RDY_ASSERT 0 1 0 1 
+data_ready_state.RDY_PIPE 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|PCIeStreaming_2_5:dynpcie|SGListFetchEngine:SGListFetchEngine_i|sg_fetcher:sg_fetcher_external|sg_fetch_responder:i_responder|cur_st
+Name cur_st.RSP_XMT cur_st.RSP_RAM_RD cur_st.RSP_IDLE 
+cur_st.RSP_IDLE 0 0 0 
+cur_st.RSP_RAM_RD 0 1 1 
+cur_st.RSP_XMT 1 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|MAX4PCIeSlaveInterface:MAX4PCIeSlaveInterface_i|max_SV_pcie_slave:PCIeSlaveInterface_imp|int_state
+Name int_state.INT_DEASSERT int_state.INT_WAIT_DEASSERT int_state.INT_ASSERT int_state.RST_STATE 
+int_state.RST_STATE 0 0 0 0 
+int_state.INT_ASSERT 0 0 1 1 
+int_state.INT_WAIT_DEASSERT 0 1 0 1 
+int_state.INT_DEASSERT 1 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedMemoriesControllerdomain0_drp_domain0domain1_STREAM_domain1:MappedMemoriesController_i|mapped_memories_controller_core:MappedMemoriesControllerCoreExternal_i|req_current_state
+Name req_current_state.REQ_FINISHED req_current_state.REQ_OUTSTANDING_ACK_WAIT req_current_state.REQ_THROTTLE req_current_state.REQ_ISSUE req_current_state.REQ_SAMPLE_DATA req_current_state.REQ_START req_current_state.REQ_IDLE 
+req_current_state.REQ_IDLE 0 0 0 0 0 0 0 
+req_current_state.REQ_START 0 0 0 0 0 1 1 
+req_current_state.REQ_SAMPLE_DATA 0 0 0 0 1 0 1 
+req_current_state.REQ_ISSUE 0 0 0 1 0 0 1 
+req_current_state.REQ_THROTTLE 0 0 1 0 0 0 1 
+req_current_state.REQ_OUTSTANDING_ACK_WAIT 0 1 0 0 0 0 1 
+req_current_state.REQ_FINISHED 1 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|MappedRegistersController_50:MappedRegistersController_i|mapped_registers_controller:MappedRegistersControllerExternal_i|current_state
+Name current_state.FINISHED current_state.DELIMITER current_state.STOP_POST_DELAY current_state.STOP_POST_SETUP current_state.ROTATE_TO_ZERO current_state.SEND_WRITE_COMPLETION current_state.WRITING current_state.READING current_state.SEND_READ_COMPLETION current_state.ROTATE_TO_BASE_ADDR current_state.SEND_HOST_HEADER current_state.STOP_PRE_DELAY current_state.STOP_PRE_SETUP current_state.SWITCH_REGS current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.SWITCH_REGS 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.STOP_PRE_SETUP 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.STOP_PRE_DELAY 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.SEND_HOST_HEADER 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.ROTATE_TO_BASE_ADDR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.SEND_READ_COMPLETION 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.READING 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.WRITING 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.SEND_WRITE_COMPLETION 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.ROTATE_TO_ZERO 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.STOP_POST_SETUP 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.STOP_POST_DELAY 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.DELIMITER 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.FINISHED 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |MAX4GALAVAPeripheryTop|MAX4FPGATop:MAX4GalavaFabricTop_i|FPGAWrapperEntity_Manager_CpuStream:wrapper|Manager_CpuStream:wrapper_entity|Manager_CpuStream_WrapperNodeEntity_CpuStreamKernel:CpuStreamKernel|CpuStreamKernel_streamwrapper:inst_ln31_streamingblock|PhotonDesignControl:control_sm|state
+Name state.DONE state.FLUSH state.RUN 
+state.RUN 0 0 0 
+state.FLUSH 0 1 1 
+state.DONE 1 0 1 

@@ -1,0 +1,16 @@
+Wed Dec 20 16:20:02 CET 2017
+Manager_CpuStream
+orig
+Manager_CpuStream_orig.dot
+schedstall
+Manager_CpuStream_schedstall.dot
+clockwidth
+Manager_CpuStream_clockwidth.dot
+pipelining
+Manager_CpuStream_pipelining.dot
+dualaspect
+Manager_CpuStream_dualaspect.dot
+pullpush
+Manager_CpuStream_pullpush.dot
+final
+Manager_CpuStream_final.dot

@@ -1,0 +1,94 @@
+
+Total resource usage
+-----------------------------------------------------------------
+    LUTs     FFs   BRAMs    DSPs                            
+  370000  740000    2304     256  total available resources for FPGA
+   12520   17671      90       0  total resources used      
+   3.38%   2.39%   3.91%   0.00%  % of available
+     539    1002       1       0  used by kernels           
+   0.15%   0.14%   0.04%   0.00%  % of available
+   11054   15163      81       0  used by manager           
+   2.99%   2.05%   3.52%   0.00%  % of available
+    2642    3265      24       0  stray resources           
+   0.71%   0.44%   1.04%   0.00%  % of available
+
+High level manager breakdown aggregated by type
+-----------------------------------------------------------------
+    LUTs     FFs   BRAMs    DSPs  Type                      Occurrences
+      43      38       1       0  ChecksumMappedDRP         1
+     152     148       0       0  DualAspectMux             4
+       4      99       0       0  DualAspectReg             1
+     704     809      21       0  Fifo                      9
+     539    1002       1       0  Kernel                    1
+     868     929       1       0  MAX4PCIeSlaveInterface    1
+     551      77       0       0  MappedElementSwitch       1
+     430     990       5       0  MappedMemoriesController  1
+     132     108       0       0  MappedRegistersControlle  1
+    7146   11013      52       0  PCIeStreaming             1
+     842     709       0       0  PerfMonitor               1
+      16      22       0       0  ResetControl              2
+      65     145       0       0  SanityBlock               1
+      99      75       1       0  SignalForwardingAdapter   1
+       2       1       0       0  StreamPullPushAdapter     1
+       0       0       0       0  Memory Controller         --
+       0       0       0       0  Other InterFPGA           --
+    1126    1287       7       0  Other MappedElements      --
+    8752   13119      59       0  Other PCIe                --
+
+Kernel breakdown
+-----------------------------------------------------------------
+    LUTs     FFs   BRAMs    DSPs  category
+     539    1002       1       0  total for all kernels
+   0.15%   0.14%   0.04%   0.00%  % of total available
+
+Totals for each kernel
+    LUTs     FFs   BRAMs    DSPs  Kernel name
+     539    1002       1       0  CpuStreamKernel (total)
+   0.15%   0.14%   0.04%   0.00%  % of total available
+     356     624       0       0  CpuStreamKernel (user)
+   0.10%   0.08%   0.00%   0.00%  % of total available
+       0       0       0       0  CpuStreamKernel (scheduling)
+   0.00%   0.00%   0.00%   0.00%  % of total available
+     183     378       1       0  CpuStreamKernel (other Kernel resources)
+   0.05%   0.05%   0.04%   0.00%  % of total available
+
+
+Manager breakdown
+-----------------------------------------------------------------
+    LUTs     FFs   BRAMs    DSPs  Type                      Instance
+     539    1002       1       0  Kernel                    CpuStreamKernel
+      38      37       0       0  DualAspectMux             Stream_10
+       4      99       0       0  DualAspectReg             Stream_14
+      49      32       4       0  Fifo                      Stream_17
+     107     140       1       0  Fifo                      Stream_19
+      38      37       0       0  DualAspectMux             Stream_1
+      49      32       4       0  Fifo                      Stream_21
+     107     140       1       0  Fifo                      Stream_23
+      49      32       4       0  Fifo                      Stream_25
+     107     140       1       0  Fifo                      Stream_27
+      49      32       4       0  Fifo                      Stream_29
+     109     140       1       0  Fifo                      Stream_31
+      78     121       1       0  Fifo                      Stream_33
+       2       1       0       0  StreamPullPushAdapter     Stream_35
+      38      37       0       0  DualAspectMux             Stream_4
+      38      37       0       0  DualAspectMux             Stream_7
+     868     929       1       0  MAX4PCIeSlaveInterface    MAX4PCIeSlaveInterface_i
+       8      11       0       0  ResetControl              control_streams_rst_ctl
+     551      77       0       0  MappedElementSwitch       MappedElementSwitch_i
+     430     990       5       0  MappedMemoriesController  MappedMemoriesController_i
+     132     108       0       0  MappedRegistersControlle  MappedRegistersController_i
+      65     145       0       0  SanityBlock               SanityBlock_i
+      99      75       1       0  SignalForwardingAdapter   SignalForwardingAdapter_i
+      43      38       1       0  ChecksumMappedDRP         checksum_mem_drp
+    7146   11013      52       0  PCIeStreaming             dynpcie
+     842     709       0       0  PerfMonitor               perfmon
+       8      11       0       0  ResetControl              reset_controller
+
+Source files annotation report
+-----------------------------------------------------------------
+
+% of total used for each file (note: multiple files may share the same resources)
+    LUTs     FFs   BRAMs    DSPs  filename
+   1.05%   1.54%   0.00%   0.00%  cpustream/CpuStreamKernel.maxj
+   2.84%   3.53%   0.00%   0.00%  cpustream/CpuStreamManager.maxj
+   2.84%   3.53%   0.00%   0.00%  [ missing source files ]

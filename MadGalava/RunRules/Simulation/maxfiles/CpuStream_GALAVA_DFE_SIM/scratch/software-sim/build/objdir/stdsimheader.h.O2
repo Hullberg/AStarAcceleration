@@ -1,0 +1,14 @@
+objdir/stdsimheader.h.O2: stdsimheader.h HWTypes.h varint_u.h varint_s.h \
+  HWExceptionDispatch.h HWRawBits_decl.h HWFloat_decl.h \
+  HWOffsetFix_decl.h HWRawBits_impl.h HWFloat_impl.h HWOffsetFix_impl.h \
+  KernelManagerBlockSync.h ManagerSync.h CondVar.h Thread.h \
+  ManagerBlock.h MappedElements.h Data.h DynamicVarUInt.h SimException.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/maxrt_mec_common.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/max_types.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/maxrt_error.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/maxrt_core.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/maxdriver.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/maxerrors.h \
+  /opt/maxcompiler/lib/maxeleros-sim/include/max_list.h PullSync.h \
+  Connections.h PushSync.h Debuggable.h DebugStreams.h \
+  stdkernel_headers.h CpuStreamKernel.h

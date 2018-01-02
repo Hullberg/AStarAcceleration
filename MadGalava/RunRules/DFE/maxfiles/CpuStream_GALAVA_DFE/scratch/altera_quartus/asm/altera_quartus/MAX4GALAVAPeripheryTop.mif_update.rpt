@@ -1,0 +1,90 @@
+MIF/HEX Update report for MAX4GALAVAPeripheryTop
+Wed Dec 20 16:32:17 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Wed Dec 20 16:32:17 2017 ;
+; Revision Name         ; MAX4GALAVAPeripheryTop                ;
+; Top-level Entity Name ; MAX4GALAVAPeripheryTop                ;
+; Family                ; Stratix V                             ;
+; Device                ; 5SGXMA5N3F45C4                        ;
++-----------------------+---------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/asm/altera_quartus/32x512_ROM_SINGLE_PORT_ireg_checksum.mif                           ;
+; /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/asm/altera_quartus/db/MAX4GALAVAPeripheryTop.ram0_sv_xrbasic_l2p_rom_a2c9d7fe.hdl.mif ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit MIF/HEX Update
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Wed Dec 20 16:32:12 2017
+Info: Command: quartus_cdb MAX4GALAVAPeripheryTop --write_settings_files=off --update_mif
+Info: Using INI file /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/asm/altera_quartus/quartus.ini
+Warning (39023): Can't find Memory Initialization File alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_a.mif -- skipped updates for this file
+Warning (39023): Can't find Memory Initialization File alt_xcvr_reconfig_cpu_reconfig_cpu_rf_ram_b.mif -- skipped updates for this file
+Warning (39023): Can't find Memory Initialization File alt_xcvr_reconfig_cpu_ram.hex -- skipped updates for this file
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/asm/altera_quartus/32x512_ROM_SINGLE_PORT_ireg_checksum.mif
+    Info (39025): Processed Memory Initialization File /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/maxfiles/CpuStream_GALAVA_DFE/scratch/altera_quartus/asm/altera_quartus/db/MAX4GALAVAPeripheryTop.ram0_sv_xrbasic_l2p_rom_a2c9d7fe.hdl.mif
+Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1554 megabytes
+    Info: Processing ended: Wed Dec 20 16:32:17 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+

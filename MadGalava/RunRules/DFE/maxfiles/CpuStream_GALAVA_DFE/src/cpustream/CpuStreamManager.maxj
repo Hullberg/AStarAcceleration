@@ -1,0 +1,59 @@
+package cpustream;
+
+import com.maxeler.maxcompiler.v2.managers.BuildConfig;
+import com.maxeler.maxcompiler.v2.managers.custom.CustomManager;
+import com.maxeler.maxcompiler.v2.managers.custom.blocks.KernelBlock;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.CPUTypes;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.EngineInterface;
+import com.maxeler.maxcompiler.v2.managers.engine_interfaces.InterfaceParam;
+
+public class CpuStreamManager extends CustomManager {
+
+	private static final String s_kernelName = "CpuStreamKernel";
+
+	public CpuStreamManager(CpuStreamEngineParameters engineParameters) {
+		super(engineParameters);
+
+		KernelBlock block = addKernel(new CpuStreamKernel(makeKernelParameters(s_kernelName)));
+
+		for (String inputName: block.getAllInputs())
+			block.getInput(inputName).connect(addStreamFromCPU(inputName));
+		for (String outputName: block.getAllOutputs())
+			addStreamToCPU(outputName).connect(block.getOutput(outputName));
+
+		createSLiCinterface(modeDefault());
+
+		configBuild(engineParameters);
+	}
+
+	private static EngineInterface modeDefault() {
+		EngineInterface engine_interface = new EngineInterface();
+		CPUTypes   type = CPUTypes.INT32;
+		int        size = type.sizeInBytes();
+
+		InterfaceParam  N    = engine_interface.addParam("N", CPUTypes.INT);
+		engine_interface.setTicks(s_kernelName, N);
+		engine_interface.setStream("child_0", type, N * size);
+		engine_interface.setStream("child_1", type, N * size);
+		engine_interface.setStream("child_2", type, N * size);
+		engine_interface.setStream("child_3", type, N * size);
+		//engine_interface.setStream("child_4", type, N * size);
+		//engine_interface.setStream("child_5", type, N * size);
+		//engine_interface.setStream("child_6", type, N * size);
+		//engine_interface.setStream("child_7", type, N * size);
+		engine_interface.setStream("data_w", type, N * size);
+		return engine_interface;
+	}
+
+	private void configBuild(CpuStreamEngineParameters params) {
+		BuildConfig buildConfig = getBuildConfig();
+		buildConfig.setMPPRCostTableSearchRange(params.getMPPRStartCT(), params.getMPPREndCT());
+		buildConfig.setMPPRParallelism(params.getMPPRThreads());
+		buildConfig.setMPPRRetryNearMissesThreshold(params.getMPPRRetryThreshold());
+	}
+
+	public static void main(String[] args) {
+		CpuStreamManager manager = new CpuStreamManager(new CpuStreamEngineParameters(args));
+		manager.build();
+	}
+}

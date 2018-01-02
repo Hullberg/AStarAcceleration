@@ -1,0 +1,45 @@
+package cpustream;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class CpuStreamKernel extends Kernel {
+
+	private static final DFEType type = dfeInt(32);
+
+	protected CpuStreamKernel(KernelParameters parameters) {
+		super(parameters);
+		long start_time_link = System.nanoTime();
+
+		DFEVar child_0 = io.input("child_0", type);
+		DFEVar child_1 = io.input("child_1", type);
+		DFEVar child_2 = io.input("child_2", type);
+		DFEVar child_3 = io.input("child_3", type);
+
+		//Comment out if 4 edges
+		//DFEVar child_4 = io.input("child_4", type);
+		//DFEVar child_5 = io.input("child_5", type);
+		//DFEVar child_6 = io.input("child_6", type);
+		//DFEVar child_7 = io.input("child_7", type);
+
+
+		//If edges is 4
+		DFEVar data_w = (child_0 + child_1 + child_2 + child_3) / 4;
+
+		//If edges is 8
+		//DFEVar sum = child_0 + child_1 + child_2 + child_3 + child_4 + child_5 + child_6 + child_7;
+		//DFEVar data_w = sum / 8;
+
+
+
+		// Send back to CPUCode/MemStreamCpuCode.c
+		System.out.println("Before output");
+		io.output("data_w", data_w, type);
+
+		long end_time_link = System.nanoTime();
+		System.out.println("Time for maxeler operation is: " + (end_time_link - start_time_link)/1000 + "microseconds");
+	}
+
+}

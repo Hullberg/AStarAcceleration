@@ -1,0 +1,50 @@
+Tue 12:19: ########################################## 
+Tue 12:19: Compiling.
+Tue 12:19: ########################################## 
+
+Tue 12:19: MaxCompiler version: 2017.2.1.
+Tue 12:19: Build DFE run rule for MadGalava start time: Tue Jan 02 12:19:47 CET 2018.
+Tue 12:19: Project location: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava.
+Tue 12:19: Detailed build log: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/RunRules/DFE/build.log.
+
+Tue 12:19: Compiling Engine Code.
+Tue 12:19: Engine building skipped (no changes on .max files).
+Tue 12:19: Compiling CPU Code.
+Tue 12:19: Run CPU project make files updating
+Tue 12:19: Executing command:
+Tue 12:19: java -jar /opt/maxcompiler/lib/MaxIDE/projectAdmin.jar -u /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava DFE 
+Tue 12:19: Command output:
+
+Tue 12:19: MaxCompiler Project Admin Tool Version 2016.1.00001
+Tue 12:19:  Copyright Maxeler Technologies 2010 - 2016. All rights reserved.
+Tue 12:19: Handler version 2
+Tue 12:19: Updating RunRule dependent Makefiles for RunRule 'DFE'
+Tue 12:19: 	Updating: DFE
+Tue 12:19: Found makefiles: 1
+Tue 12:19: 	Updated: DFE
+Tue 12:19: Run CPU make.
+Tue 12:19: make RUNRULE=DFE 
+Tue 12:19: Command output:
+Tue 12:19: make -f Makefile.rules build
+Tue 12:19: make[1]: Entering directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 12:19: set -e; rm -f ../RunRules/DFE/objects/c/CpuStreamCpuCode.d ;                                                             \
+Tue 12:19: 	  cc -M -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/DFE/include  -I '/opt/maxcompiler/include/slic'  -Wno-error CpuStreamCpuCode.c > ../RunRules/DFE/objects/c/CpuStreamCpuCode.d.$$ ;                                 \
+Tue 12:19:       sed 's,\(CpuStreamCpuCode\)\.o[ :]*,../RunRules/DFE/objects/c/\1.o ../RunRules/DFE/objects/c/CpuStreamCpuCode.d : ,g' < ../RunRules/DFE/objects/c/CpuStreamCpuCode.d.$$ > ../RunRules/DFE/objects/c/CpuStreamCpuCode.d; \
+Tue 12:19:       rm -f ../RunRules/DFE/objects/c/CpuStreamCpuCode.d.$$
+Tue 12:19: make[1]: Leaving directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 12:19: make[1]: Entering directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 12:19: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/DFE/include  -I '/opt/maxcompiler/include/slic'  -c CpuStreamCpuCode.c -o ../RunRules/DFE/objects/c/CpuStreamCpuCode.o
+Tue 12:19: In file included from CpuStreamCpuCode.c:7:
+Tue 12:19: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/bfs/graph_iteration.c: In function ‘main’:
+Tue 12:19: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/bfs/graph_iteration.c:127: warning: unused parameter ‘argc’
+Tue 12:19: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/bfs/graph_iteration.c:127: warning: unused parameter ‘argv’
+Tue 12:19: CpuStreamCpuCode.c: At top level:
+Tue 12:19: CpuStreamCpuCode.c:10: error: conflicting types for ‘main’
+Tue 12:19: /home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/bfs/graph_iteration.c:127: note: previous definition of ‘main’ was here
+Tue 12:19: make[1]: *** [../RunRules/DFE/objects/c/CpuStreamCpuCode.o] Error 1
+Tue 12:19: make[1]: Leaving directory `/home/madmaxeler/Desktop/BreadthFirstSearchAcceleration/MadGalava/CPUCode'
+Tue 12:19: make: *** [build] Error 2
+Tue 12:19: Make command failed with status = 2
+Tue 12:19: Build failed: Tue Jan 02 12:19:47 CET 2018
+
+

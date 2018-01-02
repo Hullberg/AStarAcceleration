@@ -1,0 +1,10 @@
+intended_device_family="Stratix V"
+CLOCK_TYPE="AUTO"
+NUMBER_OF_CLOCKS="1"
+ena="USED"
+ENA_REGISTER_MODE="FALLING EDGE"
+clock_inputs="1"
+clksel_width="1"
+clkselect="UNUSED"
+OPTIONAL_FILES="SIM_NETLIST"
+

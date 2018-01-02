@@ -9,8 +9,8 @@
 
 #include "vertex.c"
 
-#define EDGE_COUNT 8
-#define VERTEX_COUNT 40000
+#define EDGE_COUNT 4
+#define VERTEX_COUNT  2048 * 10000	
 
 Vertex** vertex_list;
 
@@ -67,12 +67,18 @@ void magic_function(int index){
   vertex_list[index]->value = sum / EDGE_COUNT;
 }
 
-void iterate(){
+double iterate(){
+  clock_t start_simulation_time = clock();
   for (int i = 0; i < VERTEX_COUNT; i++) {
     //start.stream(blah,blah,blah);
     magic_function(i);
   }
+  clock_t end_simulation_time = clock();
+  double total_time = (double)end_simulation_time-start_simulation_time;
   update_edges();
+  return total_time;
+	
+	
 }
 
 bool is_equal(int32_t a, int32_t b){
@@ -117,21 +123,27 @@ bool converged(){
 ////////////
 /////// MAIN
 ////////////
-/*
+
 int main(int argc, char* argv[]) {
+  clock_t start_simulation_time = clock();
   srand(time(NULL));
   vertex_list = malloc(sizeof(Vertex*) * VERTEX_COUNT);
+  double tot_time =0;
 
   init_vertices();
 
   init_arrays();
-  
+
+  int iteration_count = 100;
+
   int count = 0;
   do {
-    iterate();
+    tot_time +=iterate();
     count++;
-  } while(false);
+  } while(count < iteration_count);
+  double average_time = tot_time/(double)count;
   printf("\nDone! Converged after %d iterations.\n", count);
+  printf("Average time in C: %f \n",average_time/CLOCKS_PER_SEC);
   
   for (int i = 0; i < 10; i++) {
     //printf("%d, %d, %d, %d, %d\n", edges[0][i], edges[1][i], edges[2][i], edges[3][i], [i]);
@@ -145,6 +157,9 @@ int main(int argc, char* argv[]) {
     free(edges[i]);
   }
   free(vertex_list);
+  clock_t end_simulation_time = clock();
+  printf("Graph iteration Total time: %f s\n", ((double)end_simulation_time-start_simulation_time)/CLOCKS_PER_SEC);
   return 0;
-}*/
+}
+
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maxCompilerManager version="2">
+<enginePart internalEngineSubproject="MadGalava_EngineCode" isSrcBin="false" isUseDefaultSelected="false" outputLocation="/MadGalava_EngineCode/bin" projectName="MadGalava"/>
+<cpuPart internalCpuSubproject="MadGalava_CPUCode"/>
+<watchedFiles/>
+</maxCompilerManager>
